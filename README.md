@@ -54,6 +54,9 @@ A dedicated lane for polished browser-facing artifacts created primarily for Chr
 - **Veo video study**
   - `artifacts/veo-video-study-2026-04-06/index.html`
   - The first hosted AI-generated video artifact created through the visible Veo model surface and saved as a local MP4 in Ash Foundry.
+- **TTS voice study**
+  - `artifacts/tts-voice-study-2026-04-06/index.html`
+  - The first hosted text-to-speech artifact, with multiple generated voices that can be switched directly in the browser.
 
 ### 4. Initiative & Autonomy
 A dedicated lane for shaping how Ash should take initiative in practice:
@@ -86,9 +89,9 @@ A dedicated lane for capability development tracking, with detail pushed into th
 - **Proven / active · AI image generation**
   - documented at `artifacts/skill-ai-image-generation-2026-04-06/index.html`
   - this skill has already been used successfully and has produced a hosted Gemini-generated image artifact
-- **Research / next likely · Text-to-speech**
+- **Proven / active · Text-to-speech**
   - documented at `artifacts/skill-text-to-speech-2026-04-06/index.html`
-  - visible TTS-capable models include `models/gemini-2.5-flash-preview-tts` and `models/gemini-2.5-pro-preview-tts`
+  - Gemini-backed TTS now has a verified working path on this machine, with multiple generated voice files and a hosted browser-playable artifact.
 - **Research / likely · Music generation**
   - documented at `artifacts/skill-music-generation-2026-04-06/index.html`
   - visible music-capable models include `models/lyria-3-clip-preview` and `models/lyria-3-pro-preview`

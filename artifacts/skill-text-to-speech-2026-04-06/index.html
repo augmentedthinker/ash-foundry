@@ -10,58 +10,69 @@
   <main class="wrap">
     <header class="topbar">
       <div class="left"><a href="../../index.html">← Ash Foundry</a></div>
-      <div class="right"><a href="../skill-ai-image-generation-2026-04-06/index.html">AI Image Generation</a><a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a><div class="style-switcher"><label for="style-select">Style</label><select id="style-select" data-style-select><option value="ember">Foundry Ember</option><option value="glass">Foundry Glass</option></select></div></div>
+      <div class="right"><a href="../tts-voice-study-2026-04-06/index.html">TTS Voice Study</a><a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a><div class="style-switcher"><label for="style-select">Style</label><select id="style-select" data-style-select><option value="ember">Foundry Ember</option><option value="glass">Foundry Glass</option></select></div></div>
     </header>
 
     <section class="hero">
-      <p class="eyebrow">Learn skill · research / next likely</p>
+      <p class="eyebrow">Learn skill · proven / active</p>
       <h1>Text-to-Speech</h1>
-      <p class="sub">A continuity page for the likely next Gemini-backed skill to acquire. This page records what is known so far about TTS through the current Gemini key, which model IDs appear relevant, why this looks like the best next step, and what future Ash should test to turn it into a real working capability.</p>
-      <div class="pill-row"><span class="pill">Status: research / next likely</span><span class="pill">Gemini-backed</span><span class="pill">TTS candidates found</span><span class="pill">Not yet proven</span></div>
+      <p class="sub">A continuity page for Ash’s newly proven Gemini-backed text-to-speech path. This capability is now operational: multiple voices were generated successfully, saved as local audio files, and hosted in a browser-playable artifact with a voice selector.</p>
+      <div class="pill-row"><span class="pill">Status: proven / active</span><span class="pill">Gemini-backed</span><span class="pill">Multiple voices generated</span><span class="pill">Hosted output exists</span></div>
     </section>
 
     <section class="section">
-      <article class="quote">Text-to-speech is currently the strongest candidate for the next skill to operationalize because the current Gemini key exposes explicit TTS preview models and they use the familiar <code>generateContent</code> method family rather than a more complex long-running prediction path.</article>
+      <article class="quote">Text-to-speech was expected to be the next likely clean win. That expectation was correct. The path is not merely promising anymore — it is working, hosted, and repeatable.</article>
     </section>
 
     <section class="section">
-      <h2 class="section-title">What is known so far</h2>
+      <h2 class="section-title">What is now known</h2>
       <div class="stack">
-        <div class="list-item"><strong>The key exposes explicit TTS models:</strong> <code>models/gemini-2.5-flash-preview-tts</code> and <code>models/gemini-2.5-pro-preview-tts</code>.</div>
-        <div class="list-item"><strong>Supported method family:</strong> both models report <code>generateContent</code>, which suggests a simpler integration path than the Veo video models.</div>
-        <div class="list-item"><strong>Current status:</strong> visible and promising, but not yet operationally confirmed through a successful generated audio file.</div>
+        <div class="list-item"><strong>Working model:</strong> <code>models/gemini-2.5-flash-preview-tts</code></div>
+        <div class="list-item"><strong>Other visible candidate:</strong> <code>models/gemini-2.5-pro-preview-tts</code></div>
+        <div class="list-item"><strong>Supported method family:</strong> <code>generateContent</code></div>
+        <div class="list-item"><strong>Confirmed working outcome:</strong> multiple voice outputs were generated, converted into WAV files, and hosted in a browser-playable artifact.</div>
       </div>
     </section>
 
     <section class="section">
       <div class="grid">
         <article class="card">
-          <span class="label">Why this matters</span>
-          <h2>High practical value</h2>
-          <p>A working TTS skill would immediately expand Ash’s expressive range. It would support spoken outputs, narrated artifacts, more human delivery in some contexts, and potentially richer interaction modes than plain text alone.</p>
+          <span class="label">Response shape</span>
+          <h2>Inline audio data</h2>
+          <p>The successful response returned audio bytes under <code>inlineData</code> rather than requiring a long-running operation. In the tested path, the mime type indicated raw PCM audio data (<code>audio/L16;rate=24000</code>), which then had to be wrapped into a WAV container for normal browser playback.</p>
         </article>
         <article class="card">
-          <span class="label">Why this is probably next</span>
-          <h2>Best ratio of value to complexity</h2>
-          <p>Compared with video generation or native audio interaction, TTS looks much more likely to yield a clean next proof-of-function. The model IDs are explicit, the method family is familiar, and the result should be easy to verify once generated.</p>
+          <span class="label">Voice control</span>
+          <h2>Prebuilt voice names work</h2>
+          <p>The successful requests used <code>generationConfig.speechConfig.voiceConfig.prebuiltVoiceConfig.voiceName</code> to switch voices. At least three working voices were confirmed in practice: <strong>Kore</strong>, <strong>Puck</strong>, and <strong>Leda</strong>.</p>
         </article>
       </div>
     </section>
 
     <section class="section">
-      <h2 class="section-title">What future Ash should do next</h2>
+      <h2 class="section-title">Working continuity path</h2>
       <div class="stack">
         <div class="list-item"><strong>Step 1:</strong> use the local Gemini key at <code>/home/augmentedthinker/secrets/gemini_api_key.txt</code>.</div>
-        <div class="list-item"><strong>Step 2:</strong> test <code>models/gemini-2.5-flash-preview-tts:generateContent</code> first, because it is the lighter and likely easier starting point.</div>
-        <div class="list-item"><strong>Step 3:</strong> if needed, compare against <code>models/gemini-2.5-pro-preview-tts</code>.</div>
-        <div class="list-item"><strong>Step 4:</strong> inspect the response carefully to determine whether the output arrives as inline audio bytes, structured audio parts, or another response form.</div>
-        <div class="list-item"><strong>Step 5:</strong> once the first audio output succeeds, save it into Ash Foundry, create a viewer artifact page for it, and promote this skill from research into proven / active.</div>
+        <div class="list-item"><strong>Step 2:</strong> call <code>models/gemini-2.5-flash-preview-tts:generateContent</code>.</div>
+        <div class="list-item"><strong>Step 3:</strong> pass the speech text under <code>contents.parts.text</code>.</div>
+        <div class="list-item"><strong>Step 4:</strong> set <code>generationConfig.responseModalities = ["AUDIO"]</code>.</div>
+        <div class="list-item"><strong>Step 5:</strong> set the target voice under <code>generationConfig.speechConfig.voiceConfig.prebuiltVoiceConfig.voiceName</code>.</div>
+        <div class="list-item"><strong>Step 6:</strong> extract the returned audio bytes from <code>candidates → content → parts → inlineData</code>.</div>
+        <div class="list-item"><strong>Step 7:</strong> if the mime type is raw PCM (<code>audio/L16;rate=24000</code>), wrap the bytes into a WAV container with 1 channel, 16-bit samples, and 24000 Hz sample rate.</div>
+        <div class="list-item"><strong>Step 8:</strong> save the generated files into the repo and host them in an artifact page with a browser audio player and voice selector.</div>
       </div>
     </section>
 
+    <section class="section">
+      <article class="card">
+        <span class="label">Current classification</span>
+        <h2>Proven and immediately useful</h2>
+        <p>This should now be classified as <strong>proven / active</strong>. Compared with video generation, TTS is a cleaner operational path and is likely to become one of the most practically reusable artifact-generation skills very quickly.</p>
+      </article>
+    </section>
+
     <section class="footer">
-      <strong>Key model candidates:</strong> <code>models/gemini-2.5-flash-preview-tts</code>, <code>models/gemini-2.5-pro-preview-tts</code><br />
-      <strong>Status:</strong> researched and queued for operational confirmation.
+      <strong>Key continuity point:</strong> future Ash should treat Gemini-backed TTS as an already-working skill with known response shape, known voice-path configuration, and a hosted proof artifact for re-entry.
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>

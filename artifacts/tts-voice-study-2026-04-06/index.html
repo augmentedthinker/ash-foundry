@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>TTS Voice Study · 2026-04-06</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a></div>
+      <div class="right"><a href="../skill-text-to-speech-2026-04-06/index.html">TTS Skill</a><a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a><div class="style-switcher"><label for="style-select">Style</label><select id="style-select" data-style-select><option value="ember">Foundry Ember</option><option value="glass">Foundry Glass</option></select></div></div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">Viewer artifact · text-to-speech study</p>
+      <h1>TTS Voice Study</h1>
+      <p class="sub">The first hosted text-to-speech artifact for Ash Foundry. This page demonstrates that Gemini-backed TTS is now working on this machine and lets Christopher switch between multiple generated voices directly in the browser.</p>
+      <div class="pill-row"><span class="pill">First hosted TTS</span><span class="pill">Multiple voices</span><span class="pill">Gemini-backed</span><span class="pill">2026-04-06</span></div>
+    </section>
+
+    <section class="section">
+      <article class="quote">A voice changes the feeling of the system immediately. Text describes a capability. Audio performs one.</article>
+    </section>
+
+    <section class="section">
+      <article class="card">
+        <span class="label">Voice selector</span>
+        <h2>Switch between generated voices</h2>
+        <p>Each sample speaks the same line so the comparison is about the voice itself rather than the wording.</p>
+        <div class="style-switcher" style="margin-top:14px;">
+          <label for="voice-select">Voice</label>
+          <select id="voice-select">
+            <option value="kore">Kore</option>
+            <option value="puck">Puck</option>
+            <option value="leda">Leda</option>
+          </select>
+        </div>
+        <div class="code-card" style="margin-top:16px;">
+          <div class="code-head"><strong>Preview player</strong><span id="voice-caption">Kore</span></div>
+          <div class="code-body">
+            <audio id="voice-player" controls preload="metadata" style="width:100%;">
+              <source src="../../assets/audio/generated-tts-kore-2026-04-06.wav" type="audio/wav" />
+            </audio>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="grid">
+        <article class="card">
+          <span class="label">What was said</span>
+          <h2>Shared test line</h2>
+          <p><em>“Today Ash learned that a capability becomes real when it leaves behind an artifact.”</em></p>
+          <p>The point of the line was to bind the content of the voice test to the larger arc of today’s work: capabilities becoming concrete through files, artifacts, and hosted proof.</p>
+        </article>
+        <article class="card">
+          <span class="label">What this proves</span>
+          <h2>TTS is no longer merely queued</h2>
+          <p>The TTS skill page had previously described text-to-speech as the most likely next capability. That status is now outdated. The path is working, the files exist, and the browser can play them back directly.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="footer">
+      <p><strong>Generated voices in this artifact:</strong> Kore, Puck, Leda.</p>
+      <p><strong>Continuity implication:</strong> Ash now has a working local path for spoken artifact generation, not just text and image output.</p>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+  <script>
+    (function () {
+      const files = {
+        kore: '../../assets/audio/generated-tts-kore-2026-04-06.wav',
+        puck: '../../assets/audio/generated-tts-puck-2026-04-06.wav',
+        leda: '../../assets/audio/generated-tts-leda-2026-04-06.wav'
+      };
+      const select = document.getElementById('voice-select');
+      const player = document.getElementById('voice-player');
+      const caption = document.getElementById('voice-caption');
+      if (!select || !player) return;
+      select.addEventListener('change', () => {
+        const key = select.value;
+        const next = files[key];
+        if (!next) return;
+        player.pause();
+        player.setAttribute('src', next);
+        player.load();
+        if (caption) caption.textContent = select.options[select.selectedIndex].text;
+      });
+    })();
+  </script>
+</body>
+</html>
