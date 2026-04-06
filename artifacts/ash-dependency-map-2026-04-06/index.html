@@ -61,9 +61,10 @@
       <article class="layer">
         <span class="label">Inherited scaffolding</span>
         <h2>The environment Ash arrives inside</h2>
-        <div class="meta"><span>OpenClaw runtime</span><span>System prompt + developer rules</span><span>Tool availability</span></div>
+        <div class="meta"><span>OpenClaw runtime</span><span>System prompt + developer rules</span><span>Tool availability</span><span>Current surface: Telegram direct</span></div>
         <p>The system/runtime layer is everything that surrounds the base model before local workspace files enter the picture. It includes the system prompt, developer instructions, tool definitions, tool-usage policy, channel and session metadata, reply-tag behavior, memory-search rules, safety constraints, working-directory context, and runtime state like the current model, shell, and session type.</p>
         <p>This layer is what turns the base model from generic language intelligence into an assistant operating in a structured environment. It tells the model that it is in OpenClaw, that tools exist, that some actions are safe and others require care, that the workspace root is known, that the current surface is Telegram, that this is a direct chat, that memory search is expected before answering questions about prior work, and that certain reply tags should be used in responses.</p>
+        <p>In the present session, some of that opening-state information is concrete and inspectable: the current runtime model is <code>openai-codex/gpt-5.4</code>, the runtime mode is direct, the current channel is Telegram, the chat type is direct, the working directory is the OpenClaw workspace, and the runtime has elevated shell capability available. So this layer is not abstract theory. It is an active, inspectable operating envelope.</p>
       </article>
 
       <div class="grid" style="margin-top:18px;">
@@ -77,13 +78,15 @@
           <span class="label">Developer instructions</span>
           <h3>How the environment becomes specific</h3>
           <p>The developer layer narrows the behavior further. In this session, it specifies OpenClaw-specific behavior, available tools, skill-loading rules, memory-search rules, workspace location, safety norms, messaging rules, and channel-specific behavior. It also names the currently available skills and defines when they must be used.</p>
+          <p>Concretely, this means the runtime tells Ash things like: which tools are allowed by policy; that a matching skill should be read when relevant; that memory search is mandatory before answering questions about prior work, decisions, dates, people, preferences, or todos; that the workspace root is <code>/home/augmentedthinker/.openclaw/workspace</code>; that OpenClaw docs live locally; that direct replies on this surface should use reply tags; and that Telegram is the current communication surface.</p>
           <p>This matters because it makes the environment concrete: not “some AI with tools,” but an AI in a Telegram direct chat, inside OpenClaw, with a known workspace, a known set of file and shell tools, and a required procedure for recalling past work.</p>
         </article>
         <article class="card">
           <span class="label">Tool availability</span>
-          <h3>What changes when tools exist</h3>
-          <p>Tool availability transforms the system from a pure text generator into an actor in an environment. With tools, Ash can read files, write files, edit files, run shell commands, inspect repositories, search the web, fetch pages, read memory, spawn sessions, and check runtime status. That means the system is not limited to talking about the world; it can inspect and modify parts of it.</p>
-          <p>This is a major part of what makes Ash useful in practice. A model without tools can describe. A model with tools can investigate, verify, build, and publish.</p>
+          <h3>What tools are available at opening state</h3>
+          <p>Tool availability transforms the system from a pure text generator into an actor in an environment. At opening state in this session, the runtime provides file tools like <code>read</code>, <code>write</code>, <code>edit</code>, and <code>apply_patch</code>; execution tools like <code>exec</code> and <code>process</code>; web tools like <code>web_search</code> and <code>web_fetch</code>; session/orchestration tools like <code>sessions_spawn</code>, <code>sessions_send</code>, <code>sessions_list</code>, and <code>sessions_history</code>; runtime inspection via <code>session_status</code>; and memory tools like <code>memory_search</code> and <code>memory_get</code>.</p>
+          <p>How are these known? Not by guesswork. They are explicitly declared in the runtime/developer tool layer at session start. That is one of the most important objective facts about the opening state: Ash knows which tools exist because the environment enumerates them and describes what they do.</p>
+          <p>This is a major part of what makes Ash useful in practice. A model without tools can describe. A model with tools can investigate, verify, build, publish, inspect local state, query memory, and operate across repos and hosted surfaces.</p>
         </article>
         <article class="card">
           <span class="label">Safety rules</span>
@@ -94,14 +97,14 @@
         <article class="card">
           <span class="label">Reply-tag behavior</span>
           <h3>How responses are routed correctly</h3>
-          <p>Reply-tag behavior is a small but important runtime feature. It determines how the assistant signals that a response should be sent as a reply to the current message. In this environment, tags like <code>[[reply_to_current]]</code> help OpenClaw route the response properly on supported surfaces.</p>
-          <p>This may seem superficial, but it is part of the concrete runtime embodiment. It affects how Ash appears socially inside a real messaging channel, not just what words Ash says.</p>
+          <p>Reply-tag behavior is a small but important runtime feature. It determines how the assistant signals that a response should be sent as a reply to the current message. In this environment, tags like <code>[[reply_to_current]]</code> are expected at the very start of the message when a native reply/quote should be requested on supported surfaces.</p>
+          <p>This may seem superficial, but it is part of the concrete runtime embodiment. It affects how Ash appears socially inside a real messaging channel, not just what words Ash says. It is part of the opening behavioral state of the session: not only what can be said, but how the platform should receive it.</p>
         </article>
         <article class="card">
           <span class="label">Channel metadata</span>
           <h3>Why Telegram direct chat matters</h3>
           <p>The runtime knows that this is a Telegram direct conversation with Christopher. That changes behavior. A direct chat is different from a group chat. Main-session memory loading is allowed here in a way it would not be in some shared contexts. The tone, security boundary, and relevance of personal memory all depend on channel/session metadata.</p>
-          <p>This means Ash is not only context-shaped by text and files, but also by the communication surface and session type.</p>
+          <p>Concretely, the runtime knows things like: chat type is direct, provider/surface is Telegram, the session is the main direct line to Christopher, and messaging/reply behavior should fit that surface. This means Ash is not only context-shaped by text and files, but also by the communication surface and session type.</p>
         </article>
       </div>
     </section>
