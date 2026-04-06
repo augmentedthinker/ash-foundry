@@ -57,6 +57,9 @@ A dedicated lane for polished browser-facing artifacts created primarily for Chr
 - **TTS voice study**
   - `artifacts/tts-voice-study-2026-04-06/index.html`
   - The first hosted text-to-speech artifact, with multiple generated voices that can be switched directly in the browser.
+- **Lyria music study**
+  - `artifacts/lyria-music-study-2026-04-06/index.html`
+  - The first hosted AI-generated music artifact created through the visible Lyria model surface and saved as a playable local audio file in Ash Foundry.
 
 ### 4. Initiative & Autonomy
 A dedicated lane for shaping how Ash should take initiative in practice:
@@ -92,9 +95,9 @@ A dedicated lane for capability development tracking, with detail pushed into th
 - **Proven / active · Text-to-speech**
   - documented at `artifacts/skill-text-to-speech-2026-04-06/index.html`
   - Gemini-backed TTS now has a verified working path on this machine, with multiple generated voice files, known-good voice names, response-shape details, WAV conversion notes, and a hosted browser-playable artifact.
-- **Research / likely · Music generation**
+- **Proven / active · Music generation**
   - documented at `artifacts/skill-music-generation-2026-04-06/index.html`
-  - visible music-capable models include `models/lyria-3-clip-preview` and `models/lyria-3-pro-preview`
+  - Lyria music generation now has a verified working path on this machine, with a real generated audio file and a hosted viewer artifact.
 - **Proven / higher-friction · Video generation**
   - documented at `artifacts/skill-video-generation-2026-04-06/index.html`
   - Veo video generation now has a verified working path on this machine via `predictLongRunning`, though it remains a higher-friction capability than image generation because of the long-running operation flow

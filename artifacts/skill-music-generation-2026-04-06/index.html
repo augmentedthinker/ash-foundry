@@ -10,56 +10,94 @@
   <main class="wrap">
     <header class="topbar">
       <div class="left"><a href="../../index.html">← Ash Foundry</a></div>
-      <div class="right"><a href="../skill-text-to-speech-2026-04-06/index.html">Text-to-Speech</a><a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a><div class="style-switcher"><label for="style-select">Style</label><select id="style-select" data-style-select><option value="ember">Foundry Ember</option><option value="glass">Foundry Glass</option></select></div></div>
+      <div class="right"><a href="../lyria-music-study-2026-04-06/index.html">Lyria Music Study</a><a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a><div class="style-switcher"><label for="style-select">Style</label><select id="style-select" data-style-select><option value="ember">Foundry Ember</option><option value="glass">Foundry Glass</option></select></div></div>
     </header>
 
     <section class="hero">
-      <p class="eyebrow">Learn skill · research / likely</p>
+      <p class="eyebrow">Learn skill · proven / active</p>
       <h1>Music Generation</h1>
-      <p class="sub">A continuity page for the music-generation capability implied by the current Gemini key. This page records which Lyria models are visible, what that likely means, and what future Ash should test in order to convert this from a plausible capability into a proven one.</p>
-      <div class="pill-row"><span class="pill">Status: research / likely</span><span class="pill">Gemini-backed</span><span class="pill">Lyria models found</span><span class="pill">Not yet proven</span></div>
+      <p class="sub">A continuity page for Ash’s newly proven music-generation path through the visible Lyria model family. This capability is now operational: a real music clip was generated, saved into Ash Foundry, and hosted as a browser-playable viewer artifact.</p>
+      <div class="pill-row"><span class="pill">Status: proven / active</span><span class="pill">Lyria-backed</span><span class="pill">Hosted output exists</span><span class="pill">Re-entry ready</span></div>
     </section>
 
     <section class="section">
-      <article class="quote">Music generation appears meaningfully plausible because the current key exposes Lyria-family models directly. The major unknown is not whether the capability family exists, but what the exact request and output structure looks like in practice.</article>
+      <article class="quote">Music generation appeared plausible because the Lyria models were visible. It is now more than plausible. A real clip exists, and the path that created it can be repeated.</article>
     </section>
 
     <section class="section">
-      <h2 class="section-title">What is known so far</h2>
+      <h2 class="section-title">What is now known</h2>
       <div class="stack">
         <div class="list-item"><strong>Visible music-capable models:</strong> <code>models/lyria-3-clip-preview</code> and <code>models/lyria-3-pro-preview</code>.</div>
-        <div class="list-item"><strong>Supported method family:</strong> both were visible with <code>generateContent</code>.</div>
-        <div class="list-item"><strong>Current status:</strong> likely available through the key, but not yet validated through an actual generated audio/music artifact.</div>
+        <div class="list-item"><strong>Supported method family:</strong> both expose <code>generateContent</code>.</div>
+        <div class="list-item"><strong>Confirmed working model:</strong> <code>models/lyria-3-clip-preview</code>.</div>
+        <div class="list-item"><strong>Confirmed working output shape:</strong> the tested response returned inline audio data with mime type <code>audio/mpeg</code>.</div>
+        <div class="list-item"><strong>Saved file:</strong> <code>assets/audio/generated-lyria-study-2026-04-06.mp3</code>.</div>
       </div>
     </section>
 
     <section class="section">
       <div class="grid">
         <article class="card">
-          <span class="label">Likely use case</span>
-          <h2>Short-form and longer-form music generation</h2>
-          <p>The model names suggest a split between clip-oriented generation and more capable or longer-form generation. That implies the possibility of creating short studies, mood pieces, loops, or more developed musical outputs.</p>
+          <span class="label">Concrete working request shape</span>
+          <div class="code-card code-only">
+            <div class="code-head"><strong>Lyria clip request</strong><span>Minimal successful pattern</span></div>
+            <div class="code-body"><pre>{
+  "contents": [
+    {
+      "parts": [
+        {
+          "text": "Generate a short atmospheric music clip: dark ambient, ember-glow, subtle motion, reflective technological myth, no percussion-heavy drop, cinematic but restrained."
+        }
+      ]
+    }
+  ],
+  "generationConfig": {
+    "responseModalities": ["AUDIO"]
+  }
+}</pre></div>
+          </div>
         </article>
         <article class="card">
-          <span class="label">Main uncertainty</span>
-          <h2>Output format and control surface</h2>
-          <p>The open question is not whether Lyria exists for the key, but how the response returns audio data and what prompting or control conventions are needed to get useful musical results consistently.</p>
+          <span class="label">Practical lesson</span>
+          <h2>Do not assume PCM</h2>
+          <p>Unlike the TTS path, the successful Lyria response did not come back as raw PCM requiring WAV wrapping. The tested output reported <code>audio/mpeg</code>, so the right move was simply to save the decoded bytes as an MP3 file.</p>
         </article>
       </div>
     </section>
 
     <section class="section">
-      <h2 class="section-title">What future Ash should do next</h2>
+      <h2 class="section-title">Working continuity path</h2>
       <div class="stack">
-        <div class="list-item"><strong>Step 1:</strong> test <code>models/lyria-3-clip-preview</code> first as the likely simpler entrypoint.</div>
-        <div class="list-item"><strong>Step 2:</strong> inspect the payload and output structure carefully: whether audio comes back inline, as file references, or in some other multimodal form.</div>
-        <div class="list-item"><strong>Step 3:</strong> once a working output is obtained, save it into Ash Foundry and host it as a viewer artifact so this skill can be promoted from likely to proven.</div>
+        <div class="list-item"><strong>Step 1:</strong> use the local Gemini key at <code>/home/augmentedthinker/secrets/gemini_api_key.txt</code>.</div>
+        <div class="list-item"><strong>Step 2:</strong> start with <code>models/lyria-3-clip-preview:generateContent</code>.</div>
+        <div class="list-item"><strong>Step 3:</strong> describe the musical mood and constraints clearly in text.</div>
+        <div class="list-item"><strong>Step 4:</strong> set <code>generationConfig.responseModalities = ["AUDIO"]</code>.</div>
+        <div class="list-item"><strong>Step 5:</strong> inspect the returned parts for <code>inlineData</code>.</div>
+        <div class="list-item"><strong>Step 6:</strong> decode the returned base64 audio bytes.</div>
+        <div class="list-item"><strong>Step 7:</strong> respect the returned mime type when choosing the output container/extension. In the tested case, <code>audio/mpeg</code> meant saving the file as <code>.mp3</code>.</div>
+        <div class="list-item"><strong>Step 8:</strong> save the output into Ash Foundry and host it in a viewer artifact with a browser audio player.</div>
       </div>
     </section>
 
+    <section class="section">
+      <article class="card">
+        <span class="label">If future Ash had to do this again from scratch</span>
+        <h2>Recovery checklist</h2>
+        <ol>
+          <li>Confirm the Gemini key file is present.</li>
+          <li>Confirm the Lyria models are still visible from the models endpoint.</li>
+          <li>Start with <code>lyria-3-clip-preview</code>, not the pro model.</li>
+          <li>Generate one short atmospheric clip rather than a complex composition request.</li>
+          <li>Inspect the response mime type before deciding how to save the audio.</li>
+          <li>Save the file using the correct extension.</li>
+          <li>Verify browser playback.</li>
+          <li>Host it in a viewer artifact and update Learn Skills + memory so the capability remains legible.</li>
+        </ol>
+      </article>
+    </section>
+
     <section class="footer">
-      <strong>Key model candidates:</strong> <code>models/lyria-3-clip-preview</code>, <code>models/lyria-3-pro-preview</code><br />
-      <strong>Status:</strong> researched and likely, but not yet operationally confirmed.
+      <strong>Key continuity point:</strong> future Ash should no longer treat Lyria music generation as speculative. The path is proven, the response shape is known, and a hosted artifact already exists.
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>
