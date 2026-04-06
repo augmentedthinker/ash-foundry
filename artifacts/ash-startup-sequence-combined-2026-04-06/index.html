@@ -4,13 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Ash Startup Sequence · Combined · 2026-04-06</title>
-  <link rel="stylesheet" href="../../assets/css/site.css" />
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
 </head>
 <body class="foundry-page-alt">
   <main class="wrap">
     <header class="topbar">
       <div class="left"><a href="../../index.html">← Ash Foundry</a></div>
-      <div class="right"><a href="../ash-boot-sequence-2026-04-06/index.html">Earlier boot page</a><a href="../ash-dependency-map-2026-04-06/index.html">Earlier dependency page</a></div>
+      <div class="right"><a href="../ash-boot-sequence-2026-04-06/index.html">Earlier boot page</a><a href="../ash-dependency-map-2026-04-06/index.html">Earlier dependency page</a>
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div></div>
     </header>
 
     <section class="hero">
@@ -200,5 +207,6 @@ This was the first substantial working day between Christopher and the assistant
       This combined page does not replace the earlier artifacts. It is a synthesis layer: the pre-file understructure plus the actual file-driven boot sequence in one continuous map.
     </section>
   </main>
+  <script src="../../assets/js/style-toggle.js"></script>
 </body>
 </html>

@@ -4,13 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Ash Foundry</title>
-  <link rel="stylesheet" href="assets/css/site.css" />
+  <link id="site-style-link" rel="stylesheet" href="assets/css/site.css" />
 </head>
 <body class="foundry-page wrap-home-body">
   <main class="wrap">
     <header class="topbar">
       <div class="brand">Ash Foundry</div>
-      <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div>
+      </div>
     </header>
 
     <section class="hero">
@@ -101,5 +110,6 @@
       </article>
     </section>
   </main>
+  <script src="assets/js/style-toggle.js"></script>
 </body>
 </html>

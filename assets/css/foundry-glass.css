@@ -29,6 +29,11 @@
 body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text)}
 a{color:inherit}
 
+.style-switcher{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.style-switcher label{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.style-switcher select{appearance:none;-webkit-appearance:none;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.58);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:var(--text);font:inherit;font-size:.95rem;min-width:150px;cursor:pointer}
+.style-switcher select:focus{outline:2px solid rgba(91,124,250,.28);outline-offset:2px}
+
 body.foundry-page{
   background:
     radial-gradient(circle at 12% 10%, rgba(91,124,250,.10), transparent 26%),
@@ -122,4 +127,4 @@ summary::-webkit-details-marker{display:none}
 .topbar-tight{margin-bottom:18px}
 
 @media (max-width: 980px){.hero-grid,.grid{grid-template-columns:1fr}.step{grid-template-columns:1fr}.step-num{width:56px;height:56px}}
-@media (max-width: 900px){.hero-grid,.grid{grid-template-columns:1fr}}
+@media (max-width: 900px){.hero-grid,.grid{grid-template-columns:1fr}.style-switcher{width:100%}.style-switcher select{width:100%}}

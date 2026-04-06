@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Foundry Glass · 2026-04-06</title>
-  <link rel="stylesheet" href="../../assets/css/foundry-glass.css" />
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
 </head>
 <body class="foundry-page">
   <main class="wrap">
     <header class="topbar">
       <div class="left"><a href="../../index.html">← Ash Foundry</a></div>
-      <div class="right"><a href="../../assets/css/site.css">Active site.css</a><a href="../../assets/css/foundry-glass.css">Foundry Glass CSS</a><a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a></div>
+      <div class="right"><a href="../../assets/css/site.css">Active site.css</a><a href="../../assets/css/foundry-glass.css">Foundry Glass CSS</a><a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a><div class="style-switcher"><label for="style-select">Style</label><select id="style-select" data-style-select><option value="ember">Foundry Ember</option><option value="glass">Foundry Glass</option></select></div></div>
     </header>
 
     <section class="hero">
@@ -58,5 +58,6 @@
       <strong>Status:</strong> alternate style option for visual comparison.
     </section>
   </main>
+  <script src="../../assets/js/style-toggle.js"></script>
 </body>
 </html>

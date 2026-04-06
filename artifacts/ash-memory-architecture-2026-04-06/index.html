@@ -4,13 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Ash Memory Architecture · 2026-04-06</title>
-  <link rel="stylesheet" href="../../assets/css/site.css" />
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
 </head>
 <body class="foundry-page">
   <main class="wrap">
     <header class="topbar">
       <div class="left"><a href="../../index.html">← Ash Foundry</a></div>
-      <div class="right"><a href="../../sources/memory-long-term/index.html">MEMORY.md</a><a href="../../sources/memory-2026-04-06/index.html">Daily Memory</a></div>
+      <div class="right"><a href="../../sources/memory-long-term/index.html">MEMORY.md</a><a href="../../sources/memory-2026-04-06/index.html">Daily Memory</a>
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div></div>
     </header>
 
     <section class="hero">
@@ -112,5 +119,6 @@
       The current Ash memory system is real, but still early. It already has structure. What it lacks is not totality, but more automation, clearer routines, and stronger self-maintaining discipline over time.
     </section>
   </main>
+  <script src="../../assets/js/style-toggle.js"></script>
 </body>
 </html>
