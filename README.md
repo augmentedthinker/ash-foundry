@@ -66,6 +66,9 @@ A dedicated lane for Ash Foundry’s shared visual language and alternate style 
 - **Foundry Glass**
   - `artifacts/page-style-foundry-glass-2026-04-06/index.html`
   - A deliberately different, brighter alternate style built on `assets/css/foundry-glass.css` for live visual comparison.
+- **Foundry Pocket**
+  - `artifacts/page-style-foundry-pocket-2026-04-06/index.html`
+  - A portrait-first, phone-friendly alternate style built for narrower browsing and cleaner mobile reading rhythm.
 
 ### 6. Learn Skills
 A dedicated lane for capability development tracking, with detail pushed into the individual skill pages themselves:
@@ -127,14 +130,15 @@ The current stylesheet hierarchy is:
 At the moment, `site.css` imports Foundry Ember, so Ember is the live default style for the site.
 
 A live browser toggle now exists across the main styled pages of Ash Foundry:
-- visitors can switch between **Foundry Ember** and **Foundry Glass** in-page
-- the choice is stored in the browser with `localStorage`
+- visitors can switch between **Foundry Ember**, **Foundry Glass**, and **Foundry Pocket** in-page
+- visitors can also switch between **Auto** and **Portrait** view modes to simulate a narrower reading environment when desired
+- the choices are stored in the browser with `localStorage`
 - this means the active viewing style can change without editing the repo itself
 
 This creates a useful distinction:
 - **`site.css`** = the canonical default style entrypoint for the site
-- **the style toggle** = the viewer-side override mechanism
-- **Foundry Ember / Foundry Glass** = named style implementations beneath that layer
+- **the style/view controls** = the viewer-side override mechanism
+- **Foundry Ember / Foundry Glass / Foundry Pocket** = named style implementations beneath that layer
 
 ## Implementation note for future pages
 

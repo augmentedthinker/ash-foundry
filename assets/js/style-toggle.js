@@ -1,26 +1,37 @@
 (function () {
-  const STORAGE_KEY = 'ash-foundry-style';
+  const STYLE_STORAGE_KEY = 'ash-foundry-style';
+  const VIEW_STORAGE_KEY = 'ash-foundry-view-mode';
   const DEFAULT_STYLE = 'ember';
+  const DEFAULT_VIEW_MODE = 'auto';
   const STYLES = {
     ember: '/ash-foundry/assets/css/foundry-ember.css',
     glass: '/ash-foundry/assets/css/foundry-glass.css',
+    pocket: '/ash-foundry/assets/css/foundry-pocket.css',
+  };
+  const VIEW_MODES = {
+    auto: 'auto',
+    portrait: 'portrait',
   };
 
   function normalizeStyle(value) {
     return Object.prototype.hasOwnProperty.call(STYLES, value) ? value : DEFAULT_STYLE;
   }
 
-  function getCurrentStyle() {
+  function normalizeViewMode(value) {
+    return Object.prototype.hasOwnProperty.call(VIEW_MODES, value) ? value : DEFAULT_VIEW_MODE;
+  }
+
+  function getStoredValue(key, fallback, normalizer) {
     try {
-      return normalizeStyle(localStorage.getItem(STORAGE_KEY) || DEFAULT_STYLE);
+      return normalizer(localStorage.getItem(key) || fallback);
     } catch {
-      return DEFAULT_STYLE;
+      return fallback;
     }
   }
 
-  function setStoredStyle(style) {
+  function setStoredValue(key, value, normalizer) {
     try {
-      localStorage.setItem(STORAGE_KEY, normalizeStyle(style));
+      localStorage.setItem(key, normalizer(value));
     } catch {}
   }
 
@@ -35,18 +46,35 @@
     });
   }
 
+  function applyViewMode(mode) {
+    const normalized = normalizeViewMode(mode);
+    document.documentElement.setAttribute('data-view-mode', normalized);
+    document.querySelectorAll('[data-view-select]').forEach((el) => {
+      if ('value' in el) el.value = normalized;
+    });
+  }
+
   function bindControls() {
     document.querySelectorAll('[data-style-select]').forEach((control) => {
       control.addEventListener('change', (event) => {
         const next = normalizeStyle(event.target.value);
-        setStoredStyle(next);
+        setStoredValue(STYLE_STORAGE_KEY, next, normalizeStyle);
         applyStyle(next);
+      });
+    });
+
+    document.querySelectorAll('[data-view-select]').forEach((control) => {
+      control.addEventListener('change', (event) => {
+        const next = normalizeViewMode(event.target.value);
+        setStoredValue(VIEW_STORAGE_KEY, next, normalizeViewMode);
+        applyViewMode(next);
       });
     });
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    applyStyle(getCurrentStyle());
+    applyStyle(getStoredValue(STYLE_STORAGE_KEY, DEFAULT_STYLE, normalizeStyle));
+    applyViewMode(getStoredValue(VIEW_STORAGE_KEY, DEFAULT_VIEW_MODE, normalizeViewMode));
     bindControls();
   });
 })();
