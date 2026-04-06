@@ -63,6 +63,9 @@ A dedicated lane for artifacts and formatting choices intended specifically for 
 - **Mobile & remote viewing page**
   - `artifacts/mobile-remote-viewing-2026-04-06/index.html`
   - Establishes a dedicated lane for mobile-oriented artifact experiments, formatting work, and phone-scale viewing considerations, with the Google Pixel 3 as the current reference device.
+- **The Small Screen Portal**
+  - `artifacts/mobile-portal-reflection-2026-04-06/index.html`
+  - A first real mobile artifact: a phone-oriented reflection on today’s work with a vertical AI-generated image and a short parable shaped for handheld reading.
 
 ### 6. Page Styles
 A dedicated lane for Ash Foundry’s shared visual language and alternate style directions:
