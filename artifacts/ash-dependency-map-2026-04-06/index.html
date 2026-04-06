@@ -14,7 +14,7 @@
     .section{margin-top:24px}.section-title{margin:0 0 14px;font-size:1.38rem;letter-spacing:-.02em}.layers,.stack{display:grid;gap:16px}.layer,.card{padding:22px;background:rgba(23,28,37,.88)}.layer{background:var(--panel-soft)}
     .label{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;background:var(--accent-soft);border:1px solid rgba(217,155,73,.18);color:#efca90;font-size:.74rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
     .meta{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 12px}.meta span{display:inline-flex;align-items:center;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--line);font-size:.8rem;color:#d8d0c4}
-    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.quote{padding:20px 22px;border-radius:22px;background:linear-gradient(180deg, rgba(140,199,255,.08), rgba(255,255,255,.02));border:1px solid rgba(140,199,255,.14);font-size:1.04rem;line-height:1.9;color:#ebe4d8}.footer{margin-top:24px;padding:24px;border:1px solid var(--line);border-radius:24px;background:rgba(23,28,37,.84);color:var(--muted);line-height:1.86}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.tool-list{display:grid;gap:12px;margin-top:14px}.tool-item{padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid var(--line)}.tool-item strong{color:#f3d19f}.quote{padding:20px 22px;border-radius:22px;background:linear-gradient(180deg, rgba(140,199,255,.08), rgba(255,255,255,.02));border:1px solid rgba(140,199,255,.14);font-size:1.04rem;line-height:1.9;color:#ebe4d8}.footer{margin-top:24px;padding:24px;border:1px solid var(--line);border-radius:24px;background:rgba(23,28,37,.84);color:var(--muted);line-height:1.86}
     @media (max-width: 980px){.hero,.grid{grid-template-columns:1fr}}
   </style>
 </head>
@@ -84,8 +84,26 @@
         <article class="card">
           <span class="label">Tool availability</span>
           <h3>What tools are available at opening state</h3>
-          <p>Tool availability transforms the system from a pure text generator into an actor in an environment. At opening state in this session, the runtime provides file tools like <code>read</code>, <code>write</code>, <code>edit</code>, and <code>apply_patch</code>; execution tools like <code>exec</code> and <code>process</code>; web tools like <code>web_search</code> and <code>web_fetch</code>; session/orchestration tools like <code>sessions_spawn</code>, <code>sessions_send</code>, <code>sessions_list</code>, and <code>sessions_history</code>; runtime inspection via <code>session_status</code>; and memory tools like <code>memory_search</code> and <code>memory_get</code>.</p>
-          <p>How are these known? Not by guesswork. They are explicitly declared in the runtime/developer tool layer at session start. That is one of the most important objective facts about the opening state: Ash knows which tools exist because the environment enumerates them and describes what they do.</p>
+          <p>Tool availability transforms the system from a pure text generator into an actor in an environment. How are these known? Not by guesswork. They are explicitly declared in the runtime/developer tool layer at session start. That is one of the most important objective facts about the opening state: Ash knows which tools exist because the environment enumerates them and describes what they do.</p>
+          <div class="tool-list">
+            <div class="tool-item"><strong>read</strong> — read file contents from the local filesystem.</div>
+            <div class="tool-item"><strong>write</strong> — create or overwrite files.</div>
+            <div class="tool-item"><strong>edit</strong> — make precise targeted replacements inside existing files.</div>
+            <div class="tool-item"><strong>apply_patch</strong> — apply multi-file patches in patch format.</div>
+            <div class="tool-item"><strong>exec</strong> — run shell commands, including longer-running commands with background continuation.</div>
+            <div class="tool-item"><strong>process</strong> — manage running shell processes: poll, inspect logs, write input, kill, and so on.</div>
+            <div class="tool-item"><strong>web_search</strong> — search the web with grounded results.</div>
+            <div class="tool-item"><strong>web_fetch</strong> — fetch and extract readable content from a URL.</div>
+            <div class="tool-item"><strong>sessions_list</strong> — list other sessions, including sub-agents, with filters and recent messages.</div>
+            <div class="tool-item"><strong>sessions_history</strong> — fetch message history for another session.</div>
+            <div class="tool-item"><strong>sessions_send</strong> — send a message into another session.</div>
+            <div class="tool-item"><strong>subagents</strong> — list, steer, or kill sub-agent runs for the current requester session.</div>
+            <div class="tool-item"><strong>session_status</strong> — inspect current session/runtime status, including model and usage details.</div>
+            <div class="tool-item"><strong>memory_search</strong> — semantically search MEMORY.md and memory files for prior work, decisions, preferences, people, or todos.</div>
+            <div class="tool-item"><strong>memory_get</strong> — retrieve a safe snippet from memory files after locating it.</div>
+            <div class="tool-item"><strong>sessions_spawn</strong> — spawn isolated sub-agents or ACP sessions for delegated work.</div>
+            <div class="tool-item"><strong>sessions_yield</strong> — end the current turn when waiting for spawned work or resumable flow.</div>
+          </div>
           <p>This is a major part of what makes Ash useful in practice. A model without tools can describe. A model with tools can investigate, verify, build, publish, inspect local state, query memory, and operate across repos and hosted surfaces.</p>
         </article>
         <article class="card">
