@@ -57,12 +57,13 @@ A dedicated lane for Ash Foundry’s shared visual language and alternate style 
 
 ## Purpose
 
-Ash Foundry currently serves four main jobs:
+Ash Foundry currently serves five main jobs:
 
 - explain what Ash is built on before local identity files are loaded
 - explain how the local files reconstruct Ash into a situated session-self
 - expose the actual constituting source files in hosted browser-readable form
 - expose the current memory architecture and memory mirrors in a legible way
+- provide a browser-facing surface for reflective artifacts and style experimentation
 
 ## Design principle
 
@@ -91,7 +92,27 @@ The current stylesheet hierarchy is:
 - **Foundry Ember** → `assets/css/foundry-ember.css`
 - **Foundry Glass** → `assets/css/foundry-glass.css`
 
-At the moment, `site.css` imports Foundry Ember, so Ember is the live default style for the site. Foundry Glass exists as an alternate named style option that can be inspected independently or swapped in later.
+At the moment, `site.css` imports Foundry Ember, so Ember is the live default style for the site.
+
+A live browser toggle now exists across the main styled pages of Ash Foundry:
+- visitors can switch between **Foundry Ember** and **Foundry Glass** in-page
+- the choice is stored in the browser with `localStorage`
+- this means the active viewing style can change without editing the repo itself
+
+This creates a useful distinction:
+- **`site.css`** = the canonical default style entrypoint for the site
+- **the style toggle** = the viewer-side override mechanism
+- **Foundry Ember / Foundry Glass** = named style implementations beneath that layer
+
+## Implementation note for future pages
+
+New Ash Foundry pages should, by default:
+- use the shared stylesheet architecture
+- point at `assets/css/site.css` rather than a named style file directly
+- remain compatible with the site-wide style toggle
+- avoid page-local CSS unless there is a strong reason not to
+
+This keeps the repo visually consistent and preserves the ability to make site-wide style changes with minimal friction.
 
 ## Live site
 
