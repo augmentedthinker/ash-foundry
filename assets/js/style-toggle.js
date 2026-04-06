@@ -3,10 +3,10 @@
   const VIEW_STORAGE_KEY = 'ash-foundry-view-mode';
   const DEFAULT_STYLE = 'ember';
   const DEFAULT_VIEW_MODE = 'auto';
-  const STYLES = {
-    ember: '/ash-foundry/assets/css/foundry-ember.css',
-    glass: '/ash-foundry/assets/css/foundry-glass.css',
-    pocket: '/ash-foundry/assets/css/foundry-pocket.css',
+  const STYLE_PATHS = {
+    ember: 'assets/css/foundry-ember.css',
+    glass: 'assets/css/foundry-glass.css',
+    pocket: 'assets/css/foundry-pocket.css',
   };
   const VIEW_MODES = {
     auto: 'auto',
@@ -14,7 +14,7 @@
   };
 
   function normalizeStyle(value) {
-    return Object.prototype.hasOwnProperty.call(STYLES, value) ? value : DEFAULT_STYLE;
+    return Object.prototype.hasOwnProperty.call(STYLE_PATHS, value) ? value : DEFAULT_STYLE;
   }
 
   function normalizeViewMode(value) {
@@ -35,11 +35,17 @@
     } catch {}
   }
 
+  function resolveStyleHref(style) {
+    const normalized = normalizeStyle(style);
+    const relativePath = STYLE_PATHS[normalized];
+    return new URL(relativePath, document.baseURI).href;
+  }
+
   function applyStyle(style) {
     const normalized = normalizeStyle(style);
     const link = document.getElementById('site-style-link');
     if (!link) return;
-    link.setAttribute('href', STYLES[normalized]);
+    link.setAttribute('href', resolveStyleHref(normalized));
     document.documentElement.setAttribute('data-style', normalized);
     document.querySelectorAll('[data-style-select]').forEach((el) => {
       if ('value' in el) el.value = normalized;
