@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Foundry Ember · 2026-04-06</title>
-  <link rel="stylesheet" href="../../assets/css/foundry-ember.css" />
+  <link rel="stylesheet" href="../../assets/css/site.css" />
 </head>
 <body class="foundry-page">
   <main class="wrap">
     <header class="topbar">
       <div class="left"><a href="../../index.html">← Ash Foundry</a></div>
-      <div class="right"><a href="../../assets/css/foundry-ember.css">Shared CSS</a><a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a></div>
+      <div class="right"><a href="../../assets/css/site.css">Active site.css</a><a href="../../assets/css/foundry-ember.css">Foundry Ember CSS</a><a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a></div>
     </header>
 
     <section class="hero">
@@ -45,10 +45,10 @@
     <section class="section">
       <h2 class="section-title">What changed in this refactor</h2>
       <div class="stack">
-        <div class="list-item"><strong>Shared stylesheet created:</strong> the common visual language now lives in <code>assets/css/foundry-ember.css</code>.</div>
-        <div class="list-item"><strong>Pages now pull from the shared style:</strong> the site’s HTML files were refactored to link to the shared CSS instead of embedding isolated page-level style blocks.</div>
+        <div class="list-item"><strong>Neutral entrypoint created:</strong> the live site now points to <code>assets/css/site.css</code> as its canonical stylesheet.</div>
+        <div class="list-item"><strong>Foundry Ember remains the named implementation:</strong> <code>site.css</code> currently imports <code>foundry-ember.css</code> as the active default style.</div>
         <div class="list-item"><strong>Universal updates are now easier:</strong> core visual changes can now be made once and reflected across the repo instead of repeated page by page.</div>
-        <div class="list-item"><strong>The style is now a named object:</strong> this gives the repo a clear initial design baseline that can later be revised, versioned, or replaced intentionally.</div>
+        <div class="list-item"><strong>The architecture is cleaner:</strong> the site default and the named style options are now separate concepts, which makes future swaps much easier.</div>
       </div>
     </section>
 
@@ -62,8 +62,9 @@
     </section>
 
     <section class="footer">
-      <strong>Style file:</strong> <code>assets/css/foundry-ember.css</code><br />
-      <strong>Status:</strong> active initial style baseline for Ash Foundry.
+      <strong>Active entrypoint:</strong> <code>assets/css/site.css</code><br />
+      <strong>Current implementation behind it:</strong> <code>assets/css/foundry-ember.css</code><br />
+      <strong>Status:</strong> active default style baseline for Ash Foundry.
     </section>
   </main>
 </body>

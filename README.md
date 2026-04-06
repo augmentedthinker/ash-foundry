@@ -86,11 +86,12 @@ This keeps memory pushes inspectable from both the local system and the browser-
 
 ## Shared style system
 
-The current named style options are:
+The current stylesheet hierarchy is:
+- **`assets/css/site.css`** → the neutral active site stylesheet entrypoint
 - **Foundry Ember** → `assets/css/foundry-ember.css`
 - **Foundry Glass** → `assets/css/foundry-glass.css`
 
-At the moment, the live site itself still uses the Foundry Ember stylesheet as its primary shared visual system. Foundry Glass exists as an alternate documented style option for browser-based comparison.
+At the moment, `site.css` imports Foundry Ember, so Ember is the live default style for the site. Foundry Glass exists as an alternate named style option that can be inspected independently or swapped in later.
 
 ## Live site
 
