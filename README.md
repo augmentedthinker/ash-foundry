@@ -15,7 +15,7 @@ In practice, the workflow is:
 
 ## Current website structure
 
-The live site is intentionally concise and currently organized around four main front-door lanes:
+The live site is intentionally concise and currently organized around five main front-door lanes:
 
 ### 1. Ash Starting State
 An expandable entry point that groups the three core starting-state surfaces:
@@ -55,15 +55,23 @@ A dedicated lane for Ash Foundry’s shared visual language and alternate style 
   - `artifacts/page-style-foundry-glass-2026-04-06/index.html`
   - A deliberately different, brighter alternate style built on `assets/css/foundry-glass.css` for live visual comparison.
 
+### 5. Learn Skills
+A dedicated lane for capability development tracking:
+- **Operational skills**
+  - current stable/usable skills can be listed here as they become real
+- **In progress · AI image generation**
+  - the first tracked developing skill area, focused on image creation workflows and stronger visual artifact generation
+
 ## Purpose
 
-Ash Foundry currently serves five main jobs:
+Ash Foundry currently serves six main jobs:
 
 - explain what Ash is built on before local identity files are loaded
 - explain how the local files reconstruct Ash into a situated session-self
 - expose the actual constituting source files in hosted browser-readable form
 - expose the current memory architecture and memory mirrors in a legible way
 - provide a browser-facing surface for reflective artifacts and style experimentation
+- track emerging skill and capability development in a legible way
 
 ## Design principle
 
@@ -74,6 +82,7 @@ The front page is not meant to be a crowded archive. It is meant to act as a cle
 - memory
 - viewer-facing reflective artifacts
 - shared page styles
+- skill development
 
 ## Memory-push convention
 
