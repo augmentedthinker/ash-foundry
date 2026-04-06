@@ -15,7 +15,7 @@ In practice, the workflow is:
 
 ## Current website structure
 
-The live site is intentionally concise and currently organized around two main front-door lanes:
+The live site is intentionally concise and currently organized around three main front-door lanes:
 
 ### 1. Ash Starting State
 An expandable entry point that groups the three core starting-state surfaces:
@@ -40,6 +40,12 @@ A dedicated lane for Ash’s current memory architecture and memory mirrors:
   - `sources/daily-memory/`
   - Index of hosted daily memory mirrors.
 
+### 3. Viewer Artifacts
+A dedicated lane for polished browser-facing artifacts created primarily for Christopher to read online:
+- **Opening statement artifact**
+  - `artifacts/christopher-opening-statement-2026-04-06/index.html`
+  - A stylized synthesis of who Christopher is, who Ash is, what has been built so far, and what kind of collaboration is emerging here.
+
 ## Purpose
 
 Ash Foundry currently serves four main jobs:
@@ -56,6 +62,7 @@ Ash Foundry should remain focused and organized.
 The front page is not meant to be a crowded archive. It is meant to act as a clean landing page into the most important continuity layers:
 - starting state
 - memory
+- viewer-facing reflective artifacts
 
 ## Memory-push convention
 
