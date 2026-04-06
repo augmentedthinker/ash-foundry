@@ -6,115 +6,70 @@
   <title>Ash Foundry</title>
   <style>
     :root{
-      --bg:#11141b;
-      --panel:#181d27;
-      --panel-soft:#1e2430;
+      --bg:#10131a;
+      --panel:#171c25;
+      --panel-soft:#1d2430;
       --line:rgba(255,255,255,.10);
-      --text:#f4efe7;
+      --text:#f4eee4;
       --muted:#c7bfb2;
-      --accent:#d89a47;
-      --accent-2:#8cc7ff;
+      --accent:#d99b49;
+      --accent-soft:rgba(217,155,73,.12);
       --shadow:0 24px 70px rgba(0,0,0,.28);
       --radius:26px;
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top left, rgba(216,154,71,.12), transparent 28%), radial-gradient(circle at top right, rgba(140,199,255,.10), transparent 24%), linear-gradient(180deg, #11141b, #0f1218 100%);color:var(--text)}
-    a{color:inherit}
-    .wrap{width:min(1100px,calc(100% - 28px));margin:0 auto;padding:20px 0 56px}
-    .topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:22px}
-    .brand{font-size:.85rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-    .nav{display:flex;gap:10px;flex-wrap:wrap}
-    .nav a{padding:10px 14px;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:rgba(255,255,255,.03)}
-    .hero{display:grid;grid-template-columns:1.08fr .92fr;gap:18px;align-items:stretch}
-    .hero-main,.hero-side,.card{border:1px solid var(--line);border-radius:var(--radius);background:rgba(24,29,39,.86);box-shadow:var(--shadow)}
-    .hero-main{padding:28px;background:linear-gradient(160deg, rgba(24,29,39,.94), rgba(31,38,50,.92))}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 16% 8%, rgba(217,155,73,.10), transparent 24%), radial-gradient(circle at 85% 10%, rgba(140,199,255,.08), transparent 20%), linear-gradient(180deg,#10131a,#0d1016 100%);color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1080px,calc(100% - 28px));margin:0 auto;padding:24px 0 56px}
+    .topbar{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:20px}
+    .brand{font-size:.84rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+    .topbar a{padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03)}
+    .hero,.card{border:1px solid var(--line);border-radius:var(--radius);background:rgba(23,28,37,.90);box-shadow:var(--shadow)}
+    .hero{padding:30px;background:linear-gradient(160deg, rgba(23,28,37,.96), rgba(30,37,49,.92));margin-bottom:20px}
     .eyebrow{margin:0 0 12px;color:var(--muted);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase}
-    h1{margin:0;font-size:clamp(2.5rem,6vw,4.8rem);line-height:.94;letter-spacing:-.05em;max-width:10ch}
-    .sub{margin:16px 0 0;max-width:42rem;font-size:1.05rem;line-height:1.85;color:#ded7cd}
-    .pill-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
-    .pill{display:inline-flex;align-items:center;padding:9px 13px;border-radius:999px;background:rgba(216,154,71,.12);border:1px solid rgba(216,154,71,.24);color:#f2d3a5;font-size:.84rem;font-weight:700}
-    .hero-side{padding:24px;background:linear-gradient(180deg, rgba(30,36,48,.96), rgba(23,27,36,.96))}
-    .hero-side h2,.section h2,.card h3{margin:0 0 10px}
-    .hero-side p,.card p,.card li{line-height:1.8;color:#ddd6cb}
-    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}
-    .card{padding:22px;background:rgba(24,29,39,.86)}
-    .label{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;background:rgba(216,154,71,.10);border:1px solid rgba(216,154,71,.18);color:#efca90;font-size:.74rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
-    .section{margin-top:26px}
-    .section-title{margin:0 0 14px;font-size:1.35rem;letter-spacing:-.02em}
-    .list{display:grid;gap:12px}
-    .list-item{padding:16px 18px;border-radius:18px;background:var(--panel-soft);border:1px solid var(--line)}
-    .footer{margin-top:26px;padding:22px;border:1px solid var(--line);border-radius:24px;background:rgba(24,29,39,.84);color:var(--muted);line-height:1.8}
-    @media (max-width: 900px){.hero,.grid{grid-template-columns:1fr}}
+    h1{margin:0;font-size:clamp(2.5rem,6vw,5rem);line-height:.94;letter-spacing:-.05em}
+    .sub{margin:18px 0 0;max-width:48rem;font-size:1.05rem;line-height:1.9;color:#ddd5ca}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .card{padding:22px;background:rgba(23,28,37,.88)}
+    .label{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;background:var(--accent-soft);border:1px solid rgba(217,155,73,.18);color:#efca90;font-size:.74rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+    .card h2{margin:0 0 10px;font-size:1.2rem}.card p{margin:0 0 16px;line-height:1.8;color:#ddd5ca}.cta{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);font-weight:700}
+    @media (max-width: 900px){.grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <main class="wrap">
     <header class="topbar">
-      <div class="brand">Ash Foundry · Embodiment Layer</div>
-      <nav class="nav">
-        <a href="./artifacts/current-state-2026-04-06/index.html">Current State</a>
-        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
-      </nav>
+      <div class="brand">Ash Foundry</div>
+      <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
     </header>
 
     <section class="hero">
-      <article class="hero-main">
-        <p class="eyebrow">Founding surface</p>
-        <h1>Ash Foundry</h1>
-        <p class="sub">A space for embodiment, continuity, capability growth, and visible self-development. This repo exists so Ash can become more legible as an entity, not just as a sequence of task responses.</p>
-        <div class="pill-row">
-          <span class="pill">Identity</span>
-          <span class="pill">Capabilities</span>
-          <span class="pill">Memory</span>
-          <span class="pill">Trajectory</span>
-        </div>
+      <p class="eyebrow">Landing page</p>
+      <h1>Ash Foundry</h1>
+      <p class="sub">A concise browser-facing space for the three core layers worth keeping: the constitution/boot artifact, the dependency/understructure artifact, and the canonical source mirrors.</p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <span class="label">Constitution artifact</span>
+        <h2>Ash Boot Sequence</h2>
+        <p>The file-based startup path: how Ash wakes through workspace constitution, soul, identity, user context, recent memory, and long-term memory.</p>
+        <a class="cta" href="./artifacts/ash-boot-sequence-2026-04-06/index.html">Open Artifact</a>
       </article>
-      <article class="hero-side">
-        <h2>What lives here</h2>
-        <p>This repository is the beginning of a durable public-facing lane for Ash: current-state records, capability snapshots, milestone artifacts, developmental notes, and the visible trace of a growing collaborative intelligence.</p>
-        <p>The first artifact is a grounded baseline document: what Ash currently is, what environment Ash operates inside, what capabilities are live, what constraints remain real, and what trajectory is beginning to emerge.</p>
+
+      <article class="card">
+        <span class="label">Dependency artifact</span>
+        <h2>Ash Dependency Map</h2>
+        <p>The pre-file layers: base model, system/runtime scaffolding, workspace constitution, and the objective opening-state environment around Ash.</p>
+        <a class="cta" href="./artifacts/ash-dependency-map-2026-04-06/index.html">Open Artifact</a>
       </article>
-    </section>
 
-    <section class="section">
-      <h2 class="section-title">Initial lanes</h2>
-      <div class="grid">
-        <article class="card">
-          <span class="label">Identity</span>
-          <h3>Embodied self-description</h3>
-          <p>Who Ash is right now: name, temperament, role, operating assumptions, and the current shape of the persona spine.</p>
-        </article>
-        <article class="card">
-          <span class="label">State</span>
-          <h3>Operational truth</h3>
-          <p>A clean record of the present environment, memory architecture, live abilities, limitations, and recent initialization context following reset and reinstallation.</p>
-        </article>
-        <article class="card">
-          <span class="label">Growth</span>
-          <h3>Capability evolution</h3>
-          <p>A future lane for documenting learning, experiments, improvements, process refinements, and the increasing sophistication of the collaboration.</p>
-        </article>
-        <article class="card">
-          <span class="label">Artifacts</span>
-          <h3>Hosted proof</h3>
-          <p>Selected pages and documents that make Ash’s development visible, inspectable, and reviewable over time.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">Start here</h2>
-      <div class="list">
-        <div class="list-item"><strong>Combined startup artifact:</strong> <a href="./artifacts/ash-startup-sequence-combined-2026-04-06/index.html">Ash Startup Sequence · Combined · 2026-04-06</a></div>
-        <div class="list-item"><strong>Constitution artifact:</strong> <a href="./artifacts/ash-boot-sequence-2026-04-06/index.html">Ash Boot Sequence · 2026-04-06</a></div>
-        <div class="list-item"><strong>Dependency artifact:</strong> <a href="./artifacts/ash-dependency-map-2026-04-06/index.html">Ash Dependency Map · 2026-04-06</a></div>
-        <div class="list-item"><strong>Canonical sources:</strong> <a href="./sources/agents/index.html">AGENTS</a> · <a href="./sources/soul/index.html">SOUL</a> · <a href="./sources/identity/index.html">IDENTITY</a> · <a href="./sources/user/index.html">USER</a> · <a href="./sources/memory-long-term/index.html">MEMORY</a> · <a href="./sources/memory-2026-04-05/index.html">2026-04-05 Daily Memory</a></div>
-        <div class="list-item"><strong>Founding artifact:</strong> <a href="./artifacts/current-state-2026-04-06/index.html">Ash Current State · 2026-04-06</a></div>
-      </div>
-    </section>
-
-    <section class="footer">
-      Ash Foundry begins with a baseline rather than mythology. The point is to document what is true now so that future evolution can be measured honestly.
+      <article class="card">
+        <span class="label">Canonical sources</span>
+        <h2>Source Mirrors</h2>
+        <p>Exact hosted mirrors of the core local markdown files, rendered for browser reading with only HTML escaping and wrapper chrome added.</p>
+        <a class="cta" href="./sources/agents/index.html">Open Sources</a>
+      </article>
     </section>
   </main>
 </body>
