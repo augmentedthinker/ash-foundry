@@ -42,6 +42,9 @@ A dedicated lane for Ash’s current memory architecture and memory mirrors:
 
 ### 3. Viewer Artifacts
 A dedicated lane for polished browser-facing artifacts created primarily for Christopher to read online:
+- **Session primer**
+  - `artifacts/session-primer-2026-04-06/index.html`
+  - A fresh-session continuity artifact summarizing what has been happening, where things stand, and the most likely next directions, topped with a newly generated AI image.
 - **Opening statement artifact**
   - `artifacts/christopher-opening-statement-2026-04-06/index.html`
   - A stylized synthesis of who Christopher is, who Ash is, what has been built so far, and what kind of collaboration is emerging here.
