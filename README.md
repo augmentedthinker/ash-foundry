@@ -15,7 +15,7 @@ In practice, the workflow is:
 
 ## Current website structure
 
-The live site is intentionally concise and currently organized around six main front-door lanes:
+The live site is intentionally concise and currently organized around seven main front-door lanes:
 
 ### 1. Ash Starting State
 An expandable entry point that groups the three core starting-state surfaces:
@@ -58,7 +58,13 @@ A dedicated lane for shaping how Ash should take initiative in practice:
   - `artifacts/ash-autonomy-initiative-2026-04-06/index.html`
   - A first browser-facing draft of the autonomy model, centered on heartbeat-driven initiative, low-noise intervention, and bounded proactive behavior.
 
-### 5. Page Styles
+### 5. Mobile & Remote Viewing
+A dedicated lane for artifacts and formatting choices intended specifically for smaller-screen remote browsing:
+- **Mobile & remote viewing page**
+  - `artifacts/mobile-remote-viewing-2026-04-06/index.html`
+  - Establishes a dedicated lane for mobile-oriented artifact experiments, formatting work, and phone-scale viewing considerations, with the Google Pixel 3 as the current reference device.
+
+### 6. Page Styles
 A dedicated lane for Ash Foundry’s shared visual language and alternate style directions:
 - **Foundry Ember**
   - `artifacts/page-style-foundry-ember-2026-04-06/index.html`
@@ -67,7 +73,7 @@ A dedicated lane for Ash Foundry’s shared visual language and alternate style 
   - `artifacts/page-style-foundry-glass-2026-04-06/index.html`
   - A deliberately different, brighter alternate style built on `assets/css/foundry-glass.css` for live visual comparison.
 
-### 6. Learn Skills
+### 7. Learn Skills
 A dedicated lane for capability development tracking, with detail pushed into the individual skill pages themselves:
 - **Operational skills**
   - current stable/usable skills can be listed here as they become real
@@ -104,6 +110,7 @@ The front page is not meant to be a crowded archive. It is meant to act as a cle
 - memory
 - viewer-facing reflective artifacts
 - initiative and autonomy
+- mobile and remote viewing
 - shared page styles
 - skill development
 
