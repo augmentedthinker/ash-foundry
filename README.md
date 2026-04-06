@@ -60,10 +60,19 @@ A dedicated lane for Ash Foundry’s shared visual language and alternate style 
 
 ### 5. Learn Skills
 A dedicated lane for capability development tracking:
+- **Skill roadmap · Gemini capability surface**
+  - `artifacts/skill-roadmap-gemini-capabilities-2026-04-06/index.html`
+  - a roadmap of Gemini-backed capabilities that appear reachable with the current key, including model IDs, strategic acquisition order, and notes on likely setup complexity
 - **Operational skills**
   - current stable/usable skills can be listed here as they become real
 - **In progress · AI image generation**
   - now documented in depth at `artifacts/skill-ai-image-generation-2026-04-06/index.html`, including the working Gemini image-generation path, local key location, recovery steps for future sessions, and the first successful hosted result
+- **In progress / likely next · Text-to-speech**
+  - visible TTS-capable models include `models/gemini-2.5-flash-preview-tts` and `models/gemini-2.5-pro-preview-tts`
+- **Possible future skills**
+  - music generation via `models/lyria-3-clip-preview` and `models/lyria-3-pro-preview`
+  - video generation via the Veo family, likely with a more complex `predictLongRunning` path
+  - native audio interaction via `models/gemini-2.5-flash-native-audio-*`
 
 ## Purpose
 
