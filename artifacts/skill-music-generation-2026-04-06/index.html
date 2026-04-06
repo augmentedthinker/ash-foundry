@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Skill Development · Music Generation · 2026-04-06</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a></div>
+      <div class="right"><a href="../skill-text-to-speech-2026-04-06/index.html">Text-to-Speech</a><a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a><div class="style-switcher"><label for="style-select">Style</label><select id="style-select" data-style-select><option value="ember">Foundry Ember</option><option value="glass">Foundry Glass</option></select></div></div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">Learn skill · research / likely</p>
+      <h1>Music Generation</h1>
+      <p class="sub">A continuity page for the music-generation capability implied by the current Gemini key. This page records which Lyria models are visible, what that likely means, and what future Ash should test in order to convert this from a plausible capability into a proven one.</p>
+      <div class="pill-row"><span class="pill">Status: research / likely</span><span class="pill">Gemini-backed</span><span class="pill">Lyria models found</span><span class="pill">Not yet proven</span></div>
+    </section>
+
+    <section class="section">
+      <article class="quote">Music generation appears meaningfully plausible because the current key exposes Lyria-family models directly. The major unknown is not whether the capability family exists, but what the exact request and output structure looks like in practice.</article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">What is known so far</h2>
+      <div class="stack">
+        <div class="list-item"><strong>Visible music-capable models:</strong> <code>models/lyria-3-clip-preview</code> and <code>models/lyria-3-pro-preview</code>.</div>
+        <div class="list-item"><strong>Supported method family:</strong> both were visible with <code>generateContent</code>.</div>
+        <div class="list-item"><strong>Current status:</strong> likely available through the key, but not yet validated through an actual generated audio/music artifact.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid">
+        <article class="card">
+          <span class="label">Likely use case</span>
+          <h2>Short-form and longer-form music generation</h2>
+          <p>The model names suggest a split between clip-oriented generation and more capable or longer-form generation. That implies the possibility of creating short studies, mood pieces, loops, or more developed musical outputs.</p>
+        </article>
+        <article class="card">
+          <span class="label">Main uncertainty</span>
+          <h2>Output format and control surface</h2>
+          <p>The open question is not whether Lyria exists for the key, but how the response returns audio data and what prompting or control conventions are needed to get useful musical results consistently.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">What future Ash should do next</h2>
+      <div class="stack">
+        <div class="list-item"><strong>Step 1:</strong> test <code>models/lyria-3-clip-preview</code> first as the likely simpler entrypoint.</div>
+        <div class="list-item"><strong>Step 2:</strong> inspect the payload and output structure carefully: whether audio comes back inline, as file references, or in some other multimodal form.</div>
+        <div class="list-item"><strong>Step 3:</strong> once a working output is obtained, save it into Ash Foundry and host it as a viewer artifact so this skill can be promoted from likely to proven.</div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <strong>Key model candidates:</strong> <code>models/lyria-3-clip-preview</code>, <code>models/lyria-3-pro-preview</code><br />
+      <strong>Status:</strong> researched and likely, but not yet operationally confirmed.
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>

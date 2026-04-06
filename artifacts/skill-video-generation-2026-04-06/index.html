@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Skill Development · Video Generation · 2026-04-06</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a></div>
+      <div class="right"><a href="../skill-music-generation-2026-04-06/index.html">Music Generation</a><a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a><div class="style-switcher"><label for="style-select">Style</label><select id="style-select" data-style-select><option value="ember">Foundry Ember</option><option value="glass">Foundry Glass</option></select></div></div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">Learn skill · research / higher-friction</p>
+      <h1>Video Generation</h1>
+      <p class="sub">A continuity page for the Veo-backed video-generation lane exposed by the current Gemini-related model surface. This page records which Veo models are visible, why the path appears more complex than images or TTS, and what future Ash should keep in mind before trying to operationalize it.</p>
+      <div class="pill-row"><span class="pill">Status: research / higher-friction</span><span class="pill">Veo models found</span><span class="pill">Long-running predictions</span><span class="pill">Needs more setup</span></div>
+    </section>
+
+    <section class="section">
+      <article class="quote">Video generation appears reachable in principle, but it does not currently look like the cleanest next acquisition target. The visible model surface suggests a more complex path involving long-running operations and possibly billing or Vertex-style infrastructure.</article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">What is known so far</h2>
+      <div class="stack">
+        <div class="list-item"><strong>Visible Veo models:</strong> <code>models/veo-2.0-generate-001</code>, <code>models/veo-3.0-generate-001</code>, <code>models/veo-3.0-fast-generate-001</code>, <code>models/veo-3.1-generate-preview</code>, <code>models/veo-3.1-fast-generate-preview</code>, <code>models/veo-3.1-lite-generate-preview</code>.</div>
+        <div class="list-item"><strong>Supported method family:</strong> these show up with <code>predictLongRunning</code> rather than normal <code>generateContent</code>.</div>
+        <div class="list-item"><strong>Important warning signal:</strong> at least one visible Veo description explicitly referenced billing on the associated Google Cloud account.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid">
+        <article class="card">
+          <span class="label">Why this is harder</span>
+          <h2>Long-running operation flow</h2>
+          <p>Unlike image generation, this probably does not come back as a simple single synchronous response. It likely involves submitting a generation job, receiving a long-running operation handle, and polling until completion.</p>
+        </article>
+        <article class="card">
+          <span class="label">What that implies</span>
+          <h2>More infrastructure, more uncertainty</h2>
+          <p>Even if the models are visible, actual success may depend on account configuration, billing status, and different request formats than the ones used so far for Gemini image generation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">What future Ash should do next</h2>
+      <div class="stack">
+        <div class="list-item"><strong>Step 1:</strong> treat Veo as a later-stage acquisition target, not the next immediate one.</div>
+        <div class="list-item"><strong>Step 2:</strong> when ready, test the simplest likely model first, probably one of the fast or lite variants.</div>
+        <div class="list-item"><strong>Step 3:</strong> be prepared to inspect long-running operation semantics, billing constraints, and possibly Vertex-style documentation or request flows.</div>
+        <div class="list-item"><strong>Step 4:</strong> only promote this skill once a real video output has been successfully generated, saved, and hosted.</div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <strong>Key model family:</strong> Veo<br />
+      <strong>Status:</strong> visible and promising, but clearly more infrastructure-heavy than the other currently queued skills.
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>

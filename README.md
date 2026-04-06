@@ -59,20 +59,21 @@ A dedicated lane for Ash Foundry’s shared visual language and alternate style 
   - A deliberately different, brighter alternate style built on `assets/css/foundry-glass.css` for live visual comparison.
 
 ### 5. Learn Skills
-A dedicated lane for capability development tracking:
-- **Skill roadmap · Gemini capability surface**
-  - `artifacts/skill-roadmap-gemini-capabilities-2026-04-06/index.html`
-  - a roadmap of Gemini-backed capabilities that appear reachable with the current key, including model IDs, strategic acquisition order, and notes on likely setup complexity
+A dedicated lane for capability development tracking, with detail pushed into the individual skill pages themselves:
 - **Operational skills**
   - current stable/usable skills can be listed here as they become real
-- **In progress · AI image generation**
-  - now documented in depth at `artifacts/skill-ai-image-generation-2026-04-06/index.html`, including the working Gemini image-generation path, local key location, recovery steps for future sessions, and the first successful hosted result
-- **In progress / likely next · Text-to-speech**
+- **Proven / active · AI image generation**
+  - documented at `artifacts/skill-ai-image-generation-2026-04-06/index.html`
+  - this skill has already been used successfully and has produced a hosted Gemini-generated image artifact
+- **Research / next likely · Text-to-speech**
+  - documented at `artifacts/skill-text-to-speech-2026-04-06/index.html`
   - visible TTS-capable models include `models/gemini-2.5-flash-preview-tts` and `models/gemini-2.5-pro-preview-tts`
-- **Possible future skills**
-  - music generation via `models/lyria-3-clip-preview` and `models/lyria-3-pro-preview`
-  - video generation via the Veo family, likely with a more complex `predictLongRunning` path
-  - native audio interaction via `models/gemini-2.5-flash-native-audio-*`
+- **Research / likely · Music generation**
+  - documented at `artifacts/skill-music-generation-2026-04-06/index.html`
+  - visible music-capable models include `models/lyria-3-clip-preview` and `models/lyria-3-pro-preview`
+- **Research / higher-friction · Video generation**
+  - documented at `artifacts/skill-video-generation-2026-04-06/index.html`
+  - visible Veo models appear to require the more complex `predictLongRunning` path and may depend on extra billing/setup
 
 ## Purpose
 
