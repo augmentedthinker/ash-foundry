@@ -40,9 +40,15 @@
         <div class="code-card" style="margin-top:16px;">
           <div class="code-head"><strong>Preview player</strong><span id="voice-caption">Kore</span></div>
           <div class="code-body">
-            <audio id="voice-player" controls preload="metadata" style="width:100%;">
-              <source id="voice-source" src="../../assets/audio/generated-tts-kore-2026-04-06.wav" type="audio/wav" />
+            <audio id="voice-player" controls preload="metadata" playsinline style="width:100%;">
+              <source id="voice-source" src="../../assets/audio/generated-tts-kore-2026-04-06.wav?v=2" type="audio/wav" />
             </audio>
+            <div class="links" style="margin-top:14px;">
+              <a class="link-item" id="voice-download" href="../../assets/audio/generated-tts-kore-2026-04-06.wav?v=2">
+                <strong>Open / download current voice file</strong>
+                <span>If the embedded player misbehaves on a particular browser, open the raw file directly to test codec support and cache behavior.</span>
+              </a>
+            </div>
           </div>
         </div>
       </article>
@@ -73,14 +79,15 @@
   <script>
     (function () {
       const files = {
-        kore: '../../assets/audio/generated-tts-kore-2026-04-06.wav',
-        puck: '../../assets/audio/generated-tts-puck-2026-04-06.wav',
-        leda: '../../assets/audio/generated-tts-leda-2026-04-06.wav'
+        kore: '../../assets/audio/generated-tts-kore-2026-04-06.wav?v=2',
+        puck: '../../assets/audio/generated-tts-puck-2026-04-06.wav?v=2',
+        leda: '../../assets/audio/generated-tts-leda-2026-04-06.wav?v=2'
       };
       const select = document.getElementById('voice-select');
       const player = document.getElementById('voice-player');
       const source = document.getElementById('voice-source');
       const caption = document.getElementById('voice-caption');
+      const download = document.getElementById('voice-download');
       if (!select || !player || !source) return;
       select.addEventListener('change', () => {
         const key = select.value;
@@ -88,6 +95,7 @@
         if (!next) return;
         player.pause();
         source.setAttribute('src', next);
+        if (download) download.setAttribute('href', next);
         player.load();
         if (caption) caption.textContent = select.options[select.selectedIndex].text;
       });
