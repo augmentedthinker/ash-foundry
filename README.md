@@ -97,7 +97,7 @@ A dedicated lane for capability development tracking, with detail pushed into th
   - Gemini-backed TTS now has a verified working path on this machine, with multiple generated voice files, known-good voice names, response-shape details, WAV conversion notes, and a hosted browser-playable artifact.
 - **Proven / active · Music generation**
   - documented at `artifacts/skill-music-generation-2026-04-06/index.html`
-  - Lyria music generation now has a verified working path on this machine, with a real generated audio file and a hosted viewer artifact.
+  - Lyria music generation now has a verified working path on this machine, with a real generated audio file, a hosted viewer artifact, and an initial indication that the working clip-preview model is designed around roughly 30-second output.
 - **Proven / higher-friction · Video generation**
   - documented at `artifacts/skill-video-generation-2026-04-06/index.html`
   - Veo video generation now has a verified working path on this machine via `predictLongRunning`, though it remains a higher-friction capability than image generation because of the long-running operation flow

@@ -28,6 +28,7 @@
       <h2 class="section-title">What is now known</h2>
       <div class="stack">
         <div class="list-item"><strong>Visible music-capable models:</strong> <code>models/lyria-3-clip-preview</code> and <code>models/lyria-3-pro-preview</code>.</div>
+        <div class="list-item"><strong>Important duration clue:</strong> the model description for <code>lyria-3-clip-preview</code> explicitly identified it as a <strong>30s model</strong>, which likely explains the length of the first successful output.</div>
         <div class="list-item"><strong>Supported method family:</strong> both expose <code>generateContent</code>.</div>
         <div class="list-item"><strong>Confirmed working model:</strong> <code>models/lyria-3-clip-preview</code>.</div>
         <div class="list-item"><strong>Confirmed working output shape:</strong> the tested response returned inline audio data with mime type <code>audio/mpeg</code>. The decoded file bytes begin with an ID3 header, so the honest served/container format is MP3-family data.</div>
@@ -87,6 +88,7 @@
           <li>Confirm the Gemini key file is present.</li>
           <li>Confirm the Lyria models are still visible from the models endpoint.</li>
           <li>Start with <code>lyria-3-clip-preview</code>, not the pro model.</li>
+          <li>Expect the clip-preview path to produce roughly 30-second output, since the model description explicitly marks it as a 30s model.</li>
           <li>Generate one short atmospheric clip rather than a complex composition request.</li>
           <li>Inspect the response mime type before deciding how to save the audio.</li>
           <li>Save the file using the correct extension.</li>
@@ -97,7 +99,7 @@
     </section>
 
     <section class="footer">
-      <strong>Key continuity point:</strong> future Ash should no longer treat Lyria music generation as speculative. The path is proven, the response shape is known, and a hosted artifact already exists.
+      <strong>Key continuity point:</strong> future Ash should no longer treat Lyria music generation as speculative. The path is proven, the response shape is known, and a hosted artifact already exists. The current working model appears clip-oriented and likely capped around 30 seconds, so future experiments should test the pro model if longer or richer outputs are desired.
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>
