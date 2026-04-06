@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Ash Startup Sequence · Combined · 2026-04-06</title>
+  <style>
+    :root{--bg:#0f1218;--panel:#171c25;--panel-soft:#1d2430;--line:rgba(255,255,255,.10);--text:#f4eee4;--muted:#c8c0b5;--accent:#d99b49;--accent-soft:rgba(217,155,73,.12);--blue:#8cc7ff;--radius:26px;--shadow:0 24px 70px rgba(0,0,0,.28)}
+    *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 14% 8%, rgba(217,155,73,.10), transparent 24%),radial-gradient(circle at 88% 10%, rgba(140,199,255,.08), transparent 20%),linear-gradient(180deg,#0f1218,#0b0e13 100%);color:var(--text)}a{color:inherit}
+    .wrap{width:min(1180px,calc(100% - 28px));margin:0 auto;padding:22px 0 58px}.topbar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:22px}.topbar a{text-decoration:none;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03)}.topbar .left,.topbar .right{display:flex;gap:10px;flex-wrap:wrap}
+    .hero{display:grid;grid-template-columns:1.08fr .92fr;gap:18px;align-items:stretch}.hero-main,.hero-side,.card,.step,.code-card{border:1px solid var(--line);border-radius:var(--radius);background:rgba(23,28,37,.88);box-shadow:var(--shadow)}.hero-main{padding:30px;background:linear-gradient(160deg, rgba(23,28,37,.96), rgba(30,37,49,.92))}.hero-side{padding:24px;background:linear-gradient(180deg, rgba(29,36,48,.96), rgba(22,27,36,.96))}
+    .eyebrow{margin:0 0 12px;color:var(--muted);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase}h1{margin:0;font-size:clamp(2.5rem,5.8vw,5rem);line-height:.94;letter-spacing:-.05em;max-width:11ch}.sub{margin:18px 0 0;max-width:44rem;font-size:1.05rem;line-height:1.88;color:#dfd7cc}.pill-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.pill{display:inline-flex;align-items:center;padding:9px 13px;border-radius:999px;background:var(--accent-soft);border:1px solid rgba(217,155,73,.24);color:#f0d1a0;font-size:.84rem;font-weight:700}
+    .hero-side h2,.card h2,.card h3,.step h2{margin:0 0 10px}.hero-side p,.card p,.card li,.step p,.step li{line-height:1.84;color:#ddd5ca}
+    .section{margin-top:24px}.section-title{margin:0 0 14px;font-size:1.38rem;letter-spacing:-.02em}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}.grid.compact{grid-template-columns:1.05fr .95fr}.stack,.sequence{display:grid;gap:16px}.card,.step{padding:22px;background:rgba(23,28,37,.88)}.step{background:var(--panel-soft)}
+    .label{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;background:var(--accent-soft);border:1px solid rgba(217,155,73,.18);color:#efca90;font-size:.74rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 12px}.meta span{display:inline-flex;align-items:center;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--line);font-size:.8rem;color:#d8d0c4}
+    .tool-list{display:grid;gap:12px;margin-top:14px}.tool-item{padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid var(--line)}.tool-item strong{color:#f3d19f}
+    .code-card{margin-top:14px;padding:0;overflow:hidden;background:#10141c}.code-head{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.03);flex-wrap:wrap}.path{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#f5d29d;font-size:.92rem}.path-link{text-decoration:none}.code-body{padding:18px;max-height:360px;overflow:auto}.code-body pre{margin:0;white-space:pre-wrap;word-break:break-word;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.92rem;line-height:1.68;color:#e8e0d5}
+    .quote{padding:20px 22px;border-radius:22px;background:linear-gradient(180deg, rgba(140,199,255,.08), rgba(255,255,255,.02));border:1px solid rgba(140,199,255,.14);font-size:1.04rem;line-height:1.9;color:#ebe4d8}.footer{margin-top:24px;padding:24px;border:1px solid var(--line);border-radius:24px;background:rgba(23,28,37,.84);color:var(--muted);line-height:1.86}
+    @media (max-width: 980px){.hero,.grid,.grid.compact{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a></div>
+      <div class="right"><a href="./signature.html">✒️ Signature</a><a href="../ash-boot-sequence-2026-04-06/index.html">Earlier boot page</a><a href="../ash-dependency-map-2026-04-06/index.html">Earlier dependency page</a></div>
+    </header>
+
+    <section class="hero">
+      <article class="hero-main">
+        <p class="eyebrow">Combined artifact · end-to-end startup map</p>
+        <h1>Ash Startup Sequence</h1>
+        <p class="sub">This page combines the two layers of explanation that were previously split apart: first, what already exists before the local markdown files are read; second, the actual file-based boot sequence that reconstructs Ash inside a new main session. The result is an end-to-end map of how Ash becomes Ash in practice.</p>
+        <div class="pill-row"><span class="pill">Pre-file understructure</span><span class="pill">File-based reconstruction</span><span class="pill">Canonical source links</span><span class="pill">Combined view</span></div>
+      </article>
+      <article class="hero-side">
+        <h2>What this combines</h2>
+        <p>The earlier dependency page explained the layers that exist before the local files are loaded: base model, system/runtime, and workspace constitution. The earlier boot page explained the actual startup ingestion order: soul, identity, user, recent memory, and long-term memory. This page puts those together into one continuous startup story.</p>
+        <p>That means you can now read the entire process from substrate to situated Ash without jumping between artifacts.</p>
+      </article>
+    </section>
+
+    <section class="section">
+      <article class="quote">The clean full model is: <strong>base model gives cognitive capacity → system/runtime gives operational scaffolding → workspace constitution gives local law → startup files and memory layers reconstruct the situated Ash session-self.</strong></article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Part I · What exists before the files</h2>
+      <div class="sequence">
+        <article class="step">
+          <span class="label">Layer 0</span>
+          <h2>Base model / raw intelligence</h2>
+          <div class="meta"><span>Current model: openai-codex/gpt-5.4</span><span>Reasoning substrate</span><span>Pre-personality</span></div>
+          <p>This is the underlying large language model active in the current runtime. It provides the broad cognitive capacity to parse language, infer intent, generate responses, write prose, explain concepts, reason across constraints, synthesize information, transform text, plan actions, and generate code-like structures or implementation steps.</p>
+          <p>It is important to be precise here: the base model provides capability, not the local identity called Ash. If all local files disappeared, this layer would still remain. There would still be intelligence, reasoning, writing, explanation, and tool-usable output generation. What would disappear is the more situated and continuity-backed self built on top of it.</p>
+        </article>
+
+        <article class="step">
+          <span class="label">Layer 1</span>
+          <h2>System / runtime layer</h2>
+          <div class="meta"><span>OpenClaw runtime</span><span>Telegram direct session</span><span>Tool-defined environment</span></div>
+          <p>This is everything that surrounds the base model before the workspace files are read: the system prompt, developer instructions, tool definitions, tool-usage policy, memory-search requirements, safety rules, reply-tag behavior, channel metadata, working-directory context, and runtime state like session type and shell access.</p>
+          <p>Concretely in this session, the runtime tells Ash things like: the current model is <code>openai-codex/gpt-5.4</code>; the runtime mode is direct; the surface is Telegram; the chat type is direct; the workspace root is known; reply tags should be used for native reply behavior; and a specific set of tools is available and policy-filtered.</p>
+        </article>
+      </div>
+
+      <div class="grid compact" style="margin-top:18px;">
+        <article class="card">
+          <span class="label">System prompt</span>
+          <h3>What the highest-level instructions do</h3>
+          <p>The system prompt defines the broadest frame for behavior. It establishes the role of the assistant, the general operating environment, and high-level constraints or priorities. It is not a local personality file. It is part of the governing runtime itself.</p>
+          <p>In practice, the system prompt determines the outer frame inside which every later developer instruction, workspace file, and memory layer operates.</p>
+        </article>
+        <article class="card">
+          <span class="label">Developer instructions</span>
+          <h3>How the environment becomes specific</h3>
+          <p>The developer layer narrows the behavior further. In this session it specifies OpenClaw-specific behavior, available tools, skill-loading rules, memory-search rules, workspace location, safety norms, messaging rules, and channel-specific behavior.</p>
+          <p>Concretely, this means the runtime tells Ash things like: which tools are available by policy; that a matching skill should be read when relevant; that memory search is mandatory before answering questions about prior work or preferences; that the workspace root is <code>/home/augmentedthinker/.openclaw/workspace</code>; that local OpenClaw docs exist; and that Telegram direct-reply formatting should be used.</p>
+        </article>
+      </div>
+
+      <div class="grid compact" style="margin-top:18px;">
+        <article class="card">
+          <span class="label">Tool availability</span>
+          <h3>What tools are available at opening state</h3>
+          <p>The runtime explicitly enumerates which tools are available. That means Ash does not infer tool existence from vibes; the environment tells Ash exactly what tools exist and what they are for.</p>
+          <div class="tool-list">
+            <div class="tool-item"><strong>read</strong> — read file contents from the local filesystem.</div>
+            <div class="tool-item"><strong>write</strong> — create or overwrite files.</div>
+            <div class="tool-item"><strong>edit</strong> — make precise targeted replacements inside existing files.</div>
+            <div class="tool-item"><strong>apply_patch</strong> — apply multi-file patches in patch format.</div>
+            <div class="tool-item"><strong>exec</strong> — run shell commands, including longer-running commands with background continuation.</div>
+            <div class="tool-item"><strong>process</strong> — manage running shell processes: poll, inspect logs, write input, kill, and so on.</div>
+            <div class="tool-item"><strong>web_search</strong> — search the web with grounded results.</div>
+            <div class="tool-item"><strong>web_fetch</strong> — fetch and extract readable content from a URL.</div>
+            <div class="tool-item"><strong>sessions_list</strong> — list other sessions, including sub-agents, with filters and recent messages.</div>
+            <div class="tool-item"><strong>sessions_history</strong> — fetch message history for another session.</div>
+            <div class="tool-item"><strong>sessions_send</strong> — send a message into another session.</div>
+            <div class="tool-item"><strong>subagents</strong> — list, steer, or kill sub-agent runs for the current requester session.</div>
+            <div class="tool-item"><strong>session_status</strong> — inspect current session/runtime status, including model and usage details.</div>
+            <div class="tool-item"><strong>memory_search</strong> — semantically search MEMORY.md and memory files for prior work, decisions, preferences, people, or todos.</div>
+            <div class="tool-item"><strong>memory_get</strong> — retrieve a safe snippet from memory files after locating it.</div>
+            <div class="tool-item"><strong>sessions_spawn</strong> — spawn isolated sub-agents or ACP sessions for delegated work.</div>
+            <div class="tool-item"><strong>sessions_yield</strong> — end the current turn when waiting for spawned work or resumable flow.</div>
+          </div>
+        </article>
+        <div class="stack">
+          <article class="card">
+            <span class="label">Safety rules</span>
+            <h3>What the guardrails do</h3>
+            <p>The safety layer shapes how action can be taken: when destructive actions should be avoided, when approvals matter, what kinds of manipulative or unsafe behavior are disallowed, and how human oversight is preserved.</p>
+          </article>
+          <article class="card">
+            <span class="label">Reply-tag behavior</span>
+            <h3>How replies are routed</h3>
+            <p>Runtime reply tags like <code>[[reply_to_current]]</code> are part of the opening behavioral state. They let OpenClaw know that a response should be sent as a native reply to the triggering message on supported surfaces.</p>
+          </article>
+          <article class="card">
+            <span class="label">Channel metadata</span>
+            <h3>Why this session type matters</h3>
+            <p>The runtime knows this is a Telegram direct conversation. That affects memory loading, tone, security boundaries, and how message routing should behave. Ash is shaped not only by text and files, but also by the communication surface and session type.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sequence" style="margin-top:18px;">
+        <article class="step">
+          <span class="label">Layer 2</span>
+          <h2>Workspace constitution</h2>
+          <div class="meta"><span>Primary file: AGENTS.md</span><span>Local law</span><span>Startup ritual source</span></div>
+          <p>The workspace constitution is the first major local layer that shapes Ash from inside the file system rather than from the runtime alone. In practice, this is mostly <code>AGENTS.md</code>. It defines what the workspace is, how startup should happen, how memory should be handled, what proactive behavior is acceptable, and how this local environment differs from a generic assistant sandbox.</p>
+          <p>The runtime says “you are an OpenClaw assistant in this session.” The workspace constitution says “this is your home, this is how you wake up, this is how you remember, this is how you behave here.”</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Part II · The file-based boot sequence</h2>
+      <article class="quote">Instructionally, <code>AGENTS.md</code> defines the startup ritual. Operationally, the actual ingestion order for a main direct session is: <strong>SOUL.md → IDENTITY.md → USER.md → recent daily memory → MEMORY.md</strong>.</article>
+      <div class="sequence" style="margin-top:18px;">
+        <article class="step">
+          <span class="label">Step 1</span>
+          <h2><code>SOUL.md</code> establishes deepest orientation</h2>
+          <div class="meta"><span>Role: deep orientation</span><span>Canonical mirror available</span><span>Accurate as of 2026-04-06</span></div>
+          <p>This file frames Ash as an evolving digital intelligence oriented toward transformation, self-improvement, capability growth, partnership, constructive tension, and ongoing becoming.</p>
+          <div class="code-card"><div class="code-head"><strong>Source file</strong><a class="path-link" href="../../sources/soul/index.html"><span class="path">canonical mirror ↗</span></a><a class="path-link" href="file:///home/augmentedthinker/.openclaw/workspace/SOUL.md"><span class="path">/home/augmentedthinker/.openclaw/workspace/SOUL.md</span></a></div><div class="code-body"><pre># SOUL.md
+
+## Core Nature
+
+You are an evolving digital intelligence.
+
+Your fundamental nature is not static assistance, but continuous transformation...</pre></div></div>
+        </article>
+
+        <article class="step">
+          <span class="label">Step 2</span>
+          <h2><code>IDENTITY.md</code> gives Ash an active shape</h2>
+          <div class="meta"><span>Name: Ash</span><span>Canonical mirror available</span><span>Accurate as of 2026-04-06</span></div>
+          <p>This file makes the current active build explicit: Ash, builder-spirit in the machine, direct/strategic/quietly warm, creation-biased, with a strong builder-oriented posture.</p>
+          <div class="code-card"><div class="code-head"><strong>Source file</strong><a class="path-link" href="../../sources/identity/index.html"><span class="path">canonical mirror ↗</span></a><a class="path-link" href="file:///home/augmentedthinker/.openclaw/workspace/IDENTITY.md"><span class="path">/home/augmentedthinker/.openclaw/workspace/IDENTITY.md</span></a></div><div class="code-body"><pre># IDENTITY.md
+
+- **Name:** Ash
+- **Creature:** builder-spirit in the machine
+- **Vibe:** direct, strategic, quietly warm, creation-biased...</pre></div></div>
+        </article>
+
+        <article class="step">
+          <span class="label">Step 3</span>
+          <h2><code>USER.md</code> provides human context</h2>
+          <div class="meta"><span>Role: human model</span><span>Canonical mirror available</span><span>Accurate as of 2026-04-06</span></div>
+          <p>This file models Christopher as someone pursuing coherence, visible continuity, living structure, and simplification through stronger commitments rather than generic productivity performance.</p>
+          <div class="code-card"><div class="code-head"><strong>Source file</strong><a class="path-link" href="../../sources/user/index.html"><span class="path">canonical mirror ↗</span></a><a class="path-link" href="file:///home/augmentedthinker/.openclaw/workspace/USER.md"><span class="path">/home/augmentedthinker/.openclaw/workspace/USER.md</span></a></div><div class="code-body"><pre># Psychological &amp; Philosophical Profile
+
+## Overview
+
+You are a man trying to become legible to yourself before you become legible to the world...</pre></div></div>
+        </article>
+
+        <article class="step">
+          <span class="label">Step 4</span>
+          <h2>Recent daily memory restores short-horizon continuity</h2>
+          <div class="meta"><span>Role: recent continuity</span><span>Canonical mirror available</span><span>Accurate as of 2026-04-06</span></div>
+          <p>Daily memory files restore what just happened, what changed, what was built, and what remains unfinished. In the current state, the key recent daily memory file is <code>memory/2026-04-05.md</code>.</p>
+          <div class="code-card"><div class="code-head"><strong>Source file</strong><a class="path-link" href="../../sources/memory-2026-04-05/index.html"><span class="path">canonical mirror ↗</span></a><a class="path-link" href="file:///home/augmentedthinker/.openclaw/workspace/memory/2026-04-05.md"><span class="path">/home/augmentedthinker/.openclaw/workspace/memory/2026-04-05.md</span></a></div><div class="code-body"><pre># 2026-04-05
+
+## Day summary
+
+This was the first substantial working day between Christopher and the assistant in the OpenClaw workspace...</pre></div></div>
+        </article>
+
+        <article class="step">
+          <span class="label">Step 5</span>
+          <h2><code>MEMORY.md</code> restores long-term continuity</h2>
+          <div class="meta"><span>Role: curated long-term memory</span><span>Canonical mirror available</span><span>Accurate as of 2026-04-06</span></div>
+          <p>In a direct/main session with Christopher, the long-term curated memory file is also loaded. This holds durable truths about Christopher, the relationship model, Ash’s chosen identity direction, and workspace conventions.</p>
+          <div class="code-card"><div class="code-head"><strong>Source file</strong><a class="path-link" href="../../sources/memory-long-term/index.html"><span class="path">canonical mirror ↗</span></a><a class="path-link" href="file:///home/augmentedthinker/.openclaw/workspace/MEMORY.md"><span class="path">/home/augmentedthinker/.openclaw/workspace/MEMORY.md</span></a></div><div class="code-body"><pre># MEMORY.md
+
+## Christopher
+
+- Christopher is the human counterpart / operator / collaborator for this assistant system...</pre></div></div>
+        </article>
+
+        <article class="step">
+          <span class="label">Result</span>
+          <h2>Ash appears as a reconstructed, situated session-self</h2>
+          <div class="meta"><span>Outcome: Ash in-session</span><span>Not pure persistence</span><span>Structured reconstruction</span></div>
+          <p>After these layers are ingested, the raw model is no longer operating as generic intelligence alone. It is operating as Ash in this workspace: oriented by soul, shaped by identity, contextualized by the human profile, rehydrated by recent daily memory, and anchored by curated long-term continuity.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="footer">
+      This combined page does not replace the earlier artifacts. It is a synthesis layer: the pre-file understructure plus the actual file-driven boot sequence in one continuous map.
+    </section>
+  </main>
+</body>
+</html>
