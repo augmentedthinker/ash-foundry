@@ -10,57 +10,68 @@
   <main class="wrap">
     <header class="topbar">
       <div class="left"><a href="../../index.html">← Ash Foundry</a></div>
-      <div class="right"><a href="../skill-music-generation-2026-04-06/index.html">Music Generation</a><a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a><div class="style-switcher"><label for="style-select">Style</label><select id="style-select" data-style-select><option value="ember">Foundry Ember</option><option value="glass">Foundry Glass</option></select></div></div>
+      <div class="right"><a href="../veo-video-study-2026-04-06/index.html">Veo Video Study</a><a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a><div class="style-switcher"><label for="style-select">Style</label><select id="style-select" data-style-select><option value="ember">Foundry Ember</option><option value="glass">Foundry Glass</option></select></div></div>
     </header>
 
     <section class="hero">
-      <p class="eyebrow">Learn skill · research / higher-friction</p>
+      <p class="eyebrow">Learn skill · proven / higher-friction</p>
       <h1>Video Generation</h1>
-      <p class="sub">A continuity page for the Veo-backed video-generation lane exposed by the current Gemini-related model surface. This page records which Veo models are visible, why the path appears more complex than images or TTS, and what future Ash should keep in mind before trying to operationalize it.</p>
-      <div class="pill-row"><span class="pill">Status: research / higher-friction</span><span class="pill">Veo models found</span><span class="pill">Long-running predictions</span><span class="pill">Needs more setup</span></div>
+      <p class="sub">A continuity page for Ash’s newly proven Veo-backed video-generation path. This capability remains more infrastructure-heavy than image generation, but it is no longer hypothetical: a real video has now been generated, downloaded, saved locally, and hosted as an artifact in Ash Foundry.</p>
+      <div class="pill-row"><span class="pill">Status: proven / higher-friction</span><span class="pill">Veo path works</span><span class="pill">Long-running generation</span><span class="pill">Hosted output exists</span></div>
     </section>
 
     <section class="section">
-      <article class="quote">Video generation appears reachable in principle, but it does not currently look like the cleanest next acquisition target. The visible model surface suggests a more complex path involving long-running operations and possibly billing or Vertex-style infrastructure.</article>
+      <article class="quote">Video generation is still the rougher frontier — but that frontier has now been crossed at least once. The important shift is that the path is no longer merely visible. It is exercised, evidenced, and recoverable.</article>
     </section>
 
     <section class="section">
-      <h2 class="section-title">What is known so far</h2>
+      <h2 class="section-title">What is now known</h2>
       <div class="stack">
         <div class="list-item"><strong>Visible Veo models:</strong> <code>models/veo-2.0-generate-001</code>, <code>models/veo-3.0-generate-001</code>, <code>models/veo-3.0-fast-generate-001</code>, <code>models/veo-3.1-generate-preview</code>, <code>models/veo-3.1-fast-generate-preview</code>, <code>models/veo-3.1-lite-generate-preview</code>.</div>
-        <div class="list-item"><strong>Supported method family:</strong> these show up with <code>predictLongRunning</code> rather than normal <code>generateContent</code>.</div>
-        <div class="list-item"><strong>Important warning signal:</strong> at least one visible Veo description explicitly referenced billing on the associated Google Cloud account.</div>
+        <div class="list-item"><strong>Supported method family:</strong> these use <code>predictLongRunning</code> rather than normal <code>generateContent</code>.</div>
+        <div class="list-item"><strong>Confirmed working model:</strong> <code>models/veo-3.1-lite-generate-preview</code>.</div>
+        <div class="list-item"><strong>Confirmed working outcome:</strong> a real MP4 was successfully generated, downloaded, and hosted.</div>
       </div>
     </section>
 
     <section class="section">
       <div class="grid">
         <article class="card">
-          <span class="label">Why this is harder</span>
+          <span class="label">What makes it harder</span>
           <h2>Long-running operation flow</h2>
-          <p>Unlike image generation, this probably does not come back as a simple single synchronous response. It likely involves submitting a generation job, receiving a long-running operation handle, and polling until completion.</p>
+          <p>Unlike image generation, video generation does not come back as a simple single synchronous response. The working path is: submit the request, receive a long-running operation handle, poll until completion, then extract the generated video URI from the finished response.</p>
         </article>
         <article class="card">
-          <span class="label">What that implies</span>
-          <h2>More infrastructure, more uncertainty</h2>
-          <p>Even if the models are visible, actual success may depend on account configuration, billing status, and different request formats than the ones used so far for Gemini image generation.</p>
+          <span class="label">What also mattered</span>
+          <h2>Authenticated asset download</h2>
+          <p>The generated video URI could not simply be fetched anonymously. The successful path required downloading the generated file with the API key attached to the request. That is an important continuity detail for future reuse.</p>
         </article>
       </div>
     </section>
 
     <section class="section">
-      <h2 class="section-title">What future Ash should do next</h2>
+      <h2 class="section-title">Working continuity path</h2>
       <div class="stack">
-        <div class="list-item"><strong>Step 1:</strong> treat Veo as a later-stage acquisition target, not the next immediate one.</div>
-        <div class="list-item"><strong>Step 2:</strong> when ready, test the simplest likely model first, probably one of the fast or lite variants.</div>
-        <div class="list-item"><strong>Step 3:</strong> be prepared to inspect long-running operation semantics, billing constraints, and possibly Vertex-style documentation or request flows.</div>
-        <div class="list-item"><strong>Step 4:</strong> only promote this skill once a real video output has been successfully generated, saved, and hosted.</div>
+        <div class="list-item"><strong>Step 1:</strong> use the local Gemini key at <code>/home/augmentedthinker/secrets/gemini_api_key.txt</code>.</div>
+        <div class="list-item"><strong>Step 2:</strong> call <code>models/veo-3.1-lite-generate-preview:predictLongRunning</code> with a text prompt.</div>
+        <div class="list-item"><strong>Step 3:</strong> capture the returned operation name.</div>
+        <div class="list-item"><strong>Step 4:</strong> poll <code>v1beta/&lt;operation-name&gt;</code> until <code>done: true</code>.</div>
+        <div class="list-item"><strong>Step 5:</strong> extract the generated video URI from <code>response.generateVideoResponse.generatedSamples[0].video.uri</code>.</div>
+        <div class="list-item"><strong>Step 6:</strong> download that URI with the API key attached.</div>
+        <div class="list-item"><strong>Step 7:</strong> save the resulting file into the repo and host it in a viewer artifact.</div>
       </div>
     </section>
 
+    <section class="section">
+      <article class="card">
+        <span class="label">Current classification</span>
+        <h2>Proven, but still higher-friction</h2>
+        <p>This skill should now be classified as <strong>proven / higher-friction</strong>. It is proven because it has already yielded a real output and hosted artifact. It remains higher-friction because the path is more operationally involved than image generation and will benefit from better tooling, wrapping, and repeatable scripts later.</p>
+      </article>
+    </section>
+
     <section class="footer">
-      <strong>Key model family:</strong> Veo<br />
-      <strong>Status:</strong> visible and promising, but clearly more infrastructure-heavy than the other currently queued skills.
+      <strong>Key continuity point:</strong> future Ash should no longer treat Veo video generation as merely speculative. The path is real and recoverable, even if it still needs refinement.
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>

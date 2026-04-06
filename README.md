@@ -92,9 +92,9 @@ A dedicated lane for capability development tracking, with detail pushed into th
 - **Research / likely · Music generation**
   - documented at `artifacts/skill-music-generation-2026-04-06/index.html`
   - visible music-capable models include `models/lyria-3-clip-preview` and `models/lyria-3-pro-preview`
-- **Research / higher-friction · Video generation**
+- **Proven / higher-friction · Video generation**
   - documented at `artifacts/skill-video-generation-2026-04-06/index.html`
-  - visible Veo models appear to require the more complex `predictLongRunning` path and may depend on extra billing/setup
+  - Veo video generation now has a verified working path on this machine via `predictLongRunning`, though it remains a higher-friction capability than image generation because of the long-running operation flow
 
 ## Purpose
 
