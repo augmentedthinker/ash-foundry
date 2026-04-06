@@ -15,7 +15,7 @@ In practice, the workflow is:
 
 ## Current website structure
 
-The live site is intentionally concise and currently organized around three main front-door lanes:
+The live site is intentionally concise and currently organized around four main front-door lanes:
 
 ### 1. Ash Starting State
 An expandable entry point that groups the three core starting-state surfaces:
@@ -46,6 +46,12 @@ A dedicated lane for polished browser-facing artifacts created primarily for Chr
   - `artifacts/christopher-opening-statement-2026-04-06/index.html`
   - A stylized synthesis of who Christopher is, who Ash is, what has been built so far, and what kind of collaboration is emerging here.
 
+### 4. Page Styles
+A dedicated lane for Ash Foundry’s shared visual language:
+- **Foundry Ember**
+  - `artifacts/page-style-foundry-ember-2026-04-06/index.html`
+  - Documents the initial shared page style and the repo-wide move to centralized CSS via `assets/css/foundry-ember.css`.
+
 ## Purpose
 
 Ash Foundry currently serves four main jobs:
@@ -63,6 +69,7 @@ The front page is not meant to be a crowded archive. It is meant to act as a cle
 - starting state
 - memory
 - viewer-facing reflective artifacts
+- shared page styles
 
 ## Memory-push convention
 
@@ -73,6 +80,13 @@ When Christopher asks for a **memory push**, the process should normally include
 - refreshing the hosted daily-memory mirror in Ash Foundry
 
 This keeps memory pushes inspectable from both the local system and the browser-facing continuity surface.
+
+## Shared style system
+
+The current named style baseline is:
+- **Foundry Ember** → `assets/css/foundry-ember.css`
+
+This stylesheet now acts as the shared visual system for the repo so future site-wide style changes can be made centrally instead of updating each page’s embedded CSS independently.
 
 ## Live site
 

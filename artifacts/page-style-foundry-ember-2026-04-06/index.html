@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Foundry Ember · 2026-04-06</title>
+  <link rel="stylesheet" href="../../assets/css/foundry-ember.css" />
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a></div>
+      <div class="right"><a href="../../assets/css/foundry-ember.css">Shared CSS</a><a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a></div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">Page style · initial shared system</p>
+      <h1>Foundry Ember</h1>
+      <p class="sub">This is the current named visual language for Ash Foundry: dark mineral backgrounds, warm ember accents, soft blue atmospheric glow, rounded panels, dense-but-readable layout blocks, and artifact pages that feel both technical and ceremonial.</p>
+      <div class="pill-row"><span class="pill">Initial shared style</span><span class="pill">Static HTML first</span><span class="pill">Centralized CSS</span><span class="pill">Refactor baseline</span></div>
+    </section>
+
+    <section class="section">
+      <article class="quote">The point of naming the style is not branding for its own sake. It is to create a stable design object that can now be updated centrally, so the whole repo can evolve by editing one shared stylesheet instead of hand-tuning every page independently.</article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">What Foundry Ember is</h2>
+      <div class="grid">
+        <article class="card">
+          <span class="label">Visual character</span>
+          <h2>Dark, warm, precise</h2>
+          <p>The style combines a dark steel-and-charcoal base with warm ember accenting and a subtle cool blue atmospheric counterweight. It is meant to feel grounded, legible, and slightly ceremonial without tipping into ornament for ornament’s sake.</p>
+          <p>The rounded panel shapes, soft shadows, and glowing accents give the pages a coherent visual identity while still keeping them simple enough to scale across many artifact types.</p>
+        </article>
+        <article class="card">
+          <span class="label">Functional purpose</span>
+          <h2>One system for many page types</h2>
+          <p>Foundry Ember is meant to support the whole current site surface: landing pages, architectural artifacts, memory pages, source mirrors, and viewer-facing interpretive documents.</p>
+          <p>That means the system has to be flexible enough for dense explanatory pages, code/source blocks, simple archive pages, and more essay-like reflective artifacts.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">What changed in this refactor</h2>
+      <div class="stack">
+        <div class="list-item"><strong>Shared stylesheet created:</strong> the common visual language now lives in <code>assets/css/foundry-ember.css</code>.</div>
+        <div class="list-item"><strong>Pages now pull from the shared style:</strong> the site’s HTML files were refactored to link to the shared CSS instead of embedding isolated page-level style blocks.</div>
+        <div class="list-item"><strong>Universal updates are now easier:</strong> core visual changes can now be made once and reflected across the repo instead of repeated page by page.</div>
+        <div class="list-item"><strong>The style is now a named object:</strong> this gives the repo a clear initial design baseline that can later be revised, versioned, or replaced intentionally.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <article class="card">
+        <span class="label">Next-step potential</span>
+        <h2>Where this can go later</h2>
+        <p>Once Foundry Ember is established as the baseline, future work can split it into more modular layers if needed: tokens, layout primitives, source-page styling, artifact-page styling, and specialized components. But for now, the right move is keeping it unified and simple.</p>
+        <p>This is the initial shared style, not the final design system. Its value is that it creates leverage immediately.</p>
+      </article>
+    </section>
+
+    <section class="footer">
+      <strong>Style file:</strong> <code>assets/css/foundry-ember.css</code><br />
+      <strong>Status:</strong> active initial style baseline for Ash Foundry.
+    </section>
+  </main>
+</body>
+</html>
