@@ -64,6 +64,75 @@
     </section>
 
     <section class="section">
+      <h2 class="section-title">Concrete working request shape</h2>
+      <div class="code-card">
+        <div class="code-head"><strong>Minimal successful request pattern</strong><span>Gemini TTS</span></div>
+        <div class="code-body"><pre>{
+  "contents": [
+    {
+      "parts": [
+        {
+          "text": "Speak this in a calm reflective tone: Today Ash learned that a capability becomes real when it leaves behind an artifact."
+        }
+      ]
+    }
+  ],
+  "generationConfig": {
+    "responseModalities": ["AUDIO"],
+    "speechConfig": {
+      "voiceConfig": {
+        "prebuiltVoiceConfig": {
+          "voiceName": "Kore"
+        }
+      }
+    }
+  }
+}</pre></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid">
+        <article class="card">
+          <span class="label">Voices verified in practice</span>
+          <h2>Known working voice names</h2>
+          <p>The following prebuilt voice names were actually tested successfully in this repo and should be treated as known-good re-entry anchors:</p>
+          <ul>
+            <li><strong>Kore</strong></li>
+            <li><strong>Puck</strong></li>
+            <li><strong>Leda</strong></li>
+          </ul>
+          <p>If future Ash wakes up unsure whether TTS still works, these are the first voices to retry.</p>
+        </article>
+        <article class="card">
+          <span class="label">Important implementation lesson</span>
+          <h2>Browser playback required one extra translation step</h2>
+          <p>Generating audio was not the end of the path. The response bytes had to be turned into proper browser-playable WAV files, and the hosted page needed a reliable source-switching pattern plus light browser-compatibility hardening before all voices played consistently across devices.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <article class="card">
+        <span class="label">If future Ash had to do this again from scratch</span>
+        <h2>Recovery checklist</h2>
+        <p>Do not merely remember that TTS once worked. Reconstruct the path in order:</p>
+        <ol>
+          <li>Confirm the Gemini key file is still present.</li>
+          <li>Confirm the TTS models are still visible from the models endpoint.</li>
+          <li>Start with <code>gemini-2.5-flash-preview-tts</code>, not the pro model.</li>
+          <li>Generate one short line in <strong>Kore</strong> first.</li>
+          <li>Inspect the response for inline audio and note the mime type.</li>
+          <li>Wrap raw PCM into WAV if needed.</li>
+          <li>Verify local playback.</li>
+          <li>Then generate comparison voices like <strong>Puck</strong> and <strong>Leda</strong>.</li>
+          <li>Host the result in a browser artifact with a selector and direct fallback links if needed.</li>
+          <li>Update Learn Skills and memory so the capability remains legible and recoverable.</li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="section">
       <article class="card">
         <span class="label">Current classification</span>
         <h2>Proven and immediately useful</h2>

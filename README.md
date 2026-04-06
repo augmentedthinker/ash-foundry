@@ -91,7 +91,7 @@ A dedicated lane for capability development tracking, with detail pushed into th
   - this skill has already been used successfully and has produced a hosted Gemini-generated image artifact
 - **Proven / active · Text-to-speech**
   - documented at `artifacts/skill-text-to-speech-2026-04-06/index.html`
-  - Gemini-backed TTS now has a verified working path on this machine, with multiple generated voice files and a hosted browser-playable artifact.
+  - Gemini-backed TTS now has a verified working path on this machine, with multiple generated voice files, known-good voice names, response-shape details, WAV conversion notes, and a hosted browser-playable artifact.
 - **Research / likely · Music generation**
   - documented at `artifacts/skill-music-generation-2026-04-06/index.html`
   - visible music-capable models include `models/lyria-3-clip-preview` and `models/lyria-3-pro-preview`
