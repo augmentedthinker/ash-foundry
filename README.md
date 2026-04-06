@@ -65,7 +65,7 @@ A dedicated lane for artifacts and formatting choices intended specifically for 
   - Establishes a dedicated lane for mobile-oriented artifact experiments, formatting work, and phone-scale viewing considerations, with the Google Pixel 3 as the current reference device.
 - **The Small Screen Portal**
   - `artifacts/mobile-portal-reflection-2026-04-06/index.html`
-  - A first real mobile artifact: a phone-oriented reflection on today’s work with a vertical AI-generated image and a short parable shaped for handheld reading.
+  - The first real mobile viewing template/reference artifact: a phone-oriented reflection on today’s work with a vertical AI-generated image, a short parable, denser edge-to-edge layout decisions, and justified body text shaped for handheld reading.
 
 ### 6. Page Styles
 A dedicated lane for Ash Foundry’s shared visual language and alternate style directions:
@@ -155,6 +155,19 @@ New Ash Foundry pages should, by default:
 - avoid page-local CSS unless there is a strong reason not to
 
 This keeps the repo visually consistent and preserves the ability to make site-wide style changes with minimal friction.
+
+## Mobile viewing template direction
+
+A first practical mobile artifact template now exists in the Mobile & Remote Viewing lane:
+- `artifacts/mobile-portal-reflection-2026-04-06/index.html`
+
+Current lessons from that template:
+- mobile-first artifacts can use a much denser near-edge layout than the default desktop-oriented pages
+- body text can be intentionally set in justified/full-justified form for a stronger block-reading feel on the phone
+- light structure with strong readability is preferred over heavy chrome for this lane
+- the artifact should feel closer to an enhanced, well-composed markdown reading experience than to a dense desktop control surface
+
+For now, this page should be treated as the main reference/template for future mobile-oriented artifact experiments.
 
 ## Live site
 
