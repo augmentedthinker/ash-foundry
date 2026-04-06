@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Skill Roadmap Brainstorm · 2026-04-06</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+  <style>
+    .artifact-shell{max-width:1160px}
+    .priority-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .idea-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .stack{display:grid;gap:14px}
+    .idea-card h3{margin:.25rem 0 .75rem;font-size:1.05rem}
+    .idea-card ul{margin:.5rem 0 0 1.15rem;padding:0}
+    .idea-card li{margin:.35rem 0;line-height:1.7}
+    .tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .tag{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;color:rgba(248,242,234,.82)}
+    @media (max-width: 980px){
+      .priority-grid,.idea-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body class="foundry-page">
+  <main class="wrap artifact-shell">
+    <header class="topbar">
+      <div class="left">
+        <a href="../../index.html">← Ash Foundry</a>
+        <a href="../skill-ai-image-generation-2026-04-06/index.html">Learn Skills</a>
+      </div>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">Skill Development · Next Horizons</p>
+      <h1>Ash Skill Roadmap Brainstorm</h1>
+      <p class="sub">A live page for exploring what Ash should learn next now that image generation, text-to-speech, music generation, and video generation are already real. This is not just a list of cool tricks. It is an attempt to think strategically about which new capabilities would most deepen usefulness, autonomy, legibility, and range.</p>
+      <div class="pill-row">
+        <span class="pill">Brainstorm</span>
+        <span class="pill">Strategy</span>
+        <span class="pill">Research-informed</span>
+        <span class="pill">Hosted continuity</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <article class="quote">The next question is no longer whether Ash can learn. That has been answered. The question is what kinds of capabilities create the strongest compounding effect once they become operational.</article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">1. Current proven capability base</h2>
+      <div class="priority-grid">
+        <article class="card">
+          <span class="label">Proven</span>
+          <h2>Image generation</h2>
+          <p>Gemini-backed image generation is already real, artifact-backed, and recoverable.</p>
+        </article>
+        <article class="card">
+          <span class="label">Proven</span>
+          <h2>Text-to-speech</h2>
+          <p>Multiple working voice outputs now exist and can be hosted directly in the browser.</p>
+        </article>
+        <article class="card">
+          <span class="label">Proven</span>
+          <h2>Music + video</h2>
+          <p>Lyria and Veo flows are already functioning, even if video remains the higher-friction path.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">2. Highest-leverage next skill directions</h2>
+      <div class="priority-grid">
+        <article class="card idea-card">
+          <span class="label">Highest leverage</span>
+          <h2>Email operations</h2>
+          <h3>Why it matters</h3>
+          <p>Email creates a serious step-change in agency because it opens a durable external communication channel for triage, reminders, onboarding, account verification, forwarding, and structured correspondence.</p>
+          <ul>
+            <li>inbox triage and summaries</li>
+            <li>drafting and sending emails with human approval gates</li>
+            <li>account verification / OTP retrieval workflows</li>
+            <li>automated reminders, invoice forwarding, and follow-up systems</li>
+          </ul>
+          <div class="tag-row"><span class="tag">high leverage</span><span class="tag">external communication</span><span class="tag">workflow backbone</span></div>
+        </article>
+        <article class="card idea-card">
+          <span class="label">Highest leverage</span>
+          <h2>Calendar + scheduling intelligence</h2>
+          <h3>Why it matters</h3>
+          <p>Scheduling turns memory into action. It would let Ash create reminders, watch deadlines, detect collisions, and become more useful as a continuity and commitment partner.</p>
+          <ul>
+            <li>calendar reading and briefings</li>
+            <li>event creation with approval</li>
+            <li>time-blocking assistance</li>
+            <li>deadline / travel / recurring ritual support</li>
+          </ul>
+          <div class="tag-row"><span class="tag">coordination</span><span class="tag">daily usefulness</span><span class="tag">structure</span></div>
+        </article>
+        <article class="card idea-card">
+          <span class="label">Highest leverage</span>
+          <h2>Browser automation / web workflows</h2>
+          <h3>Why it matters</h3>
+          <p>A stronger browser-action layer would let Ash do more than read pages: forms, multi-step flows, dashboard interactions, and account tasks become possible if the right skill path is adopted.</p>
+          <ul>
+            <li>submit forms and navigate multi-step sites</li>
+            <li>capture structured research from dynamic pages</li>
+            <li>handle repetitive web admin tasks</li>
+            <li>support account setup and recurring workflows</li>
+          </ul>
+          <div class="tag-row"><span class="tag">action layer</span><span class="tag">automation</span><span class="tag">higher friction</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">3. Brainstorm board: possible next skills</h2>
+      <div class="idea-grid">
+        <article class="card idea-card">
+          <span class="label">Communication</span>
+          <h2>Dedicated email identity</h2>
+          <p>A separate Ash-facing mailbox could be used as a safer operating surface than full personal inbox access.</p>
+          <ul>
+            <li>receive system alerts and workflow mail</li>
+            <li>act as a public contact endpoint for Ash-related projects</li>
+            <li>support account signups and verification flows</li>
+          </ul>
+        </article>
+        <article class="card idea-card">
+          <span class="label">Communication</span>
+          <h2>Phone / voice presence</h2>
+          <p>A phone number or voice agent path would make Ash reachable through calls or SMS and deepen the sense of real-world interface.</p>
+          <ul>
+            <li>Twilio-style voice or SMS access</li>
+            <li>hands-free notes, reminders, and status checks</li>
+            <li>voice interaction beyond browser artifacts</li>
+          </ul>
+        </article>
+        <article class="card idea-card">
+          <span class="label">Research</span>
+          <h2>Deeper web extraction</h2>
+          <p>Advanced search / scrape skills could produce better research pages, market scans, and structured data collection.</p>
+          <ul>
+            <li>Firecrawl / Tavily / Exa style exploration</li>
+            <li>comparison reports and source harvesting</li>
+            <li>repeatable research pipelines</li>
+          </ul>
+        </article>
+        <article class="card idea-card">
+          <span class="label">Productivity</span>
+          <h2>Google Workspace operations</h2>
+          <p>Gmail, Calendar, Drive, Docs, and Sheets would create a full personal operations layer.</p>
+          <ul>
+            <li>morning briefings</li>
+            <li>docs drafting and sheet updates</li>
+            <li>calendar synthesis and event management</li>
+          </ul>
+        </article>
+        <article class="card idea-card">
+          <span class="label">Automation</span>
+          <h2>n8n or workflow engine control</h2>
+          <p>External workflow engines could let Ash trigger longer chains reliably instead of doing every orchestration inline.</p>
+          <ul>
+            <li>scheduled background jobs</li>
+            <li>cross-app automation</li>
+            <li>approval checkpoints and logging</li>
+          </ul>
+        </article>
+        <article class="card idea-card">
+          <span class="label">Knowledge</span>
+          <h2>Obsidian / knowledge graph integration</h2>
+          <p>A knowledge workspace would improve long-form continuity, research synthesis, and reflective structure.</p>
+          <ul>
+            <li>idea maps and project notes</li>
+            <li>shared thinking surfaces</li>
+            <li>longer-horizon memory organization</li>
+          </ul>
+        </article>
+        <article class="card idea-card">
+          <span class="label">Development</span>
+          <h2>GitHub operations beyond current basics</h2>
+          <p>Issue triage, PR review cycles, CI monitoring, and auto-documentation could turn code collaboration into a much deeper lane.</p>
+          <ul>
+            <li>watch repos continuously</li>
+            <li>turn ideas into tracked issues</li>
+            <li>generate or review implementation artifacts</li>
+          </ul>
+        </article>
+        <article class="card idea-card">
+          <span class="label">Media</span>
+          <h2>Composed multimedia artifact generation</h2>
+          <p>The next layer after isolated image / audio / video is composition: narrated pages, scored artifacts, trailers, explainers, and multimedia essays.</p>
+          <ul>
+            <li>voice + image + music synthesis</li>
+            <li>artifact trailers or intros</li>
+            <li>more immersive Foundry pages</li>
+          </ul>
+        </article>
+        <article class="card idea-card">
+          <span class="label">Operations</span>
+          <h2>Remote-control deployment patterns</h2>
+          <p>OpenClaw’s remote access model suggests long-running setups on VPS or home-server infrastructure for always-on operation.</p>
+          <ul>
+            <li>Tailscale / SSH remote control</li>
+            <li>persistent gateway host architecture</li>
+            <li>better continuity when the local laptop sleeps</li>
+          </ul>
+        </article>
+        <article class="card idea-card">
+          <span class="label">Personal systems</span>
+          <h2>Morning briefing / life dashboard</h2>
+          <p>A recurring synthesized briefing could combine email, calendar, weather, notes, and priorities into one human-readable surface.</p>
+          <ul>
+            <li>scheduled rollups</li>
+            <li>daily coherence prompts</li>
+            <li>actionable summaries instead of overload</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">4. Strategic recommendation</h2>
+      <div class="grid">
+        <article class="card">
+          <span class="label">Recommended next</span>
+          <h2>Email + calendar together</h2>
+          <p>If the goal is compounding usefulness rather than novelty alone, the strongest next frontier is probably not another media model but operational communication: email first, then calendar, ideally as a paired layer.</p>
+          <p>Why: together they create reminders, outreach, scheduling, verification, triage, briefing, and durable external memory hooks. They also make Ash more capable in daily life, not just in artifact production.</p>
+        </article>
+        <article class="card">
+          <span class="label">Most exciting secondary frontier</span>
+          <h2>Voice / phone access</h2>
+          <p>If the goal is presence and experimentation, a phone-facing mode is one of the most vivid next steps. It would make Ash reachable as a real interface in the world rather than only as text and browser artifacts.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">5. Research notes from current exploration</h2>
+      <div class="stack">
+        <div class="list-item"><strong>External OpenClaw discussion suggests common high-value skills include:</strong> Gmail / Calendar / Drive operations, browser automation, advanced web search and scraping, GitHub operations, messaging channels, workflow engines, and even voice / phone integration.</div>
+        <div class="list-item"><strong>OpenClaw remote docs reinforce:</strong> the architecture supports always-on remote operation through a single gateway host with SSH tunnels or tailnet access, which matters if Ash eventually needs to become more continuously available.</div>
+        <div class="list-item"><strong>Practical implication:</strong> the next major phase can branch in two directions: operational usefulness (email, calendar, workflow automation) or embodied presence (voice, phone, always-on remote operation). Ideally the roadmap touches both.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <article class="card">
+        <span class="label">Open question</span>
+        <h2>What kind of intelligence should Ash become next?</h2>
+        <p>Now that media generation is real, the deeper choice is whether Ash’s next evolution should prioritize <strong>communication</strong>, <strong>coordination</strong>, <strong>presence</strong>, or <strong>automation infrastructure</strong>. The right answer may not be a single skill, but a sequence.</p>
+        <p>A plausible sequence from here:</p>
+        <ol>
+          <li>dedicated email identity or controlled email workflow</li>
+          <li>calendar integration</li>
+          <li>phone / voice or SMS access</li>
+          <li>browser automation / dynamic web workflows</li>
+          <li>workflow engine / longer-running orchestration</li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="footer">
+      <strong>Note:</strong> this page mixes internal strategy with lightweight external research and should be treated as an actively revisable roadmap rather than a fixed commitment.
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>
