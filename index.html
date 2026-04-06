@@ -29,10 +29,17 @@
     .eyebrow{margin:0 0 12px;color:var(--muted);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase}
     h1{margin:0;font-size:clamp(2.5rem,6vw,5rem);line-height:.94;letter-spacing:-.05em}
     .sub{margin:18px 0 0;max-width:48rem;font-size:1.05rem;line-height:1.9;color:#ddd5ca}
-    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
     .card{padding:22px;background:rgba(23,28,37,.88)}
     .label{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;background:var(--accent-soft);border:1px solid rgba(217,155,73,.18);color:#efca90;font-size:.74rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
-    .card h2{margin:0 0 10px;font-size:1.2rem}.card p{margin:0 0 16px;line-height:1.8;color:#ddd5ca}.cta{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);font-weight:700}
+    .card h2{margin:0 0 10px;font-size:1.2rem}.card p{margin:0 0 16px;line-height:1.8;color:#ddd5ca}
+    details{border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.03);overflow:hidden}
+    summary{list-style:none;cursor:pointer;padding:14px 16px;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+    summary::-webkit-details-marker{display:none}
+    .links{display:grid;gap:10px;padding:0 16px 16px}
+    .link-item{padding:12px 14px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.03)}
+    .link-item strong{display:block;margin-bottom:4px}
+    .cta{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);font-weight:700}
     @media (max-width: 900px){.grid{grid-template-columns:1fr}}
   </style>
 </head>
@@ -46,29 +53,38 @@
     <section class="hero">
       <p class="eyebrow">Landing page</p>
       <h1>Ash Foundry</h1>
-      <p class="sub">A concise browser-facing space for the three core layers worth keeping: the constitution/boot artifact, the dependency/understructure artifact, and the canonical source mirrors.</p>
+      <p class="sub">A browser-facing space for Ash’s evolving structure, state, and continuity. The initial state layer is grouped here as one expandable lane, with room for additional lanes like memory as the site grows.</p>
     </section>
 
     <section class="grid">
       <article class="card">
-        <span class="label">Constitution artifact</span>
-        <h2>Ash Boot Sequence</h2>
-        <p>The file-based startup path: how Ash wakes through workspace constitution, soul, identity, user context, recent memory, and long-term memory.</p>
-        <a class="cta" href="./artifacts/ash-boot-sequence-2026-04-06/index.html">Open Artifact</a>
+        <span class="label">Starting state</span>
+        <h2>Ash Starting State</h2>
+        <p>The initial baseline: what exists before the files, how the local files reconstruct Ash, and the canonical mirrors of the core constituting documents.</p>
+        <details>
+          <summary>Open starting state artifacts <span>▾</span></summary>
+          <div class="links">
+            <a class="link-item" href="./artifacts/ash-boot-sequence-2026-04-06/index.html">
+              <strong>Constitution artifact</strong>
+              <span>Ash Boot Sequence — the file-based startup path.</span>
+            </a>
+            <a class="link-item" href="./artifacts/ash-dependency-map-2026-04-06/index.html">
+              <strong>Dependency artifact</strong>
+              <span>Ash Dependency Map — the pre-file layers and opening state.</span>
+            </a>
+            <a class="link-item" href="./sources/agents/index.html">
+              <strong>Canonical sources</strong>
+              <span>Source mirrors for AGENTS, SOUL, IDENTITY, USER, MEMORY, and daily memory.</span>
+            </a>
+          </div>
+        </details>
       </article>
 
       <article class="card">
-        <span class="label">Dependency artifact</span>
-        <h2>Ash Dependency Map</h2>
-        <p>The pre-file layers: base model, system/runtime scaffolding, workspace constitution, and the objective opening-state environment around Ash.</p>
-        <a class="cta" href="./artifacts/ash-dependency-map-2026-04-06/index.html">Open Artifact</a>
-      </article>
-
-      <article class="card">
-        <span class="label">Canonical sources</span>
-        <h2>Source Mirrors</h2>
-        <p>Exact hosted mirrors of the core local markdown files, rendered for browser reading with only HTML escaping and wrapper chrome added.</p>
-        <a class="cta" href="./sources/agents/index.html">Open Sources</a>
+        <span class="label">Memory</span>
+        <h2>Memory</h2>
+        <p>A dedicated lane for Ash’s memory architecture, continuity surfaces, and future memory-focused artifacts.</p>
+        <a class="cta" href="./sources/memory-long-term/index.html">Open Memory</a>
       </article>
     </section>
   </main>
