@@ -13,7 +13,7 @@
 </head>
 <body>
   <main class="wrap">
-    <div class="topbar"><a href="../../index.html">← Ash Foundry</a><a href="../../sources/memory-long-term/index.html">Long-term Memory</a></div>
+    <div class="topbar"><a href="../../index.html">← Ash Foundry</a><a href="../daily-memory/index.html">Daily Memory Archive</a></div>
     <section class="hero">
       <p class="eyebrow">Canonical source mirror</p>
       <h1>memory/2026-04-06.md</h1>
@@ -86,9 +86,18 @@ The current front page is intentionally concise and now centers around:
 - `Ash Starting State` (expandable card linking to the boot sequence, dependency artifact, and canonical sources)
 - `Memory` (a separate lane for memory-related continuity surfaces)
 
+## Memory implementation progress
+
+Additional progress after the initial memory push:
+- Created a dedicated `Ash Memory Architecture` artifact explaining how Ash’s memory currently functions.
+- Converted the `Memory` card on the Ash Foundry front page into a dropdown menu.
+- Created a `Daily Memory` archive/index page in Ash Foundry.
+- Established an explicit working convention that when Christopher asks for a memory push, the local daily memory file should also be mirrored into Ash Foundry’s daily-memory lane.
+- Verified that the memory tools `memory_search` and `memory_get` are functioning in the current environment.
+
 ## Open threads
 
-- Improve the `Memory` lane in Ash Foundry so memory pushes are easier to inspect.
+- Decide later whether the new memory-push mirroring convention should be promoted into `MEMORY.md` as a durable long-term operating rule.
 - Potentially create dedicated memory audit/change artifacts when long-term memory is updated.
 - Continue expanding Ash Foundry in an organized way without reintroducing front-page bloat.
 - Over time, use Ash Foundry to document capability growth, autonomy structure, and longer-term development of Ash as a digital entity.
