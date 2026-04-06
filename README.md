@@ -47,10 +47,13 @@ A dedicated lane for polished browser-facing artifacts created primarily for Chr
   - A stylized synthesis of who Christopher is, who Ash is, what has been built so far, and what kind of collaboration is emerging here.
 
 ### 4. Page Styles
-A dedicated lane for Ash Foundry’s shared visual language:
+A dedicated lane for Ash Foundry’s shared visual language and alternate style directions:
 - **Foundry Ember**
   - `artifacts/page-style-foundry-ember-2026-04-06/index.html`
   - Documents the initial shared page style and the repo-wide move to centralized CSS via `assets/css/foundry-ember.css`.
+- **Foundry Glass**
+  - `artifacts/page-style-foundry-glass-2026-04-06/index.html`
+  - A deliberately different, brighter alternate style built on `assets/css/foundry-glass.css` for live visual comparison.
 
 ## Purpose
 
@@ -83,10 +86,11 @@ This keeps memory pushes inspectable from both the local system and the browser-
 
 ## Shared style system
 
-The current named style baseline is:
+The current named style options are:
 - **Foundry Ember** → `assets/css/foundry-ember.css`
+- **Foundry Glass** → `assets/css/foundry-glass.css`
 
-This stylesheet now acts as the shared visual system for the repo so future site-wide style changes can be made centrally instead of updating each page’s embedded CSS independently.
+At the moment, the live site itself still uses the Foundry Ember stylesheet as its primary shared visual system. Foundry Glass exists as an alternate documented style option for browser-based comparison.
 
 ## Live site
 
