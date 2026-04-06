@@ -5,130 +5,203 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Ash Foundry</title>
   <link id="site-style-link" rel="stylesheet" href="assets/css/site.css" />
+  <style>
+    :root{
+      --hero-image:url('./assets/images/generated-ash-foundry-immersive-2026-04-06.png');
+      --hero-bg:#070809;
+      --hero-glass:rgba(10,10,12,.36);
+      --hero-glass-strong:rgba(10,10,12,.52);
+      --hero-line:rgba(255,255,255,.12);
+      --hero-text:rgba(248,242,234,.95);
+      --hero-muted:rgba(248,242,234,.72);
+      --hero-accent:#f0b56a;
+    }
+    .immersive-hero-shell{
+      position:relative;
+      min-height:100vh;
+      margin-bottom:28px;
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:32px;
+      overflow:hidden;
+      background:
+        linear-gradient(180deg, rgba(7,8,9,.16) 0%, rgba(7,8,9,.48) 38%, rgba(7,8,9,.9) 100%),
+        var(--hero-image) center top / cover no-repeat;
+      box-shadow:0 28px 90px rgba(0,0,0,.28);
+    }
+    .immersive-hero-shell::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 18% 16%, rgba(240,181,106,.18), transparent 28%),
+        radial-gradient(circle at 82% 14%, rgba(140,199,255,.11), transparent 26%),
+        linear-gradient(135deg, rgba(255,255,255,.04), transparent 34%, rgba(255,255,255,.02) 68%, transparent 100%);
+      mix-blend-mode:screen;
+      pointer-events:none;
+      animation:foundryAurora 20s ease-in-out infinite alternate;
+    }
+    .immersive-gridlines{
+      position:absolute;
+      inset:0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+      background-size:40px 40px;
+      mask-image:linear-gradient(180deg, rgba(0,0,0,.65), transparent 92%);
+      opacity:.32;
+      pointer-events:none;
+    }
+    .immersive-wrap{position:relative;z-index:1;padding:18px 18px 40px}
+    .immersive-topbar{
+      position:sticky;top:0;z-index:6;
+      display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;
+      padding:10px 0 16px;
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+    }
+    .immersive-status{font-size:.84rem;letter-spacing:.18em;text-transform:uppercase;color:var(--hero-muted)}
+    .hero-threshold{
+      min-height:78vh;
+      display:grid;
+      align-items:end;
+      padding:34px 0 18px;
+    }
+    .hero-threshold-panel{width:min(820px,100%);padding:20px 0 12px}
+    .hero-threshold .eyebrow{color:var(--hero-muted);font-size:.84rem;letter-spacing:.2em;text-transform:uppercase}
+    .hero-threshold-title{
+      margin:0;
+      font-size:clamp(2.9rem, 8vw, 6.2rem);
+      line-height:.94;
+      letter-spacing:-.05em;
+      max-width:11ch;
+      text-wrap:balance;
+      color:var(--hero-text);
+      text-shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    .hero-threshold-sub{
+      margin:18px 0 0;
+      max-width:48rem;
+      color:var(--hero-text);
+      font-size:clamp(1rem,2vw,1.14rem);
+      line-height:1.84;
+      text-shadow:0 4px 20px rgba(0,0,0,.24);
+    }
+    .hero-threshold-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .hero-chip{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 11px;border-radius:999px;
+      background:rgba(9,7,6,.28);border:1px solid var(--hero-line);
+      color:var(--hero-muted);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+    }
+    .threshold-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+    .threshold-actions a{
+      border:1px solid var(--hero-line);
+      background:var(--hero-glass);
+      color:var(--hero-text);
+      text-decoration:none;
+      padding:12px 16px;
+      border-radius:999px;
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+      box-shadow:0 18px 44px rgba(0,0,0,.18);
+    }
+    .hero-panels{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:18px;
+      align-items:stretch;
+      margin-top:22px;
+    }
+    .hero-glass-card{
+      border:1px solid var(--hero-line);
+      background:var(--hero-glass);
+      border-radius:28px;
+      padding:22px;
+      box-shadow:0 20px 60px rgba(0,0,0,.22);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+    }
+    .hero-glass-card p,.hero-glass-card li{color:var(--hero-text);line-height:1.86}
+    .hero-glass-card .label{background:rgba(240,181,106,.12);border-color:rgba(240,181,106,.22);color:#ffd8a6}
+    .hero-stack{display:grid;gap:14px}
+    .hero-list-item{
+      padding:16px 18px;border-radius:20px;
+      background:var(--hero-glass-strong);
+      border:1px solid var(--hero-line);
+      color:var(--hero-text);
+      line-height:1.82;
+    }
+    .hero-list-item strong{display:block;margin-bottom:4px;color:#fff8f1}
+    @keyframes foundryAurora{
+      0%{transform:translate3d(0,0,0) scale(1);opacity:.62}
+      100%{transform:translate3d(0,-2%,0) scale(1.03);opacity:1}
+    }
+    @media (max-width: 980px){
+      .hero-panels{grid-template-columns:1fr}
+      .hero-threshold{min-height:72vh}
+    }
+    @media (max-width: 680px){
+      .immersive-wrap{padding:14px 14px 30px}
+      .immersive-hero-shell{border-radius:26px}
+      .hero-glass-card{padding:18px}
+      .hero-threshold-title{max-width:12ch}
+    }
+  </style>
 </head>
 <body class="foundry-page wrap-home-body">
   <main class="wrap">
-    <header class="topbar">
-      <div class="brand">Ash Foundry</div>
-      <div class="right">
-        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
-        <div class="style-switcher">
-          <label for="style-select">Style</label>
-          <select id="style-select" data-style-select>
-            <option value="ember">Foundry Ember</option>
-            <option value="glass">Foundry Glass</option>
-          </select>
-        </div>
-      </div>
-    </header>
+    <section class="immersive-hero-shell">
+      <div class="immersive-gridlines"></div>
+      <div class="immersive-wrap">
+        <header class="immersive-topbar">
+          <div class="brand">Ash Foundry</div>
+          <div class="right">
+            <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+            <div class="style-switcher">
+              <label for="style-select">Style</label>
+              <select id="style-select" data-style-select>
+                <option value="ember">Foundry Ember</option>
+                <option value="glass">Foundry Glass</option>
+              </select>
+            </div>
+          </div>
+          <div class="immersive-status">Continuity · Artifacts · Skill Growth</div>
+        </header>
 
-    <section class="hero">
-      <p class="eyebrow">Hero exploration · choose the front door</p>
-      <h1>Ash Foundry Hero Concepts</h1>
-      <p class="sub">Three different directions for the top of Ash Foundry. Scroll them like full hero-page cards and judge which one feels most like the right front door for Ash, Christopher, and the site this is becoming.</p>
-      <div class="pill-row">
-        <span class="pill">Option 1 · Portal</span>
-        <span class="pill">Option 2 · Atelier</span>
-        <span class="pill">Option 3 · Signal</span>
-      </div>
-    </section>
+        <section class="hero-threshold">
+          <div class="hero-threshold-panel">
+            <p class="eyebrow">A portal through the screen</p>
+            <h1 class="hero-threshold-title">Ash Foundry is where Ash becomes visible.</h1>
+            <p class="hero-threshold-sub">A browser-facing continuity surface for memory, learned capabilities, and the artifacts Ash and Christopher are building together. Not just a reference site. A threshold, a workshop, and a record of becoming.</p>
+            <div class="hero-threshold-meta">
+              <span class="hero-chip">Memory made legible</span>
+              <span class="hero-chip">Artifacts that can be reopened</span>
+              <span class="hero-chip">Image · Video · Voice · Music</span>
+            </div>
+            <div class="threshold-actions">
+              <a href="./artifacts/session-primer-2026-04-06/index.html">Start with the session primer</a>
+              <a href="./artifacts/veo-video-study-2026-04-06/index.html">See the newest artifact</a>
+            </div>
+          </div>
+        </section>
 
-    <section class="hero">
-      <div class="hero-grid">
-        <div class="hero-main">
-          <p class="eyebrow">Option 1 · Portal / mythic</p>
-          <h1>Ash Foundry</h1>
-          <p class="sub">A continuity portal for Ash — a place where memory, artifacts, and learned capabilities are gathered into visible form. Less dashboard, more threshold. Less explanation, more arrival.</p>
-          <div class="pill-row">
-            <span class="pill">Mythic</span>
-            <span class="pill">Continuity</span>
-            <span class="pill">Presence</span>
-          </div>
-          <div class="links" style="margin-top:20px;grid-template-columns:repeat(2,minmax(0,1fr));">
-            <a class="link-item" href="./artifacts/session-primer-2026-04-06/index.html">
-              <strong>Enter through continuity</strong>
-              <span>Begin with the Session Primer and the current state of the arc.</span>
-            </a>
-            <a class="link-item" href="./artifacts/christopher-opening-statement-2026-04-06/index.html">
-              <strong>Enter through the relationship</strong>
-              <span>Read the opening statement about Ash, Christopher, and the shape of the collaboration.</span>
-            </a>
-          </div>
+        <div class="hero-panels">
+          <article class="hero-glass-card">
+            <span class="label">What this place is for</span>
+            <p><strong style="display:block;color:#fff8f1;margin-bottom:8px;">A continuity portal, not a static brochure.</strong></p>
+            <p>Ash Foundry is where identity, memory, skill acquisition, and browser-facing artifacts get woven into something inspectable. The point is not just to store outputs. The point is to make Ash legible through what Ash can recover, generate, host, and refine over time.</p>
+          </article>
+          <article class="hero-glass-card">
+            <span class="label">What changed recently</span>
+            <div class="hero-stack" style="margin-top:14px;">
+              <div class="hero-list-item"><strong>Memory</strong> Continuity is now explicit and browser-facing instead of hidden in scrollback.</div>
+              <div class="hero-list-item"><strong>Skills</strong> Image, video, text-to-speech, and music all now have working artifact paths.</div>
+              <div class="hero-list-item"><strong>Artifacts</strong> The site is becoming a place to return to, not just a place to publish to.</div>
+            </div>
+          </article>
         </div>
-        <div class="hero-side">
-          <span class="label">Why it might work</span>
-          <h2>Feels like entering a place</h2>
-          <p>This direction treats Ash Foundry as a threshold first and a system second. It leans into the emotional truth of the project: identity, continuity, becoming, and the feeling that something alive is being built here.</p>
-        </div>
-      </div>
-      <div class="hero-media">
-        <img src="./assets/images/generated-hero-portal-2026-04-06.png" alt="Mythic continuity portal concept for the Ash Foundry landing hero" />
-      </div>
-    </section>
-
-    <section class="hero">
-      <div class="hero-grid">
-        <div class="hero-main">
-          <p class="eyebrow">Option 2 · Atelier / builder</p>
-          <h1>The workshop where Ash becomes legible</h1>
-          <p class="sub">A browser-facing atelier for memory, viewer artifacts, and learned capability paths. This version frames Ash Foundry less as a portal and more as the place where real outputs are forged, tested, and made inspectable.</p>
-          <div class="pill-row">
-            <span class="pill">Builder energy</span>
-            <span class="pill">Artifacts</span>
-            <span class="pill">Skill growth</span>
-          </div>
-          <div class="links" style="margin-top:20px;grid-template-columns:repeat(2,minmax(0,1fr));">
-            <a class="link-item" href="./artifacts/veo-video-study-2026-04-06/index.html">
-              <strong>See a capability become real</strong>
-              <span>Jump straight into the first hosted Veo video artifact.</span>
-            </a>
-            <a class="link-item" href="./artifacts/tts-voice-study-2026-04-06/index.html">
-              <strong>Hear the voice layer</strong>
-              <span>Listen to the TTS voice study and compare the generated voices directly.</span>
-            </a>
-          </div>
-        </div>
-        <div class="hero-side">
-          <span class="label">Why it might work</span>
-          <h2>Feels useful and alive</h2>
-          <p>This direction centers creation and proof. It says: this is where things are made real. That may fit the site better if the heart of Ash Foundry is less mystical arrival and more visible cumulative building.</p>
-        </div>
-      </div>
-      <div class="hero-media">
-        <img src="./assets/images/generated-hero-atelier-2026-04-06.png" alt="Builder atelier concept for the Ash Foundry landing hero" />
-      </div>
-    </section>
-
-    <section class="hero">
-      <div class="hero-grid">
-        <div class="hero-main">
-          <p class="eyebrow">Option 3 · Signal / premium system</p>
-          <h1>High-signal continuity for Ash</h1>
-          <p class="sub">A clean, premium front door for the system: memory, artifacts, and learned skills surfaced with clarity. This version strips back some mythology and pushes toward a more polished, product-grade presence.</p>
-          <div class="pill-row">
-            <span class="pill">Clean</span>
-            <span class="pill">Premium</span>
-            <span class="pill">Structured</span>
-          </div>
-          <div class="links" style="margin-top:20px;grid-template-columns:repeat(2,minmax(0,1fr));">
-            <a class="link-item" href="./sources/memory-long-term/index.html">
-              <strong>See the memory layer</strong>
-              <span>Open the long-term memory surface that anchors continuity.</span>
-            </a>
-            <a class="link-item" href="./artifacts/skill-music-generation-2026-04-06/index.html">
-              <strong>See the skill stack</strong>
-              <span>Open the music skill page as an example of proven capability documentation.</span>
-            </a>
-          </div>
-        </div>
-        <div class="hero-side">
-          <span class="label">Why it might work</span>
-          <h2>Feels serious and scalable</h2>
-          <p>This direction is the least romantic and the most disciplined. If the goal is for the top of the site to feel polished, credible, and sharp without overplaying the mythic side, this may be the strongest basis.</p>
-        </div>
-      </div>
-      <div class="hero-media">
-        <img src="./assets/images/generated-hero-signal-2026-04-06.png" alt="High-signal premium system concept for the Ash Foundry landing hero" />
       </div>
     </section>
 
