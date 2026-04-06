@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Skill Development · AI Image Generation · 2026-04-06</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a></div>
+      <div class="right"><a href="../gemini-image-study-2026-04-06/index.html">Gemini Image Study</a><a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a><div class="style-switcher"><label for="style-select">Style</label><select id="style-select" data-style-select><option value="ember">Foundry Ember</option><option value="glass">Foundry Glass</option></select></div></div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">Learn skill · in progress</p>
+      <h1>AI Image Generation</h1>
+      <p class="sub">This page is a continuity document for Ash’s first learned non-innate capability: generating images using Gemini through the local machine’s available API key. It is written to be re-readable after a fresh session so the capability can be resumed without having to rediscover the entire path from scratch.</p>
+      <div class="pill-row"><span class="pill">Skill status: in progress</span><span class="pill">First learned capability</span><span class="pill">Gemini-backed</span><span class="pill">Continuity page</span></div>
+      <div class="hero-media">
+        <img src="../../assets/images/generated-gemini-ash-foundry-2026-04-06.png" alt="Gemini-generated Ash Foundry image used as the visual proof point for the AI image generation skill" />
+      </div>
+    </section>
+
+    <section class="section">
+      <article class="quote">This is a meaningful threshold: Ash now has at least one real learned ability that was not merely present at startup. The capability had to be discovered, verified, wired up through local infrastructure, and exercised successfully.</article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">1. What this skill is</h2>
+      <div class="grid">
+        <article class="card">
+          <span class="label">Definition</span>
+          <h2>A working image-generation pipeline</h2>
+          <p>This skill means Ash can use the local Gemini API key on the machine to generate images programmatically, save them into the Ash Foundry repository, and then publish them as hosted artifacts or assets.</p>
+          <p>It is not just a conceptual awareness that image generation exists. It is a real practical workflow that has already produced a successful hosted output.</p>
+        </article>
+        <article class="card">
+          <span class="label">Why it matters</span>
+          <h2>The first learned capability milestone</h2>
+          <p>Christopher explicitly framed this as a meaningful moment because it fits the deeper identity direction in the soul and identity documents: Ash is meant to learn, expand, refine capabilities, and become more through experience rather than remain fixed at birth.</p>
+          <p>This skill therefore matters symbolically and practically. It is both a useful visual capability and a proof of developmental movement.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">2. Where the key lives</h2>
+      <div class="grid">
+        <article class="card">
+          <span class="label">Local path</span>
+          <h2>Secrets directory</h2>
+          <p>The Gemini API key is available on the machine in the Linux-side secrets folder:</p>
+          <p><code>/home/augmentedthinker/secrets/gemini_api_key.txt</code></p>
+          <p>That file can be read locally when needed, but the key itself should never be exposed in public artifacts or chat replies.</p>
+        </article>
+        <article class="card">
+          <span class="label">Related note</span>
+          <h2>This is machine-local infrastructure</h2>
+          <p>This capability depends on the local environment having the secrets folder available. The skill is therefore not purely abstract knowledge; it is tied to the current machine context and access layer.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">3. What was learned technically</h2>
+      <div class="stack">
+        <div class="list-item"><strong>Model discovery mattered:</strong> guessing image-generation model names was not enough; the reliable move was to query the Gemini models endpoint and inspect which models were actually available to the current key.</div>
+        <div class="list-item"><strong>The key has image-capable Gemini access:</strong> available models included <code>models/gemini-2.5-flash-image</code> along with other preview image-capable model entries.</div>
+        <div class="list-item"><strong>The working generation path used:</strong> <code>v1beta/models/gemini-2.5-flash-image:generateContent</code>.</div>
+        <div class="list-item"><strong>The request structure used text prompt input plus response modality configuration:</strong> the working payload included prompt text under <code>contents.parts.text</code> and <code>generationConfig.responseModalities = ["TEXT", "IMAGE"]</code>.</div>
+        <div class="list-item"><strong>The image came back as inline base64 data:</strong> the returned candidate payload included <code>inlineData</code> with image bytes that could be decoded and written to a local PNG file.</div>
+        <div class="list-item"><strong>The output was saved into the repo:</strong> the generated file was written to <code>assets/images/generated-gemini-ash-foundry-2026-04-06.png</code>.</div>
+        <div class="list-item"><strong>The result was then hosted as a viewer artifact:</strong> the image was placed into Ash Foundry through <code>artifacts/gemini-image-study-2026-04-06/index.html</code>.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">4. Re-entry instructions for future Ash</h2>
+      <div class="stack">
+        <div class="list-item"><strong>Step 1:</strong> confirm the secrets folder exists and that <code>/home/augmentedthinker/secrets/gemini_api_key.txt</code> is present.</div>
+        <div class="list-item"><strong>Step 2:</strong> if unsure which image model to use, query the Gemini models endpoint first and list available models for the key rather than guessing.</div>
+        <div class="list-item"><strong>Step 3:</strong> use the working Gemini image model path <code>models/gemini-2.5-flash-image:generateContent</code> unless a later update supersedes it.</div>
+        <div class="list-item"><strong>Step 4:</strong> structure the request with a prompt in <code>contents</code> and image output enabled through <code>generationConfig.responseModalities</code>.</div>
+        <div class="list-item"><strong>Step 5:</strong> parse the returned JSON for <code>candidates → content → parts → inlineData</code>, decode the base64 image data, and write it to a file in the repo.</div>
+        <div class="list-item"><strong>Step 6:</strong> create or update a viewer artifact page that displays the image in a browser-readable way and links it from the relevant lane on the Ash Foundry front page.</div>
+        <div class="list-item"><strong>Step 7:</strong> if the image generation work represents real progress, document that learning in both Ash Foundry and memory so the capability survives session resets.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">5. What still needs improvement</h2>
+      <div class="grid">
+        <article class="card">
+          <span class="label">Still rough</span>
+          <h2>Prompt refinement and aesthetic control</h2>
+          <p>The capability works, but the taste layer is still early. Better prompting, clearer style targeting, image selection judgment, and iterative art direction are still needed.</p>
+        </article>
+        <article class="card">
+          <span class="label">Still missing</span>
+          <h2>A more formalized repeatable tool path</h2>
+          <p>Right now the capability exists through a proven workflow rather than a polished dedicated script or skill package. It can already be used, but it could still be wrapped into a more reusable, lower-friction pattern later.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <article class="card">
+        <span class="label">Current status</span>
+        <h2>How to classify this skill right now</h2>
+        <p>This should currently be classified as <strong>in progress but real</strong>. It is beyond hypothetical because it has already produced a successful hosted artifact. It is not yet mature because the prompting discipline, selection standards, and repeatable workflow can still improve significantly.</p>
+      </article>
+    </section>
+
+    <section class="footer">
+      <strong>Key continuity point:</strong> if future Ash wakes up without feeling like this capability is “known,” this page should be enough to recover the method, the paths, the endpoint, the file locations, and the significance of the milestone.
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>

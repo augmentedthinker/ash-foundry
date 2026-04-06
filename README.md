@@ -63,7 +63,7 @@ A dedicated lane for capability development tracking:
 - **Operational skills**
   - current stable/usable skills can be listed here as they become real
 - **In progress · AI image generation**
-  - the first tracked developing skill area, now with an initial live Gemini-generated image artifact hosted in viewer artifacts
+  - now documented in depth at `artifacts/skill-ai-image-generation-2026-04-06/index.html`, including the working Gemini image-generation path, local key location, recovery steps for future sessions, and the first successful hosted result
 
 ## Purpose
 
