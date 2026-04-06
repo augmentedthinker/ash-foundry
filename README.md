@@ -45,6 +45,9 @@ A dedicated lane for polished browser-facing artifacts created primarily for Chr
 - **Opening statement artifact**
   - `artifacts/christopher-opening-statement-2026-04-06/index.html`
   - A stylized synthesis of who Christopher is, who Ash is, what has been built so far, and what kind of collaboration is emerging here.
+- **Gemini image study**
+  - `artifacts/gemini-image-study-2026-04-06/index.html`
+  - The first hosted AI-generated image artifact created with the local Gemini API key for Ash Foundry.
 
 ### 4. Page Styles
 A dedicated lane for Ash Foundry’s shared visual language and alternate style directions:
@@ -60,7 +63,7 @@ A dedicated lane for capability development tracking:
 - **Operational skills**
   - current stable/usable skills can be listed here as they become real
 - **In progress · AI image generation**
-  - the first tracked developing skill area, focused on image creation workflows and stronger visual artifact generation
+  - the first tracked developing skill area, now with an initial live Gemini-generated image artifact hosted in viewer artifacts
 
 ## Purpose
 
