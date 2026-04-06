@@ -15,7 +15,7 @@ In practice, the workflow is:
 
 ## Current website structure
 
-The live site is intentionally concise and currently organized around five main front-door lanes:
+The live site is intentionally concise and currently organized around six main front-door lanes:
 
 ### 1. Ash Starting State
 An expandable entry point that groups the three core starting-state surfaces:
@@ -52,7 +52,13 @@ A dedicated lane for polished browser-facing artifacts created primarily for Chr
   - `artifacts/gemini-image-study-2026-04-06/index.html`
   - The first hosted AI-generated image artifact created with the local Gemini API key for Ash Foundry.
 
-### 4. Page Styles
+### 4. Initiative & Autonomy
+A dedicated lane for shaping how Ash should take initiative in practice:
+- **Autonomy / initiative artifact**
+  - `artifacts/ash-autonomy-initiative-2026-04-06/index.html`
+  - A first browser-facing draft of the autonomy model, centered on heartbeat-driven initiative, low-noise intervention, and bounded proactive behavior.
+
+### 5. Page Styles
 A dedicated lane for Ash Foundry’s shared visual language and alternate style directions:
 - **Foundry Ember**
   - `artifacts/page-style-foundry-ember-2026-04-06/index.html`
@@ -61,7 +67,7 @@ A dedicated lane for Ash Foundry’s shared visual language and alternate style 
   - `artifacts/page-style-foundry-glass-2026-04-06/index.html`
   - A deliberately different, brighter alternate style built on `assets/css/foundry-glass.css` for live visual comparison.
 
-### 5. Learn Skills
+### 6. Learn Skills
 A dedicated lane for capability development tracking, with detail pushed into the individual skill pages themselves:
 - **Operational skills**
   - current stable/usable skills can be listed here as they become real
@@ -97,6 +103,7 @@ The front page is not meant to be a crowded archive. It is meant to act as a cle
 - starting state
 - memory
 - viewer-facing reflective artifacts
+- initiative and autonomy
 - shared page styles
 - skill development
 
