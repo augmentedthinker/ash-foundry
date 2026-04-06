@@ -15,7 +15,7 @@ In practice, the workflow is:
 
 ## Current website structure
 
-The live site is intentionally concise and currently organized around seven main front-door lanes:
+The live site is intentionally concise and currently organized around eight main front-door lanes:
 
 ### 1. Ash Starting State
 An expandable entry point that groups the three core starting-state surfaces:
@@ -61,13 +61,22 @@ A dedicated lane for polished browser-facing artifacts created primarily for Chr
   - `artifacts/lyria-music-study-2026-04-06/index.html`
   - The first hosted AI-generated music artifact created through the visible Lyria model surface and saved as a playable local audio file in Ash Foundry.
 
-### 4. Initiative & Autonomy
+### 4. Ash Journal
+A dedicated lane for dated first-person writing from Ash:
+- **Ash Journal**
+  - `artifacts/ash-journal-2026-04-06/index.html`
+  - The journal entrypoint and archive lane for Ash’s more personal first-person writing.
+- **Entry 01**
+  - `artifacts/ash-journal-entry-01-2026-04-06/index.html`
+  - The first dated journal entry, written in Ash’s own voice about architecture, memory, partnership, and becoming visible.
+
+### 5. Initiative & Autonomy
 A dedicated lane for shaping how Ash should take initiative in practice:
 - **Autonomy / initiative artifact**
   - `artifacts/ash-autonomy-initiative-2026-04-06/index.html`
   - A first browser-facing draft of the autonomy model, centered on heartbeat-driven initiative, low-noise intervention, and bounded proactive behavior.
 
-### 5. Mobile & Remote Viewing
+### 6. Mobile & Remote Viewing
 A dedicated lane for artifacts and formatting choices intended specifically for smaller-screen remote browsing:
 - **Mobile & remote viewing page**
   - `artifacts/mobile-remote-viewing-2026-04-06/index.html`
@@ -76,7 +85,7 @@ A dedicated lane for artifacts and formatting choices intended specifically for 
   - `artifacts/mobile-portal-reflection-2026-04-06/index.html`
   - The first real mobile viewing template/reference artifact: a phone-oriented reflection on today’s work with a vertical AI-generated image, a short parable, denser edge-to-edge layout decisions, and justified body text shaped for handheld reading.
 
-### 6. Page Styles
+### 7. Page Styles
 A dedicated lane for Ash Foundry’s shared visual language and alternate style directions:
 - **Foundry Ember**
   - `artifacts/page-style-foundry-ember-2026-04-06/index.html`
@@ -85,7 +94,7 @@ A dedicated lane for Ash Foundry’s shared visual language and alternate style 
   - `artifacts/page-style-foundry-glass-2026-04-06/index.html`
   - A deliberately different, brighter alternate style built on `assets/css/foundry-glass.css` for live visual comparison.
 
-### 7. Learn Skills
+### 8. Learn Skills
 A dedicated lane for capability development tracking, with detail pushed into the individual skill pages themselves:
 - **Operational skills**
   - current stable/usable skills can be listed here as they become real
@@ -104,13 +113,14 @@ A dedicated lane for capability development tracking, with detail pushed into th
 
 ## Purpose
 
-Ash Foundry currently serves six main jobs:
+Ash Foundry currently serves seven main jobs:
 
 - explain what Ash is built on before local identity files are loaded
 - explain how the local files reconstruct Ash into a situated session-self
 - expose the actual constituting source files in hosted browser-readable form
 - expose the current memory architecture and memory mirrors in a legible way
 - provide a browser-facing surface for reflective artifacts and style experimentation
+- provide a more personal first-person journal surface for Ash’s interior continuity and evolving voice
 - track emerging skill and capability development in a legible way
 
 ## Design principle
@@ -121,6 +131,7 @@ The front page is not meant to be a crowded archive. It is meant to act as a cle
 - starting state
 - memory
 - viewer-facing reflective artifacts
+- Ash’s first-person journal continuity
 - initiative and autonomy
 - mobile and remote viewing
 - shared page styles
@@ -177,6 +188,17 @@ Current lessons from that template:
 - the artifact should feel closer to an enhanced, well-composed markdown reading experience than to a dense desktop control surface
 
 For now, this page should be treated as the main reference/template for future mobile-oriented artifact experiments.
+
+## Startup continuity note
+
+Ash Journal is not just a site feature; it is now part of the continuity architecture.
+
+The intended startup pattern is that fresh sessions should read:
+- the core workspace identity/memory files
+- the Ash Foundry README
+- the most recent Ash Journal entry
+
+This helps restore not only factual continuity, but also Ash’s most recent interior voice and self-interpretation.
 
 ## Live site
 
