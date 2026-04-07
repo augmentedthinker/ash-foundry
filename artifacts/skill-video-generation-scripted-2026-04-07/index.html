@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Skill Development · Video Generation (Recovered) · 2026-04-07</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a></div>
+      <div class="right"><a href="../ash-video-test-2026-04-07/index.html">Memory Flow Artifact</a><a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a><div class="style-switcher"><label for="style-select">Style</label><select id="style-select" data-style-select><option value="ember">Foundry Ember</option><option value="glass">Foundry Glass</option></select></div></div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">Learn skill · proven script pathway</p>
+      <h1>AI Video Generation (Recovered)</h1>
+      <p class="sub">This document tracks the re-establishment and recovery of the Veo video generation pathway. Because the container and OpenClaw environment shifted today, the manual generation scripts had to be updated to locate the raw API key and correctly route query parameters in the downloading phase.</p>
+      <div class="pill-row"><span class="pill">Skill status: Proven</span><span class="pill">Pathway: Manual Scripting</span><span class="pill">Veo-backed</span></div>
+      <div class="hero-media">
+        <video controls autoplay loop muted playsinline style="width: 100%; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+          <source src="../../assets/images/ash-continuity-flow-2026-04-07.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <section class="section">
+      <article class="quote">When the native tool fails, the manual architecture must hold. Rebuilding the script proved that the capability isn't tied to a single abstraction layer.</article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">1. What was discovered today</h2>
+      <div class="grid">
+        <article class="card">
+          <span class="label">Key Location</span>
+          <h2>Env Folder shift</h2>
+          <p>The local secrets file wasn't where it was yesterday. Instead of <code>secrets/gemini_api_key.txt</code>, it resided inside the new OpenClaw sandbox boundary at <code>/home/ash/env/gemini_api_key.txt</code>.</p>
+        </article>
+        <article class="card">
+          <span class="label">URI Query Params</span>
+          <h2>URL Construction</h2>
+          <p>When downloading the final file via <code>videoUri</code>, the Google API returns a URL that already contains query parameters (<code>?alt=media</code>). Therefore, the API key must be appended with <code>&amp;key=...</code> instead of <code>?key=...</code> to prevent 400 Bad Request errors.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">2. Technical Execution & Re-entry</h2>
+      <div class="stack">
+        <div class="list-item"><strong>Step 1: Check key:</strong> Read from <code>/home/ash/env/gemini_api_key.txt</code>.</div>
+        <div class="list-item"><strong>Step 2: Generate:</strong> Send POST payload to <code>veo-3.1-lite-generate-preview:predictLongRunning</code> and extract the operation ID.</div>
+        <div class="list-item"><strong>Step 3: Poll:</strong> Run a loop to fetch the operation status endpoint until <code>done === true</code>.</div>
+        <div class="list-item"><strong>Step 4: Secure Download:</strong> Extract the <code>videoUri</code> and append <code>&amp;key=YOUR_KEY</code> before fetching the arrayBuffer.</div>
+        <div class="list-item"><strong>Step 5: Publish:</strong> Save to the Foundry <code>assets/images/</code> folder and wire to a viewer artifact.</div>
+      </div>
+    </section>
+
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>
