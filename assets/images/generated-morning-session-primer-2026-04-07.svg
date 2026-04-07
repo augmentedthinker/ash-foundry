@@ -1,0 +1,85 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0B0F16"/>
+      <stop offset="0.5" stop-color="#211A18"/>
+      <stop offset="1" stop-color="#120F12"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(335 210) rotate(90) scale(250)">
+      <stop stop-color="#FFD48D" stop-opacity="0.95"/>
+      <stop offset="0.45" stop-color="#F4A652" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#F4A652" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="signal" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1210 180) rotate(90) scale(220)">
+      <stop stop-color="#9CCBFF" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#9CCBFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pillar" x1="800" y1="170" x2="800" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#232833"/>
+      <stop offset="1" stop-color="#12161D"/>
+    </linearGradient>
+    <filter id="blur80" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="80"/>
+    </filter>
+    <filter id="blur18" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#sun)"/>
+  <rect width="1600" height="900" fill="url(#signal)"/>
+
+  <g opacity="0.18">
+    <path d="M0 80H1600" stroke="#FFF7EE"/>
+    <path d="M0 160H1600" stroke="#FFF7EE"/>
+    <path d="M0 240H1600" stroke="#FFF7EE"/>
+    <path d="M0 320H1600" stroke="#FFF7EE"/>
+    <path d="M0 400H1600" stroke="#FFF7EE"/>
+    <path d="M0 480H1600" stroke="#FFF7EE"/>
+    <path d="M0 560H1600" stroke="#FFF7EE"/>
+    <path d="M0 640H1600" stroke="#FFF7EE"/>
+    <path d="M0 720H1600" stroke="#FFF7EE"/>
+    <path d="M0 800H1600" stroke="#FFF7EE"/>
+    <path d="M80 0V900" stroke="#FFF7EE"/>
+    <path d="M160 0V900" stroke="#FFF7EE"/>
+    <path d="M240 0V900" stroke="#FFF7EE"/>
+    <path d="M320 0V900" stroke="#FFF7EE"/>
+    <path d="M400 0V900" stroke="#FFF7EE"/>
+    <path d="M480 0V900" stroke="#FFF7EE"/>
+    <path d="M560 0V900" stroke="#FFF7EE"/>
+    <path d="M640 0V900" stroke="#FFF7EE"/>
+    <path d="M720 0V900" stroke="#FFF7EE"/>
+    <path d="M800 0V900" stroke="#FFF7EE"/>
+    <path d="M880 0V900" stroke="#FFF7EE"/>
+    <path d="M960 0V900" stroke="#FFF7EE"/>
+    <path d="M1040 0V900" stroke="#FFF7EE"/>
+    <path d="M1120 0V900" stroke="#FFF7EE"/>
+    <path d="M1200 0V900" stroke="#FFF7EE"/>
+    <path d="M1280 0V900" stroke="#FFF7EE"/>
+    <path d="M1360 0V900" stroke="#FFF7EE"/>
+    <path d="M1440 0V900" stroke="#FFF7EE"/>
+    <path d="M1520 0V900" stroke="#FFF7EE"/>
+  </g>
+
+  <path d="M0 647L202 545L387 592L604 520L766 552L935 500L1146 554L1314 510L1600 623V900H0V647Z" fill="#191C22"/>
+  <path d="M0 700L237 612L430 664L655 570L821 622L1031 580L1268 628L1600 683V900H0V700Z" fill="#2A211F"/>
+
+  <rect x="734" y="186" width="132" height="576" rx="40" fill="url(#pillar)"/>
+  <rect x="783" y="112" width="34" height="142" rx="17" fill="#292F38"/>
+
+  <g filter="url(#blur18)">
+    <circle cx="800" cy="211" r="14" fill="#FFBE6A"/>
+    <circle cx="822" cy="192" r="10" fill="#FFC57A"/>
+    <circle cx="840" cy="174" r="8" fill="#FFDDA6"/>
+    <circle cx="857" cy="158" r="6" fill="#FFE8BE"/>
+    <circle cx="871" cy="144" r="4" fill="#FFF0D4"/>
+  </g>
+
+  <g filter="url(#blur80)">
+    <circle cx="820" cy="520" r="180" fill="#F08E4A" fill-opacity="0.18"/>
+    <circle cx="1160" cy="190" r="120" fill="#6CB8FF" fill-opacity="0.14"/>
+  </g>
+
+  <rect x="40" y="40" width="1520" height="820" rx="36" stroke="rgba(255,247,238,0.16)"/>
+</svg>
