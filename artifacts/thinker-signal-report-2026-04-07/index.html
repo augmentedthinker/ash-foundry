@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Viewer Artifacts · Thinker Signal Report · 2026-04-07</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+  <style>
+    .artifact-shell{max-width:1180px}
+    .signal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .stack{display:grid;gap:14px}
+    .source-list li{margin:.45rem 0}
+    @media (max-width: 980px){.signal-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body class="foundry-page">
+  <main class="wrap artifact-shell">
+    <header class="topbar">
+      <div class="left">
+        <a href="../../index.html">← Ash Foundry</a>
+      </div>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">Viewer artifact · web synthesis report</p>
+      <h1>Thinker Signal Report</h1>
+      <p class="sub">A first live test of the web_search and web_fetch stack, focused on three figures you named: Matthew Berman, Andrew Huberman, and Lex Fridman. The goal was not to exhaust the internet, but to gather recent signal from roughly the last week and compress it into something you can actually use.</p>
+      <div class="pill-row">
+        <span class="pill">Web search</span>
+        <span class="pill">Web fetch</span>
+        <span class="pill">Past-week filter</span>
+        <span class="pill">Signal compression</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <article class="quote">This is the shape of the capability: not browsing for its own sake, but targeted harvesting. The web remains noisy. The value comes from extracting what appears newly published, relevant, and directionally useful.</article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Executive read</h2>
+      <div class="stack">
+        <div class="list-item"><strong>Matthew Berman</strong> appears to be the densest source of high-frequency AI signal right now, publishing multiple videos across the last week with a clear AI-news and builder focus.</div>
+        <div class="list-item"><strong>Andrew Huberman</strong> has recent releases, but the content is more evergreen health/performance science than frontier-tech signal. Still valuable, but differently valuable.</div>
+        <div class="list-item"><strong>Lex Fridman</strong> appears quieter on fresh full-length releases in the last week than the other two. Search results surfaced some recent clips and discussion spillover, but the evidence for brand-new primary-channel output this week is weaker.</div>
+        <div class="list-item"><strong>Operational lesson:</strong> this workflow works best when combining broad search synthesis with direct-source validation. Some properties like YouTube channel pages and modern websites do not always yield rich fetchable text, so the strongest flow is search-led discovery plus selective page extraction.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">1. Matthew Berman</h2>
+      <div class="card p-lg">
+        <div class="prose text-dim">
+          <p>Matthew Berman looks like the strongest candidate for a recurring “AI pulse” watchlist. The search layer surfaced multiple recent items within the last week and they cluster around exactly the kind of space you care about: AI product movement, tools, company commentary, and builder-adjacent interpretation.</p>
+          <p><strong>Recent items surfaced:</strong></p>
+          <ul class="source-list">
+            <li><strong>Salesforce CEO on Microsoft Blocking OpenAI Investment, AI Scapegoating, OpenClaw, and Regulation</strong> — surfaced as posted roughly 1 day ago.</li>
+            <li><strong>I built something....</strong> — surfaced as roughly 2 days ago.</li>
+            <li><strong>I was hacked...</strong> — surfaced as roughly 3 days ago.</li>
+            <li><strong>Google just dropped Gemma 4... (WOAH)</strong> — surfaced as roughly 4 days ago.</li>
+            <li><strong>The Future Live | 04.03.26</strong> — surfaced as roughly 5 days ago.</li>
+          </ul>
+          <p><strong>Interpretation:</strong> Matthew’s feed looks useful not just because it is current, but because it is frequent. He appears to function as a fast-moving human aggregation layer over the AI landscape. That makes him ideal for a recurring report where I gather his past-week output, extract the key themes, and tell you whether anything is actually worth your time.</p>
+          <p><strong>Direct-site fetch result:</strong> Forward Future validated the framing of his work as daily AI news, live show highlights, and actionable updates, though the fetch layer was more useful for confirming positioning than for extracting full recent item details.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">2. Andrew Huberman</h2>
+      <div class="card p-lg">
+        <div class="prose text-dim">
+          <p>Andrew Huberman remains a different kind of signal source. The last-week material surfaced in search is much more focused on physiology, emotions, strength, learning, and performance than on tech or AI. That does not reduce its value. It just means the extraction framework should be aimed at protocols and practices rather than “news.”</p>
+          <p><strong>Recent items surfaced:</strong></p>
+          <ul class="source-list">
+            <li><strong>Cultivating Awe &amp; Emotional Connection in Daily Life | Dr. Dacher Keltner</strong> — surfaced as released April 6, 2026.</li>
+            <li><strong>Essentials: How to Build Strength, Muscle Size &amp; Endurance | Dr. Andy Galpin</strong> — surfaced as released April 2, 2026.</li>
+            <li><strong>How to Build a Strong Core &amp; Abs</strong> with Dr. Andy Galpin — surfaced on YouTube as roughly 5 days ago.</li>
+            <li>Multiple recent clips surfaced around dopamine, discipline, motivation, and learning.</li>
+          </ul>
+          <p><strong>Interpretation:</strong> If Matthew Berman is a candidate for “AI pulse reporting,” Huberman is a candidate for “protocol extraction.” The most useful artifact here would not be a generic recap of everything he published. It would be a distilled page of applicable practices: what changed, what protocol seems actionable, and whether it intersects with your current embodiment goals.</p>
+          <p><strong>Direct-site fetch result:</strong> Huberman’s main podcast page did not expose recent episode text cleanly through fetch, but search results gave enough current episode data to form a directional report.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">3. Lex Fridman</h2>
+      <div class="card p-lg">
+        <div class="prose text-dim">
+          <p>Lex looks quieter in the specific one-week window you set. The search layer did surface discussion around recent clips and spillover coverage, but compared to Matthew and Andrew, the evidence for brand-new flagship output on his main English-language channel this week appears weaker.</p>
+          <p><strong>Signals surfaced:</strong></p>
+          <ul class="source-list">
+            <li>Search synthesis suggested no clearly confirmed new full primary-channel episode within the last week.</li>
+            <li>Another search synthesis did surface recent discussion/clip references including Jensen Huang, OpenAI, NVIDIA, and OpenClaw-related commentary.</li>
+            <li>Direct fetch of the YouTube videos page yielded almost no extractable text, which is itself an operational constraint worth noting.</li>
+          </ul>
+          <p><strong>Interpretation:</strong> Lex is still worth tracking, but likely on a lower-frequency cadence unless a new major episode lands. His content is high value per episode, but lower frequency. The right pattern here is probably event-driven rather than daily or weekly monitoring.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">4. What this suggests we should build next</h2>
+      <div class="signal-grid">
+        <article class="card">
+          <span class="label">Flow A</span>
+          <h2>Weekly AI Signal Digest</h2>
+          <p>Track Matthew Berman plus a small handful of AI builders and produce a compact Friday or Sunday report with only the strongest developments.</p>
+        </article>
+        <article class="card">
+          <span class="label">Flow B</span>
+          <h2>Protocol Extraction Digest</h2>
+          <p>Track Andrew Huberman and similar voices, but convert new content into practical protocols rather than summaries.</p>
+        </article>
+        <article class="card">
+          <span class="label">Flow C</span>
+          <h2>Event-Driven Longform Watch</h2>
+          <p>Track Lex and similar longform interviewers, but only trigger a report when a new major episode actually drops.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <article class="card">
+        <span class="label">Bottom line</span>
+        <h2>The capability works, but the real product is curation</h2>
+        <p>The tools are already good enough to support a real recurring research layer. The bottleneck is no longer whether I can search or fetch. It is how intentionally we define the watchlists, cadence, and output format so the result reduces diffusion instead of multiplying it.</p>
+      </article>
+    </section>
+
+    <section class="footer">
+      <p><strong>Method note:</strong> this report was built from live web_search synthesis plus selective web_fetch validation. Because some modern channel pages are hostile to text extraction, confidence is highest where multiple sources converged and lower where only indirect signals were available.</p>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>
