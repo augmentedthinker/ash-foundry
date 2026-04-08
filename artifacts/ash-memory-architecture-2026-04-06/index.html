@@ -24,7 +24,7 @@
       <p class="eyebrow">Memory artifact · current understanding</p>
       <h1>Ash Memory Architecture</h1>
       <p class="sub">This page explains how Ash’s memory currently functions in practice. It is not a fantasy of seamless permanent memory. It is a realistic account of the layers that exist now: active-session context, startup rehydration, reset-time snapshotting, explicit memory search, and file-backed continuity maintained through daily and long-term memory files.</p>
-      <div class="pill-row"><span class="pill">In-session context</span><span class="pill">Startup rehydration</span><span class="pill">Session-memory hook</span><span class="pill">File-backed continuity</span></div>
+      <div class="pill-row"><span class="pill">In-session context</span><span class="pill">Startup rehydration</span><span class="pill">Session-memory hook</span><span class="pill">File-backed continuity</span><span class="pill">/new evidence verified</span></div>
     </section>
 
     <section class="section">
@@ -56,6 +56,7 @@
           <div class="meta"><span>Hook-assisted</span><span>Limited automatic continuity</span></div>
           <p>OpenClaw includes a <code>session-memory</code> hook that can save summary context when a session is reset or a new session is started. This is a real automatic memory mechanism, but it is narrow. It is not a full persistent autonomous memory system. It is better understood as a reset-time continuity snapshot.</p>
           <p>That means it can help preserve session-state summaries around transitions, but it does not replace active memory curation.</p>
+          <p>As of 2026-04-08, this layer is no longer hypothetical here. A deliberate test was run: first a manual curated memory push was written, then the chat was reset with <code>/new</code>, and then a fresh hook-style file appeared immediately afterward at <code>memory/2026-04-08-memory-status.md</code>. That gives concrete evidence that reset-time session snapshotting is active on this installation.</p>
         </article>
 
         <article class="layer">
@@ -84,7 +85,7 @@
           <ul>
             <li>using the current chat context while the session remains active</li>
             <li>startup rehydration from core files</li>
-            <li>reset/new-session snapshotting via the <code>session-memory</code> hook</li>
+            <li>reset/new-session snapshotting via the <code>session-memory</code> hook, now directly evidenced by the 2026-04-08 <code>/new</code> test</li>
             <li>mandatory memory search before certain kinds of prior-context answers</li>
           </ul>
         </article>
@@ -111,6 +112,7 @@
           <span class="label">Why auditability matters</span>
           <h2>Memory should be inspectable</h2>
           <p>Because the system relies on file-backed continuity, auditable memory pushes make a lot of sense. They let Christopher inspect what was written, what changed, and what was not changed. That is exactly why the new memory lane in Ash Foundry now includes daily memory mirrors and memory-push audit surfaces.</p>
+          <p>The strongest recent example is the paired 2026-04-08 comparison set: one browser-facing copy of the manual pre-reset memory push and one browser-facing copy of the automatic post-<code>/new</code> session snapshot. Together they make the reset boundary inspectable rather than speculative.</p>
         </article>
       </div>
     </section>

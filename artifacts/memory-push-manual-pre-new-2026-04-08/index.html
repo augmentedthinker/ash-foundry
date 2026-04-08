@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Manual Memory Push Before /new · 2026-04-08</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+</head>
+<body class="foundry-page-alt">
+  <main class="wrap">
+    <div class="topbar"><a href="../../index.html">← Ash Foundry</a><a href="../memory-push-auto-post-new-2026-04-08/index.html">Automatic Post-/new Push</a></div>
+    <section class="card">
+      <span class="label">Memory push comparison</span>
+      <h1>Manual Memory Push Before /new</h1>
+      <p>This page is a browser-facing copy of the manual curated memory push that existed immediately before the chat reset experiment. It is meant to be compared directly against the automatic session-memory snapshot created after <code>/new</code>.</p>
+      <div class="pill-row"><span class="pill">Manual</span><span class="pill">Pre-/new</span><span class="pill">Curated daily memory</span><span class="pill">2026-04-08</span></div>
+    </section>
+    <section class="card">
+      <span class="label">Source file</span>
+      <h2><code>/home/ash/.openclaw/workspace/memory/2026-04-08.md</code></h2>
+      <p>The excerpt below starts at the session-memory investigation section and includes the explicit pre-reset test setup.</p>
+    </section>
+    <section class="card">
+      <span class="label">Captured content</span>
+      <pre style="white-space:pre-wrap;word-break:break-word;overflow-wrap:anywhere;line-height:1.65;">## Session-Memory Investigation
+- Investigated whether the bundled `session-memory` hook is real and possibly active.
+- Verified from local OpenClaw docs that `session-memory` is a bundled hook that can save session context to `memory/YYYY-MM-DD-slug.md` on `/new` or `/reset`.
+- Found existing hook-style memory files in the workspace memory directory: `2026-04-07-greeting.md`, `2026-04-07-think-the-user-wants-a-1-2-wor.md`, and `2026-04-08-memory-dreaming.md`.
+- This provides concrete evidence that some automatic session-summary memory writing has occurred on this install, even though Dreaming remains unproven as an active automatic memory writer.
+- Updated the working model of memory: real continuity currently consists of manual curated memory (`MEMORY.md`, canonical daily note) plus searchable retrieval, with at least some evidence of automatic `session-memory`-style hook writes.
+
+## Immediate Next Test
+- Christopher proposed a clean experiment: do a manual memory push now, then trigger `/new`, then inspect whether the refresh created another automatic session-memory artifact.
+- The aim of the next session is to compare the pre-reset manual write with any new post-reset hook-generated memory file and determine whether `/new` is actively causing `session-memory` writes on this machine.</pre>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>

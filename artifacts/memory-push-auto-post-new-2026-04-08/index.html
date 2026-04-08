@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Automatic Memory Push After /new · 2026-04-08</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+</head>
+<body class="foundry-page-alt">
+  <main class="wrap">
+    <div class="topbar"><a href="../../index.html">← Ash Foundry</a><a href="../memory-push-manual-pre-new-2026-04-08/index.html">Manual Pre-/new Push</a></div>
+    <section class="card">
+      <span class="label">Memory push comparison</span>
+      <h1>Automatic Memory Push After /new</h1>
+      <p>This page is a browser-facing copy of the automatic session-memory artifact created immediately after the chat reset experiment. It preserves the exact post-<code>/new</code> snapshot so it can be compared with the manual push that came just before the reset.</p>
+      <div class="pill-row"><span class="pill">Automatic</span><span class="pill">Post-/new</span><span class="pill">Session-memory hook</span><span class="pill">2026-04-08</span></div>
+    </section>
+    <section class="card">
+      <span class="label">Source file</span>
+      <h2><code>/home/ash/.openclaw/workspace/memory/2026-04-08-memory-status.md</code></h2>
+      <p>This is the exact hook-style memory artifact written after the reset.</p>
+    </section>
+    <section class="card">
+      <span class="label">Captured content</span>
+      <pre style="white-space:pre-wrap;word-break:break-word;overflow-wrap:anywhere;line-height:1.65;"># Session: 2026-04-08 15:32:39 UTC
+
+- **Session Key**: agent:main:telegram:direct:8546776113
+- **Session ID**: 6a4922e9-2f22-41d7-8350-2455c4edd2f3
+- **Source**: telegram
+
+## Conversation Summary
+
+user: Conversation info (untrusted metadata):
+```json
+{
+  "message_id": "5067",
+  "sender_id": "8546776113",
+  "sender": "Augmented Thinker",
+  "timestamp": "Wed 2026-04-08 11:13 EDT"
+}
+```
+
+Sender (untrusted metadata):
+```json
+{
+  "label": "Augmented Thinker (8546776113)",
+  "id": "8546776113",
+  "name": "Augmented Thinker"
+}
+```
+
+Next I want to evaluate memory again... Review our memory card and page in the Ash Foundry. Then look internally and let me know how and when you are creating memories. Is there ANY automatic memory practice currently active?
+assistant: I’m going to compare the browser-facing memory story against what’s actually happening locally, then I’ll tell you plainly whether anything automatic is real right now or if we’re still mostly running on manual memory discipline.
+assistant: [[reply_to_current]] Short answer: **almost all real memory practice is still manual right now**.
+
+What the Ash Foundry memory page currently says, in spirit:
+- memory is split between:
+  - `MEMORY.md` for durable long-term truths
+  - `memory/YYYY-MM-DD.md` for daily continuity
+  - Dreaming as an experimental background consolidation layer
+- the page presents memory as a layered architecture with some automation potential
+
+What appears to be true internally right now:
+
+**1. Manual memory is definitely active**
+- `MEMORY.md` exists and is being used as curated long-term memory
+- `memory/2026-04-08.md` exists and is being actively appended to
+- I have been writing to daily memory explicitly when prompted or during structured memory flushes
+- that is real, functioning, and current
+
+**2. Memory retrieval is active**
+- the `memory_search` / `memory_get` tooling is active through `memory-core`
+- that means stored memory can be searched and recalled
+- so memory as a retrieval surface is real
+
+**3. Automatic background memory consolidation is not clearly active in practice**
+- Dreaming is enabled in config, but we already found no convincing evidence of successful overnight output
+- no clear `DREAMS.md`
+- no meaningful phase reports
+- no convincing short-term recall ingestion into the dreaming pipeline
+- so automatic background consolidation is **not trustworthy as a live practice right now**
+
+**4. There is at least one documented automatic memory mechanism we have not verified as active**
+- OpenClaw has a bundled **`session-memory` hook**
+- docs say it can save session context on `/new` or `/reset` into `memory/YYYY-MM-DD-slug.md`
+- but we have **not yet verified whether that hook is enabled on this install**
+- so this is a possible automatic memory pathway, but not one I can currently claim is active in practice
+
+So the honest answer to “Is there ANY automatic memory practice currently active?” is:
+
+### Definitely active
+- manual daily memory writing
+- manual/curated `MEMORY.md` maintenance
+- searchable memory indexing/retrieval
+
+### Possibly available but not proven active
+- `session-memory` hook on reset/new
+- Dreaming background consolidation
+
+### Proven unreliable or unproven as live automation
+- Dreaming as an automatic memory-writing practice
+
+So right now, the memory system is best described as:
+- **manual writing + active retrieval**
+- with **experimental automation surfaces present but not yet operationally trustworthy**
+
+My recommendation is:
+- we should probably audit **`session-memory`** next, because that is the one automatic memory mechanism that looks most concrete and testable after heartbeat.</pre>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>
