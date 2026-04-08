@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 async function generateTTS() {
-  const apiKey = fs.readFileSync('/home/augmentedthinker/secrets/gemini_api_key.txt', 'utf8').trim();
+  const apiKey = fs.readFileSync('/home/ash/secrets/gemini_api_key.txt', 'utf8').trim();
   const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
 
   const payload = {
