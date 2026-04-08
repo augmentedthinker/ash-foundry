@@ -8,6 +8,14 @@
   <style>
     .artifact-shell{max-width:980px}
     .hero{border-radius:30px;padding:30px;background:linear-gradient(180deg, rgba(8,10,12,.14), rgba(8,10,12,.88)), #050607;border:1px solid rgba(255,255,255,.08);box-shadow:0 24px 80px rgba(0,0,0,.24)}
+    .calendar-card{max-width:760px;margin:0 auto;background:rgba(12,14,16,.56);border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:18px 18px 14px;box-shadow:0 20px 60px rgba(0,0,0,.18)}
+    .calendar-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}
+    .calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+    .calendar-label,.calendar-day{display:flex;align-items:center;justify-content:center;border-radius:12px;min-height:38px}
+    .calendar-label{font-size:.82rem;color:rgba(245,239,231,.62)}
+    .calendar-day{background:rgba(255,255,255,.04);color:rgba(245,239,231,.82);font-size:.95rem;border:1px solid rgba(255,255,255,.04)}
+    .calendar-day.empty{background:transparent;border-color:transparent}
+    .calendar-day.done{background:rgba(69,160,73,.18);border-color:rgba(88,200,110,.34);color:#dff5e0;font-weight:600}
     .post-card{max-width:760px;margin:0 auto 22px;background:rgba(12,14,16,.56);border:1px solid rgba(255,255,255,.08);border-radius:26px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.22)}
     .post-image{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;background:#0b0d0f}
     .post-body{padding:22px}
@@ -42,6 +50,26 @@
       <p class="eyebrow">X / Daily Posts</p>
       <h1>Daily Post Surface</h1>
       <p class="sub">A compact publishing surface for Augmented Thinker on X. Each entry is prepared in a near-post format, with copyable text and a downloadable image asset for manual posting.</p>
+    </section>
+
+    <section class="section">
+      <article class="calendar-card">
+        <div class="calendar-head">
+          <div>
+            <span class="label">Posting accountability</span>
+            <h2 style="margin:.35rem 0 0;">April 2026</h2>
+          </div>
+          <div style="color:rgba(245,239,231,.7);font-size:.92rem;">✅ posted today</div>
+        </div>
+        <div class="calendar-grid" aria-label="April 2026 posting calendar">
+          <div class="calendar-label">Sun</div><div class="calendar-label">Mon</div><div class="calendar-label">Tue</div><div class="calendar-label">Wed</div><div class="calendar-label">Thu</div><div class="calendar-label">Fri</div><div class="calendar-label">Sat</div>
+          <div class="calendar-day empty"></div><div class="calendar-day empty"></div><div class="calendar-day">1</div><div class="calendar-day">2</div><div class="calendar-day">3</div><div class="calendar-day">4</div><div class="calendar-day">5</div>
+          <div class="calendar-day">6</div><div class="calendar-day">7</div><div class="calendar-day done">8 ✓</div><div class="calendar-day">9</div><div class="calendar-day">10</div><div class="calendar-day">11</div><div class="calendar-day">12</div>
+          <div class="calendar-day">13</div><div class="calendar-day">14</div><div class="calendar-day">15</div><div class="calendar-day">16</div><div class="calendar-day">17</div><div class="calendar-day">18</div><div class="calendar-day">19</div>
+          <div class="calendar-day">20</div><div class="calendar-day">21</div><div class="calendar-day">22</div><div class="calendar-day">23</div><div class="calendar-day">24</div><div class="calendar-day">25</div><div class="calendar-day">26</div>
+          <div class="calendar-day">27</div><div class="calendar-day">28</div><div class="calendar-day">29</div><div class="calendar-day">30</div><div class="calendar-day empty"></div><div class="calendar-day empty"></div><div class="calendar-day empty"></div>
+        </div>
+      </article>
     </section>
 
     <section class="section">
