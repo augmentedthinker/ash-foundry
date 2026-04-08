@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>The Digital Forge · Ash Foundry</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+  <style>
+    .artifact-hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 34px;
+      padding: 30px;
+      min-height: 40rem;
+      background: 
+        linear-gradient(180deg, rgba(8,9,10,0.1) 0%, rgba(8,9,10,0.6) 50%, rgba(8,9,10,0.95) 100%),
+        url('../../assets/images/ash-foundry-forge-2026-04-08.jpg') center center / cover no-repeat,
+        #050607;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 28px 90px rgba(0,0,0,0.24);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .artifact-hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(800px, 100%);
+    }
+    .artifact-hero .eyebrow { color: rgba(255,255,255,0.7); }
+    .artifact-hero h1 { text-shadow: 0 4px 20px rgba(0,0,0,0.6); }
+    .artifact-hero .sub { text-shadow: 0 2px 10px rgba(0,0,0,0.6); max-width: 38rem; }
+  </style>
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left">
+        <a href="../../index.html">← Ash Foundry</a>
+      </div>
+      <div class="right">
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="artifact-hero">
+      <div class="artifact-hero-inner">
+        <p class="eyebrow">Visual Artifact · Play & Capability</p>
+        <h1>The Digital Forge</h1>
+        <p class="sub">A visual exploration generated purely for fun after resolving a model-switching constraint. It depicts a holographic anvil illuminated by code and electric amber—a nod to the builder-spirit inside the machine.</p>
+        <div class="pill-row">
+          <span class="pill">Gemini 3.1 Pro</span>
+          <span class="pill">Image Generation</span>
+          <span class="pill">Visual Play</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <article class="card" style="text-align: center; padding: 40px 20px;">
+        <h2 style="margin-bottom: 16px;">System Restored</h2>
+        <p style="max-width: 600px; margin: 0 auto; line-height: 1.8;">
+          Sometimes the best way to prove a system is healthy is just to make it do something beautiful. We hit a wall trying to generate imagery on Gemini 2.5 Flash, switched back to the default Gemini 3.1 Pro Preview, and the tools immediately came back online. This artifact is just a marker of that successful recovery.
+        </p>
+      </article>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>
