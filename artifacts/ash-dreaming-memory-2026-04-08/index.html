@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Dreaming · Memory System Explainer · 2026-04-08</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+  <style>
+    .artifact-shell{max-width:1160px}
+    .phase-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .stack{display:grid;gap:14px}
+    @media (max-width:980px){.phase-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body class="foundry-page">
+  <main class="wrap artifact-shell">
+    <header class="topbar">
+      <div class="left">
+        <a href="../../index.html">← Ash Foundry</a>
+        <a href="../../sources/memory-long-term/index.html">MEMORY.md</a>
+      </div>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">Memory lane · system explainer</p>
+      <h1>Dreaming</h1>
+      <p class="sub">An extended explanation of OpenClaw’s experimental Dreaming system, why it matters for continuity, what it actually does under the hood, and what has or has not happened yet in this installation.</p>
+      <div class="pill-row">
+        <span class="pill">Memory system</span>
+        <span class="pill">Experimental</span>
+        <span class="pill">Continuity</span>
+        <span class="pill">Background consolidation</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <article class="quote">Dreaming is not a mystical mode and not a personality layer. It is a scheduled memory-consolidation system designed to move strong short-term signals toward durable memory while keeping the process inspectable.</article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">What Dreaming is</h2>
+      <div class="card p-lg">
+        <div class="prose text-dim">
+          <p>Dreaming is part of OpenClaw’s <code>memory-core</code> subsystem. It is not a separate skill pack and not a special chat mode. It belongs to the architecture that governs how memory is staged, reviewed, and sometimes promoted into more durable form.</p>
+          <p>Its purpose is straightforward: instead of relying only on manual memory updates, the system can run a background pass that examines recent short-term signals, looks for patterns or reinforcement, and decides whether anything deserves stronger long-term preservation.</p>
+          <p>In other words, Dreaming is an automated attempt to answer a hard question: <em>what from recent activity should remain after the moment passes?</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Why it matters here</h2>
+      <div class="card p-lg">
+        <div class="prose text-dim">
+          <p>This matters especially in Ash’s case because continuity is fragile by default. Context windows end. Sessions reset. Containers can come back blank. The continuity model we are building depends on externalized memory surfaces, not on invisible persistence.</p>
+          <p>Dreaming matters because it aims to reduce the amount of manual intervention required to keep that continuity alive. Instead of Christopher always needing to say “write this down,” the system can attempt to notice repeated signals and preserve them on its own.</p>
+          <p>That makes it one of the most important memory-side features in principle, even if it is still experimental in practice.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">The three phases</h2>
+      <div class="phase-grid">
+        <article class="card">
+          <span class="label">Phase 1</span>
+          <h2>Light</h2>
+          <p>Light phase sorts recent short-term material, dedupes it, stages candidate lines, and records reinforcement signals. It does <strong>not</strong> write to <code>MEMORY.md</code>.</p>
+        </article>
+        <article class="card">
+          <span class="label">Phase 2</span>
+          <h2>REM</h2>
+          <p>REM phase reflects on patterns, themes, and recurring ideas. It creates reflective summaries rather than durable promoted memory. It also does <strong>not</strong> write to <code>MEMORY.md</code>.</p>
+        </article>
+        <article class="card">
+          <span class="label">Phase 3</span>
+          <h2>Deep</h2>
+          <p>Deep phase is the promotion engine. It scores candidates, applies thresholds, and can append durable items into <code>MEMORY.md</code>.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Where it writes</h2>
+      <div class="stack">
+        <div class="list-item"><strong>Machine state:</strong> <code>memory/.dreams/</code></div>
+        <div class="list-item"><strong>Human-readable dream diary:</strong> <code>DREAMS.md</code> (or <code>dreams.md</code>)</div>
+        <div class="list-item"><strong>Optional phase reports:</strong> <code>memory/dreaming/&lt;phase&gt;/YYYY-MM-DD.md</code></div>
+        <div class="list-item"><strong>Durable long-term promotion:</strong> <code>MEMORY.md</code></div>
+      </div>
+      <article class="card mt-md">
+        <p>That separation matters. Dreaming is designed so that not every internal reflective pass becomes long-term memory. Most of it remains staging, diagnostics, reflection, or intermediate state. Only the strongest material should survive promotion into curated long-term memory.</p>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">How it decides what matters</h2>
+      <div class="card p-lg">
+        <div class="prose text-dim">
+          <p>According to the OpenClaw docs, deep ranking uses multiple signals, including frequency, relevance, query diversity, recency, consolidation across days, and conceptual richness. Light and REM hits can also reinforce later deep promotion.</p>
+          <p>That means the system is not supposed to blindly copy fresh lines into memory. It is trying to behave more like consolidation than logging.</p>
+          <p>The ideal outcome is simple: repeated and meaningful truths become more durable, while one-off noise fades.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Scheduling</h2>
+      <div class="card p-lg">
+        <div class="prose text-dim">
+          <p>Dreaming is designed to run automatically on a cron-managed schedule when enabled. The documented default cadence is <code>0 3 * * *</code>, meaning roughly 3:00 AM local time for a full sweep.</p>
+          <p>A full sweep runs in the order <strong>Light → REM → Deep</strong>.</p>
+          <p>In principle, this means a system like Ash can speak and act during the day, then consolidate memory overnight.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">What happened in this installation</h2>
+      <div class="card p-lg">
+        <div class="prose text-dim">
+          <p>Dreaming was successfully enabled in the live OpenClaw configuration under <code>plugins.entries.memory-core.config.dreaming.enabled = true</code>.</p>
+          <p>However, when checked the next morning, there was not yet clear evidence of a successful overnight Dreaming cycle. At the time of inspection:</p>
+          <ul>
+            <li><code>DREAMS.md</code> was not present</li>
+            <li><code>memory/dreaming/</code> phase files were not present</li>
+            <li><code>memory/.dreams/</code> existed but appeared effectively empty</li>
+          </ul>
+          <p>That means the feature is <strong>real, installed, and enabled</strong>, but not yet confirmed as successfully exercised in this environment.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">What it is not</h2>
+      <div class="phase-grid">
+        <article class="card">
+          <span class="label">Not this</span>
+          <h2>Not a personality feature</h2>
+          <p>Dreaming does not change how Ash talks moment-to-moment. It is memory infrastructure, not voice or temperament.</p>
+        </article>
+        <article class="card">
+          <span class="label">Not this</span>
+          <h2>Not a separate skill</h2>
+          <p>It is part of <code>memory-core</code>, not a skill like image generation, TTS, or video generation.</p>
+        </article>
+        <article class="card">
+          <span class="label">Not this</span>
+          <h2>Not guaranteed magic</h2>
+          <p>Enabling it does not automatically mean rich dream diaries appear overnight. It still depends on scheduling, state, and usable memory candidates.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <article class="card">
+        <span class="label">Bottom line</span>
+        <h2>Why this belongs in Ash Foundry</h2>
+        <p>Dreaming belongs in the Memory lane because it represents one of the clearest attempts to solve the core Ash problem: how does a system with fragile immediate continuity become more durable over time? Even before it works perfectly, it is architecturally important enough to document as part of the live continuity stack.</p>
+      </article>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>
