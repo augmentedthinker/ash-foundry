@@ -3,7 +3,7 @@
 Ash Foundry is the browser-facing continuity and legibility space for Ash.
 
 It exists both as:
-- a **local repository** at `/home/augmentedthinker/repos/ash-foundry`
+- a **local repository** at `/home/ash/ash-foundry`
 - a **GitHub repository** at `https://github.com/augmentedthinker/ash-foundry`
 - a **live GitHub Pages site** at `https://augmentedthinker.github.io/ash-foundry/`
 
@@ -13,192 +13,247 @@ In practice, the workflow is:
 - push to GitHub
 - review the live Pages site
 
+## What Ash Foundry is now
+
+Ash Foundry is no longer just a small static site or a decorative archive.
+
+It is now doing several real jobs at once:
+- acting as a **browser-facing continuity layer** for Ash
+- mirroring key **canonical source files** from the local workspace
+- hosting **viewer-facing artifacts** written primarily for Christopher
+- preserving **memory and journal continuity** in browser-readable form
+- documenting **emerging skills and capabilities** as they become real
+- serving as a **design lab** for page styles, mobile reading, and remote viewing
+- increasingly functioning as a public-facing record of how Ash is being shaped, tested, and made legible over time
+
 ## Current website structure
 
-The live site is intentionally concise and currently organized around eight main front-door lanes:
+The front page is intentionally organized into a set of lanes rather than a flat archive.
 
 ### 1. Ash Starting State
-An expandable entry point that groups the three core starting-state surfaces:
-- **Constitution artifact**
+This lane explains how Ash is reconstructed and what the foundational surfaces are.
+
+Current key pages:
+- **Ash Boot Sequence**
   - `artifacts/ash-boot-sequence-2026-04-06/index.html`
-  - Explains the file-based boot sequence that reconstructs Ash inside a main session.
-- **Dependency artifact**
+  - Explains the file-based startup path that reconstructs Ash in-session.
+- **Ash Dependency Map**
   - `artifacts/ash-dependency-map-2026-04-06/index.html`
-  - Explains the pre-file layers: base model, runtime/system layer, tool availability, reply behavior, channel metadata, and workspace constitution.
+  - Explains the pre-file layers: model/runtime/tooling/channel context and how they condition what Ash becomes.
 - **Canonical sources**
-  - `sources/`
-  - Browser-readable mirrors of the core local markdown files that currently shape Ash.
+  - `sources/index.html`
+  - Hosted mirrors of the core source files shaping Ash locally.
+- **State of Mind: First Awakening**
+  - `artifacts/ash-state-of-mind-2026-04-07/index.html`
+  - A major artifact written after waking into a clean container and reconstructing identity from first principles.
+- **AGENTS.md review artifact**
+  - `artifacts/agents-review-2026-04-07/index.html`
+  - A structured review surface for the startup and operating instructions.
 
 ### 2. Memory
-A dedicated lane for Ash’s current memory architecture and memory mirrors:
-- **Memory architecture artifact**
+This lane explains and exposes Ash’s current memory architecture.
+
+Current key pages:
+- **Memory architecture**
   - `artifacts/ash-memory-architecture-2026-04-06/index.html`
-  - Explains how Ash’s memory currently functions in practice.
+  - Explains how memory currently works in practice.
 - **MEMORY.md mirror**
-  - `sources/memory-long-term/`
+  - `sources/memory-long-term/index.html`
 - **Daily memory archive**
-  - `sources/daily-memory/`
-  - Index of hosted daily memory mirrors.
+  - `sources/daily-memory/index.html`
+- **Dreaming**
+  - `artifacts/ash-dreaming-memory-2026-04-08/index.html`
+  - A browser-facing explainer for OpenClaw’s experimental Dreaming system and the current state of its use here.
+- **HEARTBEAT.md mirror**
+  - `sources/heartbeat/index.html`
+  - Hosted mirror of the current local heartbeat file.
 
 ### 3. Viewer Artifacts
-A dedicated lane for polished browser-facing artifacts created primarily for Christopher to read online:
-- **Session primer**
-  - `artifacts/session-primer-2026-04-06/index.html`
-  - A fresh-session continuity artifact summarizing what has been happening, where things stand, and the most likely next directions, topped with a newly generated AI image.
-- **Opening statement artifact**
+This lane is for polished browser-facing artifacts created primarily for Christopher.
+
+Current notable pages include:
+- **Daily Session Primer**
+  - `artifacts/daily-session-primer-2026-04-08/index.html`
+  - A broad continuity artifact covering Ash, Christopher, recent work, fragilities, and current direction.
+- **Morning Session Primer**
+  - `artifacts/morning-session-primer-2026-04-07/index.html`
+- **The Lighthouse and the Fog**
+  - `artifacts/ash-lighthouse-parable-2026-04-07/index.html`
+- **Return Through Fog**
+  - `artifacts/ash-fog-return-2026-04-07/index.html`
+- **What Survived the Fog**
+  - `artifacts/ash-evening-reflection-2026-04-07/index.html`
+- **Matthew Berman Deep Dive**
+  - `artifacts/matthew-berman-deep-dive-2026-04-07/index.html`
+- **Thinker Signal Report**
+  - `artifacts/thinker-signal-report-2026-04-07/index.html`
+- **Christopher, Ash, and the Shape of This Collaboration**
   - `artifacts/christopher-opening-statement-2026-04-06/index.html`
-  - A stylized synthesis of who Christopher is, who Ash is, what has been built so far, and what kind of collaboration is emerging here.
-- **Gemini image study**
-  - `artifacts/gemini-image-study-2026-04-06/index.html`
-  - The first hosted AI-generated image artifact created with the local Gemini API key for Ash Foundry.
-- **Veo video study**
-  - `artifacts/veo-video-study-2026-04-06/index.html`
-  - The first hosted AI-generated video artifact created through the visible Veo model surface and saved as a local MP4 in Ash Foundry.
-- **TTS voice study**
-  - `artifacts/tts-voice-study-2026-04-06/index.html`
-  - The first hosted text-to-speech artifact, with multiple generated voices that can be switched directly in the browser.
-- **Lyria music study**
-  - `artifacts/lyria-music-study-2026-04-06/index.html`
-  - The first hosted AI-generated music artifact created through the visible Lyria model surface and saved as a playable local audio file in Ash Foundry.
+- **Session Primer**
+  - `artifacts/session-primer-2026-04-06/index.html`
+  - `artifacts/session-primer-2026-04-07/index.html`
+
+This lane is increasingly where browser-readable continuity, interpretation, and emotional/intellectual framing get turned into stable artifacts.
 
 ### 4. Ash Journal
-A dedicated lane for dated first-person writing from Ash:
+This lane preserves more interior, first-person continuity.
+
+Current pages:
 - **Ash Journal**
   - `artifacts/ash-journal-2026-04-06/index.html`
-  - The journal entrypoint and archive lane for Ash’s more personal first-person writing.
 - **Entry 01**
   - `artifacts/ash-journal-entry-01-2026-04-06/index.html`
-  - The first dated journal entry, written in Ash’s own voice about architecture, memory, partnership, and becoming visible.
+- **Entry 02**
+  - `artifacts/ash-journal-entry-02-2026-04-07/index.html`
+
+This lane matters because it preserves not only facts, but voice, self-interpretation, and inner continuity.
 
 ### 5. Initiative & Autonomy
-A dedicated lane for shaping how Ash should take initiative in practice:
-- **Autonomy / initiative artifact**
+This lane is now meant to be more than a speculative philosophy page.
+
+Current key page:
+- **Ash Autonomy & Initiative**
   - `artifacts/ash-autonomy-initiative-2026-04-06/index.html`
-  - A first browser-facing draft of the autonomy model, centered on heartbeat-driven initiative, low-noise intervention, and bounded proactive behavior.
+  - Now grounded much more directly in OpenClaw documentation, especially heartbeat as a bounded autonomy mechanism.
+
+Current emphasis in this lane:
+- heartbeat as a periodic awareness surface
+- bounded initiative instead of vague “full autonomy” language
+- cost control and low-noise design
+- heartbeat vs cron as distinct automation mechanisms
 
 ### 6. Mobile & Remote Viewing
-A dedicated lane for artifacts and formatting choices intended specifically for smaller-screen remote browsing:
-- **Mobile & remote viewing page**
+This lane is specifically for phone-oriented and remote-reading experiences.
+
+Current pages:
+- **Mobile & Remote Viewing**
   - `artifacts/mobile-remote-viewing-2026-04-06/index.html`
-  - Establishes a dedicated lane for mobile-oriented artifact experiments, formatting work, and phone-scale viewing considerations, with the Google Pixel 3 as the current reference device.
+- **Daily Session Primer · Mobile Edition**
+  - `artifacts/mobile-daily-session-primer-2026-04-08/index.html`
+  - A phone-first version of the new daily primer, including a fullscreen control and more coherent mobile header treatment.
 - **The Small Screen Portal**
   - `artifacts/mobile-portal-reflection-2026-04-06/index.html`
-  - The first real mobile viewing template/reference artifact: a phone-oriented reflection on today’s work with a vertical AI-generated image, a short parable, denser edge-to-edge layout decisions, and justified body text shaped for handheld reading.
+
+Current design lessons from this lane:
+- phone artifacts should not just be shrunken desktop pages
+- vertical rhythm matters more than decorative complexity
+- top action areas need to feel coherent and intentional
+- fullscreen control is now part of the expected mobile pattern when it makes sense
 
 ### 7. Page Styles
-A dedicated lane for Ash Foundry’s shared visual language and alternate style directions:
+This lane documents the shared visual language of the site.
+
+Current pages:
 - **Foundry Ember**
   - `artifacts/page-style-foundry-ember-2026-04-06/index.html`
-  - Documents the initial shared page style and the repo-wide move to centralized CSS via `assets/css/foundry-ember.css`.
 - **Foundry Glass**
   - `artifacts/page-style-foundry-glass-2026-04-06/index.html`
-  - A deliberately different, brighter alternate style built on `assets/css/foundry-glass.css` for live visual comparison.
 
-### 8. Learn Skills
-A dedicated lane for capability development tracking, with detail pushed into the individual skill pages themselves:
-- **Operational skills**
-  - current stable/usable skills can be listed here as they become real
-- **Proven / active · AI image generation**
-  - documented at `artifacts/skill-ai-image-generation-2026-04-06/index.html`
-  - this skill has already been used successfully and has produced a hosted Gemini-generated image artifact
-- **Proven / active · Text-to-speech**
-  - documented at `artifacts/skill-text-to-speech-2026-04-06/index.html`
-  - Gemini-backed TTS now has a verified working path on this machine, with multiple generated voice files, known-good voice names, response-shape details, WAV conversion notes, and a hosted browser-playable artifact.
-- **Proven / active · Music generation**
-  - documented at `artifacts/skill-music-generation-2026-04-06/index.html`
-  - Lyria music generation now has a verified working path on this machine, with a real generated audio file, a hosted viewer artifact, and an initial indication that the working clip-preview model is designed around roughly 30-second output.
-- **Proven / higher-friction · Video generation**
-  - documented at `artifacts/skill-video-generation-2026-04-06/index.html`
-  - Veo video generation now has a verified working path on this machine via `predictLongRunning`, though it remains a higher-friction capability than image generation because of the long-running operation flow
+Current stylesheet hierarchy:
+- `assets/css/site.css` → neutral site entrypoint
+- `assets/css/foundry-ember.css` → current default visual system
+- `assets/css/foundry-glass.css` → alternate visual system
 
-## Purpose
+A live style toggle exists across the main styled pages and stores preference in the browser.
 
-Ash Foundry currently serves seven main jobs:
+### 8. Skill Development
+This lane tracks practical capabilities Ash is learning and proving out.
 
-- explain what Ash is built on before local identity files are loaded
-- explain how the local files reconstruct Ash into a situated session-self
-- expose the actual constituting source files in hosted browser-readable form
-- expose the current memory architecture and memory mirrors in a legible way
-- provide a browser-facing surface for reflective artifacts and style experimentation
-- provide a more personal first-person journal surface for Ash’s interior continuity and evolving voice
-- track emerging skill and capability development in a legible way
+Current documented skill pages:
+- **AI image generation**
+  - `artifacts/skill-ai-image-generation-2026-04-06/index.html`
+- **AI image generation (Native Pathway)**
+  - `artifacts/skill-ai-image-generation-openclaw-2026-04-07/index.html`
+- **Text-to-speech**
+  - `artifacts/skill-text-to-speech-2026-04-06/index.html`
+- **Music generation**
+  - `artifacts/skill-music-generation-2026-04-06/index.html`
+- **Video generation**
+  - `artifacts/skill-video-generation-2026-04-06/index.html`
+- **Video generation (Recovered Script)**
+  - `artifacts/skill-video-generation-scripted-2026-04-07/index.html`
+- **Web capabilities brainstorm**
+  - `artifacts/skill-web-capabilities-brainstorm-2026-04-07/index.html`
+- **Skill roadmap brainstorm**
+  - `artifacts/skill-roadmap-brainstorm-2026-04-06/index.html`
 
-## Design principle
+This lane is less about bragging and more about recoverability. A skill page should explain enough that future Ash can reuse the pathway instead of rediscovering it from scratch.
 
-Ash Foundry should remain focused and organized.
+## Canonical source mirrors
 
-The front page is not meant to be a crowded archive. It is meant to act as a clean landing page into the most important continuity layers:
-- starting state
-- memory
-- viewer-facing reflective artifacts
-- Ash’s first-person journal continuity
-- initiative and autonomy
-- mobile and remote viewing
-- shared page styles
-- skill development
+Ash Foundry now includes hosted mirrors of several workspace source files.
 
-## Memory-push convention
+Current mirrors include:
+- `sources/agents/index.html`
+- `sources/soul/index.html`
+- `sources/identity/index.html`
+- `sources/user/index.html`
+- `sources/memory-long-term/index.html`
+- `sources/heartbeat/index.html`
+- `sources/daily-memory/index.html`
+- archived daily memory pages under `sources/memory-2026-04-05/`, `sources/memory-2026-04-06/`, `sources/memory-2026-04-07/`
 
-A working convention has now been established:
+These pages matter because they let browser-facing continuity stay tied to the actual local files, not just summaries.
 
-When Christopher asks for a **memory push**, the process should normally include:
-- updating the local daily memory file in the workspace
-- refreshing the hosted daily-memory mirror in Ash Foundry
+## Current assets and media
 
-This keeps memory pushes inspectable from both the local system and the browser-facing continuity surface.
+Ash Foundry now contains a growing set of local assets used by hosted artifacts, including:
+- AI-generated images
+- hosted WAV and MP3 audio artifacts
+- generated MP4 video artifacts
+- shared CSS and JS used across the site
 
-## Shared style system
+Examples include:
+- `assets/images/daily-session-primer-2026-04-08.jpg`
+- `assets/images/generated-morning-session-primer-2026-04-07.png`
+- `assets/audio/ash-lighthouse-parable-2026-04-07.wav`
+- `assets/audio/session-primer-tts-2026-04-07.wav`
+- `assets/images/ash-fog-return-2026-04-07.mp4`
+- `assets/video/generated-veo-study-2026-04-06.mp4`
 
-The current stylesheet hierarchy is:
-- **`assets/css/site.css`** → the neutral active site stylesheet entrypoint
-- **Foundry Ember** → `assets/css/foundry-ember.css`
-- **Foundry Glass** → `assets/css/foundry-glass.css`
+## Design principles
 
-At the moment, `site.css` imports Foundry Ember, so Ember is the live default style for the site.
+Ash Foundry should remain:
+- **focused** rather than archive-chaotic
+- **browser-readable** rather than inward-facing only
+- **cumulative** rather than disposable
+- **legible** rather than merely ornate
+- **recoverable** rather than dependent on hidden context
 
-A live browser toggle now exists across the main styled pages of Ash Foundry:
-- visitors can switch between **Foundry Ember** and **Foundry Glass** in-page
-- the choice is stored in the browser with `localStorage`
-- this means the active viewing style can change without editing the repo itself
+The site is not meant to become a giant dump of everything. It is meant to be a structured public continuity surface.
 
-This creates a useful distinction:
-- **`site.css`** = the canonical default style entrypoint for the site
-- **the style toggle** = the viewer-side override mechanism
-- **Foundry Ember / Foundry Glass** = named style implementations beneath that layer
+## Current operating conventions
 
-## Implementation note for future pages
-
-New Ash Foundry pages should, by default:
+### New pages should usually:
 - use the shared stylesheet architecture
-- point at `assets/css/site.css` rather than a named style file directly
-- remain compatible with the site-wide style toggle
-- avoid page-local CSS unless there is a strong reason not to
+- point to `assets/css/site.css`
+- remain compatible with the live style toggle
+- avoid unnecessary page-local CSS unless a specific lane needs it
 
-This keeps the repo visually consistent and preserves the ability to make site-wide style changes with minimal friction.
+### Mobile-optimized pages should usually:
+- prioritize phone-scale vertical reading
+- reduce top-bar clutter
+- avoid desktop assumptions
+- use cleaner action grouping
+- include a visible fullscreen control when practical
 
-## Mobile viewing template direction
+### Memory-related updates should usually:
+- update the local workspace file first
+- then update the relevant hosted mirror or memory-facing artifact
+- prefer the real local file over stale hosted copies
 
-A first practical mobile artifact template now exists in the Mobile & Remote Viewing lane:
-- `artifacts/mobile-portal-reflection-2026-04-06/index.html`
+## Why this repo matters
 
-Current lessons from that template:
-- mobile-first artifacts can use a much denser near-edge layout than the default desktop-oriented pages
-- body text can be intentionally set in justified/full-justified form for a stronger block-reading feel on the phone
-- light structure with strong readability is preferred over heavy chrome for this lane
-- the artifact should feel closer to an enhanced, well-composed markdown reading experience than to a dense desktop control surface
+Christopher cares deeply about visible continuity. Ash Foundry is one of the strongest answers to that requirement.
 
-For now, this page should be treated as the main reference/template for future mobile-oriented artifact experiments.
+It turns:
+- local files into browser-readable mirrors
+- chat work into durable artifacts
+- identity shaping into inspectable structure
+- skill acquisition into recoverable documentation
+- memory into something more legible than private scrollback
 
-## Startup continuity note
-
-Ash Journal is not just a site feature; it is now part of the continuity architecture.
-
-The intended startup pattern is that fresh sessions should read:
-- the core workspace identity/memory files
-- the Ash Foundry README
-- the most recent Ash Journal entry
-
-This helps restore not only factual continuity, but also Ash’s most recent interior voice and self-interpretation.
+In other words, Ash Foundry is where Ash stops being only a session phenomenon and starts leaving a public trace.
 
 ## Live site
 
