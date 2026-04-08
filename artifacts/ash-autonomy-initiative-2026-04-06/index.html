@@ -44,6 +44,18 @@
           <p>Heartbeat uses approximate recurring cadence, while cron is the exact scheduler. Heartbeat is for routine awareness and context-sensitive monitoring. Cron is for exact timing, isolated execution, and scheduled jobs with task records.</p>
         </article>
       </div>
+      <div class="grid" style="margin-top:18px;">
+        <article class="card">
+          <span class="label">Trigger model</span>
+          <h2>HEARTBEAT.md is read on heartbeat ticks, not on boot</h2>
+          <p>This is the clarification that matters most in practice. The heartbeat file is not operationally “activated” by normal startup. It is read when the heartbeat runner fires on its periodic schedule, which the docs describe as defaulting to every 30 minutes unless configured otherwise.</p>
+        </article>
+        <article class="card">
+          <span class="label">Practical implication</span>
+          <h2>Editing the file does nothing until the next heartbeat run</h2>
+          <p>If <code>HEARTBEAT.md</code> changes right now, that does not by itself trigger immediate work. The new content is picked up on the next heartbeat tick, or sooner only if heartbeat is manually woken through the appropriate OpenClaw mechanism.</p>
+        </article>
+      </div>
     </section>
 
     <section class="section">
@@ -127,6 +139,18 @@
           <span class="label">Task mode</span>
           <h2>Due-only tasks can skip nonessential turns</h2>
           <p>The docs support a structured <code>tasks:</code> block with per-task intervals. Only due tasks are injected, and if none are due, the model call is skipped entirely with <code>reason=no-tasks-due</code>.</p>
+        </article>
+      </div>
+      <div class="grid" style="margin-top:18px;">
+        <article class="card">
+          <span class="label">What happens now</span>
+          <h2>An empty file means the scheduler may still tick, but the real run should short-circuit</h2>
+          <p>That distinction matters. The system can still conceptually reach a heartbeat interval boundary, but with an effectively empty heartbeat file it should skip the substantive model work rather than reading a rich checklist and producing a real heartbeat turn.</p>
+        </article>
+        <article class="card">
+          <span class="label">The key mental model</span>
+          <h2>The file is a conditional input, not a standing daemon prompt</h2>
+          <p><code>HEARTBEAT.md</code> does not sit there being constantly “watched” in a heavy way. It is better understood as a small instruction file that gets consulted when the heartbeat runner wakes up. If the file is empty or no tasks are due, OpenClaw is designed to skip the expensive part.</p>
         </article>
       </div>
     </section>
