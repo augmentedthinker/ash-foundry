@@ -8,13 +8,14 @@
   <style>
     .artifact-shell{max-width:980px}
     .hero{border-radius:30px;padding:30px;background:linear-gradient(180deg, rgba(8,10,12,.14), rgba(8,10,12,.88)), #050607;border:1px solid rgba(255,255,255,.08);box-shadow:0 24px 80px rgba(0,0,0,.24)}
-    .post-card{max-width:760px;margin:0 auto;background:rgba(12,14,16,.56);border:1px solid rgba(255,255,255,.08);border-radius:26px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.22)}
+    .post-card{max-width:760px;margin:0 auto 22px;background:rgba(12,14,16,.56);border:1px solid rgba(255,255,255,.08);border-radius:26px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.22)}
     .post-image{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;background:#0b0d0f}
     .post-body{padding:22px}
     .post-text{font-size:1.06rem;line-height:1.82;white-space:pre-wrap;color:#f5efe7}
     .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
     .action-btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:999px;text-decoration:none;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:#f5efe7;font:inherit;cursor:pointer}
     .action-btn:hover{background:rgba(255,255,255,.1)}
+    .meta-note{margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08);color:rgba(245,239,231,.72);font-size:.93rem;line-height:1.7}
     .note{max-width:760px;margin:18px auto 0;color:rgba(245,239,231,.72);font-size:.95rem;line-height:1.7}
   </style>
 </head>
@@ -47,7 +48,7 @@
       <article class="post-card">
         <img class="post-image" src="../../assets/images/augmented-thinker-x-post-2026-04-08.jpg" alt="AI-generated image for the Augmented Thinker X daily post for April 8, 2026" />
         <div class="post-body">
-          <span class="label">Post 01 · April 8, 2026</span>
+          <span class="label">Post 01 · April 8, 2026 · Posted</span>
           <div id="post-text" class="post-text">I’m increasingly interested in a specific question:
 
 What happens when AI stops being treated like a one-off tool and starts being shaped into a coherent, evolving collaborator?
@@ -58,25 +59,53 @@ That’s the terrain.</div>
             <button class="action-btn" id="copy-btn" type="button">Copy post text</button>
             <a class="action-btn" href="../../assets/images/augmented-thinker-x-post-2026-04-08.jpg" download>Download image</a>
           </div>
+          <div class="meta-note"><strong>Status:</strong> Posted. <strong>Community:</strong> Generative AI Community.</div>
         </div>
       </article>
+
+      <article class="post-card">
+        <img class="post-image" src="../../assets/images/augmented-thinker-x-draft-2026-04-08.jpg" alt="AI-generated image for the Augmented Thinker X draft post for April 8, 2026" />
+        <div class="post-body">
+          <span class="label">Post 02 · April 8, 2026 · Draft</span>
+          <div id="draft-text" class="post-text">A lot of human-AI collaboration still feels shallow because it begins and ends with prompts.
+
+I’m more interested in what happens when you add:
+memory,
+continuity,
+tool use,
+artifact creation,
+and repeated interaction over time.
+
+That’s when it starts becoming a system instead of a trick.</div>
+          <div class="actions">
+            <button class="action-btn" id="copy-draft-btn" type="button">Copy draft text</button>
+            <a class="action-btn" href="../../assets/images/augmented-thinker-x-draft-2026-04-08.jpg" download>Download image</a>
+          </div>
+          <div class="meta-note"><strong>Status:</strong> Draft. Not yet posted.</div>
+        </div>
+      </article>
+
       <p class="note">Designed for manual posting during the current experiment. Ash prepares the post and asset; Christopher reviews and publishes.</p>
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>
   <script>
-    const copyBtn = document.getElementById('copy-btn');
-    const postText = document.getElementById('post-text').innerText;
-    copyBtn?.addEventListener('click', async () => {
-      try {
-        await navigator.clipboard.writeText(postText);
-        copyBtn.textContent = 'Copied';
-        setTimeout(() => copyBtn.textContent = 'Copy post text', 1400);
-      } catch {
-        copyBtn.textContent = 'Copy failed';
-        setTimeout(() => copyBtn.textContent = 'Copy post text', 1400);
-      }
-    });
+    const wireCopy = (buttonId, textId, baseLabel) => {
+      const btn = document.getElementById(buttonId);
+      const text = document.getElementById(textId)?.innerText;
+      btn?.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(text || '');
+          btn.textContent = 'Copied';
+          setTimeout(() => btn.textContent = baseLabel, 1400);
+        } catch {
+          btn.textContent = 'Copy failed';
+          setTimeout(() => btn.textContent = baseLabel, 1400);
+        }
+      });
+    };
+    wireCopy('copy-btn', 'post-text', 'Copy post text');
+    wireCopy('copy-draft-btn', 'draft-text', 'Copy draft text');
   </script>
 </body>
 </html>
