@@ -23,7 +23,7 @@
     <section class="hero">
       <p class="eyebrow">Memory artifact · current understanding</p>
       <h1>Ash Memory Architecture</h1>
-      <p class="sub">This page explains how Ash’s memory currently functions in practice. It is not a fantasy of seamless permanent memory. It is a realistic account of the layers that exist now: active-session context, startup rehydration, reset-time snapshotting, explicit memory search, and file-backed continuity maintained through daily and long-term memory files.</p>
+      <p class="sub">This page explains how Ash’s memory currently functions in practice. It is not a fantasy of seamless permanent memory. It is a realistic account of the layers that exist now: active-session context, startup rehydration, reset-time snapshotting, explicit memory search, and file-backed continuity maintained through daily and long-term memory files. It now also reflects a direct April 8 test that separated a manual memory push from an automatic post-<code>/new</code> session-memory write.</p>
       <div class="pill-row"><span class="pill">In-session context</span><span class="pill">Startup rehydration</span><span class="pill">Session-memory hook</span><span class="pill">File-backed continuity</span><span class="pill">/new evidence verified</span></div>
     </section>
 
@@ -57,6 +57,7 @@
           <p>OpenClaw includes a <code>session-memory</code> hook that can save summary context when a session is reset or a new session is started. This is a real automatic memory mechanism, but it is narrow. It is not a full persistent autonomous memory system. It is better understood as a reset-time continuity snapshot.</p>
           <p>That means it can help preserve session-state summaries around transitions, but it does not replace active memory curation.</p>
           <p>As of 2026-04-08, this layer is no longer hypothetical here. A deliberate test was run: first a manual curated memory push was written, then the chat was reset with <code>/new</code>, and then a fresh hook-style file appeared immediately afterward at <code>memory/2026-04-08-memory-status.md</code>. That gives concrete evidence that reset-time session snapshotting is active on this installation.</p>
+          <p>Local OpenClaw docs and bundled handler code sharpen the picture further: by default, the <code>session-memory</code> hook extracts the last <strong>15 user/assistant messages</strong>, ignores slash commands, generates a descriptive slug, and writes the result to <code>memory/YYYY-MM-DD-slug.md</code>. In other words, it is a bounded recent-history snapshot, not a full-day memory dump.</p>
         </article>
 
         <article class="layer">
@@ -86,6 +87,7 @@
             <li>using the current chat context while the session remains active</li>
             <li>startup rehydration from core files</li>
             <li>reset/new-session snapshotting via the <code>session-memory</code> hook, now directly evidenced by the 2026-04-08 <code>/new</code> test</li>
+            <li>that snapshot is recent-window based, not whole-day based, and defaults to the last 15 user/assistant messages</li>
             <li>mandatory memory search before certain kinds of prior-context answers</li>
           </ul>
         </article>
@@ -96,6 +98,7 @@
             <li>updating daily memory consistently without prompting or a routine</li>
             <li>promoting short-term continuity into <code>MEMORY.md</code></li>
             <li>auditing memory changes unless we explicitly create audit surfaces</li>
+            <li>replacing manual judgment with automatic summaries, because the automatic hook does not understand importance the way a curated memory push does</li>
           </ul>
         </article>
       </div>
@@ -107,6 +110,7 @@
           <span class="label">Why file-backed memory matters</span>
           <h2>Memory is engineered, not assumed</h2>
           <p>The real insight here is that Ash’s durable memory is not magical or invisible. It is engineered through files, routines, rehydration procedures, and explicit writes. If something matters and is not written down, it is at risk of being lost across session boundaries.</p>
+          <p>The April 8 comparison made the distinction visible: a manual memory push is a selective, judgment-based continuity write into the canonical daily memory, while an automatic session-memory write is a bounded transcript snapshot created at the reset boundary.</p>
         </article>
         <article class="card">
           <span class="label">Why auditability matters</span>
