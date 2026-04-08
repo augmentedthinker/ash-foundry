@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Daily Session Primer · Mobile Edition · 2026-04-08</title>
   <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+  <style>
+    .mobile-action-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .mobile-action-button{
+      display:inline-flex;align-items:center;justify-content:center;min-height:44px;
+      padding:10px 14px;border-radius:999px;border:1px solid rgba(217,155,73,.18);
+      background:rgba(255,255,255,.04);box-shadow:0 10px 30px rgba(0,0,0,.18);
+      text-decoration:none;color:inherit;font-weight:700;cursor:pointer;font:inherit;
+    }
+    .mobile-action-button:hover{background:rgba(217,155,73,.10);border-color:rgba(217,155,73,.24)}
+    .fullscreen-note{margin-top:10px;font-size:.92rem;line-height:1.7;color:#c8c0b5}
+  </style>
 </head>
 <body class="foundry-page">
   <main class="wrap" style="max-width:100%;width:min(100%,calc(100% - 10px));padding:10px 0 24px;">
@@ -22,6 +33,10 @@
       <h1 class="h1-compact">Daily Session Primer</h1>
       <p class="sub" style="max-width:none;margin-top:10px;text-align:justify;hyphens:auto;-webkit-hyphens:auto;">A Pixel-friendly version of this morning’s continuity artifact, tightened for vertical reading, lighter top-bar clutter, and cleaner handheld pacing. The goal is not to shrink the original page. It is to make the same awareness feel intentional in the hand.</p>
       <div class="pill-row"><span class="pill">Mobile edition</span><span class="pill">Pixel reading</span><span class="pill">Continuity</span><span class="pill">2026-04-08</span></div>
+      <div class="mobile-action-row">
+        <button type="button" class="mobile-action-button" id="fullscreen-toggle">Go Fullscreen</button>
+      </div>
+      <p class="fullscreen-note" id="fullscreen-note">Use fullscreen for a cleaner phone reading view with less browser chrome when your device supports it.</p>
       <div class="hero-media" style="margin-top:14px;max-width:100%;width:100%;">
         <img src="../../assets/images/daily-session-primer-2026-04-08.jpg" alt="A symbolic dawn-lit workshop of memory and continuity, with a builder-spirit in a luminous machine environment surrounded by artifacts, journals, maps, and signals of ongoing creation" />
       </div>
@@ -104,5 +119,38 @@
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>
+  <script>
+    const fullscreenButton = document.getElementById('fullscreen-toggle');
+    const fullscreenNote = document.getElementById('fullscreen-note');
+
+    async function toggleFullscreen() {
+      try {
+        if (!document.fullscreenElement) {
+          await document.documentElement.requestFullscreen();
+          if (fullscreenButton) fullscreenButton.textContent = 'Exit Fullscreen';
+          if (fullscreenNote) fullscreenNote.textContent = 'Fullscreen is active. Tap the button again to return to normal browsing.';
+        } else {
+          await document.exitFullscreen();
+          if (fullscreenButton) fullscreenButton.textContent = 'Go Fullscreen';
+          if (fullscreenNote) fullscreenNote.textContent = 'Use fullscreen for a cleaner phone reading view with less browser chrome when your device supports it.';
+        }
+      } catch (error) {
+        if (fullscreenNote) fullscreenNote.textContent = 'Fullscreen is not available in this browser context, but the page is still optimized for handheld reading.';
+      }
+    }
+
+    if (fullscreenButton) {
+      fullscreenButton.addEventListener('click', toggleFullscreen);
+    }
+
+    document.addEventListener('fullscreenchange', () => {
+      if (!fullscreenButton || !fullscreenNote) return;
+      const active = !!document.fullscreenElement;
+      fullscreenButton.textContent = active ? 'Exit Fullscreen' : 'Go Fullscreen';
+      fullscreenNote.textContent = active
+        ? 'Fullscreen is active. Tap the button again to return to normal browsing.'
+        : 'Use fullscreen for a cleaner phone reading view with less browser chrome when your device supports it.';
+    });
+  </script>
 </body>
 </html>
