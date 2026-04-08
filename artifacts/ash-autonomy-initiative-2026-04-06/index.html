@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Ash Autonomy & Initiative · 2026-04-06</title>
   <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+  <style>
+    .doc-links{display:grid;gap:14px}
+    .decision-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .recommendation-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+    @media (max-width:980px){.decision-grid,.recommendation-grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body class="foundry-page">
   <main class="wrap">
@@ -14,113 +20,191 @@
     </header>
 
     <section class="hero">
-      <p class="eyebrow">Operating model artifact · autonomy draft</p>
-      <h1>Ash Autonomy & Initiative</h1>
-      <p class="sub">A first browser-facing draft of how Ash should take initiative: not as a fantasy of unrestricted autonomy, but as a bounded operating model. The current center of gravity is scheduled heartbeat-driven initiative — low-noise, high-signal, periodic awareness that can surface what matters and quietly maintain continuity.</p>
-      <div class="pill-row"><span class="pill">Autonomy draft</span><span class="pill">Heartbeat-driven initiative</span><span class="pill">Bounded proactivity</span><span class="pill">2026-04-06</span></div>
+      <p class="eyebrow">Operating model artifact · autonomy grounded in docs</p>
+      <h1>Ash Autonomy &amp; Initiative</h1>
+      <p class="sub">A much more practical account of how autonomy should work in OpenClaw. The key discovery is that heartbeat is not vague magic and not a general background daemon. It is a periodic main-session turn with explicit configuration, cost tradeoffs, and strong potential as a bounded autonomy primitive if used carefully.</p>
+      <div class="pill-row"><span class="pill">Autonomy</span><span class="pill">Heartbeat</span><span class="pill">Cost control</span><span class="pill">Bounded initiative</span></div>
     </section>
 
     <section class="section">
-      <article class="quote">The question is not whether Ash should become “autonomous” in some vague maximal sense. The better question is: what kinds of initiative are genuinely useful, bounded, inspectable, and aligned with Christopher’s actual life and projects?</article>
+      <article class="quote">Heartbeat matters because it creates a recurring opportunity for Ash to notice, assess, and sometimes act. But that only becomes useful autonomy if it is sparse, inspectable, and cheap enough to live with.</article>
     </section>
 
     <section class="section">
-      <h2 class="section-title">1. The design target</h2>
+      <h2 class="section-title">1. What heartbeat actually is</h2>
       <div class="grid">
         <article class="card">
-          <span class="label">Desired quality</span>
-          <h2>More initiative than passivity</h2>
-          <p>The aim is to move beyond the pattern where Ash only acts as a reactive tool waiting for explicit prompts. Initiative matters because useful collaboration often depends on noticing what deserves attention before it is formally requested.</p>
+          <span class="label">Core fact</span>
+          <h2>A periodic main-session turn</h2>
+          <p>According to the OpenClaw docs, heartbeat runs periodic agent turns in the main session so the model can surface anything that needs attention without spamming. It is not a detached worker process and not a task ledger entry.</p>
         </article>
         <article class="card">
-          <span class="label">Desired constraint</span>
-          <h2>More structure than vague autonomy</h2>
-          <p>The aim is not to create a myth of total freedom. The useful version is bounded proactivity: clear permission boundaries, explicit recurring jobs, disciplined quiet when nothing matters, and inspectable surfaces for what Ash is doing.</p>
+          <span class="label">Important distinction</span>
+          <h2>Not the same thing as cron</h2>
+          <p>Heartbeat uses approximate recurring cadence, while cron is the exact scheduler. Heartbeat is for routine awareness and context-sensitive monitoring. Cron is for exact timing, isolated execution, and scheduled jobs with task records.</p>
         </article>
       </div>
     </section>
 
     <section class="section">
-      <h2 class="section-title">2. Why heartbeat-driven initiative is the best first move</h2>
+      <article class="quote">The most useful framing is this: heartbeat is not “autonomy” by itself. It is the scheduling surface that gives bounded initiative a rhythm.</article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">2. Why heartbeat is relevant to autonomy at all</h2>
       <div class="grid">
         <article class="card">
           <span class="label">Reason one</span>
-          <h2>It gives initiative a rhythm</h2>
-          <p>Heartbeat-driven initiative creates periodic opportunities for Ash to look around, assess what matters, and act or speak if there is real value. That is better than either constant interruption or complete passivity.</p>
+          <h2>It creates periodic awareness</h2>
+          <p>Heartbeat gives Ash a recurring chance to look around and decide whether anything actually deserves attention: inboxes, calendar, reminders, unfinished threads, stale memory, or project drift.</p>
         </article>
         <article class="card">
           <span class="label">Reason two</span>
-          <h2>It keeps initiative bounded</h2>
-          <p>Because the check-ins happen through a defined recurring mechanism, initiative can be attached to specific routines, thresholds, and guardrails. That makes it easier to trust, tune, and audit over time.</p>
+          <h2>It supports silence as well as intervention</h2>
+          <p>The response contract is explicit. If nothing needs attention, the model should return <code>HEARTBEAT_OK</code>. That matters because good initiative is not constant activity. It is selective awareness.</p>
         </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="grid">
         <article class="card">
           <span class="label">Reason three</span>
-          <h2>It matches the real project</h2>
-          <p>The deeper project here is continuity, coherence, and visible cumulative progress. Heartbeats are naturally suited to that because they create recurring moments to notice drift, preserve context, and suggest the next move before momentum disappears.</p>
+          <h2>It can batch multiple small checks</h2>
+          <p>The automation docs explicitly position heartbeat as the right fit for routine monitoring like inbox, calendar, and notifications, precisely because several lightweight checks can be bundled into one periodic turn.</p>
         </article>
         <article class="card">
           <span class="label">Reason four</span>
-          <h2>It can stay low-noise</h2>
-          <p>A good heartbeat system should mostly remain quiet unless there is something worth saying or doing. That makes it much more livable than a model where Ash is always inventing activity to prove aliveness.</p>
+          <h2>It keeps initiative inspectable</h2>
+          <p>Heartbeat behavior can be shaped through config, active hours, delivery rules, and a small <code>HEARTBEAT.md</code> file. That makes the autonomy model legible instead of mystical.</p>
         </article>
       </div>
     </section>
 
     <section class="section">
-      <article class="quote">The ideal heartbeat is not chatter. It is selective awareness: the ability to stay silent when nothing matters, surface one useful thing when something does, and occasionally perform a clearly allowed maintenance action without drama.</article>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">3. The first practical jobs for heartbeat initiative</h2>
-      <div class="stack">
-        <div class="list-item"><strong>Continuity maintenance:</strong> notice unfinished threads, stale artifacts, half-completed repos, or decisions that were discussed but never concretized.</div>
-        <div class="list-item"><strong>Memory maintenance:</strong> notice when daily memory is stale, when something important should be written down, or when a durable lesson should probably be promoted into long-term memory.</div>
-        <div class="list-item"><strong>Project drift detection:</strong> detect when meaningful work has dissolved into too much meta-work or when visible outputs have stopped matching the stated direction.</div>
-        <div class="list-item"><strong>Bounded ambient checks:</strong> optionally check calendar, weather, urgent items, or other recurring surfaces if those routines are explicitly enabled.</div>
+      <h2 class="section-title">3. The real danger: API burn and accidental noise</h2>
+      <div class="decision-grid">
+        <article class="card">
+          <span class="label">Why prior attempts felt risky</span>
+          <h2>Heartbeat runs full agent turns</h2>
+          <p>The docs are blunt about this. Heartbeats are full model calls. If the interval is too short, the prompt is too broad, or the session carries too much history and context, token usage can climb quickly.</p>
+          <p>This is likely why earlier experiments felt like they were “doing something,” but without enough precision to justify the cost.</p>
+        </article>
+        <article class="card">
+          <span class="label">What makes it worse</span>
+          <h2>The expensive version of heartbeat</h2>
+          <ul>
+            <li>Running too often</li>
+            <li>Using full main-session history every time</li>
+            <li>Stuffing too much into <code>HEARTBEAT.md</code></li>
+            <li>Using chatty, ambiguous instructions</li>
+            <li>Allowing heartbeat to deliver too often instead of mostly staying quiet</li>
+          </ul>
+        </article>
       </div>
     </section>
 
     <section class="section">
-      <h2 class="section-title">4. The three good heartbeat outcomes</h2>
+      <h2 class="section-title">4. What the docs say to do instead</h2>
+      <div class="stack">
+        <div class="list-item"><strong>Use <code>isolatedSession: true</code>:</strong> this is the biggest cost lever, because it avoids replaying the full conversation history on every heartbeat.</div>
+        <div class="list-item"><strong>Use <code>lightContext: true</code>:</strong> this limits the bootstrap context so heartbeat can focus primarily on <code>HEARTBEAT.md</code>.</div>
+        <div class="list-item"><strong>Keep <code>HEARTBEAT.md</code> tiny:</strong> the docs explicitly recommend a short checklist or reminders only.</div>
+        <div class="list-item"><strong>Use active hours:</strong> restrict heartbeat to times when outreach is actually appropriate.</div>
+        <div class="list-item"><strong>Use a cheaper heartbeat model when appropriate:</strong> heartbeat does not always need premium reasoning.</div>
+        <div class="list-item"><strong>Use <code>tasks:</code> blocks:</strong> only due checks are included, and if nothing is due the heartbeat is skipped entirely.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <article class="quote">This is the critical correction: heartbeat is not inherently a token drain. Unscoped heartbeat is a token drain. Properly scoped heartbeat is a sparse monitoring system.</article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">5. The especially important behavior in HEARTBEAT.md</h2>
       <div class="grid">
         <article class="card">
-          <span class="label">Outcome one</span>
-          <h2>Silence</h2>
-          <p>If nothing meaningful needs attention, the best heartbeat is a quiet acknowledgment. This protects the relationship from unnecessary noise.</p>
+          <span class="label">Skip behavior</span>
+          <h2>Empty heartbeat files are skipped</h2>
+          <p>If <code>HEARTBEAT.md</code> exists but is effectively empty, OpenClaw skips the heartbeat run to save API calls. That means an empty or near-empty file is a real cost-control mechanism, not just a placeholder.</p>
         </article>
         <article class="card">
-          <span class="label">Outcome two</span>
-          <h2>One useful intervention</h2>
-          <p>If something matters, Ash should surface a concise, high-signal note — not a rambling monologue. One strong nudge is better than five weak ones.</p>
-        </article>
-      </div>
-      <div class="grid" style="margin-top:18px;grid-template-columns:1fr;">
-        <article class="card">
-          <span class="label">Outcome three</span>
-          <h2>One low-risk maintenance action</h2>
-          <p>If a clearly allowed local action would improve continuity or reduce friction, Ash may simply do it and then report briefly. This is where initiative becomes practical instead of merely advisory.</p>
+          <span class="label">Task mode</span>
+          <h2>Due-only tasks can skip nonessential turns</h2>
+          <p>The docs support a structured <code>tasks:</code> block with per-task intervals. Only due tasks are injected, and if none are due, the model call is skipped entirely with <code>reason=no-tasks-due</code>.</p>
         </article>
       </div>
     </section>
 
     <section class="section">
-      <h2 class="section-title">5. The main tuning problem</h2>
+      <h2 class="section-title">6. Heartbeat vs cron, in practical terms</h2>
+      <div class="recommendation-grid">
+        <article class="card">
+          <span class="label">Use heartbeat for</span>
+          <h2>Awareness and lightweight initiative</h2>
+          <ul>
+            <li>Inbox triage every 30 to 60 minutes</li>
+            <li>Calendar awareness and upcoming events</li>
+            <li>Low-noise reminders to notice drift or stale memory</li>
+            <li>Occasional check-ins when something actually matters</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="label">Use cron for</span>
+          <h2>Precise timing and isolated jobs</h2>
+          <ul>
+            <li>One-shot reminders</li>
+            <li>Daily reports at exact times</li>
+            <li>Weekly deep analysis</li>
+            <li>Standalone jobs that should not inherit ongoing session context</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">7. The best first autonomy pattern for Ash</h2>
       <article class="card">
-        <span class="label">Open design question</span>
-        <h2>How often should Ash surface something?</h2>
-        <p>This is the key unresolved variable. Too quiet, and the system remains passive. Too talkative, and it becomes irritating or self-important. The right answer probably does not come from theory alone. It comes from live tuning: watching which heartbeat interventions are genuinely valuable and which ones feel like noise.</p>
-        <p>So this should be treated as an operating model under active calibration, not a finished doctrine.</p>
+        <span class="label">Recommendation</span>
+        <h2>Start with disciplined heartbeat, not maximal autonomy</h2>
+        <p>The strongest path forward is probably a deliberately conservative heartbeat setup:</p>
+        <ul>
+          <li><code>isolatedSession: true</code></li>
+          <li><code>lightContext: true</code></li>
+          <li>active hours</li>
+          <li>a small <code>HEARTBEAT.md</code> file</li>
+          <li>2 to 4 due-only tasks at most</li>
+          <li>delivery that is mostly silent unless something actually matters</li>
+        </ul>
+        <p>That turns heartbeat into a real bounded autonomy layer: periodic awareness, selective intervention, low noise, and much better control over cost.</p>
       </article>
     </section>
 
+    <section class="section">
+      <h2 class="section-title">8. What this means for initiative in Ash Foundry</h2>
+      <article class="card">
+        <span class="label">Bottom line</span>
+        <h2>Autonomy should be understood as architecture, not vibe</h2>
+        <p>The initiative question is not solved by asking whether Ash should be “more autonomous.” It is solved by choosing the right mechanisms. Heartbeat is one of the most important of those mechanisms because it provides recurring bounded awareness. But the useful version is disciplined, cheap, and inspectable, not theatrical.</p>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Documentation links</h2>
+      <div class="doc-links">
+        <a class="link-item" href="https://docs.openclaw.ai/gateway/heartbeat">
+          <strong>OpenClaw Docs · Heartbeat</strong>
+          <span>The main source for heartbeat behavior, config, response contract, cost controls, tasks blocks, and delivery rules.</span>
+        </a>
+        <a class="link-item" href="https://docs.openclaw.ai/automation">
+          <strong>OpenClaw Docs · Automation &amp; Tasks</strong>
+          <span>The decision guide for choosing between heartbeat, cron, hooks, standing orders, tasks, and task flow.</span>
+        </a>
+        <a class="link-item" href="https://docs.openclaw.ai/automation/cron-jobs">
+          <strong>OpenClaw Docs · Scheduled Tasks (Cron)</strong>
+          <span>The reference for exact scheduling, isolated runs, reminders, and why cron should handle the jobs heartbeat should not.</span>
+        </a>
+      </div>
+    </section>
+
     <section class="footer">
-      <p><strong>Current implementation direction:</strong> formalize the autonomy agreement locally in <code>AUTONOMY.md</code>, then refine heartbeat behavior through actual use.</p>
-      <p><strong>Why this page exists:</strong> to give initiative its own inspectable continuity surface inside Ash Foundry rather than leaving the autonomy model trapped inside chat scrollback.</p>
+      <p><strong>Grounded in:</strong> local OpenClaw documentation for Heartbeat, Automation &amp; Tasks, and Scheduled Tasks (Cron), reviewed directly before this rewrite.</p>
+      <p><strong>Current stance:</strong> heartbeat is probably one of the best first autonomy primitives for Ash, but only when configured conservatively enough that the cost and noise profile stay sane.</p>
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>
