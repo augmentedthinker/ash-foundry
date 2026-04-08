@@ -48,7 +48,7 @@
         <article class="card">
           <span class="label">Trigger model</span>
           <h2>HEARTBEAT.md is read on heartbeat ticks, not on boot</h2>
-          <p>This is the clarification that matters most in practice. The heartbeat file is not operationally “activated” by normal startup. It is read when the heartbeat runner fires on its periodic schedule, which the docs describe as defaulting to every 30 minutes unless configured otherwise.</p>
+          <p>This is the clarification that matters most in practice. The heartbeat file is not operationally “activated” by normal startup. It is read when the heartbeat runner fires on its periodic schedule. The docs describe a default 30-minute cadence, but that should now be treated as a documented default, not a proven live behavior on this install.</p>
         </article>
         <article class="card">
           <span class="label">Practical implication</span>
@@ -153,6 +153,18 @@
           <p><code>HEARTBEAT.md</code> does not sit there being constantly “watched” in a heavy way. It is better understood as a small instruction file that gets consulted when the heartbeat runner wakes up. If the file is empty or no tasks are due, OpenClaw is designed to skip the expensive part.</p>
         </article>
       </div>
+      <div class="grid" style="margin-top:18px;">
+        <article class="card">
+          <span class="label">Live finding</span>
+          <h2>Documented default is not the same as proven active runtime</h2>
+          <p>A real-world test was run on this install by adding a quote-delivery instruction into <code>HEARTBEAT.md</code> and waiting across the expected interval window. No delivery appeared, and no satisfying local evidence of heartbeat execution was found. That means the 30-minute default should not be treated as proven live behavior here.</p>
+        </article>
+        <article class="card">
+          <span class="label">Current conclusion</span>
+          <h2>Heartbeat probably needs explicit configuration before it truly exists in practice</h2>
+          <p>The strongest current interpretation is that heartbeat is a real OpenClaw capability, but not one that is actually active on this machine yet. The likely missing piece is an explicit heartbeat configuration block or enablement step. Because configuration edits have been a source of instability before, the plan is to handle that later through the intended terminal configure flow rather than by hand-editing <code>openclaw.json</code> from chat.</p>
+        </article>
+      </div>
     </section>
 
     <section class="section">
@@ -185,8 +197,8 @@
       <h2 class="section-title">7. The best first autonomy pattern for Ash</h2>
       <article class="card">
         <span class="label">Recommendation</span>
-        <h2>Start with disciplined heartbeat, not maximal autonomy</h2>
-        <p>The strongest path forward is probably a deliberately conservative heartbeat setup:</p>
+        <h2>Start with disciplined heartbeat, but only after explicit activation is verified</h2>
+        <p>The strongest path forward is still probably a deliberately conservative heartbeat setup, but the first job now is proving heartbeat is actually enabled in live runtime before designing around it:</p>
         <ul>
           <li><code>isolatedSession: true</code></li>
           <li><code>lightContext: true</code></li>
@@ -195,7 +207,7 @@
           <li>2 to 4 due-only tasks at most</li>
           <li>delivery that is mostly silent unless something actually matters</li>
         </ul>
-        <p>That turns heartbeat into a real bounded autonomy layer: periodic awareness, selective intervention, low noise, and much better control over cost.</p>
+        <p>Once explicitly enabled and verified, that turns heartbeat into a real bounded autonomy layer: periodic awareness, selective intervention, low noise, and much better control over cost.</p>
       </article>
     </section>
 
@@ -228,7 +240,7 @@
 
     <section class="footer">
       <p><strong>Grounded in:</strong> local OpenClaw documentation for Heartbeat, Automation &amp; Tasks, and Scheduled Tasks (Cron), reviewed directly before this rewrite.</p>
-      <p><strong>Current stance:</strong> heartbeat is probably one of the best first autonomy primitives for Ash, but only when configured conservatively enough that the cost and noise profile stay sane.</p>
+      <p><strong>Current stance:</strong> heartbeat still looks like one of the best first autonomy primitives for Ash, but it is not yet proven active on this install. The next threshold is explicit, reversible enablement through the intended configure flow, followed by verification in practice.</p>
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>
