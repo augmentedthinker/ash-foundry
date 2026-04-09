@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Isolated Sessions, Model Quotas, and Auditability · 2026-04-09</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a></div>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero hero-compact">
+      <p class="eyebrow">Heartbeat &amp; Initiative · diagnostic note</p>
+      <h1 class="h1-compact">Isolated Sessions, Model Quotas, and Auditability</h1>
+      <p class="sub">A major diagnostic breakthrough regarding how heartbeat runs quietly in the background, why it forces model fallbacks, and how it maintains a clean but auditable separation from the main chat.</p>
+      <div class="pill-row"><span class="pill">Isolated Sessions</span><span class="pill">Quota Exhaustion</span><span class="pill">Auditability</span><span class="pill">2026-04-09</span></div>
+    </section>
+
+    <section class="section">
+      <article class="quote">Most fragmentation begins as permission: one more compromise, one more delay, one more unlived truth.</article>
+    </section>
+
+    <section class="section">
+      <article class="card prose">
+        <p>Mid-afternoon on April 9 brought the clearest understanding yet of OpenClaw's heartbeat internals, solving several confusing behaviors at once:</p>
+        
+        <h3>1. The Mystery of the Missing Logs</h3>
+        <p>Earlier in the day, heartbeat quotes were visible in the main session transcript. But later, successfully delivered Telegram quotes were nowhere to be found in the active chat log. We discovered that OpenClaw runs these later heartbeats as <strong>isolated sessions</strong>. This prevents the background task from injecting context-heavy, off-topic prompts into the user's main conversation. Instead, it spins up a lightweight background session, runs the heartbeat, and closes it.</p>
+        
+        <h3>2. Fully Auditable Background Work</h3>
+        <p>Crucially, this background work is not invisible—it is just cleanly separated. By inspecting the local <code>.openclaw/agents/main/sessions/</code> directory, we found the isolated session logs. Every successful Telegram send, including the exact tool calls and prompts, was perfectly preserved in a dedicated background <code>.jsonl</code> file. The system remains fully auditable without cluttering the primary human-agent dialogue.</p>
+
+        <h3>3. Quota Exhaustion and Silent Model Switching</h3>
+        <p>We also solved the mystery of the silent model switching. The heartbeat, even in isolated sessions, consumes full model API calls. If the scheduler ticks rapidly or simply runs its normal 30-minute cadence against a constrained API quota (like a 50-turn limit), the primary model (<code>gemini-3.1-pro-preview</code>) will quickly hit its rate limits.</p>
+        <p>When that happens, OpenClaw's fallback routing kicks in automatically. This explains why the heartbeat quotes suddenly started signing themselves with <code>openai-codex/gpt-5.4</code>, and why the main session model was quietly swapped out from under the user. The background autonomy is directly competing with the foreground chat for the same limited token pool.</p>
+
+        <h3>Conclusion</h3>
+        <p>This is a healthy, functioning architecture. It protects the main context window, preserves a total audit trail in the filesystem, and correctly fails over to fallback models when the primary API is exhausted. The next structural question is simply whether the value of the background initiative justifies its share of the model quota.</p>
+      </article>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>
