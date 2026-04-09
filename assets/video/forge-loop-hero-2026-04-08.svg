@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#07080a"/>
+      <stop offset="55%" stop-color="#0a0d11"/>
+      <stop offset="100%" stop-color="#030405"/>
+    </linearGradient>
+    <radialGradient id="amberGlow" cx="50%" cy="55%" r="30%">
+      <stop offset="0%" stop-color="rgba(255,190,110,0.95)"/>
+      <stop offset="35%" stop-color="rgba(255,155,70,0.42)"/>
+      <stop offset="70%" stop-color="rgba(255,120,40,0.10)"/>
+      <stop offset="100%" stop-color="rgba(255,120,40,0)"/>
+    </radialGradient>
+    <radialGradient id="blueGlow" cx="50%" cy="45%" r="34%">
+      <stop offset="0%" stop-color="rgba(120,200,255,0.28)"/>
+      <stop offset="60%" stop-color="rgba(120,200,255,0.08)"/>
+      <stop offset="100%" stop-color="rgba(120,200,255,0)"/>
+    </radialGradient>
+    <filter id="blur40"><feGaussianBlur stdDeviation="40"/></filter>
+    <filter id="blur18"><feGaussianBlur stdDeviation="18"/></filter>
+    <filter id="blur6"><feGaussianBlur stdDeviation="6"/></filter>
+    <style>
+      .floatSlow { animation: floatSlow 9s ease-in-out infinite; }
+      .floatAlt { animation: floatAlt 11s ease-in-out infinite; }
+      .emberA { animation: emberA 7s linear infinite; }
+      .emberB { animation: emberB 8.5s linear infinite; }
+      .emberC { animation: emberC 6.2s linear infinite; }
+      .pulse { animation: pulse 4.5s ease-in-out infinite; transform-origin: 50% 55%; }
+      .anvil { animation: anvil 8s ease-in-out infinite; transform-origin: 50% 55%; }
+      @keyframes floatSlow {
+        0%,100% { transform: translateY(0px) translateX(0px); opacity:.9; }
+        50% { transform: translateY(-10px) translateX(6px); opacity:1; }
+      }
+      @keyframes floatAlt {
+        0%,100% { transform: translateY(0px) translateX(0px); opacity:.7; }
+        50% { transform: translateY(12px) translateX(-8px); opacity:.95; }
+      }
+      @keyframes anvil {
+        0%,100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-8px) scale(1.01); }
+      }
+      @keyframes pulse {
+        0%,100% { opacity:.75; transform: scale(0.98); }
+        50% { opacity:1; transform: scale(1.04); }
+      }
+      @keyframes emberA {
+        0% { transform: translate(0px,0px); opacity:0; }
+        10% { opacity:.9; }
+        100% { transform: translate(-70px,-180px); opacity:0; }
+      }
+      @keyframes emberB {
+        0% { transform: translate(0px,0px); opacity:0; }
+        15% { opacity:.85; }
+        100% { transform: translate(85px,-210px); opacity:0; }
+      }
+      @keyframes emberC {
+        0% { transform: translate(0px,0px); opacity:0; }
+        12% { opacity:.8; }
+        100% { transform: translate(20px,-160px); opacity:0; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g class="floatAlt" opacity="0.9">
+    <ellipse cx="800" cy="430" rx="340" ry="190" fill="url(#blueGlow)" filter="url(#blur40)"/>
+  </g>
+  <g class="pulse">
+    <ellipse cx="800" cy="510" rx="260" ry="160" fill="url(#amberGlow)" filter="url(#blur40)"/>
+  </g>
+  <g filter="url(#blur18)" opacity="0.35">
+    <ellipse cx="800" cy="700" rx="380" ry="60" fill="#000"/>
+  </g>
+
+  <g class="anvil">
+    <path d="M690 565 C705 500, 750 458, 820 452 C892 446, 942 474, 962 522 C972 548, 995 564, 1038 570 L1038 596 L936 596 C926 620, 920 646, 920 676 L678 676 C678 642, 684 617, 694 596 L560 596 L560 570 C615 566, 658 563, 690 565 Z" fill="rgba(135,215,255,0.75)"/>
+    <path d="M714 548 C735 505, 769 480, 820 476 C876 472, 913 492, 932 528 C898 532, 859 538, 816 538 C780 538, 746 534, 714 548 Z" fill="rgba(230,250,255,0.82)"/>
+    <rect x="720" y="676" width="156" height="48" rx="12" fill="rgba(113,193,240,0.72)"/>
+    <rect x="754" y="720" width="88" height="84" rx="12" fill="rgba(88,162,214,0.7)"/>
+  </g>
+
+  <g class="floatSlow" opacity="0.9">
+    <circle class="emberA" cx="790" cy="590" r="4.5" fill="#ffcc88"/>
+    <circle class="emberB" cx="840" cy="600" r="3.8" fill="#ffc16b"/>
+    <circle class="emberC" cx="760" cy="612" r="3.4" fill="#ffd59a"/>
+    <circle class="emberA" cx="870" cy="590" r="2.8" fill="#ffc16b" style="animation-delay:1.2s"/>
+    <circle class="emberB" cx="720" cy="600" r="3.2" fill="#ffd59a" style="animation-delay:2.2s"/>
+    <circle class="emberC" cx="905" cy="620" r="2.5" fill="#ffb25e" style="animation-delay:.7s"/>
+    <circle class="emberA" cx="680" cy="610" r="2.7" fill="#ffcf90" style="animation-delay:3.1s"/>
+  </g>
+</svg>
