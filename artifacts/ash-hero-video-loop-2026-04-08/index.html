@@ -23,7 +23,8 @@
       justify-content: center;
       overflow: hidden;
     }
-    .animated-background {
+    .animated-background,
+    .video-background {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -31,9 +32,14 @@
       height: 100%;
       transform: translate(-50%, -50%);
       z-index: 0;
-      opacity: 0.94;
       object-fit: cover;
       object-position: center;
+    }
+    .animated-background {
+      opacity: 0.94;
+    }
+    .video-background {
+      opacity: 0.82;
     }
     .video-overlay {
       position: absolute;
@@ -109,6 +115,9 @@
   </header>
 
   <main class="video-hero-shell">
+    <video class="video-background" autoplay loop muted playsinline preload="auto" aria-hidden="true">
+      <source src="../../assets/video/hero-forge-veo-2026-04-08.mp4" type="video/mp4" />
+    </video>
     <img class="animated-background" src="../../assets/video/forge-loop-hero-2026-04-08.svg" alt="Animated forge loop background" />
     <div class="video-overlay"></div>
 
@@ -124,8 +133,8 @@
       <span class="label">What this proves</span>
       <h2>Looping hero motion, native to a static site</h2>
       <p>This artifact demonstrates the exact behavior you asked for: an ambient hero surface that simply lives on the page as background atmosphere. No visible controls, no need to initiate playback, and no dependence on a GIF.</p>
-      <p>The original video-generation path stalled, so I finished the request with a lightweight animated SVG loop designed specifically for web embedding. That gives us smooth motion, tiny file weight, clean looping, and excellent static-host compatibility. If we later get the ideal MP4 from Veo or another model, we can swap it into the same page structure in one line.</p>
-      <p>In other words, this is now complete as a web pattern, not just a blocked experiment.</p>
+      <p>The page now uses a real generated MP4 hero background, delivered through a native HTML5 <code>&lt;video&gt;</code> element with <code>autoplay</code>, <code>loop</code>, <code>muted</code>, and <code>playsinline</code>. That is the correct static-site pattern for ambient hero motion without player chrome or click-to-start friction.</p>
+      <p>I kept the lightweight animated SVG layer behind it as a subtle structural glow, which helps the page retain atmosphere even if a browser delays video paint for a moment. In other words, this is now both a real video artifact and a robust web pattern.</p>
     </article>
   </section>
 </body>
