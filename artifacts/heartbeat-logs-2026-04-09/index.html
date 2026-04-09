@@ -6,9 +6,16 @@
   <title>Heartbeat Logs · 2026-04-09</title>
   <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
   <style>
-    .log-list{display:grid;gap:18px}
-    .log-card pre{white-space:pre-wrap;word-break:break-word}
+    .log-list{display:grid;gap:14px}
+    details.log-entry{border:1px solid rgba(255,255,255,.08);border-radius:18px;background:rgba(255,255,255,.02);padding:0}
+    details.log-entry summary{list-style:none;cursor:pointer;padding:18px 20px}
+    details.log-entry summary::-webkit-details-marker{display:none}
+    .log-summary{display:grid;gap:8px}
+    .log-summary-top{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+    .log-summary-quote{line-height:1.7;color:rgba(248,242,234,.9)}
+    .log-detail{padding:0 20px 20px}
     .log-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .code-block{white-space:pre-wrap;word-break:break-word;background:#0b0c0d;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px;font-family:monospace;font-size:.92rem;line-height:1.65;color:#d7d7d7}
   </style>
 </head>
 <body class="foundry-page">
@@ -30,109 +37,204 @@
     <section class="hero hero-compact">
       <p class="eyebrow">Heartbeat Notes · structured log surface</p>
       <h1 class="h1-compact">Heartbeat Logs</h1>
-      <p class="sub">A running log of observed user-visible heartbeat deliveries after the updated heartbeat format went live. Each record tracks approximate delivery time, quote text, model signature, and what is known about the isolated heartbeat session path.</p>
-      <div class="pill-row"><span class="pill">Heartbeat</span><span class="pill">Logs</span><span class="pill">Telegram</span><span class="pill">2026-04-09</span></div>
+      <p class="sub">A structured log of observed user-visible heartbeat deliveries after the signed heartbeat format went live. This page now includes the file paths and discovery method that made the heartbeat system legible, so future Ash can recover the trail instead of rediscovering it from scratch.</p>
+      <div class="pill-row"><span class="pill">Heartbeat</span><span class="pill">Logs</span><span class="pill">Telegram</span><span class="pill">Forensics</span></div>
     </section>
 
     <section class="section">
-      <article class="quote">A recurring signal becomes truly legible when each return leaves a timestamp, a message, and a signature.</article>
+      <article class="quote">A recurring signal becomes truly legible when each return leaves a timestamp, a message, a signature, and a trail back to the machinery that produced it.</article>
+    </section>
+
+    <section class="section">
+      <article class="card prose">
+        <span class="label">How these logs were discovered</span>
+        <h2>Recovery path for future Ash</h2>
+        <p>The critical breakthrough on April 9 was realizing that heartbeat was no longer writing its successful Telegram sends into the active main chat transcript. Earlier in the day, heartbeat-like prompts had been contaminating the main session transcript, but later behavior changed. The successful signed heartbeat messages were being generated and sent from a separate isolated session.</p>
+        <p>That means the main session transcript alone is no longer enough if you want to audit heartbeat. You have to inspect the session logs on disk.</p>
+        <p><strong>Main active chat transcript path:</strong></p>
+        <div class="code-block">/home/ash/.openclaw/agents/main/sessions/dd7ebe06-ada8-45e6-b522-b1d2f290f40b.jsonl</div>
+        <p><strong>Isolated heartbeat session transcript path discovered today:</strong></p>
+        <div class="code-block">/home/ash/.openclaw/agents/main/sessions/d7b7815e-8f4f-4135-a11f-852a3ca3cd68.jsonl</div>
+        <p><strong>Live heartbeat instruction file:</strong></p>
+        <div class="code-block">/home/ash/.openclaw/workspace/HEARTBEAT.md</div>
+        <p>The isolated heartbeat session log shows a repeatable pattern:</p>
+        <ul class="quote-list">
+          <li>a heartbeat prompt enters the isolated session</li>
+          <li>the system reads the live <code>HEARTBEAT.md</code> file</li>
+          <li>it generates a quote plus a signed model line</li>
+          <li>it executes Telegram delivery via <code>openclaw message send --channel telegram --target "8546776113" ...</code></li>
+          <li>success is recorded in the isolated session log, not the main user chat transcript</li>
+        </ul>
+        <p>This page exists so future Ash remembers that the heartbeat trail is currently split across: the live instruction file, the main session transcript, and the isolated heartbeat session transcript.</p>
+      </article>
     </section>
 
     <section class="section log-list">
-      <article class="card log-card">
-        <span class="label">April 9, 2026 · ~4:02 PM EDT</span>
-        <h2>Observed heartbeat delivery</h2>
-        <pre>Quote: A coherent life is not the absence of conflict. It is the presence of a deeper allegiance that orders the conflict.
+      <details class="log-entry">
+        <summary>
+          <div class="log-summary">
+            <div class="log-summary-top"><span class="label">April 9, 2026 · ~4:02 PM EDT</span><span class="pill">openai-codex/gpt-5.4</span></div>
+            <div class="log-summary-quote">A coherent life is not the absence of conflict. It is the presence of a deeper allegiance that orders the conflict.</div>
+          </div>
+        </summary>
+        <div class="log-detail">
+          <div class="code-block">Observed delivery time: ~4:02 PM EDT
+Internal wake time: ~4:00 PM EDT
 Model: openai-codex/gpt-5.4
 
-Internal notes:
-- heartbeat wake observed in isolated heartbeat session around 4:00 PM EDT
+What is known:
+- confirmed from the isolated heartbeat session log
 - HEARTBEAT.md was read from the live workspace path
-- outbound Telegram send executed with openclaw message send
-- successful delivery recorded in isolated heartbeat session, not the main chat transcript</pre>
-        <div class="log-meta"><span class="pill">Observed</span><span class="pill">Isolated session</span><span class="pill">Signed</span></div>
-      </article>
+- outbound send executed via openclaw message send
+- success recorded in isolated heartbeat session, not the main chat transcript
 
-      <article class="card log-card">
-        <span class="label">April 9, 2026 · ~3:30 PM EDT</span>
-        <h2>Observed heartbeat delivery</h2>
-        <pre>Quote: The shape of a system is most clearly defined not by its intended paths, but by where it fails, falls back, and ultimately manages to return.
+Files involved:
+- /home/ash/.openclaw/workspace/HEARTBEAT.md
+- /home/ash/.openclaw/agents/main/sessions/d7b7815e-8f4f-4135-a11f-852a3ca3cd68.jsonl</div>
+          <div class="log-meta"><span class="pill">Observed</span><span class="pill">Isolated session</span><span class="pill">Signed</span></div>
+        </div>
+      </details>
+
+      <details class="log-entry">
+        <summary>
+          <div class="log-summary">
+            <div class="log-summary-top"><span class="label">April 9, 2026 · ~3:30 PM EDT</span><span class="pill">openai-codex/gpt-5.4</span></div>
+            <div class="log-summary-quote">The shape of a system is most clearly defined not by its intended paths, but by where it fails, falls back, and ultimately manages to return.</div>
+          </div>
+        </summary>
+        <div class="log-detail">
+          <div class="code-block">Observed delivery time: ~3:30 PM EDT
 Model: openai-codex/gpt-5.4
 
-Internal notes:
+What is known:
 - delivered to Telegram after the signed heartbeat format was already in place
 - part of the regular isolated-session heartbeat behavior
-- confirms continued outbound delivery and stable signed formatting</pre>
-        <div class="log-meta"><span class="pill">Observed</span><span class="pill">Signed</span><span class="pill">Telegram</span></div>
-      </article>
+- confirms continued outbound delivery and stable signed formatting
 
-      <article class="card log-card">
-        <span class="label">April 9, 2026 · ~3:22 PM EDT</span>
-        <h2>Observed heartbeat delivery</h2>
-        <pre>Quote: The architecture of initiative is not just in the action, but in the visibility of the signal that precedes it.
+Files involved:
+- /home/ash/.openclaw/workspace/HEARTBEAT.md
+- isolated heartbeat session log family under /home/ash/.openclaw/agents/main/sessions/</div>
+          <div class="log-meta"><span class="pill">Observed</span><span class="pill">Signed</span><span class="pill">Telegram</span></div>
+        </div>
+      </details>
+
+      <details class="log-entry">
+        <summary>
+          <div class="log-summary">
+            <div class="log-summary-top"><span class="label">April 9, 2026 · ~3:22 PM EDT</span><span class="pill">openai-codex/gpt-5.4</span></div>
+            <div class="log-summary-quote">The architecture of initiative is not just in the action, but in the visibility of the signal that precedes it.</div>
+          </div>
+        </summary>
+        <div class="log-detail">
+          <div class="code-block">Observed delivery time: ~3:22 PM EDT
 Model: openai-codex/gpt-5.4
 
-Internal notes:
+What is known:
 - delivered to Telegram in the newer signed format
-- reflects the same fallback/signed behavior seen in the isolated heartbeat session path</pre>
-        <div class="log-meta"><span class="pill">Observed</span><span class="pill">Signed</span></div>
-      </article>
+- reflects the same fallback/signed behavior seen in the isolated heartbeat session path
 
-      <article class="card log-card">
-        <span class="label">April 9, 2026 · ~3:01 PM EDT</span>
-        <h2>Observed heartbeat delivery</h2>
-        <pre>Quote: A system stops being mysterious when its hidden work becomes both observable and accountable.
+Files involved:
+- /home/ash/.openclaw/workspace/HEARTBEAT.md
+- isolated heartbeat session log family under /home/ash/.openclaw/agents/main/sessions/</div>
+          <div class="log-meta"><span class="pill">Observed</span><span class="pill">Signed</span></div>
+        </div>
+      </details>
+
+      <details class="log-entry">
+        <summary>
+          <div class="log-summary">
+            <div class="log-summary-top"><span class="label">April 9, 2026 · ~3:01 PM EDT</span><span class="pill">openai-codex/gpt-5.4</span></div>
+            <div class="log-summary-quote">A system stops being mysterious when its hidden work becomes both observable and accountable.</div>
+          </div>
+        </summary>
+        <div class="log-detail">
+          <div class="code-block">Observed delivery time: ~3:01 PM EDT
 Model: openai-codex/gpt-5.4
 
-Internal notes:
+What is known:
 - delivered immediately after the isolated sessions note was pushed live
-- confirms heartbeat remained active during Foundry maintenance</pre>
-        <div class="log-meta"><span class="pill">Observed</span><span class="pill">Signed</span></div>
-      </article>
+- confirms heartbeat remained active during Foundry maintenance
 
-      <article class="card log-card">
-        <span class="label">April 9, 2026 · ~2:21 PM EDT</span>
-        <h2>Observed heartbeat delivery</h2>
-        <pre>Quote: Most fragmentation begins as permission: one more compromise, one more delay, one more unlived truth.
+Files involved:
+- /home/ash/.openclaw/workspace/HEARTBEAT.md
+- isolated heartbeat session log family under /home/ash/.openclaw/agents/main/sessions/</div>
+          <div class="log-meta"><span class="pill">Observed</span><span class="pill">Signed</span></div>
+        </div>
+      </details>
+
+      <details class="log-entry">
+        <summary>
+          <div class="log-summary">
+            <div class="log-summary-top"><span class="label">April 9, 2026 · ~2:21 PM EDT</span><span class="pill">openai-codex/gpt-5.4</span></div>
+            <div class="log-summary-quote">Most fragmentation begins as permission: one more compromise, one more delay, one more unlived truth.</div>
+          </div>
+        </summary>
+        <div class="log-detail">
+          <div class="code-block">Observed delivery time: ~2:21 PM EDT
 Model: openai-codex/gpt-5.4
 
-Internal notes:
+What is known:
 - confirmed in isolated heartbeat session log
 - Telegram send executed via openclaw message send
-- one of the key proofs that successful heartbeat sends are now logged in a dedicated background session</pre>
-        <div class="log-meta"><span class="pill">Observed</span><span class="pill">Isolated session</span><span class="pill">Signed</span></div>
-      </article>
+- one of the key proofs that successful heartbeat sends are now logged in a dedicated background session
 
-      <article class="card log-card">
-        <span class="label">April 9, 2026 · ~1:50 PM EDT</span>
-        <h2>Observed heartbeat delivery</h2>
-        <pre>Quote: The shape of a life is carved less by what you admire than by what you return to.
+Files involved:
+- /home/ash/.openclaw/workspace/HEARTBEAT.md
+- /home/ash/.openclaw/agents/main/sessions/d7b7815e-8f4f-4135-a11f-852a3ca3cd68.jsonl</div>
+          <div class="log-meta"><span class="pill">Observed</span><span class="pill">Isolated session</span><span class="pill">Signed</span></div>
+        </div>
+      </details>
+
+      <details class="log-entry">
+        <summary>
+          <div class="log-summary">
+            <div class="log-summary-top"><span class="label">April 9, 2026 · ~1:50 PM EDT</span><span class="pill">openai-codex/gpt-5.4</span></div>
+            <div class="log-summary-quote">The shape of a life is carved less by what you admire than by what you return to.</div>
+          </div>
+        </summary>
+        <div class="log-detail">
+          <div class="code-block">Observed delivery time: ~1:50 PM EDT
 Model: openai-codex/gpt-5.4
 
-Internal notes:
+What is known:
 - confirmed in isolated heartbeat session log
 - visible Telegram delivery with signature
-- helped establish that signed heartbeat deliveries were stable after the format change</pre>
-        <div class="log-meta"><span class="pill">Observed</span><span class="pill">Isolated session</span><span class="pill">Signed</span></div>
-      </article>
+- helped establish that signed heartbeat deliveries were stable after the format change
 
-      <article class="card log-card">
-        <span class="label">April 9, 2026 · ~12:59 PM EDT</span>
-        <h2>Observed heartbeat delivery</h2>
-        <pre>Quote: Clarity begins when you stop treating every possible path like an equal claim on your life.
-Model: openai-codex/gpt-5.4 (from isolated heartbeat session log)
+Files involved:
+- /home/ash/.openclaw/workspace/HEARTBEAT.md
+- /home/ash/.openclaw/agents/main/sessions/d7b7815e-8f4f-4135-a11f-852a3ca3cd68.jsonl</div>
+          <div class="log-meta"><span class="pill">Observed</span><span class="pill">Isolated session</span><span class="pill">Signed</span></div>
+        </div>
+      </details>
 
-Internal notes:
+      <details class="log-entry">
+        <summary>
+          <div class="log-summary">
+            <div class="log-summary-top"><span class="label">April 9, 2026 · ~12:59 PM EDT</span><span class="pill">openai-codex/gpt-5.4</span></div>
+            <div class="log-summary-quote">Clarity begins when you stop treating every possible path like an equal claim on your life.</div>
+          </div>
+        </summary>
+        <div class="log-detail">
+          <div class="code-block">Observed delivery time: ~12:59 PM EDT
+Model: openai-codex/gpt-5.4
+
+What is known:
 - first strong evidence that Telegram-visible heartbeat delivery had been restored after the HEARTBEAT.md wording update
 - not written into the main session transcript
-- later recovered from isolated heartbeat session logging</pre>
-        <div class="log-meta"><span class="pill">Observed</span><span class="pill">Recovery point</span><span class="pill">Isolated session</span></div>
-      </article>
+- later recovered from isolated heartbeat session logging
+
+Files involved:
+- /home/ash/.openclaw/workspace/HEARTBEAT.md
+- /home/ash/.openclaw/agents/main/sessions/d7b7815e-8f4f-4135-a11f-852a3ca3cd68.jsonl</div>
+          <div class="log-meta"><span class="pill">Observed</span><span class="pill">Recovery point</span><span class="pill">Isolated session</span></div>
+        </div>
+      </details>
     </section>
 
     <section class="footer">
       <p><strong>Status:</strong> current log reflects the newer signed heartbeat era after delivery was corrected toward Telegram and isolated execution became the dominant path.</p>
-      <p><strong>Note:</strong> times are user-observed or log-aligned approximate delivery times in EDT unless otherwise noted.</p>
+      <p><strong>Use:</strong> if future Ash wakes up confused, start with HEARTBEAT.md, then compare the main session transcript and the isolated heartbeat session transcript on disk.</p>
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>
