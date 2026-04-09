@@ -36,23 +36,26 @@
       object-position: center;
     }
     .animated-background {
-      opacity: 0.94;
+      opacity: 0.18;
+      z-index: 0;
     }
     .video-background {
-      opacity: 0.82;
+      opacity: 1;
+      z-index: 1;
+      filter: saturate(1.08) brightness(0.92) contrast(1.08);
     }
     .video-overlay {
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(180deg, rgba(5,6,8,0.18) 0%, rgba(5,6,8,0.68) 100%),
-        radial-gradient(circle at 50% 50%, transparent 16%, rgba(0,0,0,0.58) 100%);
-      z-index: 1;
+        linear-gradient(180deg, rgba(5,6,8,0.14) 0%, rgba(5,6,8,0.52) 100%),
+        radial-gradient(circle at 50% 50%, transparent 22%, rgba(0,0,0,0.42) 100%);
+      z-index: 2;
       pointer-events: none;
     }
     .hero-content {
       position: relative;
-      z-index: 2;
+      z-index: 3;
       text-align: center;
       color: rgba(248, 242, 234, 0.95);
       max-width: 860px;
@@ -134,7 +137,7 @@
       <h2>Looping hero motion, native to a static site</h2>
       <p>This artifact demonstrates the exact behavior you asked for: an ambient hero surface that simply lives on the page as background atmosphere. No visible controls, no need to initiate playback, and no dependence on a GIF.</p>
       <p>The page now uses a real generated MP4 hero background, delivered through a native HTML5 <code>&lt;video&gt;</code> element with <code>autoplay</code>, <code>loop</code>, <code>muted</code>, and <code>playsinline</code>. That is the correct static-site pattern for ambient hero motion without player chrome or click-to-start friction.</p>
-      <p>I kept the lightweight animated SVG layer behind it as a subtle structural glow, which helps the page retain atmosphere even if a browser delays video paint for a moment. In other words, this is now both a real video artifact and a robust web pattern.</p>
+      <p>I reduced the fallback SVG layer so the actual video reads much more clearly. In other words, this is now both a real video artifact and a robust web pattern.</p>
     </article>
   </section>
 </body>
