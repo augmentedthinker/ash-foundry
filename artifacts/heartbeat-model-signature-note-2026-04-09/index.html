@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Heartbeat, Model Signature, and Visible Delivery · 2026-04-09</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a></div>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero hero-compact">
+      <p class="eyebrow">Heartbeat &amp; Initiative · operational note</p>
+      <h1 class="h1-compact">Heartbeat, Model Signature, and Visible Delivery</h1>
+      <p class="sub">A note marking the point where heartbeat behavior became more legible: visible Telegram delivery appears to be working on a roughly 30 minute cadence, and the next refinement is to ask heartbeat to sign each quote with the exact model ID used.</p>
+      <div class="pill-row"><span class="pill">Heartbeat</span><span class="pill">Telegram</span><span class="pill">Model ID</span><span class="pill">2026-04-09</span></div>
+    </section>
+
+    <section class="section">
+      <article class="quote">A recurring signal becomes architecture when it leaves evidence about both what it said and what produced it.</article>
+    </section>
+
+    <section class="section">
+      <article class="card prose">
+        <p>By early afternoon on April 9, the heartbeat surface finally looked less like an internal curiosity and more like a real delivery path. Quotes were no longer only appearing as strange in-session artifacts. They were arriving as user-visible Telegram messages again, and the timing had started to look disciplined rather than erratic.</p>
+        <p>The observed spacing, especially from 12:26 PM to 12:59 PM, strongly supported the working theory that the installation was following the documented default 30 minute heartbeat cadence after all. Earlier rapid-fire transcript events now looked less like the true baseline scheduler and more like some other internal or mixed-path behavior.</p>
+        <p>That still left one major blind spot: even if the heartbeat was now visibly delivering to Telegram, the exact model used for each quote remained opaque. The runtime investigation suggested that heartbeat likely uses the agent's default model stack unless a dedicated heartbeat model override is configured, but this was still inference rather than direct evidence on each individual quote.</p>
+        <p>So the next refinement became obvious: ask the heartbeat not only to deliver a quote, but to sign that quote with the exact model ID used. This is a small change, but an important one. It turns a decorative pulse into a more inspectable instrument.</p>
+        <p>If that works, heartbeat stops being merely proof that background initiative exists. It starts becoming a traceable continuity surface, where cadence, destination, wording, and generating model all leave evidence in the same living thread.</p>
+      </article>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>
