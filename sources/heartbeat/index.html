@@ -24,7 +24,7 @@
       <p class="eyebrow">Canonical source mirror</p>
       <h1>HEARTBEAT.md Files</h1>
       <p class="sub">A hosted record of the current local heartbeat file and the key heartbeat markdown variants we tested while diagnosing delivery behavior, visible Telegram sends, and model-signed output.</p>
-      <div class="meta"><span>Accurate as of 2026-04-10 3:18 PM EDT</span><span>Source path: /home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
+      <div class="meta"><span>Accurate as of 2026-04-10 3:38 PM EDT</span><span>Source path: /home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
     </section>
     <section class="code heartbeat-file archived">
       <div class="code-head"><strong>Telegram Quote</strong><span class="state-pill">Archived preset</span><span class="path">Recovered from live file + mirror history</span></div>
@@ -44,7 +44,9 @@
 
 If it is between 4:00 PM and 5:00 PM America/New_York, check whether today's date is marked as posted on the Augmented Thinker X daily-posts / calendar surface in Ash Foundry.
 
-If today's post is already marked as posted, reply exactly HEARTBEAT_OK.
+If today's post is already marked as posted, send exactly one user-visible Telegram message to chat 8546776113 saying:
+Good job posting on X today.
+Do not respond only inside the internal session transcript.
 
 If today's post is not marked as posted, send exactly one user-visible Telegram message to chat 8546776113 containing:
 - a short status line saying today's X post is still unposted
@@ -57,7 +59,7 @@ Do not post to X.
 Do not send more than one such suggestion message during the same day.
 Do not respond only inside the internal session transcript.
 </pre></div>
-      <div class="result-note"><strong>What it does:</strong> Between 4:00 PM and 5:00 PM America/New_York only, it checks whether today's X post is already marked as posted on the Foundry daily-posts / calendar surface. If not, it sends exactly one user-visible Telegram message with 3 text post ideas and short image directions. <strong>Why this version exists:</strong> it is a measured, human-gated heartbeat preset for X-post accountability, with stronger explicit delivery wording added after a likely recurrence of the earlier internal-session-only delivery ambiguity.</div>
+      <div class="result-note"><strong>What it does:</strong> Between 4:00 PM and 5:00 PM America/New_York only, it checks whether today's X post is already marked as posted on the Foundry daily-posts / calendar surface. If today is already posted, it sends a short positive Telegram confirmation. If not, it sends exactly one user-visible Telegram message with 3 text post ideas and short image directions. <strong>Why this version exists:</strong> it turns the heartbeat into a cleaner delivery test by making both branches visible, so silence no longer leaves ambiguity about whether the check passed quietly or failed to deliver.</div>
     </section>
     <section class="code heartbeat-file problem">
       <div class="code-head"><strong>Quotes Broken</strong><span class="state-pill">❌ Reliability problems</span><span class="path">Recovered from git history</span></div>
