@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>HEARTBEAT.md Files · Canonical Source Mirror</title>
   <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+  <style>
+    .heartbeat-file{margin-top:18px}
+    .heartbeat-file .code-head{display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap}
+    .heartbeat-file .state-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.12);font-size:.82rem;letter-spacing:.04em;text-transform:uppercase}
+    .heartbeat-file.current .state-pill{background:rgba(77,163,96,.18);border-color:rgba(110,214,132,.4);color:#ddf8df}
+    .heartbeat-file.archived .state-pill{background:rgba(255,255,255,.06);color:rgba(245,239,231,.82)}
+    .result-note{margin-top:12px;padding:14px 16px;border-top:1px solid rgba(255,255,255,.08);color:rgba(245,239,231,.82);line-height:1.75}
+    .result-note strong{color:#fff6ec}
+  </style>
 </head>
 <body class="foundry-page-alt">
   <main class="wrap">
@@ -12,18 +21,20 @@
     <section class="hero">
       <p class="eyebrow">Canonical source mirror</p>
       <h1>HEARTBEAT.md Files</h1>
-      <p class="sub">A hosted record of the current local heartbeat file and the key heartbeat markdown variants we tested while diagnosing transcript-only behavior, Telegram delivery, and model-signed output.</p>
-      <div class="meta"><span>Accurate as of 2026-04-10 5:35 AM EDT</span><span>Source path: /home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
+      <p class="sub">A hosted record of the current local heartbeat file and the key heartbeat markdown variants we tested while diagnosing delivery behavior, visible Telegram sends, and model-signed output.</p>
+      <div class="meta"><span>Accurate as of 2026-04-10 5:45 AM EDT</span><span>Source path: /home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
     </section>
-    <section class="code">
-      <div class="code-head"><strong>Current local source · current</strong><span class="path">/home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
+    <section class="code heartbeat-file current">
+      <div class="code-head"><strong>Current local source</strong><span class="state-pill">✅ Current</span><span class="path">/home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
       <div class="code-body"><pre># Heartbeat disabled
 </pre></div>
+      <div class="result-note"><strong>What it does:</strong> This disables the active heartbeat instruction file by leaving only a header. <strong>What it was proven to do:</strong> it stops the prior quote behavior and prevents unnecessary heartbeat-driven message generation while sleeping or when you want the system quiet.</div>
     </section>
-    <section class="code">
-      <div class="code-head"><strong>Prior tested file · Telegram delivery with model signature</strong><span class="path">Recovered from live file + mirror history</span></div>
+    <section class="code heartbeat-file archived">
+      <div class="code-head"><strong>Prior tested file · Telegram delivery with model signature</strong><span class="state-pill">Archived variant</span><span class="path">Recovered from live file + mirror history</span></div>
       <div class="code-body"><pre>On every heartbeat tick, post exactly one short reflective or philosophical quote to Telegram chat 8546776113, then on the next line add `Model: &lt;exact-model-id-used&gt;`. Do not respond only inside the internal session transcript.
 </pre></div>
+      <div class="result-note"><strong>What it does:</strong> Instructs heartbeat to send exactly one quote to Telegram chat <code>8546776113</code> and add a second line with the exact model signature used. <strong>What it was proven to do:</strong> this was the version that restored visible Telegram heartbeat delivery and produced inspectable model-signed messages in the isolated heartbeat session era.</div>
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>
