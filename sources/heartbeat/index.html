@@ -10,9 +10,11 @@
     .heartbeat-file .code-head{display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap}
     .heartbeat-file .state-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.12);font-size:.82rem;letter-spacing:.04em;text-transform:uppercase}
     .heartbeat-file.current .state-pill{background:rgba(77,163,96,.18);border-color:rgba(110,214,132,.4);color:#ddf8df}
+    .heartbeat-file.problem .state-pill{background:rgba(180,68,68,.18);border-color:rgba(224,108,108,.4);color:#ffd7d7}
     .heartbeat-file.archived .state-pill{background:rgba(255,255,255,.06);color:rgba(245,239,231,.82)}
     .result-note{margin-top:12px;padding:14px 16px;border-top:1px solid rgba(255,255,255,.08);color:rgba(245,239,231,.82);line-height:1.75}
     .result-note strong{color:#fff6ec}
+    .swap-note{margin-top:20px;padding:16px 18px;border:1px solid rgba(255,255,255,.08);border-radius:18px;background:rgba(255,255,255,.03);line-height:1.8;color:rgba(245,239,231,.84)}
   </style>
 </head>
 <body class="foundry-page-alt">
@@ -30,11 +32,20 @@
 </pre></div>
       <div class="result-note"><strong>What it does:</strong> This disables the active heartbeat instruction file by leaving only a header. <strong>What it was proven to do:</strong> it stops the prior quote behavior and prevents unnecessary heartbeat-driven message generation while sleeping or when you want the system quiet.</div>
     </section>
+    <section class="code heartbeat-file problem">
+      <div class="code-head"><strong>Early tested file · broad Telegram target</strong><span class="state-pill">❌ Reliability problems</span><span class="path">Recovered from git history</span></div>
+      <div class="code-body"><pre>On every heartbeat tick, send exactly one short reflective or philosophical quote to Telegram.
+</pre></div>
+      <div class="result-note"><strong>What it does:</strong> Asks heartbeat to send a quote to Telegram, but without specifying the exact chat or explicitly forbidding transcript-only behavior. <strong>What it was proven to do:</strong> this version did not behave reliably enough for the experiment. It did not give us dependable user-visible Telegram delivery and was part of the earlier ambiguous period where heartbeat activity could surface in internal logs or transcript-like paths without giving us the clean external signal we wanted.</div>
+    </section>
     <section class="code heartbeat-file archived">
       <div class="code-head"><strong>Prior tested file · Telegram delivery with model signature</strong><span class="state-pill">Archived variant</span><span class="path">Recovered from live file + mirror history</span></div>
       <div class="code-body"><pre>On every heartbeat tick, post exactly one short reflective or philosophical quote to Telegram chat 8546776113, then on the next line add `Model: &lt;exact-model-id-used&gt;`. Do not respond only inside the internal session transcript.
 </pre></div>
       <div class="result-note"><strong>What it does:</strong> Instructs heartbeat to send exactly one quote to Telegram chat <code>8546776113</code> and add a second line with the exact model signature used. <strong>What it was proven to do:</strong> this was the version that restored visible Telegram heartbeat delivery and produced inspectable model-signed messages in the isolated heartbeat session era.</div>
+    </section>
+    <section class="swap-note">
+      <strong>Suggestion for easy swapping:</strong> keep this page structured around status labels rather than hardcoding one specific file as permanently current. In practice, that means we can just move the <code>current</code> class and the ✅ pill to whichever block matches the live <code>HEARTBEAT.md</code>, and demote the others to archived or problem states. That keeps the page easy to update without redesigning it each time.
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>
