@@ -42,6 +42,22 @@
     </section>
 
     <section class="section entries-grid">
+      <article class="card">
+        <span class="label">April 10, 2026 · 6:38 PM EDT</span>
+        <h2>X Post Prompt, Visible Delivery, and What We Learned</h2>
+        <p class="entry-preview">A new heartbeat note on the first real test of the X-post accountability preset, the recurrence of delivery ambiguity, the fix that made both branches user-visible, and what today suggests about repeat behavior and quiet behavior outside the active window.</p>
+        <div class="entry-meta"><span class="pill">X Posting</span><span class="pill">Visible Delivery</span><span class="pill">Heartbeat</span></div>
+        <div class="prose" style="margin-top:16px;line-height:1.85;">
+          <p>The new heartbeat preset started from a simple ambition: use a narrow afternoon window to check whether the Augmented Thinker X surface had already posted for the day, and if not, send a concise Telegram message with three candidate X post ideas. In principle, that is straightforward. In practice, heartbeat had already taught us to distrust vague delivery assumptions.</p>
+          <p>We had seen this class of problem before. On April 9, heartbeat activity sometimes appeared to occur somewhere without producing a visible Telegram result in the actual user-facing thread. The earlier lesson was that heartbeat could run in isolated background sessions, leaving behind internal logs and signs of activity while remaining partially ambiguous from the human side unless the preset was explicit enough about outward delivery.</p>
+          <p>That prior lesson came back almost immediately during today’s X-post experiment. The first new X-post heartbeat version appeared to fire internally, but the visible Telegram delivery was not clearly observed. That raised the same suspicion as before: perhaps the preset was again too soft about what kind of message had to be sent and where it had to land.</p>
+          <p>The first fix was to strengthen the delivery wording. The preset was revised to say <em>user-visible Telegram message</em> and to explicitly add the line <code>Do not respond only inside the internal session transcript.</code> That line matters because it guards against the exact ambiguity we had already encountered in the quote era.</p>
+          <p>Then another subtle issue became clear. Even with stronger delivery wording, a silent branch still leaves ambiguity. If the heartbeat checked the calendar and found that the day had already been posted, then silence might mean all good or it might mean delivery failed again. So the preset was changed again. Instead of remaining quiet in the posted branch, it now sends a short positive Telegram confirmation: <code>Good job posting on X today.</code></p>
+          <p>That made the structure stronger. Both branches now produce an outward user-visible message. By late afternoon, the strengthened preset was live with the 4:00 PM to 5:00 PM window. The heartbeat fired and delivered the expected Telegram message in the unposted branch: a short status line plus three X-post suggestions with image directions. By evening, there had been no second visible Telegram message and no evidence of a second hidden heartbeat output in the inspected logs.</p>
+          <p>The best current read is that this version fired once, delivered correctly, did not duplicate during the window, and then stayed quiet after the window closed. That makes it the first genuinely proven version of the X-post heartbeat prompt, though it is still young enough that it should be watched for a few more days before being treated as fully mature infrastructure.</p>
+        </div>
+      </article>
+
       <a class="entry-link-card" href="../heartbeat-isolated-sessions-note-2026-04-09/index.html">
         <article class="card">
           <span class="label">April 9, 2026 · 2:54 PM EDT</span>
@@ -116,7 +132,7 @@
     </section>
 
     <section class="footer">
-      <p><strong>Current note count:</strong> 8</p>
+      <p><strong>Current note count:</strong> 9</p>
       <p><strong>Use:</strong> Heartbeat Notes provides a diagnostic archive for the engine of Ash's proactive autonomy.</p>
     </section>
   </main>
