@@ -17,6 +17,10 @@
     .calendar-day.empty{background:transparent;border-color:transparent}
     .calendar-day.done{background:rgba(69,160,73,.18);border-color:rgba(88,200,110,.34);color:#dff5e0;font-weight:600}
     .post-card{max-width:760px;margin:0 auto 22px;background:rgba(12,14,16,.56);border:1px solid rgba(255,255,255,.08);border-radius:26px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.22)}
+    .post-toggle{cursor:pointer;list-style:none;padding:18px 22px;display:flex;justify-content:space-between;gap:16px;align-items:center;background:rgba(255,255,255,.03)}
+    .post-toggle::-webkit-details-marker{display:none}
+    .post-toggle-label{display:grid;gap:6px}
+    .post-toggle-hint{color:rgba(245,239,231,.72);font-size:.92rem}
     .post-image{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;background:#0b0d0f}
     .post-body{padding:22px}
     .post-text{font-size:1.06rem;line-height:1.82;white-space:pre-wrap;color:#f5efe7}
@@ -73,10 +77,16 @@
     </section>
 
     <section class="section">
-      <article class="post-card">
+      <details class="post-card" open>
+        <summary class="post-toggle">
+          <div class="post-toggle-label">
+            <span class="label">Post 01 · April 8, 2026 · Posted</span>
+            <span class="post-toggle-hint">Expand to view image, post text, and download controls.</span>
+          </div>
+          <span class="post-toggle-hint">▾</span>
+        </summary>
         <img class="post-image" src="../../assets/images/augmented-thinker-x-post-2026-04-08.jpg" alt="AI-generated image for the Augmented Thinker X daily post for April 8, 2026" />
         <div class="post-body">
-          <span class="label">Post 01 · April 8, 2026 · Posted</span>
           <div id="post-text" class="post-text">I’m increasingly interested in a specific question:
 
 What happens when AI stops being treated like a one-off tool and starts being shaped into a coherent, evolving collaborator?
@@ -89,12 +99,18 @@ That’s the terrain.</div>
           </div>
           <div class="meta-note"><strong>Status:</strong> Posted. <strong>Community:</strong> Generative AI Community.</div>
         </div>
-      </article>
+      </details>
 
-      <article class="post-card">
+      <details class="post-card">
+        <summary class="post-toggle">
+          <div class="post-toggle-label">
+            <span class="label">Post 02 · April 8, 2026 · Draft</span>
+            <span class="post-toggle-hint">Expand to view image, draft text, and download controls.</span>
+          </div>
+          <span class="post-toggle-hint">▾</span>
+        </summary>
         <img class="post-image" src="../../assets/images/augmented-thinker-x-draft-2026-04-08.jpg" alt="AI-generated image for the Augmented Thinker X draft post for April 8, 2026" />
         <div class="post-body">
-          <span class="label">Post 02 · April 8, 2026 · Draft</span>
           <div id="draft-text" class="post-text">A lot of human-AI collaboration still feels shallow because it begins and ends with prompts.
 
 I’m more interested in what happens when you add:
@@ -111,7 +127,7 @@ That’s when it starts becoming a system instead of a trick.</div>
           </div>
           <div class="meta-note"><strong>Status:</strong> Draft. Not yet posted.</div>
         </div>
-      </article>
+      </details>
 
       <p class="note">Designed for manual posting during the current experiment. Ash prepares the post and asset; Christopher reviews and publishes.</p>
     </section>
