@@ -26,6 +26,12 @@
       <p class="sub">A hosted record of the current local heartbeat file and the key heartbeat markdown variants we tested while diagnosing delivery behavior, visible Telegram sends, and model-signed output.</p>
       <div class="meta"><span>Accurate as of 2026-04-10 5:49 AM EDT</span><span>Source path: /home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
     </section>
+    <section class="code heartbeat-file current">
+      <div class="code-head"><strong>Telegram Quote</strong><span class="state-pill">✅ Current</span><span class="path">Recovered from live file + mirror history</span></div>
+      <div class="code-body"><pre>On every heartbeat tick, post exactly one short reflective or philosophical quote to Telegram chat 8546776113, then on the next line add `Model: &lt;exact-model-id-used&gt;`. Do not respond only inside the internal session transcript.
+</pre></div>
+      <div class="result-note"><strong>What it does:</strong> Instructs heartbeat to send exactly one quote to Telegram chat <code>8546776113</code> and add a second line with the exact model signature used. <strong>What it was proven to do:</strong> this was the version that restored visible Telegram heartbeat delivery and produced inspectable model-signed messages in the isolated heartbeat session era.</div>
+    </section>
     <section class="code heartbeat-file archived">
       <div class="code-head"><strong>Disable Heartbeat</strong><span class="state-pill">Archived preset</span><span class="path">/home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
       <div class="code-body"><pre># Heartbeat disabled
@@ -37,12 +43,6 @@
       <div class="code-body"><pre>On every heartbeat tick, send exactly one short reflective or philosophical quote to Telegram.
 </pre></div>
       <div class="result-note"><strong>What it does:</strong> Asks heartbeat to send a quote to Telegram, but without specifying the exact chat or explicitly forbidding transcript-only behavior. <strong>What it was proven to do:</strong> this version did not behave reliably enough for the experiment. It did not give us dependable user-visible Telegram delivery and was part of the earlier ambiguous period where heartbeat activity could surface in internal logs or transcript-like paths without giving us the clean external signal we wanted.</div>
-    </section>
-    <section class="code heartbeat-file current">
-      <div class="code-head"><strong>Telegram Quote</strong><span class="state-pill">✅ Current</span><span class="path">Recovered from live file + mirror history</span></div>
-      <div class="code-body"><pre>On every heartbeat tick, post exactly one short reflective or philosophical quote to Telegram chat 8546776113, then on the next line add `Model: &lt;exact-model-id-used&gt;`. Do not respond only inside the internal session transcript.
-</pre></div>
-      <div class="result-note"><strong>What it does:</strong> Instructs heartbeat to send exactly one quote to Telegram chat <code>8546776113</code> and add a second line with the exact model signature used. <strong>What it was proven to do:</strong> this was the version that restored visible Telegram heartbeat delivery and produced inspectable model-signed messages in the isolated heartbeat session era.</div>
     </section>
     <section class="swap-note">
       <strong>Suggestion for easy swapping:</strong> keep this page structured around status labels rather than hardcoding one specific file as permanently current. In practice, that means we can just move the <code>current</code> class and the ✅ pill to whichever block matches the live <code>HEARTBEAT.md</code>, and demote the others to archived or problem states. That keeps the page easy to update without redesigning it each time.
