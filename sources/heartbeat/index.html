@@ -24,16 +24,16 @@
       <p class="eyebrow">Canonical source mirror</p>
       <h1>HEARTBEAT.md Files</h1>
       <p class="sub">A hosted record of the current local heartbeat file and the key heartbeat markdown variants we tested while diagnosing delivery behavior, visible Telegram sends, and model-signed output.</p>
-      <div class="meta"><span>Accurate as of 2026-04-10 5:49 AM EDT</span><span>Source path: /home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
+      <div class="meta"><span>Accurate as of 2026-04-10 9:07 AM EDT</span><span>Source path: /home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
     </section>
-    <section class="code heartbeat-file current">
-      <div class="code-head"><strong>Telegram Quote</strong><span class="state-pill">✅ Current</span><span class="path">Recovered from live file + mirror history</span></div>
+    <section class="code heartbeat-file archived">
+      <div class="code-head"><strong>Telegram Quote</strong><span class="state-pill">Archived preset</span><span class="path">Recovered from live file + mirror history</span></div>
       <div class="code-body"><pre>On every heartbeat tick, post exactly one short reflective or philosophical quote to Telegram chat 8546776113, then on the next line add `Model: &lt;exact-model-id-used&gt;`. Do not respond only inside the internal session transcript.
 </pre></div>
       <div class="result-note"><strong>What it does:</strong> Instructs heartbeat to send exactly one quote to Telegram chat <code>8546776113</code> and add a second line with the exact model signature used. <strong>What it was proven to do:</strong> this was the version that restored visible Telegram heartbeat delivery and produced inspectable model-signed messages in the isolated heartbeat session era.</div>
     </section>
-    <section class="code heartbeat-file archived">
-      <div class="code-head"><strong>Disable Heartbeat</strong><span class="state-pill">Archived preset</span><span class="path">/home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
+    <section class="code heartbeat-file current">
+      <div class="code-head"><strong>Disable Heartbeat</strong><span class="state-pill">✅ Current</span><span class="path">/home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
       <div class="code-body"><pre># Heartbeat disabled
 </pre></div>
       <div class="result-note"><strong>What it does:</strong> This disables the active heartbeat instruction file by leaving only a header. <strong>What it was proven to do:</strong> it stops the prior quote behavior and prevents unnecessary heartbeat-driven message generation while sleeping or when you want the system quiet.</div>
