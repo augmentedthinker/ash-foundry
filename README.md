@@ -198,7 +198,7 @@ Current documented skill pages:
 - `artifacts/skill-video-generation-2026-04-06/index.html`
 - `artifacts/skill-video-generation-scripted-2026-04-07/index.html`
 - `artifacts/skill-web-capabilities-brainstorm-2026-04-07/index.html`
-- `artifacts/skill-roadmap-brainstorm-2026-04-06/index.html`
+- `artifacts/next-steps-2026-04-06/index.html`
 
 This lane is less about bragging and more about recoverability. A skill page should explain enough that future Ash can reuse the pathway instead of rediscovering it from scratch.
 
