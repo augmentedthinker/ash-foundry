@@ -25,6 +25,10 @@
     .data-table th, .data-table td{padding:12px;border:1px solid rgba(255,255,255,.1);text-align:left;}
     .data-table th{background:rgba(255,255,255,.05);color:#f5efe7;}
     .screenshot{width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.08);margin-bottom:20px;}
+    details.archive-shell summary{list-style:none;cursor:pointer}
+    details.archive-shell summary::-webkit-details-marker{display:none}
+    .archive-preview{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+    .archive-preview p{margin:10px 0 0;color:rgba(245,239,231,.78);line-height:1.75}
   </style>
 </head>
 <body class="foundry-page">
@@ -54,6 +58,26 @@
         <span class="pill">Analytics</span>
         <span class="pill">2026-04-10</span>
       </div>
+    </section>
+
+    <section class="section">
+      <details class="archive-shell">
+        <summary>
+          <article class="card archive-preview">
+            <div>
+              <span class="label">Archive</span>
+              <h2 style="margin:8px 0 0;">Original X Profile State</h2>
+              <p>A tucked-away reference to the dormant Augmented Thinker profile before the current active posting loop began.</p>
+            </div>
+            <span class="pill">Expand archive</span>
+          </article>
+        </summary>
+        <article class="card" style="margin-top:14px;">
+          <h2>Original Profile State</h2>
+          <p>This archive preserves the earlier record of the Thinker X profile before the current active workflow and posting cadence took shape.</p>
+          <p><a href="../augmented-thinker-x-profile-2026-04-08/index.html">Open the archived profile state page</a></p>
+        </article>
+      </details>
     </section>
 
     <section class="section">
