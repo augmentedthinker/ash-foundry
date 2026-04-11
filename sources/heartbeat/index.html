@@ -24,7 +24,7 @@
       <p class="eyebrow">Canonical source mirror</p>
       <h1>HEARTBEAT.md Files</h1>
       <p class="sub">A hosted record of the current local heartbeat file and the key heartbeat markdown variants we tested while diagnosing delivery behavior, visible Telegram sends, and model-signed output.</p>
-      <div class="meta"><span>Accurate as of 2026-04-10 4:15 PM EDT</span><span>Source path: /home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
+      <div class="meta"><span>Accurate as of 2026-04-10 9:16 PM EDT</span><span>Source path: /home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
     </section>
     <section class="code heartbeat-file archived">
       <div class="code-head"><strong>Telegram Quote</strong><span class="state-pill">Archived preset</span><span class="path">Recovered from live file + mirror history</span></div>
@@ -32,17 +32,17 @@
 </pre></div>
       <div class="result-note"><strong>What it does:</strong> Instructs heartbeat to send exactly one quote to Telegram chat <code>8546776113</code> and add a second line with the exact model signature used. <strong>What it was proven to do:</strong> this was the version that restored visible Telegram heartbeat delivery and produced inspectable model-signed messages in the isolated heartbeat session era.</div>
     </section>
-    <section class="code heartbeat-file archived">
-      <div class="code-head"><strong>Disable Heartbeat</strong><span class="state-pill">Archived preset</span><span class="path">/home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
+    <section class="code heartbeat-file current">
+      <div class="code-head"><strong>Disable Heartbeat</strong><span class="state-pill">✅ Current</span><span class="path">/home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
       <div class="code-body"><pre># Heartbeat disabled
 </pre></div>
-      <div class="result-note"><strong>What it does:</strong> This disables the active heartbeat instruction file by leaving only a header. <strong>What it was proven to do:</strong> it stops the prior quote behavior and prevents unnecessary heartbeat-driven message generation while sleeping or when you want the system quiet.</div>
+      <div class="result-note"><strong>What it does:</strong> This disables the active heartbeat instruction file by leaving only a header. <strong>What it was proven to do:</strong> it cleanly silences the active heartbeat after testing. On April 10th, 2026, this preset was restored immediately after the X-post reminder preset successfully completed its posted-branch check and delivered the congratulatory Telegram message at approximately 9:09 PM, confirming the full advisory loop worked end to end.</div>
     </section>
-    <section class="code heartbeat-file current">
-      <div class="code-head"><strong>X Post Prompt (Visible Delivery)</strong><span class="state-pill">✅ Current</span><span class="path">/home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
-      <div class="code-body"><pre>If the current local time is not between 4:00 PM and 5:00 PM America/New_York, reply exactly HEARTBEAT_OK.
+    <section class="code heartbeat-file archived">
+      <div class="code-head"><strong>X Post Prompt (Visible Delivery)</strong><span class="state-pill">Archived preset</span><span class="path">Recovered from live file + mirror history</span></div>
+      <div class="code-body"><pre>If the current local time is not between 9:00 PM and 10:00 PM America/New_York, reply exactly HEARTBEAT_OK.
 
-If it is between 4:00 PM and 5:00 PM America/New_York, check whether today's date is marked as posted on the Augmented Thinker X daily-posts / calendar surface in Ash Foundry.
+If it is between 9:00 PM and 10:00 PM America/New_York, check whether today's date is marked as posted on the Augmented Thinker X daily-posts / calendar surface in Ash Foundry.
 
 If today's post is already marked as posted, send exactly one user-visible Telegram message to chat 8546776113 saying:
 Good job posting on X today.
@@ -59,7 +59,7 @@ Do not post to X.
 Do not send more than one such suggestion message during the same day.
 Do not respond only inside the internal session transcript.
 </pre></div>
-      <div class="result-note"><strong>What it does:</strong> Between 4:00 PM and 5:00 PM America/New_York only, it checks whether today's X post is already marked as posted on the Foundry daily-posts / calendar surface. If today is already posted, it sends a short positive Telegram confirmation. If not, it sends exactly one user-visible Telegram message with 3 text post ideas and short image directions. <strong>What it was proven to do:</strong> on April 10th, 2026 this version successfully delivered the expected Telegram message in the unposted branch, confirming that the stronger visible-delivery wording and dual-visible-branch structure resolved the earlier delivery ambiguity. <strong>Why this version exists:</strong> it turns the heartbeat into a cleaner delivery test by making both branches visible, so silence no longer leaves ambiguity about whether the check passed quietly or failed to deliver.</div>
+      <div class="result-note"><strong>What it does:</strong> During a narrow evening test window, it checks whether today's X post is already marked as posted on the Foundry daily-posts / calendar surface. If today is already posted, it sends a short positive Telegram confirmation. If not, it sends exactly one user-visible Telegram message with 3 text post ideas and short image directions. <strong>What it was proven to do:</strong> on April 10th, 2026 this preset completed both sides of the intended advisory logic across separate tests: earlier it delivered the unposted-branch reminder with post ideas, and later, after the live test window was moved to 9:00 PM to 10:00 PM, it delivered the posted-branch confirmation message ("Good job posting on X today.") around 9:09 PM. <strong>Why this version exists:</strong> it turns heartbeat into a practical X accountability surface with visible output in both branches, removing ambiguity about whether the check quietly succeeded or failed to deliver.</div>
     </section>
     <section class="code heartbeat-file problem">
       <div class="code-head"><strong>Quotes Broken</strong><span class="state-pill">❌ Reliability problems</span><span class="path">Recovered from git history</span></div>
