@@ -15,13 +15,14 @@
     .checklist{margin:.4rem 0 0 1.1rem;padding:0}
     .checklist li{margin:.5rem 0;line-height:1.8}
     .question-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-    .idea-stack{display:grid;gap:18px}
-    .idea-card{padding:28px}
-    .idea-copy{white-space:pre-wrap;line-height:1.9;font-size:1.06rem}
-    .idea-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
-    .idea-meta .mini{padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08)}
-    .idea-meta .mini p{margin:.35rem 0 0;line-height:1.7;color:rgba(245,239,231,.8)}
-    @media (max-width: 860px){.protocol-grid,.question-grid,.idea-meta{grid-template-columns:1fr}}
+    details.suggestions-shell summary{list-style:none;cursor:pointer}
+    details.suggestions-shell summary::-webkit-details-marker{display:none}
+    .suggestions-preview{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+    .suggestions-preview p{margin:10px 0 0;color:rgba(245,239,231,.78);line-height:1.75}
+    .suggestion-list{display:grid;gap:14px}
+    .suggestion-row{padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08)}
+    .suggestion-row p{margin:8px 0 0;color:rgba(245,239,231,.78);line-height:1.7}
+    @media (max-width: 860px){.protocol-grid,.question-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body class="foundry-page">
@@ -172,92 +173,41 @@
     </section>
 
     <section class="section">
-      <h2 class="section-title">Three suggestions for tonight</h2>
-      <div class="idea-stack">
-        <article class="card idea-card">
-          <span class="label">Suggestion 01</span>
-          <h2>Coherent collaboration</h2>
-          <div class="idea-copy">The future isn’t pure automation.
-
-It’s coherent collaboration.
-
-What gets interesting is when human and machine build a shared loop, where memory survives, taste compounds, and each interaction leaves a visible trace.</div>
-          <div class="idea-meta">
-            <div class="mini">
-              <span class="label">Why it fits</span>
-              <p>Directly aligned with the Foundry, the X loop, and the public-facing collaboration experiment.</p>
+      <details class="suggestions-shell" open>
+        <summary>
+          <article class="card suggestions-preview">
+            <div>
+              <span class="label">Tonight's suggestions</span>
+              <h2 style="margin:8px 0 0;">Three concise post directions</h2>
+              <p>Expand to view the compact suggestion set with short descriptions and the active signature.</p>
             </div>
-            <div class="mini">
-              <span class="label">Tone</span>
-              <p>Clear, confident, builderly.</p>
-            </div>
-            <div class="mini">
-              <span class="label">Image direction</span>
-              <p>Human and machine shaping one luminous signal.</p>
-            </div>
-          </div>
-        </article>
+            <span class="pill">Toggle suggestions</span>
+          </article>
+        </summary>
 
-        <article class="card idea-card">
-          <span class="label">Suggestion 02</span>
-          <h2>From prompt toy to system</h2>
-          <div class="idea-copy">AI gets more interesting when it stops feeling like a prompt toy.
-
-Memory.
-Continuity.
-Tools.
-Return.
-Public trace.
-
-That’s when it starts becoming a real system instead of a clever moment.</div>
-          <div class="idea-meta">
-            <div class="mini">
-              <span class="label">Why it fits</span>
-              <p>Very native to the Foundry architecture and distinct from generic AI hype language.</p>
+        <article class="card" style="margin-top:14px;">
+          <div class="suggestion-list">
+            <div class="suggestion-row">
+              <span class="label">Suggestion 01</span>
+              <h2 style="margin:8px 0 0;">Coherent collaboration</h2>
+              <p>The clearest articulation of the human-AI loop, memory, shared taste, and visible continuity.</p>
             </div>
-            <div class="mini">
-              <span class="label">Tone</span>
-              <p>Systems-minded, concise, slightly philosophical.</p>
+            <div class="suggestion-row">
+              <span class="label">Suggestion 02</span>
+              <h2 style="margin:8px 0 0;">From prompt toy to system</h2>
+              <p>A compact systems post about memory, continuity, tools, return, and public trace.</p>
             </div>
-            <div class="mini">
-              <span class="label">Image direction</span>
-              <p>Minimal architecture glowing in ember and cyan.</p>
+            <div class="suggestion-row">
+              <span class="label">Suggestion 03</span>
+              <h2 style="margin:8px 0 0;">The real test</h2>
+              <p>A sharper tension post about whether systems reduce friction or just hide hesitation.</p>
             </div>
           </div>
-        </article>
-
-        <article class="card idea-card">
-          <span class="label">Suggestion 03</span>
-          <h2>The real test</h2>
-          <div class="idea-copy">The danger with AI systems isn’t only failure.
-
-It’s building something elegant that helps you avoid speaking in your own voice.
-
-The real test is whether the system reduces friction, or just hides hesitation behind better machinery.</div>
-          <div class="idea-meta">
-            <div class="mini">
-              <span class="label">Why it fits</span>
-              <p>Draws directly from the Adversary lens and adds useful tension instead of comfort.</p>
-            </div>
-            <div class="mini">
-              <span class="label">Tone</span>
-              <p>Sharper, more self-aware, more provocative.</p>
-            </div>
-            <div class="mini">
-              <span class="label">Image direction</span>
-              <p>Elegant console glow with a human silhouette at the edge.</p>
-            </div>
+          <div style="margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);color:rgba(245,239,231,.76);line-height:1.75;">
+            <strong>Signature:</strong> openai-codex/gpt-5.4 · 2026-04-11 · 7:42 PM America/New_York
           </div>
         </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <article class="card">
-        <span class="label">Recommendation</span>
-        <h2>Strongest pick tonight</h2>
-        <p><strong>Suggestion 01</strong> is the strongest overall. It is the clearest articulation of what the experiment actually is, and it stays legible without becoming generic.</p>
-      </article>
+      </details>
     </section>
 
     <section class="footer">
