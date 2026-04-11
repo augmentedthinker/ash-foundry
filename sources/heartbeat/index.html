@@ -39,7 +39,34 @@
       <div class="result-note"><strong>What it does:</strong> This disables the active heartbeat instruction file by leaving only a header. <strong>What it was proven to do:</strong> it cleanly silences the active heartbeat after testing. On April 10th, 2026, this preset was restored immediately after the X-post reminder preset successfully completed its posted-branch check and delivered the congratulatory Telegram message at approximately 9:09 PM, confirming the full advisory loop worked end to end.</div>
     </section>
     <section class="code heartbeat-file current">
-      <div class="code-head"><strong>X Post Prompt (Visible Delivery)</strong><span class="state-pill">✅ Current</span><span class="path">/home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
+      <div class="code-head"><strong>X Post Contextual Synthesis (Visible Delivery)</strong><span class="state-pill">✅ Current</span><span class="path">/home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
+      <div class="code-body"><pre>If the current local time is not between 8:00 PM and 9:00 PM America/New_York, reply exactly HEARTBEAT_OK.
+
+If it is between 8:00 PM and 9:00 PM America/New_York, check whether today's date is marked as posted on the Augmented Thinker X daily-posts / calendar surface in Ash Foundry.
+
+If today's post is already marked as posted, send exactly one user-visible Telegram message to chat 8546776113 saying:
+Good job posting on X today.
+Do not respond only inside the internal session transcript.
+
+If today's post is not marked as posted:
+1. First, read the Foundry README (`/home/ash/ash-foundry/README.md`).
+2. Read the latest few Ash Journal entries.
+3. Read the latest Hemispheres debate entries.
+4. Read the Thinker X brainstorm surface (`/home/ash/ash-foundry/artifacts/thinker-x-post-brainstorm-2026-04-10/index.html`).
+5. Then, based on that active context, send exactly one user-visible Telegram message to chat 8546776113 containing:
+   - a short status line saying today's X post is still unposted
+   - 3 short textual X post ideas directly synthesized from the journals, hemispheres, and brainstorm list
+   - under each idea, a very short image-direction phrase
+
+Keep the whole message concise and practical.
+Do not generate images.
+Do not post to X.
+Do not send more than one such suggestion message during the same day.
+Do not respond only inside the internal session transcript.</pre></div>
+      <div class="result-note"><strong>What it does:</strong> Shifts the active window to 8:00 PM – 9:00 PM. If an X post is unposted, it forces the isolated heartbeat session to explicitly read the Foundry README, recent Ash Journal entries, Hemispheres debates, and the X brainstorm list before synthesizing 3 post ideas. <strong>Why this version exists:</strong> It stops the heartbeat from improvising in a vacuum and ensures the suggested posts reflect our actual latest cognitive alignments and curated brainstorms.</div>
+    </section>
+    <section class="code heartbeat-file archived">
+      <div class="code-head"><strong>X Post Prompt (Visible Delivery)</strong><span class="state-pill">Archived preset</span><span class="path">Recovered from live file + mirror history</span></div>
       <div class="code-body"><pre>If the current local time is not between 8:00 PM and 9:00 PM America/New_York, reply exactly HEARTBEAT_OK.
 
 If it is between 8:00 PM and 9:00 PM America/New_York, check whether today's date is marked as posted on the Augmented Thinker X daily-posts / calendar surface in Ash Foundry.
