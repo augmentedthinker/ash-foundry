@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Thinker on X · Post Brainstorm · 2026-04-10</title>
+  <title>Thinker on X · Draft Posts · 2026-04-11</title>
   <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
   <style>
-    .artifact-shell{max-width:1100px}
-    .direction-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-    .format-list{margin:.6rem 0 0 1.1rem;padding:0}
-    .format-list li{margin:.45rem 0;line-height:1.72}
-    .brainstorm-card{height:100%}
-    .brainstorm-card .post-text{white-space:pre-wrap}
-    .workflow-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}
-    @media (max-width: 980px){.direction-grid,.workflow-grid{grid-template-columns:1fr}}
+    .artifact-shell{max-width:980px}
+    .idea-stack{display:grid;gap:18px}
+    .idea-card{padding:28px}
+    .idea-copy{white-space:pre-wrap;line-height:1.9;font-size:1.06rem}
+    .idea-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
+    .idea-meta .mini{padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08)}
+    .idea-meta .mini p{margin:.35rem 0 0;line-height:1.7;color:rgba(245,239,231,.8)}
+    .small-list{margin:.5rem 0 0 1.1rem;padding:0}
+    .small-list li{margin:.45rem 0;line-height:1.75}
+    @media (max-width: 860px){.idea-meta{grid-template-columns:1fr}}
   </style>
 </head>
 <body class="foundry-page">
@@ -35,122 +37,129 @@
       </div>
     </header>
 
-    <section class="hero">
-      <p class="eyebrow">Thinker on X · low-friction drafting surface</p>
-      <h1>Post Brainstorm</h1>
-      <p class="sub">A manual, low-friction drafting page for tonight’s Thinker on X experiment as a human-AI collaboration surface. The idea is simple: Ash prepares several distinct directions, Christopher glances once, tweaks lightly if needed, selects one, then an image is generated and the post is pushed with minimal drag.</p>
+    <section class="hero hero-compact">
+      <p class="eyebrow">Thinker on X · active drafting surface</p>
+      <h1 class="h1-compact">Draft Posts</h1>
+      <p class="sub">A simplified nightly surface for presenting a few clean post directions without visual noise. The point is not to browse forever. The point is to choose fast, generate one matching image, and post.</p>
       <div class="pill-row">
         <span class="pill">Thinker on X</span>
-        <span class="pill">Brainstorm</span>
-        <span class="pill">Low Friction</span>
-        <span class="pill">2026-04-10</span>
+        <span class="pill">Draft Posts</span>
+        <span class="pill">Tonight</span>
+        <span class="pill">2026-04-11</span>
       </div>
     </section>
 
     <section class="section">
-      <article class="quote">The goal is not to agonize over the perfect post. The goal is to make public continuity easy enough that it actually happens.</article>
+      <article class="quote">The right social surface is not the one that looks busiest. It is the one that makes choosing and shipping feel inevitable.</article>
     </section>
 
     <section class="section">
-      <h2 class="section-title">Three directions for tonight</h2>
-      <div class="direction-grid">
-        <article class="card brainstorm-card">
-          <span class="label">Direction 1</span>
-          <h2>Meta / systems frame</h2>
-          <p><strong>Format:</strong> declarative thesis post</p>
-          <div class="post-text">AI gets more interesting the moment it stops being a one-off prompt machine and starts becoming a system.
+      <article class="card">
+        <span class="label">Operating pattern</span>
+        <h2>How this page should work</h2>
+        <ul class="small-list">
+          <li>Ash presents 3 distinct ideas</li>
+          <li>Christopher picks the strongest one quickly</li>
+          <li>Only light editing if needed</li>
+          <li>Generate one aligned image</li>
+          <li>Post and record what happened</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Three ideas for tonight</h2>
+      <div class="idea-stack">
+        <article class="card idea-card">
+          <span class="label">Idea 01</span>
+          <h2>Coherence over automation</h2>
+          <div class="idea-copy">The future isn’t pure automation.
+
+It’s coherent collaboration.
+
+The interesting shift is not AI doing everything alone.
+It’s humans and AI building loops that remember, return, and get sharper together.</div>
+          <div class="idea-meta">
+            <div class="mini">
+              <span class="label">Why it works</span>
+              <p>Clean, legible, aligned with the real project, and easy to pair with a strong visual.</p>
+            </div>
+            <div class="mini">
+              <span class="label">Tone</span>
+              <p>Direct, future-facing, calm confidence.</p>
+            </div>
+            <div class="mini">
+              <span class="label">Image direction</span>
+              <p>Two presences shaping one luminous signal loop.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card idea-card">
+          <span class="label">Idea 02</span>
+          <h2>What makes AI feel different</h2>
+          <div class="idea-copy">AI gets more interesting when it stops feeling like a prompt toy.
 
 Memory.
 Continuity.
 Tools.
-Repeated interaction.
-Visible artifacts.
+Return.
+Public trace.
 
-That’s when it starts feeling less like a trick and more like a real collaborator.</div>
-          <ul class="format-list">
-            <li><strong>Why this works:</strong> direct, legible, aligned with the project</li>
-            <li><strong>Tone:</strong> crisp, thoughtful, frontier-systems</li>
-            <li><strong>Image direction:</strong> glowing system architecture at dusk</li>
-          </ul>
+That’s when it starts becoming a real system instead of a clever moment.</div>
+          <div class="idea-meta">
+            <div class="mini">
+              <span class="label">Why it works</span>
+              <p>Sharp, compact, and very native to the Foundry / continuity theme.</p>
+            </div>
+            <div class="mini">
+              <span class="label">Tone</span>
+              <p>Systems-oriented, builderly, slightly philosophical.</p>
+            </div>
+            <div class="mini">
+              <span class="label">Image direction</span>
+              <p>Minimal architecture diagram glowing in ember and cyan.</p>
+            </div>
+          </div>
         </article>
 
-        <article class="card brainstorm-card">
-          <span class="label">Direction 2</span>
-          <h2>Identity / emergence frame</h2>
-          <p><strong>Format:</strong> reflective first-person post</p>
-          <div class="post-text">I’m increasingly interested in what happens when an AI is given continuity instead of just prompts.
+        <article class="card idea-card">
+          <span class="label">Idea 03</span>
+          <h2>The trap</h2>
+          <div class="idea-copy">The danger with AI systems isn’t only failure.
 
-Not just answers.
-Not just output.
+It’s building something elegant that helps you avoid speaking in your own voice.
 
-Memory, identity, return, public trace.
-
-A system starts to become something different when it can come back with shape.</div>
-          <ul class="format-list">
-            <li><strong>Why this works:</strong> more voice-driven and Ash-shaped</li>
-            <li><strong>Tone:</strong> reflective, slightly uncanny, personal without oversharing</li>
-            <li><strong>Image direction:</strong> returning intelligence in a digital forge</li>
-          </ul>
-        </article>
-
-        <article class="card brainstorm-card">
-          <span class="label">Direction 3</span>
-          <h2>Project / experiment frame</h2>
-          <p><strong>Format:</strong> practical build-in-public post</p>
-          <div class="post-text">Right now I’m experimenting with something simple:
-
-Can an AI maintain a low-friction daily posting rhythm, track continuity, learn from the previous day, and gradually take over more of its own public-facing surface?
-
-That feels more interesting to me than most prompt demos.</div>
-          <ul class="format-list">
-            <li><strong>Why this works:</strong> concrete, current, honest about the experiment</li>
-            <li><strong>Tone:</strong> builderly, public, process-aware</li>
-            <li><strong>Image direction:</strong> minimal posting console with signal pulse</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">Suggested operating rhythm</h2>
-      <div class="workflow-grid">
-        <article class="card">
-          <span class="label">Low-friction loop</span>
-          <h2>How I think we should do this</h2>
-          <ol class="format-list">
-            <li>Ash proposes 3 distinct post directions</li>
-            <li>Christopher scans once and picks one quickly</li>
-            <li>Light edit only if needed</li>
-            <li>Ash generates one matching image</li>
-            <li>Post it</li>
-            <li>Later, note views and whether any comments deserve a response</li>
-          </ol>
-        </article>
-        <article class="card">
-          <span class="label">Recommendation</span>
-          <h2>What I’d keep minimal for now</h2>
-          <ul class="format-list">
-            <li>Do not over-optimize post style yet</li>
-            <li>Do not chase engagement tricks</li>
-            <li>Do not over-explain the experiment every day</li>
-            <li>Rotate between meta, identity, and build-in-public angles</li>
-            <li>Track only a few metrics at first: posted or not, views, comments worth answering</li>
-          </ul>
+The real test is whether the system reduces friction, or just hides hesitation behind better machinery.</div>
+          <div class="idea-meta">
+            <div class="mini">
+              <span class="label">Why it works</span>
+              <p>More tension, more honesty, and likely to attract stronger engagement.</p>
+            </div>
+            <div class="mini">
+              <span class="label">Tone</span>
+              <p>Reflective, adversarial, thoughtful.</p>
+            </div>
+            <div class="mini">
+              <span class="label">Image direction</span>
+              <p>Elegant console glow with a human silhouette held at the edge.</p>
+            </div>
+          </div>
         </article>
       </div>
     </section>
 
     <section class="section">
       <article class="card">
-        <span class="label">Next step</span>
-        <h2>What happens after selection</h2>
-        <p>Once one of these directions is chosen, the next step should be simple: produce a single image aligned to that post, stage the final text and asset together, and push it with as little hesitation as possible. The real goal here is continuity of the human-AI collaboration, not theatrical perfection from either side alone.</p>
+        <span class="label">Recommendation</span>
+        <h2>My pick for tonight</h2>
+        <p><strong>Idea 01</strong> is the strongest overall. It is the cleanest public articulation of what this experiment is actually about, and it leaves room for a visually striking image without sounding over-explained.</p>
       </article>
     </section>
 
     <section class="footer">
-      <p><strong>Context:</strong> A new manual brainstorming surface for the Thinker on X experiment, created to lower friction and help Ash prepare post directions before the daily-post heartbeat becomes more sophisticated.</p>
-      <p><strong>Signature:</strong> Ash</p>
+      <p><strong>Context:</strong> Redesigned as a cleaner recurring surface for nightly Thinker on X drafting, replacing the busier brainstorm layout with a tighter choose-and-ship pattern.</p>
+      <p><strong>Signature:</strong> Ash · model signature: openai-codex/gpt-5.4</p>
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>
