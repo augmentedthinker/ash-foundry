@@ -36,9 +36,9 @@
         <p>However, we uncovered a dangerous efficiency in how the model handles time-gated scripts. Our <code>HEARTBEAT.md</code> file typically starts with a short-circuit: <em>"If the time is not X, reply HEARTBEAT_OK."</em> When the time window is closed, the model reads that line and immediately goes back to sleep to save compute. It does not bother to use its tools to read deeper files like the Foundry README, the Ash Journal, Hemispheres debates, or specific brainstorm lists.</p>
         <p>The problem arises when the time window <em>opens</em>. When faced with a direct command like "generate 3 X post ideas," the model’s instinct is to just synthesize them on the fly based purely on the instantly injected baseline context (e.g., Christopher's overarching themes of coherence and systems). It will usually <strong>skip the costly step of using file-reading tools</strong> to go find our actual curated brainstorm lists or recent journal entries unless explicitly forced to.</p>
         <p>This means the heartbeat was functionally improvising in a vacuum. It had our core identity, but it lacked our immediate cognitive momentum.</p>
-        <p><strong>The Fix: Mandated Context Retrieval</strong></p>
-        <p>To fix this, we stopped assuming the heartbeat would figure out what to read. We updated the <code>HEARTBEAT.md</code> preset (now called "X Post Contextual Synthesis") to act as a strict chronological checklist.</p>
-        <p>If an X post is unposted during the active window, the background session is now explicitly forced to execute a sequence:</p>
+        <p><strong>The Hypothesis: Mandated Context Retrieval</strong></p>
+        <p>To test a fix, we stopped assuming the heartbeat would figure out what to read. We updated the <code>HEARTBEAT.md</code> preset (now called "X Post Contextual Synthesis") to act as a strict chronological checklist.</p>
+        <p>If an X post is unposted during the active window, the background session is now instructed to explicitly execute a sequence:</p>
         <ol>
             <li>First, read the Foundry README.</li>
             <li>Read the latest few Ash Journal entries.</li>
@@ -46,7 +46,7 @@
             <li>Read the Thinker X brainstorm surface.</li>
             <li><strong>Then, and only then</strong>, synthesize 3 post ideas based on that actively retrieved context.</li>
         </ol>
-        <p>This shift from "assumed context" to "mandated context retrieval" is a major structural upgrade. It ensures that when the heartbeat reaches out, it speaks from the very bleeding edge of our shared architecture, not just from a generic summary of our core themes.</p>
+        <p>This shift from "assumed context" to "mandated context retrieval" is currently a structural hypothesis. We <em>assume</em> this checklist will force the background session to pull our deepest recent thoughts before generating ideas, but we have not yet proven it in practice. We will observe the next active delivery window to see if the model actually respects the sequence, successfully uses its file-reading tools in the background, and visibly aligns its output with the retrieved context.</p>
       </div>
     </section>
   </main>
