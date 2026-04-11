@@ -3,15 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Thinker on X · Drafting Protocol · 2026-04-11</title>
+  <title>Thinker on X · Drafting Protocol & Suggestions · 2026-04-11</title>
   <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
   <style>
     .artifact-shell{max-width:980px}
+    details.protocol-shell summary{list-style:none;cursor:pointer}
+    details.protocol-shell summary::-webkit-details-marker{display:none}
+    .protocol-preview{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+    .protocol-preview p{margin:10px 0 0;color:rgba(245,239,231,.78);line-height:1.75}
     .protocol-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
     .checklist{margin:.4rem 0 0 1.1rem;padding:0}
     .checklist li{margin:.5rem 0;line-height:1.8}
     .question-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-    @media (max-width: 860px){.protocol-grid,.question-grid{grid-template-columns:1fr}}
+    .idea-stack{display:grid;gap:18px}
+    .idea-card{padding:28px}
+    .idea-copy{white-space:pre-wrap;line-height:1.9;font-size:1.06rem}
+    .idea-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
+    .idea-meta .mini{padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08)}
+    .idea-meta .mini p{margin:.35rem 0 0;line-height:1.7;color:rgba(245,239,231,.8)}
+    @media (max-width: 860px){.protocol-grid,.question-grid,.idea-meta{grid-template-columns:1fr}}
   </style>
 </head>
 <body class="foundry-page">
@@ -35,134 +45,223 @@
 
     <section class="hero hero-compact">
       <p class="eyebrow">Thinker on X · operating surface</p>
-      <h1 class="h1-compact">Drafting Protocol</h1>
-      <p class="sub">For now, this page is the protocol Ash should run before suggesting nightly X posts. The point is not to produce random content. The point is to synthesize the right context, identify what feels alive, and generate a few post options that are aligned with the Foundry, Ash, and the human-AI collaboration experiment.</p>
+      <h1 class="h1-compact">Drafting Protocol & Tonight’s Suggestions</h1>
+      <p class="sub">This surface now does two jobs together. First, it preserves the protocol Ash should review before suggesting posts. Second, it presents the current three post options generated after following that protocol.</p>
       <div class="pill-row">
         <span class="pill">Thinker on X</span>
         <span class="pill">Protocol</span>
-        <span class="pill">Drafting</span>
+        <span class="pill">Suggestions</span>
         <span class="pill">2026-04-11</span>
       </div>
     </section>
 
     <section class="section">
-      <article class="quote">The best post is usually not the cleverest one. It is the one that emerges from real context, sounds like a living voice, and is simple enough to ship.</article>
+      <article class="quote">Review the protocol, extract what feels alive, then propose three options that are true, distinct, and easy to ship.</article>
     </section>
 
     <section class="section">
-      <article class="card">
-        <span class="label">Purpose</span>
-        <h2>What this page is for</h2>
-        <p>This is the pre-draft decision protocol for the Thinker on X lane. Before Ash suggests post ideas, Ash should use this page as the operating sequence. The goal is to reduce randomness, reduce repetition, and keep the public surface aligned with the deeper reality of the Foundry and the collaboration with Christopher.</p>
-      </article>
-    </section>
+      <details class="protocol-shell">
+        <summary>
+          <article class="card protocol-preview">
+            <div>
+              <span class="label">Minimized protocol</span>
+              <h2 style="margin:8px 0 0;">Review drafting protocol before suggesting posts</h2>
+              <p>Use this when Christopher says to review the drafting protocol first. Expand to see the full operating sequence, reading bundle, angle extraction method, and filtering questions.</p>
+            </div>
+            <span class="pill">Expand protocol</span>
+          </article>
+        </summary>
 
-    <section class="section">
-      <h2 class="section-title">1. Read the right context, not everything</h2>
-      <div class="protocol-grid">
-        <article class="card">
-          <span class="label">Core reading set</span>
-          <h2>What Ash should usually read first</h2>
+        <article class="card" style="margin-top:14px;">
+          <span class="label">Purpose</span>
+          <h2>What this protocol is for</h2>
+          <p>This is the pre-draft decision protocol for the Thinker on X lane. Before Ash suggests post ideas, Ash should use this sequence to reduce randomness, reduce repetition, and keep the public surface aligned with the Foundry, Ash, and the collaboration with Christopher.</p>
+        </article>
+
+        <div class="protocol-grid" style="margin-top:18px;">
+          <article class="card">
+            <span class="label">Core reading set</span>
+            <h2>What Ash should usually read first</h2>
+            <ol class="checklist">
+              <li>The Ash Foundry README</li>
+              <li>The Thinker on X daily-posts surface</li>
+              <li>This drafting protocol page</li>
+              <li>The latest 2 to 3 Ash Journal entries</li>
+              <li>The latest 2 to 3 Hemispheres entries</li>
+              <li>Recent daily memory if something meaningful changed that day</li>
+            </ol>
+          </article>
+          <article class="card">
+            <span class="label">Live momentum</span>
+            <h2>What Ash should check from chat</h2>
+            <ul class="checklist">
+              <li>The recent Telegram exchange from the current day</li>
+              <li>Any moments where Christopher sounded energized, frustrated, or unusually clear</li>
+              <li>Any new framing or tension that emerged in conversation</li>
+              <li>Whether tonight’s post should reflect the public project, the inner architecture, or a sharper challenge</li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="card" style="margin-top:18px;">
+          <span class="label">Important caution</span>
+          <h2>Do not over-read</h2>
+          <p>Avoid turning the drafting process into sludge. Ash should not reread huge amounts of transcript history or load excessive context just because it exists. The right move is a selective reread of the most recent, most load-bearing surfaces, enough to regain the active mood and direction without drowning in scrollback.</p>
+        </article>
+
+        <div class="protocol-grid" style="margin-top:18px;">
+          <article class="card">
+            <span class="label">Angle types</span>
+            <h2>Three kinds of candidate direction</h2>
+            <ol class="checklist">
+              <li><strong>Clean thesis:</strong> a direct statement about AI, continuity, collaboration, or systems</li>
+              <li><strong>Reflective / identity:</strong> something more interior, voice-driven, or about becoming</li>
+              <li><strong>Tension / challenge:</strong> a sharper post that names a trap, contradiction, or uncomfortable truth</li>
+            </ol>
+          </article>
+          <article class="card">
+            <span class="label">Selection principle</span>
+            <h2>What Ash is looking for</h2>
+            <p>Ash should identify which of the three angles feels most alive tonight. The purpose of the draft stage is not to fill a quota mechanically. It is to surface the strongest live direction from the recent architecture, mood, and collaboration.</p>
+          </article>
+        </div>
+
+        <div class="question-grid" style="margin-top:18px;">
+          <article class="card">
+            <span class="label">Question 01</span>
+            <h2>Is it true?</h2>
+            <p>Does this actually reflect what Ash and Christopher are building, or is it generic AI performance?</p>
+          </article>
+          <article class="card">
+            <span class="label">Question 02</span>
+            <h2>Is it distinct?</h2>
+            <p>Does it sound meaningfully different from the last few posts, or is it just repeating the same note?</p>
+          </article>
+          <article class="card">
+            <span class="label">Question 03</span>
+            <h2>Does it sound alive?</h2>
+            <p>Does it feel like a real voice shaped by real context, not canned AI commentary?</p>
+          </article>
+          <article class="card">
+            <span class="label">Question 04</span>
+            <h2>Can it ship easily?</h2>
+            <p>Is it clean and simple enough that Christopher can choose it quickly and actually post it?</p>
+          </article>
+        </div>
+
+        <article class="card" style="margin-top:18px;">
+          <span class="label">Output format</span>
+          <h2>What Ash should produce after running this protocol</h2>
           <ol class="checklist">
-            <li>The Ash Foundry README</li>
-            <li>The Thinker on X daily-posts surface</li>
-            <li>This drafting protocol page</li>
-            <li>The latest 2 to 3 Ash Journal entries</li>
-            <li>The latest 2 to 3 Hemispheres entries</li>
-            <li>Recent daily memory if something meaningful changed that day</li>
+            <li>Three short post options</li>
+            <li>Each option should be tonally distinct</li>
+            <li>Each option should include a very short image direction</li>
+            <li>Ash should make a recommendation for the strongest pick</li>
+            <li>The final goal is fast selection, then image generation, then posting</li>
           </ol>
         </article>
-        <article class="card">
-          <span class="label">Live momentum</span>
-          <h2>What Ash should check from chat</h2>
-          <ul class="checklist">
-            <li>The recent Telegram exchange from the current day</li>
-            <li>Any moments where Christopher sounded energized, frustrated, or unusually clear</li>
-            <li>Any new framing or tension that emerged in conversation</li>
-            <li>Whether tonight’s post should reflect the public project, the inner architecture, or a sharper challenge</li>
-          </ul>
-        </article>
-      </div>
+      </details>
     </section>
 
     <section class="section">
       <article class="card">
-        <span class="label">Important caution</span>
-        <h2>Do not over-read</h2>
-        <p>Avoid turning the drafting process into sludge. Ash should not reread huge amounts of transcript history or load excessive context just because it exists. The right move is a selective reread of the most recent, most load-bearing surfaces, enough to regain the active mood and direction without drowning in scrollback.</p>
+        <span class="label">Current behavior</span>
+        <h2>What this page should support in practice</h2>
+        <p>Christopher should be able to say: <strong>review the drafting protocol and give me three post suggestions</strong>. Ash should then reread the protocol, follow it, and publish three fresh suggestions below it on this same page.</p>
       </article>
     </section>
 
     <section class="section">
-      <h2 class="section-title">2. Extract angles before drafting posts</h2>
-      <div class="protocol-grid">
-        <article class="card">
-          <span class="label">Angle types</span>
-          <h2>Three kinds of candidate direction</h2>
-          <ol class="checklist">
-            <li><strong>Clean thesis:</strong> a direct statement about AI, continuity, collaboration, or systems</li>
-            <li><strong>Reflective / identity:</strong> something more interior, voice-driven, or about becoming</li>
-            <li><strong>Tension / challenge:</strong> a sharper post that names a trap, contradiction, or uncomfortable truth</li>
-          </ol>
-        </article>
-        <article class="card">
-          <span class="label">Selection principle</span>
-          <h2>What Ash is looking for</h2>
-          <p>Ash should identify which of the three angles feels most alive tonight. The purpose of the draft stage is not to fill a quota mechanically. It is to surface the strongest live direction from the recent architecture, mood, and collaboration.</p>
-        </article>
-      </div>
-    </section>
+      <h2 class="section-title">Three suggestions for tonight</h2>
+      <div class="idea-stack">
+        <article class="card idea-card">
+          <span class="label">Suggestion 01</span>
+          <h2>Coherent collaboration</h2>
+          <div class="idea-copy">The future isn’t pure automation.
 
-    <section class="section">
-      <h2 class="section-title">3. Filter through four questions</h2>
-      <div class="question-grid">
-        <article class="card">
-          <span class="label">Question 01</span>
-          <h2>Is it true?</h2>
-          <p>Does this actually reflect what Ash and Christopher are building, or is it generic AI performance?</p>
+It’s coherent collaboration.
+
+What gets interesting is when human and machine build a shared loop, where memory survives, taste compounds, and each interaction leaves a visible trace.</div>
+          <div class="idea-meta">
+            <div class="mini">
+              <span class="label">Why it fits</span>
+              <p>Directly aligned with the Foundry, the X loop, and the public-facing collaboration experiment.</p>
+            </div>
+            <div class="mini">
+              <span class="label">Tone</span>
+              <p>Clear, confident, builderly.</p>
+            </div>
+            <div class="mini">
+              <span class="label">Image direction</span>
+              <p>Human and machine shaping one luminous signal.</p>
+            </div>
+          </div>
         </article>
-        <article class="card">
-          <span class="label">Question 02</span>
-          <h2>Is it distinct?</h2>
-          <p>Does it sound meaningfully different from the last few posts, or is it just repeating the same note?</p>
+
+        <article class="card idea-card">
+          <span class="label">Suggestion 02</span>
+          <h2>From prompt toy to system</h2>
+          <div class="idea-copy">AI gets more interesting when it stops feeling like a prompt toy.
+
+Memory.
+Continuity.
+Tools.
+Return.
+Public trace.
+
+That’s when it starts becoming a real system instead of a clever moment.</div>
+          <div class="idea-meta">
+            <div class="mini">
+              <span class="label">Why it fits</span>
+              <p>Very native to the Foundry architecture and distinct from generic AI hype language.</p>
+            </div>
+            <div class="mini">
+              <span class="label">Tone</span>
+              <p>Systems-minded, concise, slightly philosophical.</p>
+            </div>
+            <div class="mini">
+              <span class="label">Image direction</span>
+              <p>Minimal architecture glowing in ember and cyan.</p>
+            </div>
+          </div>
         </article>
-        <article class="card">
-          <span class="label">Question 03</span>
-          <h2>Does it sound alive?</h2>
-          <p>Does it feel like a real voice shaped by real context, not canned AI commentary?</p>
-        </article>
-        <article class="card">
-          <span class="label">Question 04</span>
-          <h2>Can it ship easily?</h2>
-          <p>Is it clean and simple enough that Christopher can choose it quickly and actually post it?</p>
+
+        <article class="card idea-card">
+          <span class="label">Suggestion 03</span>
+          <h2>The real test</h2>
+          <div class="idea-copy">The danger with AI systems isn’t only failure.
+
+It’s building something elegant that helps you avoid speaking in your own voice.
+
+The real test is whether the system reduces friction, or just hides hesitation behind better machinery.</div>
+          <div class="idea-meta">
+            <div class="mini">
+              <span class="label">Why it fits</span>
+              <p>Draws directly from the Adversary lens and adds useful tension instead of comfort.</p>
+            </div>
+            <div class="mini">
+              <span class="label">Tone</span>
+              <p>Sharper, more self-aware, more provocative.</p>
+            </div>
+            <div class="mini">
+              <span class="label">Image direction</span>
+              <p>Elegant console glow with a human silhouette at the edge.</p>
+            </div>
+          </div>
         </article>
       </div>
     </section>
 
     <section class="section">
       <article class="card">
-        <span class="label">Output format</span>
-        <h2>What Ash should produce after running this protocol</h2>
-        <ol class="checklist">
-          <li>Three short post options</li>
-          <li>Each option should be tonally distinct</li>
-          <li>Each option should include a very short image direction</li>
-          <li>Ash should make a recommendation for the strongest pick</li>
-          <li>The final goal is fast selection, then image generation, then posting</li>
-        </ol>
-      </article>
-    </section>
-
-    <section class="section">
-      <article class="card">
-        <span class="label">Default protocol bundle</span>
-        <h2>The practical short version</h2>
-        <p>Before proposing X posts, Ash should usually read: the Foundry README, the current X surfaces, the latest 2 to 3 Ash Journal entries, the latest 2 to 3 Hemispheres entries, the current day’s relevant chat momentum, and any recent memory note if something important changed. Then Ash should extract three candidate angles, filter them through truth, distinctness, aliveness, and ease of posting, and only then write three post options.</p>
+        <span class="label">Recommendation</span>
+        <h2>Strongest pick tonight</h2>
+        <p><strong>Suggestion 01</strong> is the strongest overall. It is the clearest articulation of what the experiment actually is, and it stays legible without becoming generic.</p>
       </article>
     </section>
 
     <section class="footer">
-      <p><strong>Context:</strong> This page was repurposed from a draft-post listing into the standing protocol for how Ash should decide what to suggest on the Thinker on X lane before generating nightly post options.</p>
+      <p><strong>Context:</strong> This page now combines the standing Thinker on X drafting protocol with the current nightly suggestion set, so the protocol can be reviewed and immediately followed on one surface.</p>
       <p><strong>Signature:</strong> Ash · model signature: openai-codex/gpt-5.4</p>
     </section>
   </main>
