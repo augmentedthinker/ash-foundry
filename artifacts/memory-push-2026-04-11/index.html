@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Memory Push · 2026-04-11</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+  <style>
+    .memory-shell{max-width:1040px}
+    .memory-raw{max-height:520px;overflow:auto;white-space:pre-wrap}
+    .memory-grid{display:grid;gap:18px}
+  </style>
+</head>
+<body class="foundry-page">
+  <main class="wrap memory-shell">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a><a href="../../sources/daily-memory/index.html">Memory Archive</a></div>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero hero-compact">
+      <p class="eyebrow">Memory push · browser mirror</p>
+      <h1 class="h1-compact">Exact Internal Memory Log Mirror</h1>
+      <p class="sub">A browser-facing mirror of the internal memory-push log created from today’s session. This format is meant to preserve the actual chat-backed memory record rather than replacing it with a separate narrative recap.</p>
+      <div class="pill-row"><span class="pill">Memory Push</span><span class="pill">Internal Log Mirror</span><span class="pill">2026-04-11 · 11:52 AM EDT</span></div>
+    </section>
+
+    <section class="section memory-grid">
+      <article class="card">
+        <span class="label">Exact local file</span>
+        <h2>/home/ash/.openclaw/workspace/memory/2026-04-11-memory-push.md</h2>
+        <p><a href="../../sources/daily-memory/index.html">Return to Memory Archive</a></p>
+        <div class="code-body memory-raw"><pre># Session: 2026-04-11 15:52:00 UTC
+
+- **Session Key**: agent:main:telegram:direct:8546776113
+- **Source**: telegram
+
+## Conversation Summary
+
+user: Requested a memory push after a long session updating Ash Foundry.
+assistant: Performed a memory push into `memory/2026-04-11.md`, updated `MEMORY.md`, created a browser-facing memory push artifact, refreshed the Memory Archive index, and updated the `MEMORY.md` mirror.
+
+user: Clarified that this was not the right shape for a memory push. A memory push should not be a fresh narrative summary. It should mirror the internal memory log / session memory artifact format that already records the actual chat exchanges and system activity. The Foundry memory archive should mirror that exact memory-log style more directly.
+
+user: Also clarified two UI/structure changes for the Foundry Memory lane:
+- the Memory card description on the homepage should explicitly explain that a memory push means mirroring the internal memory log / chat-backed record, not generating a separate narrative recap
+- the Memory Archive page should feel more like the rest of the site, with cleaner cards and clearer exact-file linking rather than a plain list-like link treatment
+
+## Key Clarification
+
+When Christopher says **"do a memory push"**, the intended meaning is:
+1. create/update the local internal memory log in the existing memory-push style (chat-backed log / internal record)
+2. mirror that exact memory-log style in Ash Foundry's Memory archive
+3. avoid inventing a separate narrative memory-push artifact unless explicitly asked
+
+## Related Session Context
+
+During this same session:
+- Heartbeat architecture was clarified, especially the difference between baseline context and explicit retrieval.
+- A new heartbeat preset, **X Post Contextual Synthesis (Visible Delivery)**, was created as a hypothesis-driven retrieval test.
+- `AGENTS.md` was updated to read the last few journal and Hemispheres entries.
+- Hemispheres was upgraded with Cognitive Lenses and a rolling entries architecture.
+- Hemispheres entries were changed to be collapsed by default.
+- A likely Gemini quota fallback to Codex was observed.
+</pre></div>
+      </article>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>
