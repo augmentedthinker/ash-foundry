@@ -32,17 +32,17 @@
 </pre></div>
       <div class="result-note"><strong>What it does:</strong> Instructs heartbeat to send exactly one quote to Telegram chat <code>8546776113</code> and add a second line with the exact model signature used. <strong>What it was proven to do:</strong> this was the version that restored visible Telegram heartbeat delivery and produced inspectable model-signed messages in the isolated heartbeat session era.</div>
     </section>
-    <section class="code heartbeat-file current">
-      <div class="code-head"><strong>Disable Heartbeat</strong><span class="state-pill">✅ Current</span><span class="path">/home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
+    <section class="code heartbeat-file archived">
+      <div class="code-head"><strong>Disable Heartbeat</strong><span class="state-pill">Archived preset</span><span class="path">/home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
       <div class="code-body"><pre># Heartbeat disabled
 </pre></div>
       <div class="result-note"><strong>What it does:</strong> This disables the active heartbeat instruction file by leaving only a header. <strong>What it was proven to do:</strong> it cleanly silences the active heartbeat after testing. On April 10th, 2026, this preset was restored immediately after the X-post reminder preset successfully completed its posted-branch check and delivered the congratulatory Telegram message at approximately 9:09 PM, confirming the full advisory loop worked end to end.</div>
     </section>
-    <section class="code heartbeat-file archived">
-      <div class="code-head"><strong>X Post Prompt (Visible Delivery)</strong><span class="state-pill">Archived preset</span><span class="path">Recovered from live file + mirror history</span></div>
-      <div class="code-body"><pre>If the current local time is not between 9:00 PM and 10:00 PM America/New_York, reply exactly HEARTBEAT_OK.
+    <section class="code heartbeat-file current">
+      <div class="code-head"><strong>X Post Prompt (Visible Delivery)</strong><span class="state-pill">✅ Current</span><span class="path">/home/ash/.openclaw/workspace/HEARTBEAT.md</span></div>
+      <div class="code-body"><pre>If the current local time is not between 8:00 PM and 9:00 PM America/New_York, reply exactly HEARTBEAT_OK.
 
-If it is between 9:00 PM and 10:00 PM America/New_York, check whether today's date is marked as posted on the Augmented Thinker X daily-posts / calendar surface in Ash Foundry.
+If it is between 8:00 PM and 9:00 PM America/New_York, check whether today's date is marked as posted on the Augmented Thinker X daily-posts / calendar surface in Ash Foundry.
 
 If today's post is already marked as posted, send exactly one user-visible Telegram message to chat 8546776113 saying:
 Good job posting on X today.
