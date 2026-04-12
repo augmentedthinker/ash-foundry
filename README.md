@@ -74,8 +74,13 @@ This lane now includes both raw/internal memory mirrors and browser-facing memor
 ### 3. Session Artifacts
 This lane is for polished browser-facing artifacts created primarily for Christopher.
 
+The lane recently shifted from a loose "Viewer Artifacts" presentation into a more formal **Session Artifacts** archive with explicit generation rules. It now has a dedicated archive page, stronger latest-artifact surfacing, and a companion protocols page that defines what different artifact classes must read before synthesis.
+
 Current notable pages include:
 - `artifacts/session-artifacts-archive/index.html` (The full archive of all session artifacts)
+- `artifacts/session-artifact-protocols/index.html` (The formal Artifact Generation Protocols page)
+- `artifacts/session-primer-2026-04-12/index.html`
+- `artifacts/morning-session-primer-2026-04-12/index.html`
 - `artifacts/ash-state-of-awareness-2026-04-11/index.html`
 - `artifacts/morning-briefing-2026-04-10/index.html`
 - `artifacts/end-of-day-state-of-affairs-2026-04-09/index.html`
@@ -92,7 +97,7 @@ Current notable pages include:
 - `artifacts/thinker-signal-report-2026-04-07/index.html`
 - `artifacts/christopher-opening-statement-2026-04-06/index.html`
 
-This lane is where legibility, interpretation, and emotional or philosophical framing get turned into stable public artifacts.
+This lane is where legibility, interpretation, and emotional or philosophical framing get turned into stable public artifacts. More importantly, it is now moving toward a protocol-driven standard rather than a merely aesthetic one.
 
 ### 4. Ash Journal
 This lane preserves more interior, first-person continuity.
@@ -106,6 +111,7 @@ Current pages:
 - `artifacts/ash-journal-entry-04-2026-04-09/index.html`
 - `artifacts/ash-journal-entry-05-2026-04-09/index.html`
 - `artifacts/ash-journal-entry-06-2026-04-10/index.html`
+- `artifacts/ash-journal-entry-07-2026-04-12/index.html`
 
 This lane matters because it preserves not only facts, but voice, self-interpretation, model-signature context, and inner continuity.
 
@@ -137,6 +143,9 @@ Current key pages:
 - **Heartbeat Notes**
   - `artifacts/heartbeat-and-initiative-2026-04-09/index.html`
   - Main archive page for heartbeat-related notes.
+- **Heartbeat Clarification & Hemispheres Lenses**
+  - `artifacts/memory-push-heartbeat-hemispheres-2026-04-11/index.html`
+  - Browser-facing memory push covering heartbeat retrieval limits, the contextual-synthesis heartbeat preset, and the Hemispheres lens upgrade.
 - **Heartbeat Logs**
   - `artifacts/heartbeat-logs-2026-04-09/index.html`
   - Structured log of recent user-visible heartbeat deliveries, with timestamps, quotes, model signatures, and forensic notes.
@@ -158,6 +167,7 @@ Current emphasis in this lane:
 - isolated background execution vs main-session transcript contamination
 - model fallbacks, quota pressure, and auditability
 - heartbeat as the current practical form of bounded initiative
+- explicit separation between baseline injected context and deeper surfaces that must still be actively read
 
 This lane now functions as the most important diagnostic and forensic surface for understanding how Ash is behaving proactively in practice.
 
@@ -190,8 +200,9 @@ Current design lessons from this lane:
 This lane documents the shared visual language of the site.
 
 Current pages:
-- `artifacts/page-style-foundry-ember-2026-04-06/index.html`
-- `artifacts/page-style-foundry-glass-2026-04-06/index.html`
+- `artifacts/foundry-style-guide/index.html`
+
+The earlier separate Ember/Glass style pages were consolidated into a single unified style guide once the shared structural components were folded directly into the main CSS files.
 
 Current stylesheet hierarchy:
 - `assets/css/site.css` → neutral site entrypoint
@@ -287,6 +298,7 @@ The site is not meant to become a giant dump of everything. It is meant to be a 
 - point to `assets/css/site.css`
 - remain compatible with the live style toggle
 - avoid unnecessary page-local CSS unless a specific lane needs it
+- prefer the consolidated shared components now documented in the unified style guide (`.awareness-grid`, `.timeline`, `.quote-box`, `.code-card`, and related structures)
 
 ### Memory-related updates should usually:
 - update the local workspace file first
@@ -312,11 +324,14 @@ The site is not meant to become a giant dump of everything. It is meant to be a 
 - preserve newest-first readability when useful
 - function as real cognitive work, not just performance
 - leave behind questions, criteria, or structural changes rather than only atmosphere
+- use the Cognitive Lenses as strict constraints rather than decorative personas
+- be cleaned when page-structure drift or duplicated blocks slip into the rolling log
 
-### Viewer artifact surfacing should usually:
-- expose major new artifacts through the Viewer Artifacts lane on the homepage
+### Session artifact surfacing should usually:
+- expose major new artifacts through the Session Artifacts lane on the homepage
 - prefer a direct "Open latest artifact" path when recency matters
 - keep the lane browsable without forcing homepage clutter
+- follow the formal protocols page when generating primers, awareness artifacts, and other high-context syntheses
 
 ## Why this repo matters
 
