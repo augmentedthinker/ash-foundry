@@ -71,10 +71,11 @@ Current key pages:
 
 This lane now includes both raw/internal memory mirrors and browser-facing memory-push artifacts.
 
-### 3. Viewer Artifacts
+### 3. Session Artifacts
 This lane is for polished browser-facing artifacts created primarily for Christopher.
 
 Current notable pages include:
+- `artifacts/session-artifacts-archive/index.html` (The full archive of all session artifacts)
 - `artifacts/ash-state-of-awareness-2026-04-11/index.html`
 - `artifacts/morning-briefing-2026-04-10/index.html`
 - `artifacts/end-of-day-state-of-affairs-2026-04-09/index.html`
