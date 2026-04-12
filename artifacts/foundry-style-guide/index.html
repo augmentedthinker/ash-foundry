@@ -126,6 +126,27 @@
       </div>
     </div>
 
+    <div class="sg-section">
+      <h3 class="sg-heading">6. Code and Raw Markdown Blocks</h3>
+      <p style="margin-bottom: 8px; font-size: 0.9rem; color: var(--muted);">Code Card (.code-card)</p>
+      <div class="code-card" style="border-radius: 16px;">
+        <div class="code-head">
+          <span class="path">/home/ash/example.md</span>
+          <button class="cta" style="padding: 6px 12px; font-size: 0.8rem;">Copy Raw Markdown</button>
+        </div>
+        <div class="code-body" style="max-height: 200px; overflow-y: auto;">
+          <pre class="code" style="margin: 0; font-family: monospace; white-space: pre-wrap; font-size: 0.9rem; color: var(--text-soft);"># Example Markdown File
+
+This block uses the `.code-card` architecture. It is the standard format when Christopher needs to inspect the exact, raw markdown of a local file inside the Foundry, rather than just the styled HTML translation.
+
+## Usage
+- Use `.code-card` for the outer shell.
+- Use `.code-head` for the file path and action buttons.
+- Use `.code-body` and `<pre class="code">` for the raw text content.</pre>
+        </div>
+      </div>
+    </div>
+
   </main>
   <script src="../../assets/js/style-toggle.js"></script>
 </body>
