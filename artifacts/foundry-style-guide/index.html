@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Foundry Style Guide</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+  <style>
+    .sg-shell { max-width: 1080px; }
+    .sg-section { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .sg-section:last-child { border-bottom: none; }
+    .sg-heading { font-family: monospace; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; font-size: 0.9rem; }
+    .color-swatch { width: 48px; height: 48px; border-radius: 12px; margin-bottom: 8px; border: 1px solid rgba(255,255,255,0.1); }
+    .swatch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 16px; }
+    .swatch-label { font-size: 0.8rem; color: var(--text-soft); }
+  </style>
+</head>
+<body class="foundry-page">
+  <main class="wrap sg-shell">
+    <header class="topbar">
+      <div class="left">
+        <a href="../../index.html">← Ash Foundry</a>
+      </div>
+      <div class="right">
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero hero-compact" style="border-radius: 24px; margin-bottom: 3rem;">
+      <h1 class="h1-compact">Foundry Style Guide</h1>
+      <p class="sub-compact">A consolidated library of typography, components, grids, and layouts that power Ash Foundry. Use the dropdown above to toggle between Ember and Glass visual modes.</p>
+    </section>
+
+    <div class="sg-section">
+      <h3 class="sg-heading">1. Typography & Text Hierarchy</h3>
+      <p class="eyebrow">Eyebrow (Overline)</p>
+      <h1>Heading Level 1</h1>
+      <p class="sub">The subtitle text style: slightly larger, increased line-height, muted color for lead paragraphs.</p>
+      <h2>Heading Level 2 (.section-title)</h2>
+      <p>Standard paragraph text. Designed to be legible, relatively tight, and balanced against the dark mode backgrounds. Below is a deep list format.</p>
+      <ul class="deep-list">
+        <li>First item in a deep list.</li>
+        <li>Second item in a deep list, showing line height.</li>
+        <li>Third item in a deep list.</li>
+      </ul>
+    </div>
+
+    <div class="sg-section">
+      <h3 class="sg-heading">2. Pills, Labels, and Actions</h3>
+      <div style="margin-bottom: 1.5rem;">
+        <p style="margin-bottom: 8px; font-size: 0.9rem; color: var(--muted);">Pill Row (.pill-row > .pill)</p>
+        <div class="pill-row" style="justify-content: flex-start;">
+          <span class="pill">Model: google/gemini-3.1-pro-preview</span>
+          <span class="pill">Status: Active</span>
+          <span class="pill">April 12, 2026</span>
+        </div>
+      </div>
+      <div style="margin-bottom: 1.5rem;">
+        <p style="margin-bottom: 8px; font-size: 0.9rem; color: var(--muted);">Labels (.label)</p>
+        <span class="label">Priority 1</span>
+        <span class="label" style="margin-left: 8px;">Completed</span>
+      </div>
+      <div>
+        <p style="margin-bottom: 8px; font-size: 0.9rem; color: var(--muted);">Action Buttons (.cta or topbar links)</p>
+        <a href="#" class="cta" style="margin-right: 8px;">Primary Action</a>
+        <a href="#" class="cta" style="background: rgba(255,255,255,0.02);">Secondary Action</a>
+      </div>
+    </div>
+
+    <div class="sg-section">
+      <h3 class="sg-heading">3. Structural Grids</h3>
+      
+      <p style="margin-bottom: 8px; font-size: 0.9rem; color: var(--muted);">Awareness Grid (4 columns, .awareness-grid)</p>
+      <div class="awareness-grid">
+        <article class="card"><span class="label">Item 1</span><h2>First card</h2><p>Used for state-of-awareness components.</p></article>
+        <article class="card"><span class="label">Item 2</span><h2>Second card</h2><p>Used for state-of-awareness components.</p></article>
+        <article class="card"><span class="label">Item 3</span><h2>Third card</h2><p>Used for state-of-awareness components.</p></article>
+        <article class="card"><span class="label">Item 4</span><h2>Fourth card</h2><p>Used for state-of-awareness components.</p></article>
+      </div>
+
+      <p style="margin: 2rem 0 8px; font-size: 0.9rem; color: var(--muted);">Triple Grid (3 columns, .triple-grid)</p>
+      <div class="triple-grid">
+        <article class="card"><h2>Focus One</h2><p>Useful for priorities and focal points.</p></article>
+        <article class="card"><h2>Focus Two</h2><p>Useful for priorities and focal points.</p></article>
+        <article class="card"><h2>Focus Three</h2><p>Useful for priorities and focal points.</p></article>
+      </div>
+
+      <p style="margin: 2rem 0 8px; font-size: 0.9rem; color: var(--muted);">Dual Grid (2 columns, slightly asymmetrical, .dual-grid)</p>
+      <div class="dual-grid">
+        <article class="card briefing-note"><h2>Left Side (1.05fr)</h2><p>Contains a .briefing-note class for larger text.</p></article>
+        <article class="card briefing-note"><h2>Right Side (.95fr)</h2><p>Contains a .briefing-note class for larger text.</p></article>
+      </div>
+    </div>
+
+    <div class="sg-section">
+      <h3 class="sg-heading">4. Timelines & Lists</h3>
+      <p style="margin-bottom: 8px; font-size: 0.9rem; color: var(--muted);">Timeline (.timeline > .timeline-item)</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>First Event Occurred</strong>
+          This represents a sequence of events. It is clean and readable, keeping individual moments boxed visually without heavy card padding.
+        </div>
+        <div class="timeline-item">
+          <strong>Second Event Occurred</strong>
+          Another item in the sequence, demonstrating the visual rhythm of the timeline component.
+        </div>
+      </div>
+    </div>
+
+    <div class="sg-section">
+      <h3 class="sg-heading">5. Quotations and Alerts</h3>
+      <p style="margin-bottom: 8px; font-size: 0.9rem; color: var(--muted);">Quote Box (.quote-box)</p>
+      <div class="quote-box">
+        "This is a standalone quote box component. It is designed to pull attention and emphasize structural philosophy, ensuring the statement feels anchored rather than floating."
+      </div>
+      
+      <p style="margin: 2rem 0 8px; font-size: 0.9rem; color: var(--muted);">Standard Quote (.quote)</p>
+      <div class="quote">
+        A more subtle, bluish-tinted block used for smaller callouts or inline textual emphasis.
+      </div>
+    </div>
+
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>
