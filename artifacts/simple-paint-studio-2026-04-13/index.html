@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Simple Paint Studio · 2026-04-13</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+  <style>
+    .studio-shell{max-width:1100px}
+    .studio-grid{display:grid;gap:20px}
+    .toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .tool-pill{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:#f5efe7}
+    .swatch{width:14px;height:14px;border-radius:999px;background:#111;border:1px solid rgba(255,255,255,.14)}
+    .canvas-wrap{padding:16px;border-radius:24px;border:1px solid rgba(255,255,255,.08);background:rgba(10,12,14,.5)}
+    canvas{display:block;width:100%;max-width:100%;height:auto;border-radius:18px;background:#ffffff;touch-action:none;cursor:crosshair;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .action-btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:999px;text-decoration:none;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:#f5efe7;font:inherit;cursor:pointer}
+    .action-btn:hover{background:rgba(255,255,255,.1)}
+    .hint{color:rgba(245,239,231,.72);line-height:1.7}
+  </style>
+</head>
+<body class="foundry-page">
+  <main class="wrap studio-shell">
+    <header class="topbar">
+      <div class="left">
+        <a href="../../index.html">← Ash Foundry</a>
+        <a href="../session-artifacts-archive/index.html">Session Artifacts</a>
+      </div>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero hero-compact">
+      <p class="eyebrow">Session Artifact · Utility Surface</p>
+      <h1 class="h1-compact">Simple Paint Studio</h1>
+      <p class="sub">A minimal browser paint surface for sketching diagrams, flows, and rough visual explanations before sending them back into chat. One black brush, medium stroke, no clutter.</p>
+      <div class="pill-row">
+        <span class="pill">Canvas tool</span>
+        <span class="pill">Black brush</span>
+        <span class="pill">Download enabled</span>
+        <span class="pill">2026-04-13</span>
+      </div>
+    </section>
+
+    <section class="section studio-grid">
+      <article class="card">
+        <div class="toolbar">
+          <span class="tool-pill"><span class="swatch"></span> Brush: Black</span>
+          <span class="tool-pill">Size: Medium</span>
+          <span class="tool-pill">Canvas: 1600 × 1000</span>
+        </div>
+      </article>
+
+      <article class="canvas-wrap">
+        <canvas id="paint-canvas" width="1600" height="1000" aria-label="Simple paint canvas"></canvas>
+      </article>
+
+      <article class="card">
+        <div class="actions">
+          <button class="action-btn" id="clear-btn" type="button">Clear canvas</button>
+          <button class="action-btn" id="download-btn" type="button">Download PNG</button>
+        </div>
+        <p class="hint" style="margin-top:16px;">Use mouse or finger to draw. Download the finished image, then send it back through Telegram so we can inspect the diagram together.</p>
+      </article>
+    </section>
+  </main>
+
+  <script src="../../assets/js/style-toggle.js"></script>
+  <script>
+    const canvas = document.getElementById('paint-canvas');
+    const ctx = canvas.getContext('2d');
+    const clearBtn = document.getElementById('clear-btn');
+    const downloadBtn = document.getElementById('download-btn');
+
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.strokeStyle = '#111111';
+    ctx.lineWidth = 8;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+
+    let drawing = false;
+
+    const getPos = (event) => {
+      const rect = canvas.getBoundingClientRect();
+      const clientX = event.touches ? event.touches[0].clientX : event.clientX;
+      const clientY = event.touches ? event.touches[0].clientY : event.clientY;
+      return {
+        x: (clientX - rect.left) * (canvas.width / rect.width),
+        y: (clientY - rect.top) * (canvas.height / rect.height)
+      };
+    };
+
+    const startDraw = (event) => {
+      drawing = true;
+      const pos = getPos(event);
+      ctx.beginPath();
+      ctx.moveTo(pos.x, pos.y);
+      event.preventDefault();
+    };
+
+    const draw = (event) => {
+      if (!drawing) return;
+      const pos = getPos(event);
+      ctx.lineTo(pos.x, pos.y);
+      ctx.stroke();
+      event.preventDefault();
+    };
+
+    const stopDraw = () => {
+      drawing = false;
+      ctx.closePath();
+    };
+
+    canvas.addEventListener('mousedown', startDraw);
+    canvas.addEventListener('mousemove', draw);
+    window.addEventListener('mouseup', stopDraw);
+
+    canvas.addEventListener('touchstart', startDraw, { passive: false });
+    canvas.addEventListener('touchmove', draw, { passive: false });
+    window.addEventListener('touchend', stopDraw);
+
+    clearBtn.addEventListener('click', () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.strokeStyle = '#111111';
+    });
+
+    downloadBtn.addEventListener('click', () => {
+      const link = document.createElement('a');
+      link.download = 'simple-paint-studio-sketch.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    });
+  </script>
+</body>
+</html>
