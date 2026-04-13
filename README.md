@@ -176,17 +176,9 @@ This lane now functions as the most important diagnostic and forensic surface fo
 ### 7. X / Social Presence
 This lane tracks Christopher’s reactivated **Augmented Thinker** X profile and its role inside the broader Ash/Christopher ecosystem.
 
-This lane is currently one of the clearest candidates for the Active Fronts strip because it now has a real measurable loop: daily publishing cadence, archived proof-of-post screenshots, and analytics snapshots that make growth legible instead of merely felt.
+This is now a primary active front, trackable via the homepage Active Fronts strip, because it has a real measurable loop: daily publishing cadence, proof-of-post screenshots, and analytics snapshots.
 
-Current key pages:
-- `artifacts/augmented-thinker-x-profile-2026-04-08/index.html`
-- `artifacts/thinker-x-post-brainstorm-2026-04-10/index.html`
-- `artifacts/augmented-thinker-x-daily-posts-2026-04-08/index.html`
-- `artifacts/thinker-x-metrics-2026-04-10/index.html`
-
-This lane matters because it extends Ash Foundry from introspection and continuity into outward-facing publishing support, drafting loops, reply support, and metrics tracking.
-
-Right now, this is also the strongest example of a browser-facing improvement loop with actual external evidence. That makes it strategically important, not just aesthetically interesting.
+This lane matters because it extends Ash Foundry from introspection and continuity into outward-facing publishing support, drafting loops, reply support, and metrics tracking. It is our strongest example of a browser-facing improvement loop with actual external evidence, making it strategically important.
 
 ### 8. Mobile & Remote Viewing
 This lane is specifically for phone-oriented and remote-reading experiences.
