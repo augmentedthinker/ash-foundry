@@ -170,12 +170,21 @@
       0%{transform:translate3d(0,0,0)}
       100%{transform:translate3d(0,-8px,0)}
     }
-        .action-strip {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-bottom: 32px;
+    .action-strip-wrap{position:relative;margin-bottom:32px}
+    .action-strip{
+      display:grid;
+      grid-auto-flow:column;
+      grid-auto-columns:calc((100% - 28px) / 3);
+      gap:14px;
+      overflow-x:auto;
+      padding:2px 2px 10px;
+      scroll-snap-type:x mandatory;
+      scrollbar-width:none;
+      -ms-overflow-style:none;
+      cursor:grab;
     }
+    .action-strip::-webkit-scrollbar{display:none}
+    .action-strip.dragging{cursor:grabbing;scroll-snap-type:none}
     .action-box {
       background: rgba(20,22,26,.4);
       border: 1px solid rgba(255,255,255,.08);
@@ -185,6 +194,9 @@
       flex-direction: column;
       text-decoration: none;
       transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      scroll-snap-align:start;
+      min-height:104px;
+      user-select:none;
     }
     .action-box:hover {
       transform: translateY(-2px);
@@ -209,10 +221,13 @@
     .dot-blue { background: #8cc7ff; box-shadow: 0 0 8px rgba(140,199,255,.6); }
     .dot-gold { background: #f0b56a; box-shadow: 0 0 8px rgba(240,181,106,.6); }
     .dot-green { background: #58c86e; box-shadow: 0 0 8px rgba(88,200,110,.6); }
+    .dot-rose { background: #d989b5; box-shadow: 0 0 8px rgba(217,137,181,.55); }
+    .dot-violet { background: #a78bfa; box-shadow: 0 0 8px rgba(167,139,250,.55); }
+    .dot-cyan { background: #4fd1c5; box-shadow: 0 0 8px rgba(79,209,197,.55); }
     @media (max-width: 980px){
       .hero-panels{grid-template-columns:1fr}
       .hero-threshold{min-height:72vh}
-      .action-strip{grid-template-columns:1fr}
+      .action-strip{grid-auto-columns:85%}
     }
     @media (max-width: 680px){
       .immersive-wrap{padding:14px 14px 30px}
@@ -255,19 +270,33 @@
       </div>
     </section>
 
-        <section class="action-strip">
-      <a href="./artifacts/augmented-thinker-x-daily-posts-2026-04-08/index.html" class="action-box">
-        <span class="action-verb"><span class="dot dot-blue"></span> Scale X Presence</span>
-        <span class="action-sub">Draft next post. Shift focus from raw reach to interaction depth.</span>
-      </a>
-      <a href="./artifacts/hemispheres-entries/index.html" class="action-box">
-        <span class="action-verb"><span class="dot dot-gold"></span> Execute Hemispheres</span>
-        <span class="action-sub">Run constrained debates to force concrete next moves, not just insight.</span>
-      </a>
-      <a href="./index.html" class="action-box">
-        <span class="action-verb"><span class="dot dot-green"></span> Compress Architecture</span>
-        <span class="action-sub">Prune stale pages. Route active artifact conclusions back to memory.</span>
-      </a>
+    <section class="action-strip-wrap">
+      <section class="action-strip" id="action-strip">
+        <a href="./artifacts/augmented-thinker-x-daily-posts-2026-04-08/index.html" class="action-box">
+          <span class="action-verb"><span class="dot dot-blue"></span> Scale X Presence</span>
+          <span class="action-sub">Draft next post. Shift focus from raw reach to interaction depth.</span>
+        </a>
+        <a href="./artifacts/hemispheres-entries/index.html" class="action-box">
+          <span class="action-verb"><span class="dot dot-gold"></span> Execute Hemispheres</span>
+          <span class="action-sub">Run constrained debates to force concrete next moves, not just insight.</span>
+        </a>
+        <a href="./index.html" class="action-box">
+          <span class="action-verb"><span class="dot dot-green"></span> Compress Architecture</span>
+          <span class="action-sub">Prune stale pages. Route active artifact conclusions back to memory.</span>
+        </a>
+        <a href="./artifacts/thinker-x-metrics-2026-04-10/index.html" class="action-box">
+          <span class="action-verb"><span class="dot dot-rose"></span> Review Metrics</span>
+          <span class="action-sub">Compare the latest analytics snapshot and decide what to change next.</span>
+        </a>
+        <a href="./sources/daily-memory/index.html" class="action-box">
+          <span class="action-verb"><span class="dot dot-violet"></span> Push Memory</span>
+          <span class="action-sub">Capture what mattered today before it dissolves into scrollback.</span>
+        </a>
+        <a href="./artifacts/session-artifacts-archive/index.html" class="action-box">
+          <span class="action-verb"><span class="dot dot-cyan"></span> Ship Artifact</span>
+          <span class="action-sub">Turn the next useful synthesis into something durable and browser-facing.</span>
+        </a>
+      </section>
     </section>
 
     <section class="grid">
@@ -508,6 +537,31 @@
   </main>
   <script src="assets/js/style-toggle.js"></script>
   <script>
+    const actionStrip = document.getElementById('action-strip');
+    if (actionStrip) {
+      let isDown = false;
+      let startX = 0;
+      let scrollLeft = 0;
+      actionStrip.addEventListener('pointerdown', (event) => {
+        isDown = true;
+        actionStrip.classList.add('dragging');
+        startX = event.pageX;
+        scrollLeft = actionStrip.scrollLeft;
+      });
+      const stopDrag = () => {
+        isDown = false;
+        actionStrip.classList.remove('dragging');
+      };
+      actionStrip.addEventListener('pointerleave', stopDrag);
+      actionStrip.addEventListener('pointerup', stopDrag);
+      actionStrip.addEventListener('pointercancel', stopDrag);
+      actionStrip.addEventListener('pointermove', (event) => {
+        if (!isDown) return;
+        event.preventDefault();
+        const walk = event.pageX - startX;
+        actionStrip.scrollLeft = scrollLeft - walk;
+      });
+    }
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
