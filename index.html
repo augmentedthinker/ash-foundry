@@ -298,6 +298,30 @@
           <span class="action-verb"><span class="dot dot-cyan"></span> Ship Artifact</span>
           <span class="action-sub">Turn the next useful synthesis into something durable and browser-facing.</span>
         </a>
+        <a href="./artifacts/augmented-thinker-x-daily-posts-2026-04-08/index.html" class="action-box action-clone" aria-hidden="true" tabindex="-1">
+          <span class="action-verb"><span class="dot dot-blue"></span> Scale X Presence</span>
+          <span class="action-sub">Draft next post. Shift focus from raw reach to interaction depth.</span>
+        </a>
+        <a href="./artifacts/hemispheres-entries/index.html" class="action-box action-clone" aria-hidden="true" tabindex="-1">
+          <span class="action-verb"><span class="dot dot-gold"></span> Execute Hemispheres</span>
+          <span class="action-sub">Run constrained debates to force concrete next moves, not just insight.</span>
+        </a>
+        <a href="./index.html" class="action-box action-clone" aria-hidden="true" tabindex="-1">
+          <span class="action-verb"><span class="dot dot-green"></span> Compress Architecture</span>
+          <span class="action-sub">Prune stale pages. Route active artifact conclusions back to memory.</span>
+        </a>
+        <a href="./artifacts/thinker-x-metrics-2026-04-10/index.html" class="action-box action-clone" aria-hidden="true" tabindex="-1">
+          <span class="action-verb"><span class="dot dot-rose"></span> Review Metrics</span>
+          <span class="action-sub">Compare the latest analytics snapshot and decide what to change next.</span>
+        </a>
+        <a href="./sources/daily-memory/index.html" class="action-box action-clone" aria-hidden="true" tabindex="-1">
+          <span class="action-verb"><span class="dot dot-violet"></span> Push Memory</span>
+          <span class="action-sub">Capture what mattered today before it dissolves into scrollback.</span>
+        </a>
+        <a href="./artifacts/session-artifacts-archive/index.html" class="action-box action-clone" aria-hidden="true" tabindex="-1">
+          <span class="action-verb"><span class="dot dot-cyan"></span> Ship Artifact</span>
+          <span class="action-sub">Turn the next useful synthesis into something durable and browser-facing.</span>
+        </a>
       </section>
     </section>
 
@@ -545,6 +569,20 @@
       let startX = 0;
       let scrollLeft = 0;
       let dragMoved = false;
+      const originals = Array.from(actionStrip.querySelectorAll('.action-box:not(.action-clone)'));
+      const loopPoint = originals.length ? originals[0].offsetWidth * originals.length + 14 * (originals.length - 1) : 0;
+      const normalizeLoop = () => {
+        if (!loopPoint) return;
+        if (actionStrip.scrollLeft <= 0) {
+          actionStrip.scrollLeft += loopPoint;
+        } else if (actionStrip.scrollLeft >= loopPoint * 2 - actionStrip.clientWidth) {
+          actionStrip.scrollLeft -= loopPoint;
+        }
+      };
+      if (loopPoint) actionStrip.scrollLeft = loopPoint;
+      actionStrip.addEventListener('scroll', () => {
+        normalizeLoop();
+      });
       actionStrip.addEventListener('pointerdown', (event) => {
         isDown = true;
         dragMoved = false;
@@ -568,7 +606,7 @@
       });
       actionStrip.querySelectorAll('.action-box').forEach((box) => {
         box.addEventListener('click', (event) => {
-          if (dragMoved) {
+          if (dragMoved || box.classList.contains('action-clone')) {
             event.preventDefault();
             dragMoved = false;
           }
