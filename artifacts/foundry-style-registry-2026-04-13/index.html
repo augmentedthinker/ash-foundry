@@ -8,7 +8,8 @@
   <style>
     .registry-shell{max-width:900px}
     .style-card{display:flex;gap:20px;padding:20px;border-radius:18px;background:rgba(20,22,26,.4);border:1px solid rgba(255,255,255,.08);margin-bottom:16px}
-    .style-preview{width:120px;height:120px;border-radius:12px;background:rgba(255,255,255,.05);flex-shrink:0;border:1px solid rgba(255,255,255,.08)}
+    .style-preview{width:120px;height:120px;border-radius:12px;background:rgba(255,255,255,.05);flex-shrink:0;border:1px solid rgba(255,255,255,.08);cursor:pointer;transition:transform .2s ease}
+    .style-preview:hover{transform:scale(1.05)}
     .style-info{flex:1}
     .style-info strong{display:block;font-size:1.1rem;color:#f8f2ea;margin-bottom:6px}
     .style-info span{display:block;color:rgba(245,239,231,.72);line-height:1.6;font-size:.92rem}
@@ -32,7 +33,7 @@
 
     <section class="section">
       <div class="style-card">
-        <div class="style-preview" style="background:url('../../assets/images/ash-foundry-core-sample.jpg') center/cover"></div>
+        <a href="../../assets/images/ash-foundry-core-sample.jpg" target="_blank" class="style-preview" style="background:url('../../assets/images/ash-foundry-core-sample.jpg') center/cover"></a>
         <div class="style-info">
           <strong>Ash Foundry Core</strong>
           <span>The current established look: cinematic, high-contrast, frontier-tech. Deep charcoals, ember gold and soft blue highlights. Strategic, data-driven, and emotionally legible.</span>
