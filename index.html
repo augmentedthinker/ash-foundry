@@ -170,15 +170,49 @@
       0%{transform:translate3d(0,0,0)}
       100%{transform:translate3d(0,-8px,0)}
     }
+    .active-fronts{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:14px;
+      margin:0 0 28px;
+      padding:18px;
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:28px;
+      background:linear-gradient(180deg, rgba(15,14,18,.92), rgba(10,10,12,.84));
+      box-shadow:0 20px 50px rgba(0,0,0,.18);
+    }
+    .active-front{
+      padding:18px 18px 16px;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.025);
+    }
+    .active-front h3{margin:8px 0 8px;font-size:1.05rem;color:#f8f2ea}
+    .active-front p{margin:0 0 10px;color:rgba(245,239,231,.82);line-height:1.7}
+    .active-front ul{margin:0;padding-left:18px;color:rgba(245,239,231,.74);line-height:1.7}
+    .active-front .button-link{margin-top:12px}
+    .active-fronts-head{
+      grid-column:1 / -1;
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      align-items:end;
+      flex-wrap:wrap;
+      margin-bottom:2px;
+    }
+    .active-fronts-head p{margin:6px 0 0;color:rgba(245,239,231,.72);max-width:46rem;line-height:1.75}
     @media (max-width: 980px){
       .hero-panels{grid-template-columns:1fr}
       .hero-threshold{min-height:72vh}
+      .active-fronts{grid-template-columns:1fr}
     }
     @media (max-width: 680px){
       .immersive-wrap{padding:14px 14px 30px}
       .immersive-hero-shell{border-radius:26px}
       .hero-glass-card{padding:18px}
       .hero-threshold-title{max-width:12ch}
+      .active-fronts{padding:14px}
+      .active-front{padding:16px}
     }
   </style>
 </head>
