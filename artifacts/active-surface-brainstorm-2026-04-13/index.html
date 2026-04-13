@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Active Surface Brainstorm · 2026-04-13</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+  <style>
+    .brainstorm-shell{max-width:900px}
+    .idea-list{display:grid;gap:12px;margin-top:24px}
+    .idea-card{padding:18px;border-radius:16px;background:rgba(20,22,26,.4);border:1px solid rgba(255,255,255,.08);display:flex;align-items:flex-start;gap:16px}
+    .idea-index{font-family:monospace;color:rgba(245,239,231,.4);font-size:1.1rem;padding-top:2px}
+    .idea-body strong{display:block;margin-bottom:4px;color:#f8f2ea}
+    .idea-body span{color:rgba(245,239,231,.72);line-height:1.6}
+  </style>
+</head>
+<body class="foundry-page">
+  <main class="wrap brainstorm-shell">
+    <header class="topbar">
+      <div class="left">
+        <a href="../../index.html">← Ash Foundry</a>
+        <a href="../session-artifacts-archive/index.html">Session Artifacts</a>
+      </div>
+    </header>
+
+    <section class="hero hero-compact">
+      <p class="eyebrow">Session Artifact · Strategy Surface</p>
+      <h1 class="h1-compact">Active Surface Brainstorm</h1>
+      <p class="sub">20 candidate actions for the homepage "Active Surface" carousel. These represent concrete, load-bearing lanes—not just moods.</p>
+    </section>
+
+    <section class="section">
+      <div class="idea-list" id="idea-list">
+        <!-- 20 ideas inserted via script or static -->
+      </div>
+    </section>
+  </main>
+  <script>
+    const ideas = [
+      ["Sync X Analytics", "Deep-dive the latest metrics and adjust posting strategy."],
+      ["Audit Foundry Stale-ness", "Prune 5 pages that haven't been touched in over a month."],
+      ["Capture Memory Fragment", "Force-push the day's raw notes into a durable artifact."],
+      ["Hemispheres: Lens Rotation", "Pick a challenging lens and debate a current project pressure."],
+      ["Ship Artifact Conclusion", "Take a draft artifact and turn it into a final browser-facing page."],
+      ["Review Standing Goals", "Compare current performance against our X-cadence and growth goals."],
+      ["Process Telegram Inbound", "Triage new messages into tasks, memories, or Foundry content."],
+      ["Optimize Action Strip", "Refine the ordering or visibility of the homepage action cards."],
+      ["Sketch System Flow", "Use the Simple Paint Studio to map a current process bottleneck."],
+      ["Synthesize Weekly Trend", "Compress the last 7 days of Foundry activity into one insight."],
+      ["Check CI/CD Status", "Verify deployment health of the latest GitHub Pages push."],
+      ["Draft Public Primer", "Create a new entry for the Foundry's public-facing awareness set."],
+      ["Audit External Reach", "Check mentions or replies outside of our direct X loop."],
+      ["Brainstorm Metric 2.0", "Design a new way to visualize 'Active Surface' progress."],
+      ["Rotate Hemispheres Lens", "Select the next lens for a challenging internal debate."],
+      ["Prune Media Asset Folder", "Clean out unused images or temp-uploads from the media bank."],
+      ["Update Foundry Readme", "Ensure the documentation matches our current architectural stance."],
+      ["Refine Posting Protocol", "Review and tighten the X drafting or publication checklist."],
+      ["Identify Stalled Loop", "Find a project lane that feels active but shows no visible output."],
+      ["Reset Foundry State", "If the system feels cluttered, reset and re-initialize the baseline."]
+    ];
+    
+    const list = document.getElementById('idea-list');
+    ideas.forEach((idea, idx) => {
+      const card = document.createElement('div');
+      card.className = 'idea-card';
+      card.innerHTML = `<div class="idea-index">${(idx+1).toString().padStart(2, '0')}</div>
+                        <div class="idea-body"><strong>${idea[0]}</strong><span>${idea[1]}</span></div>`;
+      list.appendChild(card);
+    });
+  </script>
+</body>
+</html>
