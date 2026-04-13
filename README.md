@@ -230,16 +230,6 @@ Current documented skill pages:
 
 This lane is less about bragging and more about recoverability. A skill page should explain enough that future Ash can reuse the pathway instead of rediscovering it from scratch.
 
-### 11. Learning Path & Capability Horizon
-This lane holds future-facing growth, capability ambitions, and strategic next moves once a skill stops being merely recovered and becomes part of a broader trajectory.
-
-Current pages:
-- `artifacts/next-steps-2026-04-06/index.html`
-- `artifacts/skill-web-capabilities-brainstorm-2026-04-07/index.html`
-- `artifacts/ash-aspirations-2026-04-08/index.html`
-
-This lane matters because it preserves the horizon, not just the current toolbox.
-
 ## Canonical source mirrors
 
 Ash Foundry includes hosted mirrors of several workspace source files.
