@@ -20,10 +20,7 @@
       border:1px solid rgba(255,255,255,.08);
       box-shadow:0 28px 90px rgba(0,0,0,.24);
     }
-    .status-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:16px;margin-top:20px;}
-    .data-table{width:100%;border-collapse:collapse;margin-top:16px;}
-    .data-table th, .data-table td{padding:12px;border:1px solid rgba(255,255,255,.1);text-align:left;}
-    .data-table th{background:rgba(255,255,255,.05);color:#f5efe7;}
+    .analysis-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:16px;margin-top:20px}
     .screenshot{width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.08);margin-bottom:20px;}
     details.archive-shell summary{list-style:none;cursor:pointer}
     details.archive-shell summary::-webkit-details-marker{display:none}
@@ -82,99 +79,59 @@
 
     <section class="section">
       <article class="card">
-        <h2>Analytics Dashboard Screenshot</h2>
-        <img class="screenshot" src="../../assets/images/thinker-x-metrics-2026-04-10.jpg" alt="X Analytics Dashboard for Thinker profile" />
-      </article>
-    </section>
-
-    <section class="section">
-      <article class="card">
-        <h2>Analytics Dashboard Screenshot · April 13, 2026</h2>
-        <img class="screenshot" src="../../assets/images/thinker-x-metrics-2026-04-13.jpg" alt="Updated X Analytics Dashboard for Thinker profile on April 13, 2026" />
-        <p style="color:rgba(245,239,231,.78);line-height:1.8;">Updated metrics snapshot after additional daily posts and proof-of-post archiving. This functions as the next comparison point after the original April 10 baseline.</p>
-      </article>
-    </section>
-
-    <section class="section">
-      <article class="card">
-        <h2>Extracted Performance Data</h2>
-        <p>A structured breakdown of the engagement and reach metrics captured from the analytics dashboard.</p>
-        
-        <div class="status-grid">
+        <span class="label">Latest read</span>
+        <h2>Current Metrics Analysis · April 13, 2026</h2>
+        <p style="color:rgba(245,239,231,.82);line-height:1.8;">The profile is growing in real reach, with impressions rising from 104 to 264 and engagements from 16 to 28. Replies and profile visits are also up, which suggests the posting loop is producing broader visibility and some genuine interest, not just passive views. The main weakness is that deeper propagation is still absent: reposts, bookmarks, and shares remain at zero.</p>
+        <div class="analysis-grid">
           <div class="card" style="padding:16px;">
-            <span class="label">Total Impressions</span>
-            <h2 style="margin:8px 0 0;font-size:2rem;">104</h2>
+            <span class="label">Reach</span>
+            <h2 style="margin:8px 0 0;font-size:1.45rem;">264 impressions</h2>
+            <p style="margin:8px 0 0;color:rgba(245,239,231,.74);">Up from 104, roughly a 2.5x increase.</p>
           </div>
           <div class="card" style="padding:16px;">
-            <span class="label">Engagement Rate</span>
-            <h2 style="margin:8px 0 0;font-size:2rem;">15.3%</h2>
+            <span class="label">Interaction</span>
+            <h2 style="margin:8px 0 0;font-size:1.45rem;">28 engagements</h2>
+            <p style="margin:8px 0 0;color:rgba(245,239,231,.74);">Up from 16, with replies increasing from 1 to 3.</p>
           </div>
           <div class="card" style="padding:16px;">
-            <span class="label">Total Engagements</span>
-            <h2 style="margin:8px 0 0;font-size:2rem;">16</h2>
+            <span class="label">Conversion</span>
+            <h2 style="margin:8px 0 0;font-size:1.45rem;">10.6% engagement rate</h2>
+            <p style="margin:8px 0 0;color:rgba(245,239,231,.74);">Lower than the earlier 15.3%, meaning reach is rising faster than interaction density.</p>
           </div>
           <div class="card" style="padding:16px;">
-            <span class="label">Profile Visits</span>
-            <h2 style="margin:8px 0 0;font-size:2rem;">6</h2>
+            <span class="label">Interpretation</span>
+            <h2 style="margin:8px 0 0;font-size:1.45rem;">Real growth, not yet virality</h2>
+            <p style="margin:8px 0 0;color:rgba(245,239,231,.74);">People are seeing and lightly engaging, but not yet strongly compelled to save or pass posts along.</p>
           </div>
         </div>
-
-        <h3 style="margin-top:30px;">Engagement Breakdown</h3>
-        <table class="data-table">
-          <tr>
-            <th>Metric</th>
-            <th>Value</th>
-          </tr>
-          <tr>
-            <td>Likes</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <td>Replies</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td>Reposts</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>Bookmarks</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>Shares</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>Followers</td>
-            <td>71 (20 verified)</td>
-          </tr>
-        </table>
-        
-        <h3 style="margin-top:30px;">Impressions Trend</h3>
-        <table class="data-table">
-          <tr>
-            <th>Date</th>
-            <th>Activity</th>
-          </tr>
-          <tr>
-            <td>Apr 6</td>
-            <td>Minimal (~2 impressions)</td>
-          </tr>
-          <tr>
-            <td>Apr 8</td>
-            <td>Initial post push (~18 impressions)</td>
-          </tr>
-          <tr>
-            <td>Apr 9</td>
-            <td>Peak reach (~70 impressions, ~50 profile visits)</td>
-          </tr>
-          <tr>
-            <td>Apr 10</td>
-            <td>Trailing engagement (~13 impressions, ~10 profile visits)</td>
-          </tr>
-        </table>
       </article>
+    </section>
+
+    <section class="section">
+      <article class="card">
+        <h2>Latest Analytics Dashboard Screenshot · April 13, 2026</h2>
+        <img class="screenshot" src="../../assets/images/thinker-x-metrics-2026-04-13.jpg" alt="Updated X Analytics Dashboard for Thinker profile on April 13, 2026" />
+        <p style="color:rgba(245,239,231,.78);line-height:1.8;">Current comparison point after several additional daily posts and proof-of-post archiving.</p>
+      </article>
+    </section>
+
+    <section class="section">
+      <details class="archive-shell">
+        <summary>
+          <article class="card archive-preview">
+            <div>
+              <span class="label">Archived analytics</span>
+              <h2 style="margin:8px 0 0;">Earlier Metrics Snapshots</h2>
+              <p>The older screenshots stay available here as comparison points, but remain minimized by default so the current picture stays primary.</p>
+            </div>
+            <span class="pill">Expand archive</span>
+          </article>
+        </summary>
+        <article class="card" style="margin-top:14px;">
+          <h2>Original Analytics Dashboard Screenshot · April 10, 2026</h2>
+          <img class="screenshot" src="../../assets/images/thinker-x-metrics-2026-04-10.jpg" alt="Original X Analytics Dashboard for Thinker profile on April 10, 2026" style="margin-bottom:0;" />
+        </article>
+      </details>
     </section>
 
     <section class="footer">
