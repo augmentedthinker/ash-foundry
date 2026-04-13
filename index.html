@@ -191,27 +191,14 @@
     .active-front p{margin:0 0 10px;color:rgba(245,239,231,.82);line-height:1.7}
     .active-front ul{margin:0;padding-left:18px;color:rgba(245,239,231,.74);line-height:1.7}
     .active-front .button-link{margin-top:12px}
-    .front-metric-hero{
-      position:relative;
-      overflow:hidden;
-      min-height:220px;
-      margin:12px 0 14px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,.08);
-      background:
-        linear-gradient(180deg, rgba(8,10,12,.16), rgba(8,10,12,.82)),
-        url('./assets/images/thinker-x-active-front-banner-2026-04-13.jpg') center/cover no-repeat,
-        #0a0c10;
-      display:flex;
-      align-items:flex-end;
-      padding:16px;
-    }
-    .front-metric-overlay{width:100%}
-    .front-metric-kicker{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,239,231,.78)}
-    .front-metric-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:10px}
-    .front-metric-box{padding:10px 12px;border-radius:14px;background:rgba(8,10,12,.56);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-    .front-metric-box strong{display:block;font-size:1.3rem;line-height:1.1;color:#fff8f1}
-    .front-metric-box span{display:block;margin-top:4px;font-size:.82rem;line-height:1.45;color:rgba(245,239,231,.74)}
+    .front-metric-stack{display:grid;gap:12px;margin:12px 0 0}
+    .front-metric-pill{padding:14px 16px;border-radius:18px;border:1px solid rgba(255,255,255,.08)}
+    .front-metric-pill.good{background:rgba(77,163,96,.12);border-color:rgba(110,214,132,.24)}
+    .front-metric-pill.warn{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.08)}
+    .front-metric-pill strong{display:block;font-size:1.3rem;line-height:1.15}
+    .front-metric-pill.good strong{color:#ddf8df}
+    .front-metric-pill.warn strong{color:#fff6ec}
+    .front-metric-pill span{display:block;margin-top:6px;color:rgba(245,239,231,.78);line-height:1.55;font-size:.95rem}
     .active-fronts-head{
       grid-column:1 / -1;
       display:flex;
@@ -282,26 +269,22 @@
       <article class="active-front">
         <span class="label">Measured frontier</span>
         <h3>Thinker on X</h3>
-        <div class="front-metric-hero">
-          <div class="front-metric-overlay">
-            <div class="front-metric-kicker">Current campaign read</div>
-            <div class="front-metric-grid">
-              <div class="front-metric-box">
-                <strong>264</strong>
-                <span>impressions<br>↑ from 104</span>
-              </div>
-              <div class="front-metric-box">
-                <strong>28</strong>
-                <span>engagements<br>↑ from 16</span>
-              </div>
-              <div class="front-metric-box">
-                <strong>10.6%</strong>
-                <span>engagement rate<br>↓ from 15.3%</span>
-              </div>
-            </div>
+        <p style="margin-bottom:12px;">The cleanest live growth loop in the system right now.</p>
+        <div class="front-metric-stack">
+          <div class="front-metric-pill good">
+            <strong>✅ 264 impressions</strong>
+            <span>Up from 104, about 2.5x higher.</span>
+          </div>
+          <div class="front-metric-pill good">
+            <strong>✅ 28 engagements</strong>
+            <span>Up from 16, with replies rising from 1 to 3.</span>
+          </div>
+          <div class="front-metric-pill warn">
+            <strong>⚠️ 10.6% engagement rate</strong>
+            <span>Down from 15.3%, so reach is outpacing interaction density.</span>
           </div>
         </div>
-        <p>The first truly measurable public-growth loop in the system. Reach is climbing hard. The next step is turning visibility into stronger save/share behavior.</p>
+        <p style="margin-top:12px;">Next target: posts people save, share, or repost, not just read.</p>
         <a class="button-link" href="./artifacts/thinker-x-metrics-2026-04-10/index.html">Open X metrics</a>
       </article>
 
