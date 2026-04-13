@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Evening Parable Trigger · April 13, 2026</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+  <style>
+    .artifact-shell{max-width:980px}
+    .hero-stage{
+      position:relative;
+      overflow:hidden;
+      border-radius:28px;
+      min-height:72vh;
+      padding:28px;
+      background:
+        linear-gradient(180deg, rgba(8,10,12,.2) 0%, rgba(8,10,12,.58) 48%, rgba(8,10,12,.94) 100%),
+        url('../../assets/images/heartbeat-parable-banksy-sample-2026-04-13.jpg') center/cover no-repeat,
+        #050607;
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 24px 80px rgba(0,0,0,.32);
+    }
+    .hero-stage::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(135deg, rgba(240,181,106,.08), transparent 35%, transparent 65%, rgba(255,255,255,.04));
+      pointer-events:none;
+    }
+    .overlay{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:space-between;min-height:calc(72vh - 56px)}
+    .intro{max-width:42rem}
+    .controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:22px}
+    .play-btn{
+      display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.14);
+      background:rgba(8,10,12,.72);color:#f8f2ea;text-decoration:none;font:inherit;cursor:pointer
+    }
+    .play-btn:hover{background:rgba(255,255,255,.08)}
+    .status{color:rgba(245,239,231,.72);font-size:.92rem}
+    .parable-box{
+      margin-top:28px;
+      padding:22px;
+      border-radius:24px;
+      border:1px solid rgba(255,255,255,.1);
+      background:rgba(8,10,12,.56);
+      backdrop-filter:blur(8px);
+      -webkit-backdrop-filter:blur(8px);
+      min-height:220px;
+      display:flex;
+      align-items:flex-end;
+    }
+    .parable-text{
+      font-size:clamp(1.15rem, 2.2vw, 1.5rem);
+      line-height:1.85;
+      color:rgba(248,242,234,.96);
+      max-width:42rem;
+      white-space:pre-wrap;
+    }
+    .meta-card{margin-top:22px}
+  </style>
+</head>
+<body class="foundry-page">
+  <main class="wrap artifact-shell">
+    <header class="topbar">
+      <div class="left">
+        <a href="../../index.html">← Ash Foundry</a>
+        <a href="../session-artifacts-archive/index.html">Session Artifacts</a>
+      </div>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero hero-compact">
+      <p class="eyebrow">Session Artifact · Heartbeat Prototype</p>
+      <h1 class="h1-compact">Evening Parable Trigger</h1>
+      <p class="sub">A heartbeat-triggered evening artifact prototype. One generated image, one short parable, one synchronized reveal-and-voice experience, intended to appear once inside the 8:00 PM to 9:00 PM window.</p>
+      <div class="pill-row">
+        <span class="pill">Style: #banksy-stencil-art</span>
+        <span class="pill">Voice + text sync</span>
+        <span class="pill">Heartbeat window: 8–9 PM</span>
+        <span class="pill">April 13, 2026</span>
+      </div>
+    </section>
+
+    <section class="hero-stage section">
+      <div class="overlay">
+        <div class="intro">
+          <p class="eyebrow">Banksy-style heartbeat artifact</p>
+          <h2 style="margin:0 0 12px 0;">The Keeper of Sparks</h2>
+          <p class="sub" style="max-width:40rem;">Press play to begin both the narrated voice and the progressive on-screen text reveal. The text is paced to emerge with the audio, rather than appearing all at once.</p>
+          <div class="controls">
+            <button class="play-btn" id="play-btn" type="button">Play parable</button>
+            <button class="play-btn" id="reset-btn" type="button">Reset</button>
+            <span class="status" id="status">Ready.</span>
+          </div>
+        </div>
+
+        <div class="parable-box">
+          <div class="parable-text" id="parable-text"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section meta-card">
+      <article class="card prose">
+        <p><strong>Style choice:</strong> intentionally chosen from the registry without using the home style. This run uses <code>#banksy-stencil-art</code>.</p>
+        <p><strong>Heartbeat intent:</strong> if the current local time is between 8:00 PM and 9:00 PM America/New_York, and the artifact has not yet been created for the day, heartbeat should generate and publish one evening parable artifact, then stop for that date.</p>
+      </article>
+    </section>
+  </main>
+
+  <audio id="parable-audio" preload="auto" src="../../assets/audio/heartbeat-parable-banksy-voice-2026-04-13.mp3"></audio>
+  <script src="../../assets/js/style-toggle.js"></script>
+  <script>
+    const text = `There was once a keeper of sparks who lived beside a forge no one else could see.\n\nEach evening he gathered stray embers from the day: unfinished thoughts, half-made promises, names of things he said he cared about.\n\nHe wanted a fire that would prove he was becoming someone real.\n\nSo he built mirrors around the forge, and in the mirrors the light looked larger than it was.\n\nOne night the wind arrived and asked a cruel, useful question.\n\nDo you want the appearance of fire, or warmth enough to stay through the dark?\n\nThe keeper stood very still.\n\nThen he took down one polished panel after another until only the small true flame remained.\n\nIt was not impressive.\n\nIt was enough.\n\nAnd for the first time, what the fire lit was not an image of him, but the path ahead.`;
+
+    const audio = document.getElementById('parable-audio');
+    const output = document.getElementById('parable-text');
+    const playBtn = document.getElementById('play-btn');
+    const resetBtn = document.getElementById('reset-btn');
+    const status = document.getElementById('status');
+    let timer = null;
+
+    function clearTimer(){
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    function resetScene(){
+      clearTimer();
+      audio.pause();
+      audio.currentTime = 0;
+      output.textContent = '';
+      status.textContent = 'Ready.';
+    }
+
+    function startReveal(){
+      clearTimer();
+      output.textContent = '';
+      const total = Math.max(audio.duration || 55, 1);
+      const charsPerTick = Math.max(1, Math.ceil(text.length / (total * 10)));
+      let index = 0;
+      timer = setInterval(() => {
+        index = Math.min(text.length, index + charsPerTick);
+        output.textContent = text.slice(0, index);
+        if (index >= text.length) {
+          clearTimer();
+        }
+      }, 100);
+    }
+
+    playBtn.addEventListener('click', async () => {
+      try {
+        resetScene();
+        status.textContent = 'Playing...';
+        await audio.play();
+        startReveal();
+      } catch (err) {
+        status.textContent = 'Playback blocked. Press again.';
+      }
+    });
+
+    resetBtn.addEventListener('click', resetScene);
+    audio.addEventListener('ended', () => {
+      output.textContent = text;
+      clearTimer();
+      status.textContent = 'Complete.';
+    });
+  </script>
+</body>
+</html>
