@@ -197,6 +197,8 @@
       scroll-snap-align:start;
       min-height:104px;
       user-select:none;
+      -webkit-user-drag:none;
+      touch-action:pan-x;
     }
     .action-box:hover {
       transform: translateY(-2px);
@@ -542,8 +544,10 @@
       let isDown = false;
       let startX = 0;
       let scrollLeft = 0;
+      let dragMoved = false;
       actionStrip.addEventListener('pointerdown', (event) => {
         isDown = true;
+        dragMoved = false;
         actionStrip.classList.add('dragging');
         startX = event.pageX;
         scrollLeft = actionStrip.scrollLeft;
@@ -557,9 +561,18 @@
       actionStrip.addEventListener('pointercancel', stopDrag);
       actionStrip.addEventListener('pointermove', (event) => {
         if (!isDown) return;
-        event.preventDefault();
         const walk = event.pageX - startX;
+        if (Math.abs(walk) > 6) dragMoved = true;
+        event.preventDefault();
         actionStrip.scrollLeft = scrollLeft - walk;
+      });
+      actionStrip.querySelectorAll('.action-box').forEach((box) => {
+        box.addEventListener('click', (event) => {
+          if (dragMoved) {
+            event.preventDefault();
+            dragMoved = false;
+          }
+        });
       });
     }
     const observer = new IntersectionObserver((entries) => {
