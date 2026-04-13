@@ -33,6 +33,8 @@ The central shift is this: Ash Foundry is becoming less like an archive and more
 
 The front page is intentionally organized into lanes rather than a flat archive.
 
+At the top of the homepage, the site now also includes an **Active Fronts** strip. This functions less like a mood board and more like a compact attention board: the most current lanes under pressure, ideally shown through measurable signals, visible progress, and explicit next-step framing. The goal is for this strip to become the clearest at-a-glance visibility layer for what is actually moving right now.
+
 ### 1. Ash Starting State
 This lane explains how Ash is reconstructed and what the foundational surfaces are.
 
@@ -174,6 +176,8 @@ This lane now functions as the most important diagnostic and forensic surface fo
 ### 7. X / Social Presence
 This lane tracks Christopher’s reactivated **Augmented Thinker** X profile and its role inside the broader Ash/Christopher ecosystem.
 
+This lane is currently one of the clearest candidates for the Active Fronts strip because it now has a real measurable loop: daily publishing cadence, archived proof-of-post screenshots, and analytics snapshots that make growth legible instead of merely felt.
+
 Current key pages:
 - `artifacts/augmented-thinker-x-profile-2026-04-08/index.html`
 - `artifacts/thinker-x-post-brainstorm-2026-04-10/index.html`
@@ -181,6 +185,8 @@ Current key pages:
 - `artifacts/thinker-x-metrics-2026-04-10/index.html`
 
 This lane matters because it extends Ash Foundry from introspection and continuity into outward-facing publishing support, drafting loops, reply support, and metrics tracking.
+
+Right now, this is also the strongest example of a browser-facing improvement loop with actual external evidence. That makes it strategically important, not just aesthetically interesting.
 
 ### 8. Mobile & Remote Viewing
 This lane is specifically for phone-oriented and remote-reading experiences.
@@ -253,6 +259,8 @@ These pages matter because they let browser-facing continuity stay tied to the a
 ## Hero / front-page direction
 
 The Foundry homepage hero has continued evolving into a threshold rather than a simple banner.
+
+Beneath the hero, the **Active Fronts** strip is evolving into a compact score-and-attention surface. Instead of highlighting only broad themes, it should increasingly foreground the most important active lanes through metrics, concrete current-state summaries, and clear next pressures. In practice, it is becoming the homepage's most "in your face" visibility layer for what deserves attention now.
 
 It now uses:
 - a stronger immersive hero shell with forge imagery and grid overlays
