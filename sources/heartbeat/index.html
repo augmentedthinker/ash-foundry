@@ -74,13 +74,14 @@ If it does not already exist:
 6. Add the new artifact to the Session Artifacts archive and surface it from the homepage session-artifacts lane if appropriate.
 7. Update the heartbeat source mirror page so this preset appears as the current preset with a short explanation.
 8. Push the Foundry changes live to GitHub.
+9. After the push succeeds, send exactly one user-visible Telegram message to chat 8546776113 saying the evening parable artifact is live and include its public GitHub Pages link.
 
 Do all of this only once for the date.
 Do not create more than one such artifact in the same day.
-Do not send a separate chat message unless something fails.
+Do not send more than one such Telegram notification for the same daily artifact.
 Do not respond only inside the internal session transcript.
 </pre></div>
-      <div class="result-note"><strong>What it does:</strong> During the 8:30 PM to 9:30 PM window, this preset creates exactly one evening parable artifact for the day if it does not already exist. It forces a non-core style pick from the image-style registry, then pairs one generated image with one narrated parable and one synchronized text reveal surface, publishes it into the Session Artifacts lane, updates the heartbeat mirror, and pushes everything live. <strong>Why this version exists:</strong> it turns heartbeat into a once-only evening ritual that produces a real browser-facing artifact instead of a plain reminder.</div>
+      <div class="result-note"><strong>What it does:</strong> During the 8:30 PM to 9:30 PM window, this preset creates exactly one evening parable artifact for the day if it does not already exist. It forces a non-core style pick from the image-style registry, then pairs one generated image with one narrated parable and one synchronized text reveal surface, publishes it into the Session Artifacts lane, updates the heartbeat mirror, pushes everything live, and then sends one Telegram message with the public live link. <strong>Why this version exists:</strong> it turns heartbeat into a once-only evening ritual that produces a real browser-facing artifact instead of a plain reminder.</div>
     </section>
     <section class="code heartbeat-file archived">
       <button class="heartbeat-toggle" type="button" aria-expanded="false">
