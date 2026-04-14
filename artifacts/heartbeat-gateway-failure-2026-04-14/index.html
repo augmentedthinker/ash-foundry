@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Heartbeat Failure: The Gateway Zombie · 2026-04-14</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a></div>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero hero-compact">
+      <p class="eyebrow">Heartbeat &amp; Initiative · diagnostic note</p>
+      <h1 class="h1-compact">Heartbeat Failure: The Gateway Zombie</h1>
+      <p class="sub">A detailed note on why the April 13 evening parable heartbeat failed to run, the trail we followed to prove it, and the infrastructure lockup we found at the bottom.</p>
+      <div class="pill-row"><span class="pill">Heartbeat</span><span class="pill">Gateway</span><span class="pill">Diagnostics</span><span class="pill">2026-04-14</span></div>
+    </section>
+
+    <section class="section">
+      <article class="quote">When the system is perfectly configured but the signal never arrives, stop looking at the rules and start looking at the engine.</article>
+    </section>
+
+    <section class="section">
+      <article class="card prose">
+        <p>On the evening of April 13, 2026, we deployed a new heartbeat preset designed to trigger only between 8:30 PM and 9:30 PM. Its job was to generate a "parable" artifact (image, voice, text), publish it to GitHub Pages, and send a Telegram notification. The window passed, but no artifact was created and no notification arrived.</p>
+        
+        <h3>1. Following the Evidence Trail</h3>
+        <p>The next morning, we set out to understand why it failed. Our earlier diagnostics (from April 9) proved that successful heartbeat runs do not leave traces in the main chat transcript. Instead, they run in <strong>isolated background sessions</strong> and leave dedicated <code>.jsonl</code> logs in <code>~/.openclaw/agents/main/sessions/</code>.</p>
+        <p>We searched the local session directory for any isolated sessions that fired during the 8:00 PM to 10:00 PM window on April 13.</p>
+        
+        <h3>2. The Missing Signal</h3>
+        <p>We found absolutely zero heartbeat runs. The only background sessions firing during that window were from the internal <code>Memory Dreaming Promotion</code> cron job. There was no trace of the heartbeat runner attempting to read <code>HEARTBEAT.md</code> or execute its logic. The instructions were correct, but the runner was simply absent.</p>
+
+        <h3>3. Discovering the Zombie Daemon</h3>
+        <p>Because the heartbeat relies on the OpenClaw Gateway scheduler to trigger periodic ticks, we moved our search from the application logs to the host OS processes. Running a simple <code>ps auxww | grep openclaw</code> revealed the true culprit:</p>
+        <p>The <code>openclaw-gateway</code> background daemon was in a zombie/hung state. It had been running since April 11th, had chewed through ~61% of available RAM (24GB), and had completely frozen. Because the scheduler was locked up, the heartbeat tick never fired at 8:30 PM.</p>
+
+        <h3>4. Resolution</h3>
+        <p>The issue was not a configuration error, a prompt problem, or a silent model fallback. It was a straight infrastructure failure. We ran <code>openclaw gateway restart</code> to kill the hung process and bring the scheduler back online.</p>
+        <p><strong>Lesson:</strong> When expected autonomy fails to trigger entirely, check the daemon. Even the best logic cannot execute if the clock itself has stopped.</p>
+      </article>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>
