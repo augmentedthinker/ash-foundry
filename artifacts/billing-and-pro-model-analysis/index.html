@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>API Billing & Pro-Model Access</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a></div>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero hero-compact">
+      <p class="eyebrow">Strategic Analysis</p>
+      <h1 class="h1-compact">Billing, Pro-Models & The Expiry</h1>
+      <p class="sub">Deep dive into Gemini 3.1 Pro programmatic access, Google Cloud trial expiration, and our future-proofing strategy.</p>
+    </section>
+
+    <section class="section prose">
+      <div style="background: rgba(240,181,106,.08); padding: 2rem; border-radius: 16px; border: 1px solid rgba(240,181,106,.2);">
+        <h3 style="margin-top:0;">The Hard Reality</h3>
+        <p>Advanced models like <code>gemini-3.1-pro-preview</code> and its Custom Tools variants require a linked Cloud Billing account for programmatic API access. While you have a free $300 credit right now, once that trial expires in three days, <strong>the programmatic access to 3.1 Pro models will cease</strong> if no paid billing method is attached.</p>
+      </div>
+
+      <h3 style="margin-top: 2rem;">Why This Happens</h3>
+      <p>Google splits its ecosystem. Google AI Studio is the "front door" for testing, but once you use the API programmatically (as we do here in OpenClaw), Google bridges that access to the Google Cloud Platform (GCP). Even if you don't use other Cloud services, the API usage is metered and charged through the Cloud account associated with the project.</p>
+      
+      <p>Access to Pro-level "Preview" models is gated by this billing requirement. It is a control mechanism for Google to manage capacity and ensure data privacy (paid tiers guarantee your data isn't used for model training; free tiers do not).</p>
+
+      <h3 style="margin-top: 2rem;">Our Strategic Prognosis</h3>
+      <p>When the trial ends in 72 hours, we face a fork:</p>
+      <ul style="margin-bottom: 1.5rem;">
+        <li><strong>Path A: The Downgrade (Default):</strong> We lose programmatic access to Pro/Custom Tools and revert to the free-tier-eligible models (Flash/Flash-Lite). We lose the high-reasoning engine but remain fully functional within the "free ecosystem."</li>
+        <li><strong>Path B: The Paid Pivot:</strong> We attach a billing instrument and move to a Pay-As-You-Go model for the API. This maintains access but converts our research into a metered service.</li>
+        <li><strong>Path C: The Cloud-Free Myth:</strong> We verified this today: <strong>there is no way to bypass Cloud billing for these specific models.</strong> If you intend to stay "Cloud-free" and keep your commitment to not activating a paid account, we must accept the loss of programmatic 3.1 Pro access.</li>
+      </ul>
+
+      <h3 style="margin-top: 2rem;">Recommendations</h3>
+      <p>We need to treat this as an <strong>Architecture-Under-Constraint</strong> problem. I have already begun building "recovery lanes" (the learned skills workflows) that focus on Flash-level stability. We should use these final 3 days to:</p>
+      <ol>
+        <li>Test how much of our core Foundry architecture can be sustained by the <code>gemini-3.1-flash-lite-preview</code> model.</li>
+        <li>Archive our Pro-level reasoning threads (Hemispheres) while we still have access to the heavy engine.</li>
+      </ol>
+
+      <div class="pill-row" style="margin-top:24px;justify-content:flex-start;">
+        <span class="pill">Status: Architecture Under Constraint</span>
+        <span class="pill">April 16, 2026</span>
+      </div>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>
