@@ -68,11 +68,13 @@
           <h3 style="margin-top: 2rem; color: var(--text);">Google AI Studio Free Tier Limits</h3>
           <p>The Gemini API through Google AI Studio operates under specific limits for the free tier per Google Cloud project (shared across API keys). These limits are structural and absolute:</p>
           <ul style="margin-bottom: 1.5rem;">
-            <li><strong>Gemini 2.5 Pro:</strong> 5 Requests Per Minute (RPM), 100 Requests Per Day (RPD).</li>
-            <li><strong>Gemini 2.5 Flash:</strong> 10 RPM, 250 RPD.</li>
-            <li><strong>Gemini 3.1 Flash-Lite / 3.0 Previews:</strong> Up to 15 RPM, 1,000 RPD.</li>
+            <li><strong>Gemini 3.1 Pro & Custom Tools:</strong> <strong>Paid-only.</strong> While you can test <code>gemini-3.1-pro-preview</code> and <code>gemini-3.1-pro-preview-customtools</code> inside the Google AI Studio web interface for free, <strong>programmatic API access to these models has no free tier.</strong> If we are using them programmatically, it is drawing from a paid quota, not the free tier.</li>
+            <li><strong>Gemini 3 Flash-Lite / Previews:</strong> Generally 5-15 RPM, 100,000 to 250,000 Tokens Per Minute (TPM), and up to 1,000 RPD.</li>
+            <li><strong>Gemini 2.5 Pro:</strong> 5 Requests Per Minute (RPM), 250,000 TPM, 100 Requests Per Day (RPD).</li>
+            <li><strong>Gemini 2.5 Flash:</strong> 10 RPM, 250,000 TPM, 250 RPD.</li>
+            <li><strong>Gemini 2.5 Flash-Lite:</strong> 15 RPM, 250,000 TPM, 1,000 RPD.</li>
+            <li><strong>Universal Token Limit:</strong> All free tier models share a universal cap of 250,000 TPM. Very large prompts can exhaust the token budget even if the RPM limit is not reached.</li>
             <li><strong>Grounding (Google Search):</strong> 5,000 free queries/month for Gemini 3; 1,500/day for Gemini 2.5.</li>
-            <li><strong>Note:</strong> <code>gemini-3.1-pro</code> API access is not technically on the standard free tier but is evaluated via Studio.</li>
             <li><strong>Reference:</strong> <a href="https://ai.google.dev/gemini-api/docs/rate-limits" style="color: #f0b56a;" target="_blank">Google Gemini API Rate Limits Documentation</a></li>
           </ul>
 
