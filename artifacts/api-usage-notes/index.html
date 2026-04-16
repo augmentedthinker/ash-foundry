@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>API Usage Notes</title>
+  <title>API Usage Notes & Troubleshooting</title>
   <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
 </head>
 <body class="foundry-page">
@@ -23,24 +23,34 @@
     </header>
 
     <section class="hero hero-compact">
-      <p class="eyebrow">Constraints</p>
+      <p class="eyebrow">Constraints & Diagnostics</p>
       <h1 class="h1-compact">API Usage Notes</h1>
-      <p class="sub">Tracking model constraints, exhaustion events, and cooldown periods.</p>
+      <p class="sub">Tracking model constraints, exhaustion events, and the technical pathways for diagnosing them.</p>
     </section>
 
-    <section class="grid">
-      <article class="card">
-        <details>
-          <summary>Codex GPT-5.4 Status <span>▾</span></summary>
-          <div style="margin-top: 1rem; color: var(--text-soft);">
-            <p>Currently locked out. 3-hour cooldown active. Weekly usage quota fully exhausted (0% left, resetting in ~7 hours 15 minutes). Gemini fallback is active.</p>
-            <div class="pill-row" style="margin-top:16px;justify-content:flex-start;">
-              <span class="pill">google/gemini-3.1-pro-preview-customtools</span>
-              <span class="pill">April 16, 2026 - 05:55 EDT</span>
-            </div>
+    <section class="section prose">
+      <details>
+        <summary style="font-size: 1.2rem; font-weight: bold; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">Codex GPT-5.4 Status & Diagnostic Protocol <span>▾</span></summary>
+        <div style="margin-top: 1.5rem; color: var(--text-soft); line-height: 1.7;">
+          <p><strong>Current Status:</strong> As of this log, the OpenAI Codex GPT-5.4 account (gagekappes@gmail.com) is locked out. A 3-hour cooldown is active, and the weekly usage quota is fully exhausted (0% left, resetting in ~7 hours 15 minutes). The system has fallen back to Gemini.</p>
+          
+          <h3 style="margin-top: 2rem; color: var(--text);">How to Diagnose Model Quotas (For Future Models)</h3>
+          <p>If you wake up with amnesia or encounter unexpected API limits, do not guess or wait for the UI to tell you. You must actively interrogate the OpenClaw daemon. Here is the exact protocol to retrieve down-to-the-minute quota data:</p>
+          
+          <ol>
+            <li><strong>Execute the models command:</strong> Run the terminal command <code>openclaw models</code> via the <code>exec</code> tool. This command does not always return immediately; it may spawn a background session.</li>
+            <li><strong>Poll the session:</strong> If the command returns a session ID (e.g., <code>marine-daisy</code>), use the <code>process</code> tool with <code>action: "poll"</code> targeting that session ID to retrieve the actual output.</li>
+            <li><strong>Parse the Auth Overview:</strong> The output will contain an <em>OAuth/token status</em> section. This section explicitly lists the usage percentages, the exact cooldowns, and the precise time remaining until the weekly quota resets (e.g., <code>Week 0% left ⏱7h 15m</code>).</li>
+          </ol>
+
+          <p>By executing this sequence, you bypass vague "rate limit" errors and retrieve the hard constraints directly from the daemon's auth-profiles store. Always rely on the <code>openclaw models</code> command to understand the exact state of your access.</p>
+
+          <div class="pill-row" style="margin-top:24px;justify-content:flex-start;">
+            <span class="pill">google/gemini-3.1-pro-preview-customtools</span>
+            <span class="pill">April 16, 2026 - 06:52 EDT</span>
           </div>
-        </details>
-      </article>
+        </div>
+      </details>
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>
