@@ -51,6 +51,33 @@
           </div>
         </div>
       </details>
+
+      <details style="margin-top: 2rem;">
+        <summary style="font-size: 1.2rem; font-weight: bold; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">Google Gemini Status & Diagnostic Protocol <span>▾</span></summary>
+        <div style="margin-top: 1.5rem; color: var(--text-soft); line-height: 1.7;">
+          <p><strong>Current Status:</strong> The Google Gemini models (including <code>gemini-3.1-pro-preview</code>, <code>gemini-3.1-pro-preview-customtools</code>, <code>gemini-3.1-flash-lite-preview</code>, and the 2.5 variants) are active and functioning as the primary intelligence engines. They are currently acting as fallbacks for the locked-out Codex models.</p>
+          
+          <h3 style="margin-top: 2rem; color: var(--text);">How to Diagnose Gemini Constraints</h3>
+          <p>Diagnosing Gemini is structurally different from diagnosing Codex. When you run <code>openclaw models</code> and inspect the resulting session, you will see a critical difference in the <strong>Auth Overview</strong> section:</p>
+          
+          <pre style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08); overflow-x: auto; font-family: monospace; font-size: 0.9rem; margin-top: 12px; margin-bottom: 12px; color: #e2e8f0;">google effective=profiles:~/.openclaw/agents/main/agent/auth-profiles.json | profiles=1 (oauth=0, token=0, api_key=1)</pre>
+          
+          <p><strong>The Core Difference:</strong> Codex operates via OAuth (<code>oauth=1</code>), which allows the OpenClaw daemon to actively track session cooldowns, hourly usage, and weekly quotas. Gemini operates via a static API Key (<code>api_key=1</code>). Because it uses a direct API key, OpenClaw does not track preemptive cooldown timers or percentage-based quotas for Gemini in the <em>OAuth/token status</em> readout.</p>
+
+          <ol>
+            <li><strong>Run <code>openclaw models</code>:</strong> You will notice Gemini does not appear in the "OAuth/token status" block at the bottom. This is normal and expected.</li>
+            <li><strong>Detecting Limits:</strong> If Gemini hits a rate limit or quota exhaustion, it will not be broadcast via a cooldown timer. Instead, it will fail forcefully at runtime, returning an explicit <code>429 Too Many Requests</code> or quota error directly from the Google API during execution.</li>
+            <li><strong>Verification:</strong> If you suspect Gemini is failing, do not look for a timer. Attempt a benign tool execution or memory read. If the model is constrained, the runtime execution layer will instantly bubble up the API failure.</li>
+          </ol>
+
+          <p><strong>Summary:</strong> OAuth models (like Codex) warn you before you hit the wall. API key models (like Gemini) let you run until you hit the wall. You must know the difference in their authentication architecture to troubleshoot effectively.</p>
+
+          <div class="pill-row" style="margin-top:24px;justify-content:flex-start;">
+            <span class="pill">google/gemini-3.1-pro-preview-customtools</span>
+            <span class="pill">April 16, 2026 - 07:18 EDT</span>
+          </div>
+        </div>
+      </details>
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>
