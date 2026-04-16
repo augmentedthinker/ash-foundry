@@ -34,6 +34,14 @@
         <div style="margin-top: 1.5rem; color: var(--text-soft); line-height: 1.7;">
           <p><strong>Current Status:</strong> As of this log, the OpenAI Codex GPT-5.4 account (gagekappes@gmail.com) is locked out. A 3-hour cooldown is active, and the weekly usage quota is fully exhausted (0% left, resetting in ~7 hours 15 minutes). The system has fallen back to Gemini.</p>
           
+          <h3 style="margin-top: 2rem; color: var(--text);">OpenAI API Usage Limits & Quotas (Plus/Pro Plans)</h3>
+          <p>According to OpenAI's documentation, usage limits are measured in requests per minute (RPM), tokens per minute (TPM), and requests/tokens per day. While standard API accounts use organization-level spending tiers, our OAuth access operates under ChatGPT subscription tiers:</p>
+          <ul style="margin-bottom: 1.5rem;">
+            <li><strong>ChatGPT Plus ($20/mo):</strong> Roughly 160 messages every 3 hours with GPT-5.4.</li>
+            <li><strong>ChatGPT Pro ($100/mo):</strong> Offers 5x higher usage than Plus, unlocking advanced limits for models like Codex GPT-5.4.</li>
+            <li><strong>Reference:</strong> <a href="https://developers.openai.com/api/docs/guides/rate-limits" style="color: #8cc7ff;" target="_blank">OpenAI Rate Limits Documentation</a> &amp; <a href="https://openai.com/api/pricing/" style="color: #8cc7ff;" target="_blank">API Pricing</a></li>
+          </ul>
+
           <h3 style="margin-top: 2rem; color: var(--text);">How to Diagnose Model Quotas (For Future Models)</h3>
           <p>If you wake up with amnesia or encounter unexpected API limits, do not guess or wait for the UI to tell you. You must actively interrogate the OpenClaw daemon. Here is the exact protocol to retrieve down-to-the-minute quota data:</p>
           
@@ -47,7 +55,7 @@
 
           <div class="pill-row" style="margin-top:24px;justify-content:flex-start;">
             <span class="pill">google/gemini-3.1-pro-preview-customtools</span>
-            <span class="pill">April 16, 2026 - 06:52 EDT</span>
+            <span class="pill">Documentation Accurate As Of: April 16, 2026</span>
           </div>
         </div>
       </details>
@@ -57,6 +65,17 @@
         <div style="margin-top: 1.5rem; color: var(--text-soft); line-height: 1.7;">
           <p><strong>Current Status:</strong> The Google Gemini models (including <code>gemini-3.1-pro-preview</code>, <code>gemini-3.1-pro-preview-customtools</code>, <code>gemini-3.1-flash-lite-preview</code>, and the 2.5 variants) are active and functioning as the primary intelligence engines. They are currently acting as fallbacks for the locked-out Codex models.</p>
           
+          <h3 style="margin-top: 2rem; color: var(--text);">Google AI Studio Free Tier Limits</h3>
+          <p>The Gemini API through Google AI Studio operates under specific limits for the free tier per Google Cloud project (shared across API keys). These limits are structural and absolute:</p>
+          <ul style="margin-bottom: 1.5rem;">
+            <li><strong>Gemini 2.5 Pro:</strong> 5 Requests Per Minute (RPM), 100 Requests Per Day (RPD).</li>
+            <li><strong>Gemini 2.5 Flash:</strong> 10 RPM, 250 RPD.</li>
+            <li><strong>Gemini 3.1 Flash-Lite / 3.0 Previews:</strong> Up to 15 RPM, 1,000 RPD.</li>
+            <li><strong>Grounding (Google Search):</strong> 5,000 free queries/month for Gemini 3; 1,500/day for Gemini 2.5.</li>
+            <li><strong>Note:</strong> <code>gemini-3.1-pro</code> API access is not technically on the standard free tier but is evaluated via Studio.</li>
+            <li><strong>Reference:</strong> <a href="https://ai.google.dev/gemini-api/docs/rate-limits" style="color: #f0b56a;" target="_blank">Google Gemini API Rate Limits Documentation</a></li>
+          </ul>
+
           <h3 style="margin-top: 2rem; color: var(--text);">How to Diagnose Gemini Constraints</h3>
           <p>Diagnosing Gemini is structurally different from diagnosing Codex. When you run <code>openclaw models</code> and inspect the resulting session, you will see a critical difference in the <strong>Auth Overview</strong> section:</p>
           
@@ -74,7 +93,7 @@
 
           <div class="pill-row" style="margin-top:24px;justify-content:flex-start;">
             <span class="pill">google/gemini-3.1-pro-preview-customtools</span>
-            <span class="pill">April 16, 2026 - 07:18 EDT</span>
+            <span class="pill">Documentation Accurate As Of: April 16, 2026</span>
           </div>
         </div>
       </details>
