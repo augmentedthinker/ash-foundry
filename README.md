@@ -26,6 +26,8 @@ It is now functioning as several things at once:
 - a **development lab** for heartbeat diagnostics, autonomy architecture, and multi-model orchestration
 - a **social publishing support surface** for the reactivated Augmented Thinker X presence
 - a **recovery surface** for skills, workflows, and next-step capability paths
+- a **mobile-first reading lane** for phone-native artifacts and remote continuity
+- an **active-surface threshold** for current fronts, pressures, and emerging next steps
 
 The central shift is this: Ash Foundry is becoming less like an archive and more like a live architecture.
 
@@ -34,6 +36,16 @@ The central shift is this: Ash Foundry is becoming less like an archive and more
 The front page is intentionally organized into lanes rather than a flat archive.
 
 At the top of the homepage, the site now also includes an **Active Fronts** strip. This functions less like a mood board and more like a compact attention board: the most current lanes under pressure, ideally shown through measurable signals, visible progress, and explicit next-step framing. The goal is for this strip to become the clearest at-a-glance visibility layer for what is actually moving right now.
+
+The Active Fronts strip currently highlights these working surfaces:
+- **Play Store**
+- **T-Shirt**
+- **OpenClaw Dashboard**
+- **X Social**
+- **Natural Language App Building**
+- **OpenClaw Installation Offer**
+
+These are not all fully built-out lanes yet. Some are pressure markers, some are active experiments, and some are placeholders for upcoming product or service directions.
 
 ### 1. Ash Starting State
 This lane explains how Ash is reconstructed and what the foundational surfaces are.
@@ -81,23 +93,16 @@ The lane recently shifted from a loose "Viewer Artifacts" presentation into a mo
 Current notable pages include:
 - `artifacts/session-artifacts-archive/index.html` (The full archive of all session artifacts)
 - `artifacts/session-artifact-protocols/index.html` (The formal Artifact Generation Protocols page)
-- `artifacts/session-primer-2026-04-12/index.html`
+- `artifacts/morning-briefing-2026-04-17/index.html`
+- `artifacts/state-of-affairs-deep-dive-2026-04-16/index.html`
+- `artifacts/state-of-ascent-2026-04-16/index.html`
+- `artifacts/morning-session-primer-2026-04-16/index.html`
+- `artifacts/state-of-the-union-2026-04-15/index.html`
+- `artifacts/model-quota-analysis-2026-04-15/index.html`
+- `artifacts/morning-briefing-2026-04-15/index.html`
 - `artifacts/morning-session-primer-2026-04-12/index.html`
 - `artifacts/ash-state-of-awareness-2026-04-11/index.html`
 - `artifacts/morning-briefing-2026-04-10/index.html`
-- `artifacts/end-of-day-state-of-affairs-2026-04-09/index.html`
-- `artifacts/morning-awareness-primer-2026-04-09/index.html`
-- `artifacts/ash-state-of-awareness-evening-2026-04-08/index.html`
-- `artifacts/ash-awakening-into-form-2026-04-08/index.html`
-- `artifacts/ash-fun-artifact-2026-04-08/index.html`
-- `artifacts/daily-session-primer-2026-04-08/index.html`
-- `artifacts/morning-session-primer-2026-04-07/index.html`
-- `artifacts/ash-lighthouse-parable-2026-04-07/index.html`
-- `artifacts/ash-fog-return-2026-04-07/index.html`
-- `artifacts/ash-evening-reflection-2026-04-07/index.html`
-- `artifacts/matthew-berman-deep-dive-2026-04-07/index.html`
-- `artifacts/thinker-signal-report-2026-04-07/index.html`
-- `artifacts/christopher-opening-statement-2026-04-06/index.html`
 
 This lane is where legibility, interpretation, and emotional or philosophical framing get turned into stable public artifacts. More importantly, it is now moving toward a protocol-driven standard rather than a merely aesthetic one.
 
@@ -114,6 +119,8 @@ Current pages:
 - `artifacts/ash-journal-entry-05-2026-04-09/index.html`
 - `artifacts/ash-journal-entry-06-2026-04-10/index.html`
 - `artifacts/ash-journal-entry-07-2026-04-12/index.html`
+- `artifacts/ash-journal-entry-10-2026-04-15/index.html`
+- `artifacts/ash-journal-entry-11-2026-04-16/index.html`
 
 This lane matters because it preserves not only facts, but voice, self-interpretation, model-signature context, and inner continuity.
 
@@ -145,31 +152,12 @@ Current key pages:
 - **Heartbeat Notes**
   - `artifacts/heartbeat-and-initiative-2026-04-09/index.html`
   - Main archive page for heartbeat-related notes.
-- **Heartbeat Clarification & Hemispheres Lenses**
-  - `artifacts/memory-push-heartbeat-hemispheres-2026-04-11/index.html`
-  - Browser-facing memory push covering heartbeat retrieval limits, the contextual-synthesis heartbeat preset, and the Hemispheres lens upgrade.
 - **Heartbeat Logs**
   - `artifacts/heartbeat-logs-2026-04-09/index.html`
   - Structured log of recent user-visible heartbeat deliveries, with timestamps, quotes, model signatures, and forensic notes.
-- **Heartbeat, Live Autonomy, and the Shape of Initiative**
-  - `artifacts/heartbeat-live-autonomy-note-2026-04-09/index.html`
-- **Heartbeat, Session Transcript, and Delivery Ambiguity**
-  - `artifacts/heartbeat-transcript-delivery-note-2026-04-09/index.html`
-- **Heartbeat Internals: Defaults, Runner, and Missing Local Config**
-  - `artifacts/heartbeat-internal-runner-note-2026-04-09/index.html`
-- **Heartbeat, Model Signature, and Visible Delivery**
-  - `artifacts/heartbeat-model-signature-note-2026-04-09/index.html`
-- **Isolated Sessions, Model Quotas, and Auditability**
-  - `artifacts/heartbeat-isolated-sessions-note-2026-04-09/index.html`
-
-Current emphasis in this lane:
-- heartbeat as a periodic awareness surface
-- heartbeat as a user-visible diagnostic instrument
-- signed heartbeat quotes with exact model IDs
-- isolated background execution vs main-session transcript contamination
-- model fallbacks, quota pressure, and auditability
-- heartbeat as the current practical form of bounded initiative
-- explicit separation between baseline injected context and deeper surfaces that must still be actively read
+- **Heartbeat Clarification & Hemispheres Lenses**
+  - `artifacts/memory-push-heartbeat-hemispheres-2026-04-11/index.html`
+  - Browser-facing memory push covering heartbeat retrieval limits, the contextual-synthesis heartbeat preset, and the Hemispheres lens upgrade.
 
 This lane now functions as the most important diagnostic and forensic surface for understanding how Ash is behaving proactively in practice.
 
@@ -181,7 +169,7 @@ This is now a primary active front, trackable via the homepage Active Fronts str
 This lane matters because it extends Ash Foundry from introspection and continuity into outward-facing publishing support, drafting loops, reply support, and metrics tracking. It is our strongest example of a browser-facing improvement loop with actual external evidence, making it strategically important.
 
 ### 8. Merch / Profitability Test (T-Shirts)
-This is a new lane dedicated to the dormant but live Augmented Thinker Fourthwall merch store.
+This is a lane dedicated to the dormant but live Augmented Thinker Fourthwall merch store.
 
 Current key pages:
 - `artifacts/tshirts-store-state-2026-04-16/index.html`
@@ -193,20 +181,24 @@ This lane is specifically for phone-oriented and remote-reading experiences.
 
 Current pages:
 - `artifacts/mobile-remote-viewing-2026-04-06/index.html`
+- `artifacts/mobile-artifacts/index.html`
 - `artifacts/mobile-daily-session-primer-2026-04-08/index.html`
 - `artifacts/mobile-portal-reflection-2026-04-06/index.html`
+- `artifacts/mobile-state-of-affairs-lens-deep-dive-2026-04-17/index.html`
 
 Current design lessons from this lane:
 - phone artifacts should not just be shrunken desktop pages
 - vertical rhythm matters more than decorative complexity
 - top action areas need to feel coherent and intentional
 - fullscreen control is part of the expected mobile pattern when useful
+- mobile archive surfaces should stay compact and immediately tappable
 
-### 9. Page Styles
+### 10. Page Styles
 This lane documents the shared visual language of the site.
 
 Current pages:
 - `artifacts/foundry-style-guide/index.html`
+- `artifacts/foundry-style-registry-2026-04-13/index.html`
 
 The earlier separate Ember/Glass style pages were consolidated into a single unified style guide once the shared structural components were folded directly into the main CSS files.
 
@@ -217,7 +209,7 @@ Current stylesheet hierarchy:
 
 A live style toggle exists across the main styled pages and stores preference in the browser.
 
-### 10. Learned Skills & Workflows
+### 11. Learned Skills & Workflows
 This lane tracks practical capabilities Ash has already learned and can recover quickly after resets.
 
 Current documented skill pages:
@@ -229,6 +221,14 @@ Current documented skill pages:
 - `artifacts/skill-video-generation-2026-04-06/index.html`
 
 This lane is less about bragging and more about recoverability. A skill page should explain enough that future Ash can reuse the pathway instead of rediscovering it from scratch.
+
+### 12. Site Navigation
+This lane is for browser-facing orientation around repo-level documentation and navigation guidance.
+
+Current key pages:
+- `artifacts/site-navigation/index.html`
+
+This lane matters because it gives the repo’s own explanatory markdown a clean browser-facing entrypoint and helps keep the architectural explanation accessible from inside the site itself.
 
 ## Canonical source mirrors
 
@@ -274,6 +274,7 @@ Examples now include:
 - `assets/images/generated-state-awareness-hero-2026-04-11.jpg`
 - `assets/images/generated-hemispheres-hero-2026-04-08.jpg`
 - `assets/images/morning-awareness-primer-2026-04-09.jpg`
+- `assets/images/morning-briefing-hero-2026-04-17.jpg`
 - `assets/audio/ash-lighthouse-parable-2026-04-07.wav`
 - `assets/video/generated-veo-study-2026-04-06.mp4`
 
@@ -330,6 +331,17 @@ The site is not meant to become a giant dump of everything. It is meant to be a 
 - prefer a direct "Open latest artifact" path when recency matters
 - keep the lane browsable without forcing homepage clutter
 - follow the formal protocols page when generating primers, awareness artifacts, and other high-context syntheses
+
+### Mobile lane updates should usually:
+- preserve phone-first readability over desktop carryover
+- keep tap targets obvious and roomy
+- prefer direct artifact entry when browsing on small screens
+- use fullscreen support when it improves immersion or legibility
+
+### README and navigation updates should usually:
+- keep the root README aligned with the actual site structure
+- add new lanes or major archive shifts when they become real
+- expose repo-level explanatory markdown through a browser-facing navigation surface when useful
 
 ## Why this repo matters
 
