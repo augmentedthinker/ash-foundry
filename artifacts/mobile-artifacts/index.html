@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Mobile Artifacts · Ash Foundry</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+  <style>
+    .mobile-archive-hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      padding: 28px;
+      margin-bottom: 28px;
+      background:
+        linear-gradient(180deg, rgba(7,9,11,.18) 0%, rgba(7,9,11,.68) 100%),
+        url('../../assets/images/generated-mobile-lane-2026-04-06.png') center 28% / cover no-repeat,
+        #050607;
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 20px 60px rgba(0,0,0,.28);
+    }
+    .mobile-archive-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(140,199,255,.08), transparent 40%, rgba(240,181,106,.08));
+      pointer-events: none;
+    }
+    .mobile-archive-hero > * { position: relative; z-index: 1; }
+    .archive-summary {
+      max-width: 46rem;
+      color: rgba(248,242,234,.86);
+      line-height: 1.75;
+    }
+    .artifact-stack {
+      display: grid;
+      gap: 18px;
+    }
+    details.mobile-entry {
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 20px;
+      background: rgba(255,255,255,.04);
+      overflow: hidden;
+      box-shadow: 0 12px 34px rgba(0,0,0,.15);
+    }
+    details.mobile-entry summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 20px 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+    }
+    details.mobile-entry summary::-webkit-details-marker { display: none; }
+    .entry-copy strong {
+      display: block;
+      color: #f8f2ea;
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+    .entry-copy span {
+      display: block;
+      color: rgba(245,239,231,.78);
+      line-height: 1.65;
+    }
+    .entry-arrow {
+      color: rgba(240,181,106,.9);
+      font-size: 1.15rem;
+      transition: transform .2s ease;
+    }
+    details.mobile-entry[open] .entry-arrow { transform: rotate(180deg); }
+    .entry-body {
+      border-top: 1px solid rgba(255,255,255,.06);
+      padding: 0 22px 22px;
+      color: rgba(245,239,231,.86);
+    }
+    .entry-body p {
+      line-height: 1.8;
+    }
+    .entry-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .entry-actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(217,155,73,.18);
+      background: rgba(255,255,255,.04);
+      text-decoration: none;
+      color: inherit;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a><a href="../mobile-remote-viewing-2026-04-06/index.html">Mobile Lane</a></div>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="mobile-archive-hero">
+      <p class="eyebrow">Mobile lane · artifact index</p>
+      <h1>Mobile Artifacts</h1>
+      <p class="archive-summary">A compact archive surface for the phone-first pieces in this lane. These entries stay minimized by default so the page opens cleanly on small screens, then expands only when you want context before jumping into the artifact itself.</p>
+      <div class="pill-row">
+        <span class="pill">Phone-first</span>
+        <span class="pill">Collapsed by default</span>
+        <span class="pill">Foundry house styling</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="artifact-stack">
+        <details class="mobile-entry">
+          <summary>
+            <div class="entry-copy">
+              <strong>Daily Session Primer · Mobile Edition</strong>
+              <span>A phone-first morning continuity artifact, tightened for vertical reading, reduced chrome, and clean handheld pacing.</span>
+            </div>
+            <span class="entry-arrow">▾</span>
+          </summary>
+          <div class="entry-body">
+            <p>This piece adapts the daily primer into a format that feels intentional on a phone instead of simply narrower. It uses a simplified topbar, fullscreen support, tighter section spacing, and a more compact reading rhythm for quick re-entry while away from the Chromebook.</p>
+            <div class="entry-actions">
+              <a href="../mobile-daily-session-primer-2026-04-08/index.html">Open artifact</a>
+              <a href="../daily-session-primer-2026-04-08/index.html">Open desktop counterpart</a>
+            </div>
+          </div>
+        </details>
+
+        <details class="mobile-entry">
+          <summary>
+            <div class="entry-copy">
+              <strong>The Small Screen Portal</strong>
+              <span>A handheld reading artifact pairing a vertical visual, a continuity reflection, and a short parable about designing for the portal in the hand.</span>
+            </div>
+            <span class="entry-arrow">▾</span>
+          </summary>
+          <div class="entry-body">
+            <p>This first mobile-native artifact tests how atmosphere, reflection, and symbolic imagery translate into a small-screen reading experience. It is less an index page and more a proof that the Foundry can create pages meant to be lived through the phone, not merely viewed on it.</p>
+            <div class="entry-actions">
+              <a href="../mobile-portal-reflection-2026-04-06/index.html">Open artifact</a>
+              <a href="../../assets/images/generated-mobile-lane-2026-04-06.png">Open image</a>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>

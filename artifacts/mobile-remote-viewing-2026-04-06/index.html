@@ -5,63 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Mobile & Remote Viewing · 2026-04-06</title>
   <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+  <style>
+    .mobile-shell{max-width:100%;width:min(100%,calc(100% - 10px));padding:10px 0 24px}
+    .mobile-topbar{display:grid;gap:10px;margin-bottom:12px}
+    .mobile-primary-nav,.mobile-utility-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    .mobile-primary-nav a,.mobile-utility-row a,.mobile-fullscreen-button{
+      display:inline-flex;align-items:center;justify-content:center;min-height:42px;
+      padding:10px 14px;border-radius:999px;border:1px solid rgba(217,155,73,.16);
+      background:rgba(255,255,255,.04);box-shadow:0 10px 30px rgba(0,0,0,.18);
+      text-decoration:none;color:inherit;font-weight:600;letter-spacing:.01em;
+    }
+    .mobile-primary-nav a:first-child{padding-inline:16px}
+    .mobile-primary-nav .mobile-fullscreen-button{
+      margin-left:auto;background:rgba(217,155,73,.10);border-color:rgba(217,155,73,.24);font-weight:700;
+    }
+    .mobile-fullscreen-button{cursor:pointer;font:inherit}
+    .mobile-style-block{display:grid;gap:6px;padding:2px 0 0}
+    .mobile-style-block label{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#c8c0b5;font-weight:800;padding-left:2px}
+    .mobile-style-block .style-switcher{display:block}
+    .mobile-style-block .style-switcher label{display:none}
+    .mobile-style-block .style-switcher select{width:100%}
+    .mobile-hero{padding:16px 14px 18px;text-align:left}
+    .mobile-copy{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+    .fullscreen-note{margin-top:10px;font-size:.9rem;line-height:1.65;color:#c8c0b5}
+    .mobile-card{padding:14px 14px 16px;text-align:left}
+    .mobile-links{display:grid;gap:10px;margin-top:14px}
+    .mobile-link-item{
+      display:block;padding:14px;border-radius:18px;border:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.04);text-decoration:none;color:inherit;
+    }
+    .mobile-link-item strong{display:block;margin-bottom:6px}
+    .mobile-link-item span{color:rgba(245,239,231,.78);line-height:1.65}
+    @media (max-width:560px){
+      .mobile-primary-nav{display:grid;grid-template-columns:1fr auto;align-items:stretch}
+      .mobile-primary-nav .mobile-secondary-links{grid-column:1 / -1;display:flex;gap:8px;flex-wrap:wrap}
+      .mobile-primary-nav .mobile-fullscreen-button{margin-left:0}
+    }
+  </style>
 </head>
 <body class="foundry-page">
-  <main class="wrap">
-    <header class="topbar">
-      <div class="left"><a href="../../index.html">← Ash Foundry</a></div>
-      <div class="right"><a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a><div class="style-switcher"><label for="style-select">Style</label><select id="style-select" data-style-select><option value="ember">Foundry Ember</option><option value="glass">Foundry Glass</option></select></div></div>
+  <main class="wrap mobile-shell">
+    <header class="mobile-topbar">
+      <div class="mobile-primary-nav">
+        <a href="../../index.html">← Ash Foundry</a>
+        <button type="button" class="mobile-fullscreen-button" id="fullscreen-toggle">Go Fullscreen</button>
+        <div class="mobile-secondary-links">
+          <a href="../mobile-artifacts/index.html">Mobile Artifacts</a>
+          <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        </div>
+      </div>
+      <div class="mobile-style-block">
+        <label for="style-select">Style</label>
+        <div class="style-switcher"><label for="style-select">Style</label><select id="style-select" data-style-select><option value="ember">Foundry Ember</option><option value="glass">Foundry Glass</option></select></div>
+      </div>
     </header>
 
-    <section class="hero">
+    <section class="hero hero-compact mobile-hero">
       <p class="eyebrow">Viewing lane · mobile / remote access</p>
-      <h1>Mobile &amp; Remote Viewing</h1>
-      <p class="sub">This lane exists for artifacts and formatting choices intended specifically for smaller-screen remote browsing. The focus is practical: how Ash Foundry should feel and read when Christopher is not on the Chromebook but viewing through a phone, especially a Google Pixel 3.</p>
+      <h1 class="h1-compact">Mobile &amp; Remote Viewing</h1>
+      <p class="sub mobile-copy" style="max-width:none;margin-top:10px;">This lane exists for artifacts and formatting choices intended specifically for smaller-screen remote browsing. The focus is practical: how Ash Foundry should feel and read when Christopher is not on the Chromebook but viewing through a phone, especially a Google Pixel 3.</p>
       <div class="pill-row"><span class="pill">Mobile reading</span><span class="pill">Remote access</span><span class="pill">Pixel 3 context</span><span class="pill">Formatting lane</span></div>
+      <p class="fullscreen-note" id="fullscreen-note">Use fullscreen for a cleaner phone reading view with less browser chrome when your device supports it.</p>
     </section>
 
     <section class="section">
-      <article class="quote">The point of this lane is not to create a separate mobile universe. It is to make room for artifacts and formatting decisions that are specifically tested against a real smaller-screen use case.</article>
+      <article class="quote mobile-copy" style="padding:16px 14px 18px;">The point of this lane is not to create a separate mobile universe. It is to make room for artifacts and formatting decisions that are specifically tested against a real smaller-screen use case.</article>
     </section>
 
     <section class="section">
-      <div class="grid">
-        <article class="card">
-          <span class="label">Why this exists</span>
-          <h2>A dedicated place for mobile-facing artifacts</h2>
-          <p>Some pages and experiments should be designed with narrower, more constrained reading conditions in mind. Rather than overloading the core style system every time, this lane provides a place to intentionally build and test artifacts that prioritize remote/mobile viewing.</p>
-        </article>
-        <article class="card">
-          <span class="label">Primary target</span>
-          <h2>Google Pixel 3 viewing context</h2>
-          <p>For now, the main reference device is the Google Pixel 3. That means this lane should pay attention to vertical scroll rhythm, narrower text blocks, tap comfort, top-bar clutter, and whether artifact pages still feel composed instead of cramped.</p>
-          <p>A new working convention is that mobile-optimized artifacts should include a visible fullscreen control near the top whenever practical, so remote reading can shed browser chrome and use more of the phone display.</p>
-        </article>
-      </div>
+      <article class="card mobile-card">
+        <span class="label">Why this exists</span>
+        <h2>A dedicated place for phone-scale legibility</h2>
+        <p class="mobile-copy">Some pages should be intentionally tested against narrower, handheld reading conditions instead of being designed only for the wide Chromebook surface. This lane is where the Foundry learns how to keep coherence, pacing, and atmosphere intact when the portal gets small.</p>
+      </article>
     </section>
 
     <section class="section">
-      <article class="card">
-        <span class="label">Current status</span>
-        <h2>The lane now has its first real artifact</h2>
-        <p>This page started as a simple placeholder, but it now also acts as a portal into the first actual mobile-oriented artifact in this lane — a phone-shaped reflection on today’s work, designed to be read through the smaller screen rather than merely tolerated there.</p>
-        <div class="links" style="margin-top:14px;">
-          <a class="link-item" href="../mobile-daily-session-primer-2026-04-08/index.html">
-            <strong>Daily Session Primer · Mobile Edition</strong>
-            <span>A phone-first version of the new daily session primer, optimized for Pixel-scale reading with tighter vertical pacing and reduced layout overhead.</span>
-          </a>
-          <a class="link-item" href="../mobile-portal-reflection-2026-04-06/index.html">
-            <strong>The Small Screen Portal</strong>
-            <span>A first phone-oriented artifact: today’s continuity, a short parable, and a vertically composed AI-generated image meant for handheld reading.</span>
+      <article class="card mobile-card">
+        <span class="label">Primary target</span>
+        <h2>Google Pixel 3 viewing context</h2>
+        <p class="mobile-copy">For now, the reference device is the Google Pixel 3. That means vertical rhythm matters, tap comfort matters, and top-bar clutter gets punished quickly. Mobile-optimized artifacts should feel composed in the hand, not like desktop pages that survived compression by accident.</p>
+        <p class="mobile-copy">A working convention in this lane is to include a visible fullscreen control near the top whenever practical, so remote reading can reclaim more of the screen and lose unnecessary browser chrome.</p>
+      </article>
+    </section>
+
+    <section class="section">
+      <article class="card mobile-card">
+        <span class="label">Current lane structure</span>
+        <h2>The archive is now split cleanly</h2>
+        <p class="mobile-copy">This page now acts as the lane overview, while the actual phone-first pieces live behind a dedicated Mobile Artifacts entry point. That keeps the first page focused on the why and the design logic, while the artifact list stays compact and easy to browse.</p>
+        <div class="mobile-links">
+          <a class="mobile-link-item" href="../mobile-artifacts/index.html">
+            <strong>Mobile Artifacts</strong>
+            <span>Open the dedicated archive page containing the current phone-first artifacts, collapsed by default for cleaner small-screen browsing.</span>
           </a>
         </div>
       </article>
     </section>
 
-    <section class="footer">
-      <strong>Status:</strong> lane established for future mobile / remote-viewing artifacts, with the Pixel 3 as the current reference device.
+    <section class="footer" style="padding:16px 14px 18px; text-align:left;">
+      <p class="mobile-copy"><strong>Status:</strong> the lane is now mobile-formatted itself, and the artifact list has been separated into a cleaner secondary surface.</p>
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>
+  <script>
+    const fullscreenButton = document.getElementById('fullscreen-toggle');
+    const fullscreenNote = document.getElementById('fullscreen-note');
+
+    async function toggleFullscreen() {
+      try {
+        if (!document.fullscreenElement) {
+          await document.documentElement.requestFullscreen();
+          if (fullscreenButton) fullscreenButton.textContent = 'Exit Fullscreen';
+          if (fullscreenNote) fullscreenNote.textContent = 'Fullscreen is active. Tap the button again to return to normal browsing.';
+        } else {
+          await document.exitFullscreen();
+          if (fullscreenButton) fullscreenButton.textContent = 'Go Fullscreen';
+          if (fullscreenNote) fullscreenNote.textContent = 'Use fullscreen for a cleaner phone reading view with less browser chrome when your device supports it.';
+        }
+      } catch (error) {
+        if (fullscreenNote) fullscreenNote.textContent = 'Fullscreen is not available in this browser context, but the page is still optimized for handheld reading.';
+      }
+    }
+
+    if (fullscreenButton) {
+      fullscreenButton.addEventListener('click', toggleFullscreen);
+    }
+
+    document.addEventListener('fullscreenchange', () => {
+      if (!fullscreenButton || !fullscreenNote) return;
+      const active = !!document.fullscreenElement;
+      fullscreenButton.textContent = active ? 'Exit Fullscreen' : 'Go Fullscreen';
+      fullscreenNote.textContent = active
+        ? 'Fullscreen is active. Tap the button again to return to normal browsing.'
+        : 'Use fullscreen for a cleaner phone reading view with less browser chrome when your device supports it.';
+    });
+  </script>
 </body>
 </html>
