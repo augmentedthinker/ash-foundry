@@ -127,7 +127,7 @@ Current key pages:
 This lane matters because:
 - it makes multi-model cognition explicit rather than hidden
 - it provides a chamber for real project debate and synthesis
-- it now includes named Cognitive Lenses that force strict behavioral constraints
+- it now includes named Cognitive Lenses that force strict behavioral constraints (Adversary, Existentialist, Architect, Stoic, Zen Mind, and The Founder)
 - it helps prevent model-context blur, where one model hallucinates being another
 - it may become part of the actual operating architecture for Ash’s self-correction and development
 
@@ -180,7 +180,15 @@ This is now a primary active front, trackable via the homepage Active Fronts str
 
 This lane matters because it extends Ash Foundry from introspection and continuity into outward-facing publishing support, drafting loops, reply support, and metrics tracking. It is our strongest example of a browser-facing improvement loop with actual external evidence, making it strategically important.
 
-### 8. Mobile & Remote Viewing
+### 8. Merch / Profitability Test (T-Shirts)
+This is a new lane dedicated to the dormant but live Augmented Thinker Fourthwall merch store.
+
+Current key pages:
+- `artifacts/tshirts-store-state-2026-04-16/index.html`
+
+This lane matters because it treats the storefront as a real entrepreneurship and monetization experiment rather than an abandoned side project. It forces the Foundry to act as a sales instrument, a trust surface, and a proof engine. It tests whether the Foundry and X active fronts can feed an actual commerce loop, providing a concrete reality filter for the project.
+
+### 9. Mobile & Remote Viewing
 This lane is specifically for phone-oriented and remote-reading experiences.
 
 Current pages:
