@@ -13,6 +13,7 @@
     .color-swatch { width: 48px; height: 48px; border-radius: 12px; margin-bottom: 8px; border: 1px solid rgba(255,255,255,0.1); }
     .swatch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 16px; }
     .swatch-label { font-size: 0.8rem; color: var(--text-soft); }
+    .justified-sample { text-align: justify; text-justify: inter-word; }
   </style>
 </head>
 <body class="foundry-page">
@@ -49,6 +50,12 @@
         <li>Second item in a deep list, showing line height.</li>
         <li>Third item in a deep list.</li>
       </ul>
+    </div>
+
+    <div class="sg-section">
+      <h3 class="sg-heading">Text Alignment Preference</h3>
+      <p class="justified-sample">Foundry long-form writing now prefers justified body text for primary reading surfaces, meaning the paragraph edges align on both the left and right sides. Use this especially for reflective prose sections, briefing text, timeline descriptions, and paragraph text inside content cards when the page is intended to feel more editorial, polished, and book-like.</p>
+      <p class="justified-sample">In CSS terms, the current preference is <code>text-align: justify;</code> with <code>text-justify: inter-word;</code> where appropriate. This should be applied selectively to prose-bearing components rather than every single text surface in the system. Short labels, pills, buttons, and compact UI elements should remain naturally aligned.</p>
     </div>
 
     <div class="sg-section">
