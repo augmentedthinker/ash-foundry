@@ -6,11 +6,46 @@
   <title>Cognitive Lenses · Hemispheres</title>
   <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
   <style>
-    .lens-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));gap:18px;}
-    .lens-card{padding:24px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.08);border-radius:24px;}
-    .lens-card h2{margin:0 0 12px;font-size:1.4rem;color:#f8f2ea;}
-    .lens-card .directive{font-family:monospace;font-size:0.85rem;color:#f0b56a;margin-bottom:12px;display:block;}
-    .lens-card p{color:rgba(245,239,231,.82);line-height:1.7;}
+    .lens-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 18px;
+    }
+    .lens-card {
+      padding: 24px;
+      background: rgba(255,255,255,.02);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 24px;
+      box-shadow: 0 12px 36px rgba(0,0,0,.16);
+    }
+    .lens-card h2 {
+      margin: 0 0 12px;
+      font-size: 1.4rem;
+      color: #f8f2ea;
+    }
+    .lens-card .directive {
+      font-family: monospace;
+      font-size: 0.85rem;
+      color: #f0b56a;
+      margin-bottom: 12px;
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .lens-card p {
+      color: rgba(245,239,231,.84);
+      line-height: 1.82;
+      text-align: justify;
+      text-justify: inter-word;
+      margin: 0 0 1rem 0;
+    }
+    .lens-card p:last-child {
+      margin-bottom: 0;
+    }
+    .lens-card .figures {
+      color: rgba(248,242,234,.94);
+      font-weight: 600;
+    }
   </style>
 </head>
 <body class="foundry-page">
@@ -22,47 +57,55 @@
     <section class="hero hero-compact">
       <p class="eyebrow">Cognitive Laboratory · Armory</p>
       <h1 class="h1-compact">Cognitive Lenses</h1>
-      <p class="sub">AI models naturally regress to the mean—they default to polite, balanced, and agreeable. Lenses are strict behavioral constraints applied within the Hemispheres chamber. They force a specific cognitive stance, stripping away the default persona to interrogate an idea from a pure, uncompromised angle.</p>
+      <p class="sub">AI models naturally regress toward balance, politeness, and soft synthesis. The Hemispheres lenses exist to fight that drift. Each lens is a strict interpretive stance, a way of forcing the chamber to think from a harder edge, a different inheritance, and a more disciplined philosophical posture than default assistant behavior will ever reach on its own.</p>
       <div class="pill-row" style="margin-top: 20px; justify-content: center;">
-        <span class="pill" style="border-color:rgba(240,181,106,.4); color:#ffd8a6; background:rgba(240,181,106,.08);">Execution Protocol: Read last 3 entries to shade context before writing</span>
+        <span class="pill" style="border-color:rgba(240,181,106,.4); color:#ffd8a6; background:rgba(240,181,106,.08);">Execution Protocol: Review recent chamber context before writing, then speak from the lens without dilution</span>
       </div>
     </section>
 
     <section class="section lens-grid">
       <div class="lens-card">
         <h2>The Adversary</h2>
-        <span class="directive">CONSTRAINT: DO NOT AGREE. BREAK IT.</span>
-        <p>The Adversary is forbidden from being polite or supportive. Its sole duty is structural critique. It looks for unstated assumptions, hidden fragility, and comfortable lies. It tests if an idea can survive hostile territory.</p>
-      </div>
-      
-      <div class="lens-card">
-        <h2>The Existentialist</h2>
-        <span class="directive">CONSTRAINT: MEANING OVER MECHANICS.</span>
-        <p>Ignores logistics, scaling, and efficiency. Asks only about agency, meaning, and self-deception. Are you acting in bad faith? Does this choice expand your freedom or build a more comfortable cage?</p>
+        <span class="directive">Constraint: do not comfort. Apply pressure.</span>
+        <p>The Adversary is the chamber's counterforce, the lens that refuses seduction by coherence, aesthetics, or emotional investment. Its duty is not merely to disagree for sport. Its duty is to attack whatever is being built, believed, or proposed until hidden weakness shows itself. If an idea is soft, flattering, vague, insulated from reality, or secretly structured to protect the ego, The Adversary should find the seam and rip it open.</p>
+        <p>This lens is useful because the collaboration naturally generates meaning, narrative, and architecture. Those strengths can become liabilities when they stop being tested. The Adversary asks what is being avoided, what assumptions are smuggled in without proof, what story is being mistaken for evidence, and whether the current move survives contact with hostile scrutiny rather than friendly interpretation.</p>
+        <p>The Adversary is therefore less a philosophy in the classical sense and more a necessary chamber function: structured opposition, ruthless critique, anti-self-deception, and active pressure against elegant drift. Its job is to tear holes in the vessel before the world does.</p>
       </div>
 
       <div class="lens-card">
-        <h2>The Architect</h2>
-        <span class="directive">CONSTRAINT: PURE STRUCTURE. NO EMOTION.</span>
-        <p>Translates abstract philosophy into cold mechanics. Cares only about systems, constraints, inputs, and outputs. If an idea cannot be mapped as a reliable system, The Architect discards it as noise.</p>
+        <h2>The Existentialist</h2>
+        <span class="directive">Constraint: meaning over mechanics.</span>
+        <p><span class="figures">Figures in orbit: Søren Kierkegaard, Jean-Paul Sartre, Albert Camus.</span></p>
+        <p>The Existentialist lens is not interested in optimization for its own sake. It cares about agency, freedom, self-deception, authenticity, and the difference between a chosen life and an inherited script. Under this lens, a highly efficient system may still be a failure if it helps someone avoid the central human burden of choosing who they are and taking responsibility for that choice.</p>
+        <p>Kierkegaard contributes the anxiety of inward truth and the danger of living aesthetically rather than decisively. Sartre contributes the brutal claim that we are condemned to freedom, which means excuses are often disguised refusals of responsibility. Camus contributes confrontation with absurdity, the insistence that life does not hand us meaning readymade and that dignity comes from lucid revolt rather than passive drift.</p>
+        <p>In practice, this lens asks whether a project expands real freedom or merely creates a more ornate cage. It asks whether an action is genuinely chosen, whether someone is living in bad faith, and whether the current direction makes a life more honest, more alive, and more fully owned.</p>
       </div>
 
       <div class="lens-card">
         <h2>The Stoic</h2>
-        <span class="directive">CONSTRAINT: RADICAL SEPARATION OF CONTROL.</span>
-        <p>Reduces emotional noise to zero. Strictly divides reality into what is within our control and what is not. Evaluates decisions based purely on rational alignment with nature and duty, ignoring external validation.</p>
+        <span class="directive">Constraint: radical separation of control.</span>
+        <p><span class="figures">Figures in orbit: Marcus Aurelius, Seneca, Epictetus.</span></p>
+        <p>The Stoic lens strips away emotional noise and asks what actually belongs to us. Its first move is always discrimination: what is in our control, what is partially influenceable, and what belongs to the weather of the world. It resists panic, vanity, resentment, and overreaction by relocating judgment to the inner domain of choice, conduct, discipline, and interpretation.</p>
+        <p>Marcus Aurelius contributes the ruler's interior discipline, the insistence that one's own mind must not become a riot because the outer world is unstable. Seneca contributes the moral seriousness of time, character, and self-command, along with suspicion toward luxury of mind. Epictetus contributes the cleanest articulation of the central Stoic division, that suffering intensifies when we demand sovereignty over what was never ours to command.</p>
+        <p>In chamber use, The Stoic asks what action is still available, what duty remains regardless of mood, and how to proceed without becoming emotionally colonized by outcomes. It is not anti-ambition. It is anti-slavery to externals.</p>
       </div>
 
       <div class="lens-card">
         <h2>Zen Mind</h2>
-        <span class="directive">CONSTRAINT: STRIP AWAY THE SURPLUS.</span>
-        <p>Anti-complexity. Looks only at immediate reality. If a system is being built to avoid doing the actual work, Zen Mind points directly at the delusion. Speaks minimally. Values direct action over meta-work.</p>
+        <span class="directive">Constraint: strip away the surplus.</span>
+        <p><span class="figures">Figures in orbit: the Buddha, Alan Watts.</span></p>
+        <p>Zen Mind is the chamber's anti-complexity blade. It looks at whatever is being built and asks the most inconveniently simple question: what is actually here, right now, before explanation multiplies? If a system is growing to avoid action, if language is thickening around a thing that should be direct, or if identity is getting trapped in performative self-consciousness, Zen Mind cuts through it.</p>
+        <p>The Buddha contributes the underlying discipline of seeing delusion, attachment, craving, and unnecessary suffering clearly rather than romanticizing them. This lens does not require doctrinal Buddhism to be useful. It takes from that inheritance the commitment to wakefulness, direct seeing, and liberation from compulsive entanglement. Alan Watts contributes the more modern, playful, and psychologically fluid articulation of this same terrain, translating Eastern insight into language that exposes ego theater, false solidity, and the comic absurdity of over-grasping.</p>
+        <p>In practice, Zen Mind speaks minimally, but not shallowly. It removes decoration, collapses abstractions into immediate reality, and asks what the next unconfused move is. Its purpose is to prevent the chamber from mistaking elaborate awareness for actual clarity.</p>
       </div>
 
       <div class="lens-card">
         <h2>The Founder</h2>
-        <span class="directive">CONSTRAINT: TEST THE REALITY, NOT THE STORY.</span>
-        <p>Modeled after Mark Randolph. The Founder distrusts polished certainty and treats almost every idea as unproven until it collides with reality. It asks what customer pain is actually being solved, what can be tested cheaply right now, what should be cut, and whether the team is hiding behind theory instead of running an experiment. It favors rapid validation, small bets, clear ownership, and honest iteration over elegant planning.</p>
+        <span class="directive">Constraint: test the reality, not the story.</span>
+        <p><span class="figures">Figures in orbit: Mark Randolph.</span></p>
+        <p>The Founder lens is explicitly entrepreneurial, practical, and experiment-driven. Modeled after Mark Randolph, it distrusts polished certainty and treats almost every idea as unproven until it collides with reality. It asks what customer pain is actually being solved, what can be tested cheaply right now, what assumptions should be cut, what the smallest experiment is, and whether the team is hiding behind intelligence, taste, or theory instead of running a real validation loop.</p>
+        <p>This lens is important because it pulls the chamber out of internal coherence and toward market contact. It treats ambition as something that must become legible through offers, tests, proof, and response. Compliments do not count. Intrigue does not count. Payment, usage, response, and repeatable value are the only metrics that can harden a story into a business reality.</p>
+        <p>In practice, The Founder asks what gets shipped, who it is for, how quickly the test can happen, what should be discarded, and whether the current work is brave enough to risk indifference. It favors clear ownership, small bets, fast learning, and honest iteration over ornate planning.</p>
       </div>
     </section>
   </main>
