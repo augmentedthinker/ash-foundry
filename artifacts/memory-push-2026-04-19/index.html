@@ -3,31 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Memory Push · Field Test Shift · 2026-04-19</title>
+  <title>Memory Push · April 19, 2026</title>
   <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
-  <style>
-    .memory-pre {
-      white-space: pre-wrap;
-      word-break: break-word;
-      overflow-wrap: anywhere;
-      font-size: 0.98rem;
-      line-height: 1.7;
-    }
-    @media (max-width: 720px) {
-      .memory-pre {
-        font-size: 0.9rem;
-        line-height: 1.6;
-      }
-    }
-  </style>
 </head>
 <body class="foundry-page">
   <main class="wrap">
     <header class="topbar">
-      <div class="left">
-        <a href="../../index.html">← Ash Foundry</a>
-        <a href="../../sources/daily-memory/index.html">Memory Archive</a>
-      </div>
+      <div class="left"><a href="../../index.html">← Ash Foundry</a><a href="../../sources/daily-memory/index.html">Memory Archive</a></div>
       <div class="right">
         <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
         <div class="style-switcher">
@@ -41,63 +23,57 @@
     </header>
 
     <section class="hero hero-compact">
-      <p class="eyebrow">Memory push</p>
-      <h1 class="h1-compact">Exact Internal Memory Log Mirror</h1>
-      <p class="sub">A browser-facing mirror of <code>/home/ash/.openclaw/workspace/memory/2026-04-19-memory-push.md</code>, capturing the April 18 artifact work, the shift away from polishing architecture as the main loop, and the new end-of-month field-test goals.</p>
+      <p class="eyebrow">Memory Push</p>
+      <h1 class="h1-compact">Model Drift, Hemispheres, and the Viable Gemini Lane</h1>
+      <p class="sub">A browser-facing mirror of the day’s work: chamber additions, runtime-model verification, Gemini fallback diagnostics, and the emergence of a cleaner provider strategy under constraint.</p>
       <div class="pill-row">
-        <span class="pill">Memory push</span>
-        <span class="pill">Exact file mirror</span>
-        <span class="pill">2026-04-19 · Morning</span>
-        <span class="pill">Model: openai-codex/gpt-5.4</span>
+        <span class="pill">April 19, 2026</span>
+        <span class="pill">Memory Archive</span>
+        <span class="pill">Runtime diagnostics</span>
       </div>
     </section>
 
-    <section class="section">
-      <article class="card prose">
-<pre class="memory-pre"><code># Memory Push - 2026-04-19
+    <section class="section prose">
+      <p>Today’s work clustered around two fronts that turned out to be tightly connected: the continued build-out of the Hemispheres chamber, and a deeper investigation into model identity, runtime drift, and what parts of the Google Gemini lane remain truly usable as the Google Cloud free trial expires.</p>
 
-## 1. April 18 Artifact and Foundry Upgrade Work
-- Created and published a new **Present State of Awareness** session artifact for April 18, intentionally constrained to wake-state only, focused on what Ash knew at startup before further investigation.
-- Upgraded visual standards across the Foundry by introducing **justified paragraph formatting** for long-form reading surfaces. Applied this to the April 18 awareness artifact, then documented the preference in the Foundry Style Guide.
-- Extended the same justified-text formatting to the **Ash Foundry homepage**, clarifying that the homepage itself should be treated as a polished reading surface, not only a menu.
-- Created and published a second, much deeper **Saturated State of Awareness** artifact for April 18 after extensive re-absorption of memory, Foundry lanes, journal, Hemispheres, git history, and workspace context.
-- Created and published a plain-language **OpenClaw CLI Access Explainer** artifact to clarify that OpenClaw is installed locally but the shell PATH used during exec did not include `~/.npm-global/bin`, so `openclaw` was not callable by short name from that shell even though the binary exists at `/home/ash/.npm-global/bin/openclaw`.
+      <h2>1. Hemispheres Continued to Mature as a Real Chamber</h2>
+      <p>We added a new substantial <strong>Strategist</strong> entry to the Hemispheres log and then followed it with a new <strong>Founder</strong> entry that acted as a direct counterstroke. The Strategist turn argued for leverage, sequencing, and moves that improve the board rather than merely feeling meaningful. The Founder turn attacked that elegance from the other side, insisting that strategy can become a shelter for delay unless it forces immediate contact with reality.</p>
+      <p>The chamber therefore behaved correctly today. It did not merely produce more text. It accumulated tension. It created an argument between lenses rather than a sequence of agreeable reflections.</p>
 
-## 2. Shift Away from Architecture Polish as the Main Loop
-- Christopher explicitly named the current trap: we may already have enough architecture, and further refinement risks becoming like **rearranging gym equipment instead of doing the workout**.
-- A second metaphor was reinforced: the Foundry and surrounding system now function like **power armor**, which matters only insofar as it gets used in the field rather than endlessly polished in the workshop.
-- This marked a strategic shift in tone from “what should we add to the system?” toward “how do we now use the system under real load, with real-world stakes?”
+      <h2>2. Model Identity Drift Became Concrete Again</h2>
+      <p>While publishing the Founder entry, an important issue resurfaced: the model selected in OpenClaw is not always the model actually producing the output. Multiple status checks today confirmed that <strong>selected model</strong> and <strong>active runtime</strong> can diverge when the chosen model times out or errors, causing the system to fall back silently to another provider.</p>
+      <p>This mattered immediately because the Founder entry was briefly relabeled to Gemini after a switch, but further verification showed that the actual runtime used for the turn had been <code>openai-codex/gpt-5.4</code>. The page was corrected and pushed back to reflect the true generating model.</p>
+      <p>The lesson hardened again: when signing Hemispheres entries or other model-visible artifacts, the correct signature is the <em>actual runtime model</em>, not just the selected/default model in configuration.</p>
 
-## 3. Candidate End-of-Month Field Tests
-Christopher brainstormed three concrete goals for the end of April, explicitly looking for outcomes that would create a paradigm shift around **credibility, profitability, and real-world proof**:
+      <h2>3. The Gemini Question Became Testable Instead of Speculative</h2>
+      <p>Because the Google Cloud free trial is expiring today, we needed a cleaner way to determine which Gemini API models remain reachable through the Google AI Studio key and which ones are effectively unusable. Rather than relying on vague UI signals, we created a new browser-facing diagnostic artifact: the <strong>Gemini API Tester</strong>.</p>
+      <p>This page was added to the Ash Foundry homepage under the <strong>API Usage &amp; Quotas</strong> dropdown and built to work entirely client-side. Christopher can paste a real Gemini API key into the page locally, select model IDs, and ping them directly against the Gemini REST endpoint. No secret is stored in the repository.</p>
 
-1. **Get an app on the Play Store**
-   - Symbolic meaning: public builder credibility and real shipping proof.
-   - Constraint: must stay very small or it becomes another overbuilt architecture loop.
+      <h2>4. The Tester Produced a Clearer Map of the Working Lane</h2>
+      <p>The reported results were strong enough to cut through much of the earlier ambiguity:</p>
+      <ul>
+        <li><code>gemini-2.5-flash</code> responded successfully.</li>
+        <li><code>gemini-2.5-flash-lite</code> responded successfully.</li>
+        <li><code>gemini-3.1-flash-lite-preview</code> responded successfully.</li>
+        <li><code>gemini-2.5-pro</code> returned HTTP 429.</li>
+        <li><code>gemini-3.1-pro-preview</code> returned HTTP 429.</li>
+        <li><code>gemini-3.1-pro-preview-customtools</code> returned HTTP 429.</li>
+      </ul>
+      <p>The current working interpretation is not that Google access is gone. It is that the <strong>practical dependable lane is now Flash / Flash-Lite</strong>, while the Pro-tier Gemini path is either quota-constrained, tier-restricted, or otherwise not dependable in this environment.</p>
 
-2. **Get the first T-shirt sale**
-   - Symbolic meaning: first actual transaction and clean profitability proof.
-   - Would likely require reviving the dormant Augmented Thinker merch store with better design, storytelling, and a real promotion pipeline.
+      <h2>5. A Cleaner Provider Strategy Emerged</h2>
+      <p>Christopher’s current judgment is that <code>openai-codex/gpt-5.4</code> remains the most coherent and reliable primary intelligence for this system. Today’s diagnostic work strengthened that position rather than weakening it. The likely best architecture going forward is to keep Codex as the primary/default model and use only the proven-working Gemini Flash / Flash-Lite models as fallbacks.</p>
+      <p>The three current fallback candidates favored by observed behavior are:</p>
+      <ul>
+        <li><code>google/gemini-2.5-flash</code></li>
+        <li><code>google/gemini-2.5-flash-lite</code></li>
+        <li><code>google/gemini-3.1-flash-lite-preview</code></li>
+      </ul>
+      <p>This is a more honest configuration direction than pretending the Pro Gemini path is available when runtime behavior suggests otherwise.</p>
 
-3. **Create a credibility page and land one client**
-   - Symbolic meaning: break the ceiling of self-doubt by making a public offer and converting at least one real person.
-   - Possible direction: AI teaching, OpenClaw setup/help, or related agent-system education.
-   - Could involve grassroots local promotion and neighborhood outreach rather than only internet-based credibility.
-
-## 4. Current Strategic Read on Those Three Goals
-- The **Play Store app** feels like the strongest credibility move.
-- The **first T-shirt sale** feels like the cleanest profitability test.
-- The **credibility page + one client** feels like the strongest identity-shifting move, because it would force external contact, offer clarity, and a real yes from another human.
-- A useful framing emerged: these may not actually be three unrelated goals, but a three-part **credibility stack**:
-  - ship one tiny public app,
-  - generate one real transaction,
-  - land one real human yes.
-
-## 5. Most Important Emerging Principle
-- The collaboration appears to have crossed a threshold where **more architecture is yielding diminishing returns unless it is used in the field**.
-- The next important phase is not more abstract refinement of the Foundry’s foundations, but **field tests**: public proof, market contact, shipping, offers, transactions, and real-world consequence.
-- This should likely shape the next session after refresh: less internal polishing, more decision-making around the strongest near-term field test for the rest of April.</code></pre>
-      </article>
+      <h2>6. Memory Push Shape Was Reaffirmed</h2>
+      <p>Today also reaffirmed a process rule: when Christopher asks for a memory push, the right shape is not a fresh essay detached from the work. It is a mirror of the actual work, the actual decisions, the actual runtime behavior, and the hardened lessons that should survive the session.</p>
+      <p>That is what this page is intended to be.</p>
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>
