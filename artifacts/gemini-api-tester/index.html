@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Gemini API Tester</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+  <style>
+    .tester-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:start}
+    .stack{display:flex;flex-direction:column;gap:18px}
+    .soft-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:22px}
+    .soft-card h2,.soft-card h3{margin-top:0}
+    .muted{color:rgba(245,239,231,.76)}
+    .model-list{display:grid;gap:12px}
+    .model-row{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:start;padding:14px 16px;border:1px solid rgba(255,255,255,.08);border-radius:16px;background:rgba(255,255,255,.03)}
+    .model-row input{margin-top:4px}
+    code.inline{background:rgba(0,0,0,.25);padding:2px 6px;border-radius:8px}
+    .controls{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    button{appearance:none;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:600;cursor:pointer;background:#8cc7ff;color:#081018}
+    button.secondary{background:rgba(255,255,255,.08);color:#f5efe7;border:1px solid rgba(255,255,255,.1)}
+    button:disabled{opacity:.5;cursor:not-allowed}
+    textarea,input[type="password"],input[type="text"]{width:100%;box-sizing:border-box;border-radius:14px;border:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.22);color:#f5efe7;padding:12px 14px;font:inherit}
+    .results{display:grid;gap:12px;margin-top:18px}
+    .result{border-radius:16px;padding:14px 16px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03)}
+    .ok{border-color:rgba(88,200,110,.45);background:rgba(88,200,110,.08)}
+    .err{border-color:rgba(224,108,108,.45);background:rgba(224,108,108,.08)}
+    .pending{border-color:rgba(240,181,106,.45);background:rgba(240,181,106,.08)}
+    .pill-row{justify-content:flex-start}
+    ul.tight li{margin-bottom:.45rem}
+    @media (max-width: 900px){.tester-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a><a href="../api-usage-notes/index.html">API Usage Notes</a></div>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero hero-compact">
+      <p class="eyebrow">Diagnostics Artifact</p>
+      <h1 class="h1-compact">Gemini API Tester</h1>
+      <p class="sub">A browser-side tester for Google AI Studio / Gemini API free-tier candidates. Paste your own API key locally, select models, and ping them directly without storing the key in the repo.</p>
+      <div class="pill-row">
+        <span class="pill">Manual API key entry</span>
+        <span class="pill">Client-side fetch only</span>
+        <span class="pill">April 19, 2026</span>
+      </div>
+    </section>
+
+    <section class="section tester-grid">
+      <div class="stack">
+        <article class="soft-card prose">
+          <h2>What this page is testing</h2>
+          <p>This artifact is aimed at the <strong>Google AI Studio / Gemini API free tier</strong>, especially in the context of the Google Cloud trial expiring. The point is not to guess what should work. The point is to let you test real model responsiveness directly from the browser.</p>
+          <p>The page uses the Gemini REST endpoint and sends a tiny prompt to each selected model. If a model responds, it is reachable with your key. If it fails, the error block should usually tell you whether the issue is invalid auth, model access, quota exhaustion, or a missing free-tier entitlement.</p>
+          <h3>Best-current candidate model IDs</h3>
+          <p class="muted">Based on current Google documentation and recent public references, these are the main API model IDs worth testing for ongoing free-tier access:</p>
+          <ul class="tight">
+            <li><code class="inline">gemini-2.5-flash</code></li>
+            <li><code class="inline">gemini-2.5-flash-lite</code></li>
+            <li><code class="inline">gemini-2.5-pro</code></li>
+            <li><code class="inline">gemini-2.5-flash-image</code> (image-oriented, likely not suitable for this text ping test, so listed for awareness only)</li>
+            <li><code class="inline">gemini-3.1-flash-lite-preview</code> (reported publicly as free-priced in API contexts, but preview availability can drift)</li>
+          </ul>
+          <p><strong>Important caveat:</strong> <code class="inline">gemini-3.1-pro-preview</code> and <code class="inline">gemini-3.1-pro-preview-customtools</code> do <em>not</em> appear to be dependable free-tier API targets. They may be visible in AI Studio or in product UIs but still fail, time out, or require paid quota in programmatic usage.</p>
+        </article>
+
+        <article class="soft-card">
+          <h2>Run the test</h2>
+          <label for="apiKey"><strong>Gemini API key</strong></label>
+          <input id="apiKey" type="password" placeholder="Paste your Google AI Studio / Gemini API key here" autocomplete="off" />
+          <div style="height:12px"></div>
+          <label for="promptBox"><strong>Test prompt</strong></label>
+          <textarea id="promptBox" rows="4">Reply with exactly: OK</textarea>
+          <div style="height:12px"></div>
+          <div class="model-list" id="modelList"></div>
+          <div class="controls">
+            <button id="selectAllBtn" type="button" class="secondary">Select all</button>
+            <button id="clearBtn" type="button" class="secondary">Clear</button>
+            <button id="runBtn" type="button">Run selected tests</button>
+          </div>
+          <div class="results" id="results"></div>
+        </article>
+      </div>
+
+      <div class="stack">
+        <article class="soft-card prose">
+          <h2>How the tester works</h2>
+          <ul class="tight">
+            <li>Your API key stays in the browser tab. This page does not submit it to the repo.</li>
+            <li>Each selected model is called at <code class="inline">v1beta/models/{model}:generateContent</code>.</li>
+            <li>The test uses a tiny text-only prompt so results are cheap and fast.</li>
+            <li>The result area reports HTTP status, raw error text when available, and any returned text.</li>
+          </ul>
+        </article>
+
+        <article class="soft-card prose">
+          <h2>Interpretation guide</h2>
+          <ul class="tight">
+            <li><strong>200 + short text response:</strong> the model is reachable with your key.</li>
+            <li><strong>400/404:</strong> the model ID may be wrong or not exposed on your endpoint/tier.</li>
+            <li><strong>403:</strong> the key is valid but the model is not available to your project or tier.</li>
+            <li><strong>429:</strong> quota or rate limit wall.</li>
+            <li><strong>Timeout / fetch failed:</strong> network issue, CORS issue, or unstable upstream behavior.</li>
+          </ul>
+        </article>
+
+        <article class="soft-card prose">
+          <h2>Source notes</h2>
+          <p class="muted">This page is based on current public Google Gemini API model/rate-limit documentation plus recent public summaries. Google changes preview names and tier exposure often, so the tester is intentionally empirical.</p>
+          <p><a href="https://ai.google.dev/gemini-api/docs/rate-limits" target="_blank">Google Gemini API rate limits</a><br />
+          <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank">Google Gemini API models documentation</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+  <script>
+    const MODELS = [
+      {
+        id: 'gemini-2.5-flash',
+        note: 'Strong free-tier candidate for general text tests.'
+      },
+      {
+        id: 'gemini-2.5-flash-lite',
+        note: 'Fast, cheaper tier candidate.'
+      },
+      {
+        id: 'gemini-2.5-pro',
+        note: 'May be limited, but worth verifying directly.'
+      },
+      {
+        id: 'gemini-3.1-flash-lite-preview',
+        note: 'Preview/free-priced candidate, availability may drift.'
+      },
+      {
+        id: 'gemini-3.1-pro-preview',
+        note: 'Likely paid or unstable for API access, included for verification.'
+      },
+      {
+        id: 'gemini-3.1-pro-preview-customtools',
+        note: 'OpenClaw-specific runtime label, included as an experiment.'
+      }
+    ];
+
+    const modelList = document.getElementById('modelList');
+    const results = document.getElementById('results');
+    const apiKeyInput = document.getElementById('apiKey');
+    const promptBox = document.getElementById('promptBox');
+
+    function renderModels() {
+      modelList.innerHTML = MODELS.map((model, index) => `
+        <label class="model-row" for="model-${index}">
+          <input type="checkbox" id="model-${index}" data-model="${model.id}" ${index < 4 ? 'checked' : ''} />
+          <div>
+            <strong>${model.id}</strong>
+            <div class="muted">${model.note}</div>
+          </div>
+          <span class="pill">candidate</span>
+        </label>
+      `).join('');
+    }
+
+    function getSelectedModels() {
+      return Array.from(modelList.querySelectorAll('input[type="checkbox"]:checked')).map(el => el.dataset.model);
+    }
+
+    function addResult(kind, title, body) {
+      const div = document.createElement('div');
+      div.className = `result ${kind}`;
+      div.innerHTML = `<strong>${title}</strong><div style="margin-top:8px; white-space:pre-wrap;" class="muted">${body}</div>`;
+      results.appendChild(div);
+      return div;
+    }
+
+    async function testModel(modelId, apiKey, prompt) {
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(modelId)}:generateContent?key=${encodeURIComponent(apiKey)}`;
+      const pending = addResult('pending', modelId, 'Testing...');
+      try {
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [
+              {
+                parts: [{ text: prompt }]
+              }
+            ]
+          })
+        });
+        const text = await response.text();
+        let parsed;
+        try { parsed = JSON.parse(text); } catch {}
+        if (response.ok) {
+          const output = parsed?.candidates?.[0]?.content?.parts?.map(p => p.text).filter(Boolean).join('\n') || text;
+          pending.className = 'result ok';
+          pending.innerHTML = `<strong>${modelId} · HTTP ${response.status}</strong><div style="margin-top:8px; white-space:pre-wrap;" class="muted">${output || 'No text returned.'}</div>`;
+        } else {
+          const detail = parsed?.error ? JSON.stringify(parsed.error, null, 2) : text;
+          pending.className = 'result err';
+          pending.innerHTML = `<strong>${modelId} · HTTP ${response.status}</strong><div style="margin-top:8px; white-space:pre-wrap;" class="muted">${detail}</div>`;
+        }
+      } catch (error) {
+        pending.className = 'result err';
+        pending.innerHTML = `<strong>${modelId} · Request failed</strong><div style="margin-top:8px; white-space:pre-wrap;" class="muted">${error?.message || String(error)}</div>`;
+      }
+    }
+
+    document.getElementById('selectAllBtn').addEventListener('click', () => {
+      modelList.querySelectorAll('input[type="checkbox"]').forEach(el => { el.checked = true; });
+    });
+
+    document.getElementById('clearBtn').addEventListener('click', () => {
+      modelList.querySelectorAll('input[type="checkbox"]').forEach(el => { el.checked = false; });
+      results.innerHTML = '';
+    });
+
+    document.getElementById('runBtn').addEventListener('click', async () => {
+      const apiKey = apiKeyInput.value.trim();
+      const prompt = promptBox.value.trim() || 'Reply with exactly: OK';
+      const selected = getSelectedModels();
+      results.innerHTML = '';
+
+      if (!apiKey) {
+        addResult('err', 'Missing API key', 'Paste a Gemini API key first.');
+        return;
+      }
+      if (!selected.length) {
+        addResult('err', 'No models selected', 'Choose at least one model to test.');
+        return;
+      }
+
+      for (const modelId of selected) {
+        await testModel(modelId, apiKey, prompt);
+      }
+    });
+
+    renderModels();
+  </script>
+</body>
+</html>
