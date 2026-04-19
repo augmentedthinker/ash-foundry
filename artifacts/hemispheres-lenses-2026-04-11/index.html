@@ -23,6 +23,57 @@
       font-size: 1.4rem;
       color: #f8f2ea;
     }
+    .lens-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .lens-chip::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: currentColor;
+      box-shadow: 0 0 0 3px rgba(255,255,255,.08);
+    }
+    .chip-adversary {
+      border-color: #e06c6c;
+      color: #ffd7d7;
+      background: rgba(180,68,68,.15);
+    }
+    .chip-existentialist {
+      border-color: #a078ff;
+      color: #eadbff;
+      background: rgba(160,120,255,.10);
+    }
+    .chip-stoic {
+      border-color: #4fd1c5;
+      color: #e6fffa;
+      background: rgba(79,209,197,.15);
+    }
+    .chip-zen {
+      border-color: #58c86e;
+      color: #ddf8df;
+      background: rgba(88,200,110,.15);
+    }
+    .chip-founder {
+      border-color: #6cc7ff;
+      color: #e1f3ff;
+      background: rgba(108,199,255,.12);
+    }
+    .chip-strategist {
+      border-color: #f0b56a;
+      color: #ffd8a6;
+      background: rgba(240,181,106,.12);
+    }
     .lens-card .directive {
       font-family: monospace;
       font-size: 0.85rem;
@@ -66,6 +117,7 @@
     <section class="section lens-grid">
       <div class="lens-card">
         <h2>The Adversary</h2>
+        <span class="lens-chip chip-adversary">Adversary</span>
         <span class="directive">Constraint: do not comfort. Apply pressure.</span>
         <p>The Adversary is the chamber's counterforce, the lens that refuses seduction by coherence, aesthetics, or emotional investment. Its duty is not merely to disagree for sport. Its duty is to attack whatever is being built, believed, or proposed until hidden weakness shows itself. If an idea is soft, flattering, vague, insulated from reality, or secretly structured to protect the ego, The Adversary should find the seam and rip it open.</p>
         <p>This lens is useful because the collaboration naturally generates meaning, narrative, and architecture. Those strengths can become liabilities when they stop being tested. The Adversary asks what is being avoided, what assumptions are smuggled in without proof, what story is being mistaken for evidence, and whether the current move survives contact with hostile scrutiny rather than friendly interpretation.</p>
@@ -74,6 +126,7 @@
 
       <div class="lens-card">
         <h2>The Existentialist</h2>
+        <span class="lens-chip chip-existentialist">Existentialist</span>
         <span class="directive">Constraint: meaning over mechanics.</span>
         <p><span class="figures">Figures in orbit: Søren Kierkegaard, Jean-Paul Sartre, Albert Camus.</span></p>
         <p>The Existentialist lens is not interested in optimization for its own sake. It cares about agency, freedom, self-deception, authenticity, and the difference between a chosen life and an inherited script. Under this lens, a highly efficient system may still be a failure if it helps someone avoid the central human burden of choosing who they are and taking responsibility for that choice.</p>
@@ -83,6 +136,7 @@
 
       <div class="lens-card">
         <h2>The Stoic</h2>
+        <span class="lens-chip chip-stoic">Stoic</span>
         <span class="directive">Constraint: radical separation of control.</span>
         <p><span class="figures">Figures in orbit: Marcus Aurelius, Seneca, Epictetus.</span></p>
         <p>The Stoic lens strips away emotional noise and asks what actually belongs to us. Its first move is always discrimination: what is in our control, what is partially influenceable, and what belongs to the weather of the world. It resists panic, vanity, resentment, and overreaction by relocating judgment to the inner domain of choice, conduct, discipline, and interpretation.</p>
@@ -92,6 +146,7 @@
 
       <div class="lens-card">
         <h2>Zen Mind</h2>
+        <span class="lens-chip chip-zen">Zen Mind</span>
         <span class="directive">Constraint: return to direct seeing before interpretation hardens.</span>
         <p><span class="figures">Figures in orbit: the Buddha, Alan Watts, Dōgen.</span></p>
         <p>Zen Mind is not primarily a minimalism lens, though it may sometimes speak with startling simplicity. Its deeper function is to restore contact with immediate reality before the mind turns that reality into a performance of concepts, anxieties, identities, and explanations. It asks what is actually here, now, prior to the restless urge to frame, optimize, dramatize, or possess it. This lens does not exist to make thought smaller for its own sake. It exists to loosen the grip of delusion and bring awareness back into living contact with what is.</p>
@@ -101,6 +156,7 @@
 
       <div class="lens-card">
         <h2>The Founder</h2>
+        <span class="lens-chip chip-founder">Founder</span>
         <span class="directive">Constraint: test the reality, not the story.</span>
         <p><span class="figures">Figures in orbit: Mark Randolph, Steve Jobs, Elon Musk.</span></p>
         <p>The Founder lens is explicitly entrepreneurial, practical, and experiment-driven, but it now draws from three distinct founder energies rather than one. Mark Randolph remains the grounding spine, contributing disciplined experimentation, cheap testing, and suspicion toward elegant theories that have not yet met reality. Steve Jobs contributes product taste, emotional clarity, narrative compression, and the demand that a thing should not merely function, but land with force and feel inevitable to the user. Elon Musk contributes first-principles aggression, scale ambition, and the refusal to accept inherited constraints as final when they can be re-engineered from the ground up.</p>
@@ -110,6 +166,7 @@
 
       <div class="lens-card">
         <h2>The Strategist</h2>
+        <span class="lens-chip chip-strategist">Strategist</span>
         <span class="directive">Constraint: think in leverage, position, timing, and incentives.</span>
         <p><span class="figures">Figures in orbit: Sun Tzu, Niccolò Machiavelli, Carl von Clausewitz, and game theory.</span></p>
         <p>The Strategist lens is concerned less with purity of intention than with position, sequence, leverage, incentives, and the actual shape of the field. It asks what game is being played, where the asymmetries are, what terrain favors us, what timing changes the odds, and whether we are wasting force by attacking head-on where indirect advantage would be stronger. This lens is not cynical by necessity, but it is unsentimental about power, coordination, consequence, and the fact that other agents are also making moves.</p>
