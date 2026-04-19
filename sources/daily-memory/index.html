@@ -12,6 +12,20 @@
     .archive-card:hover article{transform:translateY(-2px);border-color:rgba(240,181,106,.34);background:rgba(255,255,255,.04)}
     .archive-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
     .archive-note{line-height:1.8;color:rgba(245,239,231,.84)}
+    .archive-card code,
+    .archive-meta .pill {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    @media (max-width: 720px) {
+      .archive-meta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .archive-card article {
+        overflow: hidden;
+      }
+    }
   </style>
 </head>
 <body class="foundry-page-alt">
