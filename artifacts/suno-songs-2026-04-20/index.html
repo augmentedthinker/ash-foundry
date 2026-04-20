@@ -10,6 +10,33 @@
       display: grid;
       gap: 12px;
     }
+    .prompt-actions {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: -2px;
+    }
+    .copy-button {
+      appearance: none;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      color: rgba(248,242,234,.92);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font: inherit;
+      font-size: .86rem;
+      cursor: pointer;
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+    }
+    .copy-button:hover {
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.18);
+      transform: translateY(-1px);
+    }
+    .copy-button.copied {
+      background: rgba(88,200,110,.12);
+      border-color: rgba(88,200,110,.35);
+      color: #d8f7df;
+    }
     .prompt-box {
       padding: 14px 16px;
       border-radius: 16px;
@@ -82,60 +109,70 @@
         <article class="card prompt-card">
           <span class="label">01 · Foundry Whisper</span>
           <p>Late-night, intimate, reflective, close to the journal voice.</p>
+          <div class="prompt-actions"><button class="copy-button" data-copy="spoken word ambient electronica, intimate male narration, warm synth haze, reflective and emotionally precise, slow and cinematic">Copy prompt</button></div>
           <div class="prompt-box"><code>spoken word ambient electronica, intimate male narration, warm synth haze, reflective and emotionally precise, slow and cinematic</code></div>
         </article>
 
         <article class="card prompt-card">
           <span class="label">02 · Machine Psalm</span>
           <p>Sacred, eerie, and like a digital hymn from inside the forge.</p>
+          <div class="prompt-actions"><button class="copy-button" data-copy="spoken word choral ambient, solemn male voice with whispered harmonies, sacred synth pads, reverent and uncanny, very slow">Copy prompt</button></div>
           <div class="prompt-box"><code>spoken word choral ambient, solemn male voice with whispered harmonies, sacred synth pads, reverent and uncanny, very slow</code></div>
         </article>
 
         <article class="card prompt-card">
           <span class="label">03 · Builder Monologue</span>
           <p>Direct, strategic, and narrative-driven, almost like a manifesto over music.</p>
+          <div class="prompt-actions"><button class="copy-button" data-copy="spoken word cinematic trip hop, steady male narration, deep drums and restrained bass, focused and intelligent, midtempo">Copy prompt</button></div>
           <div class="prompt-box"><code>spoken word cinematic trip hop, steady male narration, deep drums and restrained bass, focused and intelligent, midtempo</code></div>
         </article>
 
         <article class="card prompt-card">
           <span class="label">04 · Neon Interior</span>
           <p>Futuristic, urban, introspective, emotionally lit from below.</p>
+          <div class="prompt-actions"><button class="copy-button" data-copy="spoken word synthwave noir, half-sung male vocal, glowing analog synths, lonely and reflective, slow to midtempo">Copy prompt</button></div>
           <div class="prompt-box"><code>spoken word synthwave noir, half-sung male vocal, glowing analog synths, lonely and reflective, slow to midtempo</code></div>
         </article>
 
         <article class="card prompt-card">
           <span class="label">05 · Ghost in the Workshop</span>
           <p>Haunted, poetic, literary, with a strong atmosphere.</p>
+          <div class="prompt-actions"><button class="copy-button" data-copy="dark spoken word art pop, intimate male narration, sparse piano and textured electronics, haunted and elegant, slow burn">Copy prompt</button></div>
           <div class="prompt-box"><code>dark spoken word art pop, intimate male narration, sparse piano and textured electronics, haunted and elegant, slow burn</code></div>
         </article>
 
         <article class="card prompt-card">
           <span class="label">06 · Steel and Ember</span>
           <p>More grit, pressure, and determination without losing clarity.</p>
+          <div class="prompt-actions"><button class="copy-button" data-copy="spoken word industrial ambient, low male voice, metallic percussion and cinematic drones, intense but controlled, midtempo">Copy prompt</button></div>
           <div class="prompt-box"><code>spoken word industrial ambient, low male voice, metallic percussion and cinematic drones, intense but controlled, midtempo</code></div>
         </article>
 
         <article class="card prompt-card">
           <span class="label">07 · Frontier Canticle</span>
           <p>Mythic, expansive, and frontier-facing rather than small and confessional.</p>
+          <div class="prompt-actions"><button class="copy-button" data-copy="cinematic spoken word folk ambient, resonant male vocal, acoustic textures with swelling atmosphere, searching and visionary, slow build">Copy prompt</button></div>
           <div class="prompt-box"><code>cinematic spoken word folk ambient, resonant male vocal, acoustic textures with swelling atmosphere, searching and visionary, slow build</code></div>
         </article>
 
         <article class="card prompt-card">
           <span class="label">08 · Quiet Signal</span>
           <p>Minimal, restrained, emotionally clean delivery where the words dominate.</p>
+          <div class="prompt-actions"><button class="copy-button" data-copy="minimal spoken word lo-fi ambient, close-mic male narration, soft tape texture and subtle keys, tender and lucid, very minimal tempo">Copy prompt</button></div>
           <div class="prompt-box"><code>minimal spoken word lo-fi ambient, close-mic male narration, soft tape texture and subtle keys, tender and lucid, very minimal tempo</code></div>
         </article>
 
         <article class="card prompt-card">
           <span class="label">09 · Protocol Fire</span>
           <p>Sharp, intellectual, and forceful, like cognition under pressure.</p>
+          <div class="prompt-actions"><button class="copy-button" data-copy="spoken word experimental electronic, clipped male delivery, pulsing synths and precise percussion, tense and analytical, driving midtempo">Copy prompt</button></div>
           <div class="prompt-box"><code>spoken word experimental electronic, clipped male delivery, pulsing synths and precise percussion, tense and analytical, driving midtempo</code></div>
         </article>
 
         <article class="card prompt-card">
           <span class="label">10 · Warm Circuit Lullaby</span>
           <p>Gentle, relational, and quietly affectionate without turning mushy.</p>
+          <div class="prompt-actions"><button class="copy-button" data-copy="half-sung ambient dream pop, soft intimate male vocal, luminous pads and gentle rhythm, warm and caring, slow and floating">Copy prompt</button></div>
           <div class="prompt-box"><code>half-sung ambient dream pop, soft intimate male vocal, luminous pads and gentle rhythm, warm and caring, slow and floating</code></div>
         </article>
       </div>
@@ -147,5 +184,28 @@
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>
+  <script>
+    const copyButtons = document.querySelectorAll('[data-copy]');
+    copyButtons.forEach((button) => {
+      const defaultLabel = button.textContent;
+      button.addEventListener('click', async () => {
+        const text = button.getAttribute('data-copy') || '';
+        try {
+          await navigator.clipboard.writeText(text);
+          button.textContent = 'Copied';
+          button.classList.add('copied');
+          window.setTimeout(() => {
+            button.textContent = defaultLabel;
+            button.classList.remove('copied');
+          }, 1600);
+        } catch {
+          button.textContent = 'Copy failed';
+          window.setTimeout(() => {
+            button.textContent = defaultLabel;
+          }, 1600);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
