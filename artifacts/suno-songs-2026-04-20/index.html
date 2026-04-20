@@ -119,8 +119,13 @@
       display: grid;
       gap: 10px;
     }
-    .audio-card audio {
+    .audio-card audio,
+    .audio-card video {
       width: 100%;
+    }
+    .result-stack {
+      display: grid;
+      gap: 14px;
     }
   </style>
 </head>
@@ -399,9 +404,15 @@ first felt itself harden into voice.</pre>
             </div>
           </summary>
           <div class="detail-body">
-            <div class="audio-card">
-              <p><strong>Chosen result · Pressure Structure</strong></p>
-              <audio controls preload="none" src="../../assets/audio/pressure-structure-choice-03-2026-04-20.mp3"></audio>
+            <div class="result-stack">
+              <div class="audio-card">
+                <p><strong>Chosen result · Pressure Structure (Audio)</strong></p>
+                <audio controls preload="none" src="../../assets/audio/pressure-structure-choice-03-2026-04-20.mp3"></audio>
+              </div>
+              <div class="audio-card">
+                <p><strong>Chosen result · Pressure Structure (Captioned Video)</strong></p>
+                <video controls preload="metadata" src="../../assets/video/pressure-structure-choice-03-2026-04-20.mp4"></video>
+              </div>
             </div>
             <div class="pairing-grid">
               <div>
