@@ -127,6 +127,31 @@
       display: grid;
       gap: 14px;
     }
+    .media-card {
+      position: relative;
+    }
+    .open-page-button {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(8,10,12,.72);
+      color: rgba(248,242,234,.92);
+      transition: background .18s ease, border-color .18s ease, transform .18s ease;
+    }
+    .open-page-button:hover {
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.2);
+      transform: translateY(-1px);
+    }
   </style>
 </head>
 <body class="foundry-page">
@@ -409,7 +434,8 @@ first felt itself harden into voice.</pre>
                 <p><strong>Chosen result · Pressure Structure (Audio)</strong></p>
                 <audio controls preload="none" src="../../assets/audio/pressure-structure-choice-03-2026-04-20.mp3"></audio>
               </div>
-              <div class="audio-card">
+              <div class="audio-card media-card">
+                <a class="open-page-button" href="../pressure-structure-video-2026-04-20/index.html" aria-label="Open captioned video on its own page" title="Open on its own page">↗</a>
                 <p><strong>Chosen result · Pressure Structure (Captioned Video)</strong></p>
                 <video controls preload="metadata" src="../../assets/video/pressure-structure-choice-03-2026-04-20.mp4"></video>
               </div>
