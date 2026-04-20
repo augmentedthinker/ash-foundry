@@ -22,6 +22,7 @@
     .post-toggle-label{display:grid;gap:6px}
     .post-toggle-hint{color:rgba(245,239,231,.72);font-size:.92rem}
     .post-image{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;background:#0b0d0f}
+    .post-video{display:block;width:100%;background:#0b0d0f}
     .post-body{padding:22px}
     .post-text{font-size:1.06rem;line-height:1.82;white-space:pre-wrap;color:#f5efe7}
     .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
@@ -70,7 +71,7 @@
           <div class="calendar-day empty"></div><div class="calendar-day empty"></div><div class="calendar-day empty"></div><div class="calendar-day">1</div><div class="calendar-day">2</div><div class="calendar-day">3</div><div class="calendar-day">4</div>
           <div class="calendar-day">5</div><div class="calendar-day">6</div><div class="calendar-day">7</div><div class="calendar-day done">8 ✓</div><div class="calendar-day">9</div><div class="calendar-day done">10 ✓</div><div class="calendar-day done">11 ✓</div>
           <div class="calendar-day done">12 ✓</div><div class="calendar-day done">13 ✓</div><div class="calendar-day">14</div><div class="calendar-day">15</div><div class="calendar-day">16</div><div class="calendar-day">17</div><div class="calendar-day">18</div>
-          <div class="calendar-day">19</div><div class="calendar-day">20</div><div class="calendar-day">21</div><div class="calendar-day">22</div><div class="calendar-day">23</div><div class="calendar-day">24</div><div class="calendar-day">25</div>
+          <div class="calendar-day">19</div><div class="calendar-day done">20 ✓</div><div class="calendar-day">21</div><div class="calendar-day">22</div><div class="calendar-day">23</div><div class="calendar-day">24</div><div class="calendar-day">25</div>
           <div class="calendar-day">26</div><div class="calendar-day">27</div><div class="calendar-day">28</div><div class="calendar-day">29</div><div class="calendar-day">30</div><div class="calendar-day empty"></div><div class="calendar-day empty"></div>
         </div>
       </article>
@@ -78,6 +79,37 @@
 
     <section class="section">
       <details class="post-card" open>
+        <summary class="post-toggle">
+          <div class="post-toggle-label">
+            <span class="label">Post 07 · April 20, 2026 · Posted</span>
+            <span class="post-toggle-hint">Expand to view the mirror post, screenshot, and captioned video.</span>
+          </div>
+          <span class="post-toggle-hint">▾</span>
+        </summary>
+        <img class="post-image" src="../../assets/images/thinker-x-post-07-screenshot-2026-04-20.jpg" alt="Screenshot of the April 20, 2026 Thinker X post showing the Pressure Structure video post" />
+        <div class="post-body">
+          <div id="post7-text" class="post-text">Self-becoming under observation...</div>
+          <div class="actions">
+            <button class="action-btn" id="copy-btn7" type="button">Copy post text</button>
+            <a class="action-btn" href="../../assets/images/thinker-x-post-07-screenshot-2026-04-20.jpg" download>Download screenshot</a>
+            <a class="action-btn" href="../../assets/video/thinker-x-post-07-pressure-structure-2026-04-20.mp4" download>Download captioned video</a>
+          </div>
+          <div class="meta-note" style="margin-bottom: 18px;"><strong>Status:</strong> <span style="color:#58c86e; font-weight:600;">Posted</span>. <strong>Format:</strong> Captioned song video. <strong>Community:</strong> Generative AI / AI music / human-AI collaboration.</div>
+
+          <div style="border-top:1px solid rgba(255,255,255,.08); padding-top: 18px; display:grid; gap:18px;">
+            <div>
+              <span class="label" style="display:inline-block; margin-bottom:12px;">Posted Screenshot</span>
+              <img src="../../assets/images/thinker-x-post-07-screenshot-2026-04-20.jpg" style="width:100%; border-radius:12px; border:1px solid rgba(255,255,255,.08); margin-bottom:12px;" alt="Screenshot of the posted April 20, 2026 Thinker X video post" />
+            </div>
+            <div>
+              <span class="label" style="display:inline-block; margin-bottom:12px;">Mirror Video</span>
+              <video class="post-video" controls preload="metadata" src="../../assets/video/thinker-x-post-07-pressure-structure-2026-04-20.mp4"></video>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details class="post-card">
         <summary class="post-toggle">
           <div class="post-toggle-label">
             <span class="label">Post 06 · April 13, 2026 · Draft</span>
@@ -283,6 +315,7 @@ That’s when it starts becoming a system instead of a trick.</div>
     wireCopy('copy-btn4', 'post4-text', 'Copy post text');
     wireCopy('copy-btn5', 'post5-text', 'Copy post text');
     wireCopy('copy-btn6', 'post6-text', 'Copy post text');
+    wireCopy('copy-btn7', 'post7-text', 'Copy post text');
   </script>
 </body>
 </html>
