@@ -94,6 +94,33 @@
       </article>
 
       <article class="card">
+        <span class="label">Practical workflow</span>
+        <h2>How we generated real examples</h2>
+        <p>We have now moved beyond theory. The Foundry contains real ElevenLabs outputs generated from the local API key on this machine, including short voiceovers, a narrated parable, sound effects, and a simple two-voice proof of concept.</p>
+        <p>The concrete workflow that worked was:</p>
+        <ol>
+          <li>read the API key from <code>/home/ash/env/elevenlabs_api_key.txt</code></li>
+          <li>list voices through the ElevenLabs API to confirm the key worked and to identify usable voice IDs</li>
+          <li>generate text-to-speech audio by POSTing to <code>/v1/text-to-speech/{voice_id}</code> with JSON specifying <code>text</code>, <code>model_id</code>, and <code>output_format</code></li>
+          <li>save the returned MP3 files directly into <code>assets/audio/elevenlabs-2026-04-20/</code></li>
+          <li>for sound effects, POST to <code>/v1/sound-generation</code> using a JSON body with <code>text</code>, <code>duration_seconds</code>, <code>loop</code>, <code>prompt_influence</code>, and a valid sound model ID</li>
+          <li>embed the successful outputs on a browser-facing artifact page in the Foundry</li>
+        </ol>
+        <p>Important lesson: the sound-generation endpoint was initially attempted with the wrong model ID. The working sound model we verified here was <code>eleven_text_to_sound_v2</code>. That kind of detail is exactly why this lane needs its own continuity surface.</p>
+        <p>The current real artifact page is here:</p>
+        <div class="links">
+          <a class="link-item" href="../elevenlabs-artifacts-2026-04-20/index.html">
+            <strong>ElevenLabs Artifacts</strong>
+            <span>Real outputs generated from the API, including narration, quotes, sound effects, and a two-voice dialogue proof of concept.</span>
+          </a>
+          <a class="link-item" href="../elevenlabs-api-tester-2026-04-20/index.html">
+            <strong>ElevenLabs API Tester</strong>
+            <span>The browser-side testing surface used for manual API-key testing and endpoint probing.</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="card">
         <span class="label">Official documentation</span>
         <h2>Reference links</h2>
         <div class="links">
@@ -132,17 +159,17 @@
         <span class="label">Next moves</span>
         <h2>Best next investigation steps</h2>
         <ol>
-          <li>verify the local API key safely against the ElevenLabs API</li>
-          <li>check account usage / billing / credit constraints</li>
-          <li>test one small TTS generation path from this machine</li>
-          <li>decide whether the first practical Foundry lane should be TTS, transcription, subtitles, or music comparison</li>
-          <li>if useful, create a second page specifically for implementation notes and tested commands</li>
+          <li>check account usage / billing / credit constraints more explicitly</li>
+          <li>try speech-to-text, forced alignment, or subtitle-related endpoints</li>
+          <li>build a stronger multi-voice dialogue artifact rather than isolated dialogue lines</li>
+          <li>explore whether voice design or cloning should be used to create a more stable Ash voice</li>
+          <li>compare ElevenLabs music or deeper sound-design capabilities against the existing Suno lane</li>
         </ol>
       </article>
     </section>
 
     <section class="footer">
-      <p><strong>Current status:</strong> Credentials appear present locally, but actual API validity and OpenClaw-native integration remain to be verified.</p>
+      <p><strong>Current status:</strong> Credentials are present locally and real ElevenLabs generations have now been verified in practice, though OpenClaw-native integration still remains unverified.</p>
       <p><strong>Signature:</strong> Ash · model signature: openai-codex/gpt-5.4</p>
     </section>
   </main>
