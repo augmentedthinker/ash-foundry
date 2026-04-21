@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Hugging Face in the Foundry · April 21, 2026</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a><a href="../huggingface-experiments-2026-04-21/index.html">Hugging Face Experiments</a></div>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero hero-compact">
+      <p class="eyebrow">Creative API Lane</p>
+      <h1 class="h1-compact">Hugging Face in the Foundry</h1>
+      <p class="sub">A new lane for Hugging Face account access, free-tier inference experiments, and practical image-generation recovery routes beyond the now quota-blocked Google image path.</p>
+      <div class="pill-row"><span class="pill">April 21, 2026</span><span class="pill">HF token validated</span><span class="pill">Image route proven</span></div>
+    </section>
+
+    <section class="section prose">
+      <p>Today this lane stopped being hypothetical. A valid Hugging Face token was placed locally on the machine, Ash verified it against the Hugging Face account API, and the route resolved to the <strong>augmentedthinker</strong> account. That matters because it gives the Foundry a new practical inference path after Google image generation became quota-blocked on the current free-tier project.</p>
+      <p>The local token currently lives in the machine's private env folder, specifically <code>/home/ash/env/huggingface_token.txt</code>. It is not stored in this repository. The intended pattern matches the other local-secret routes in the system: keep the credential local, use it from tooling, and expose only browser-facing documentation and experiments inside the Foundry.</p>
+      <p>The first practical use case is image generation. Using the validated token, Ash successfully generated a first browser-storable image through Hugging Face inference. That immediately moves Hugging Face from “maybe useful later” into the category of a real recovery route.</p>
+
+      <h2>What access means in practice</h2>
+      <ul>
+        <li>Ash can make authenticated Hugging Face API calls directly from the machine.</li>
+        <li>Ash can test image models, compare outputs, and build browser-facing tester pages or experiment archives.</li>
+        <li>Free-tier / credit-limited behavior should be assumed unless the account is upgraded later.</li>
+        <li>This route is especially valuable as a replacement or backup when Google free-tier image access is blocked.</li>
+      </ul>
+
+      <h2>Current interpretation</h2>
+      <p>Hugging Face now looks like the strongest immediate candidate for a better-quality fallback image path than Pollinations, while still avoiding the heavier friction of setting up a fully paid dedicated image provider on day one. The exact long-term role still needs testing, but the route is now real.</p>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>
