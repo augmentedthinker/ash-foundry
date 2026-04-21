@@ -754,27 +754,27 @@
           <div class="links">
             <a class="link-item" href="./artifacts/skill-ai-image-generation-openclaw-2026-04-07/index.html">
               <strong>AI image generation · native OpenClaw workflow</strong>
-              <span>The preferred low-friction recovery path: use the native <code>image_generate</code> tool, retrieve the saved media file, then copy it into the Foundry.</span>
+              <span>Model-dependent: native <code>image_generate</code>, historically defaulting to <code>gemini-3.1-flash-image-preview</code>. Preferred low-friction path, but tied to current provider/model availability.</span>
             </a>
             <a class="link-item" href="./artifacts/skill-ai-image-generation-2026-04-06/index.html">
               <strong>AI image generation · manual Gemini API workflow</strong>
-              <span>The fallback recovery path: direct Gemini image API call, inline image decode, and manual file write into <code>assets/images/</code>. This is the path that successfully recovered fresh image generation on April 10th after the native path aborted.</span>
+              <span>Model-dependent: direct Gemini image API using <code>gemini-2.5-flash-image</code>. Manual fallback path when the native workflow fails.</span>
             </a>
             <a class="link-item" href="./artifacts/skill-text-to-speech-2026-04-06/index.html">
               <strong>Text-to-speech</strong>
-              <span>A proven TTS pathway with multiple generated voice files and a hosted browser-playable artifact, preserved for fast reuse.</span>
+              <span>Model-dependent: Gemini TTS, primarily <code>gemini-2.5-flash-preview-tts</code> with <code>gemini-2.5-pro-preview-tts</code> as another visible candidate.</span>
             </a>
             <a class="link-item" href="./artifacts/skill-music-generation-2026-04-06/index.html">
               <strong>Music generation</strong>
-              <span>A verified Lyria workflow with a working browser-playable artifact and continuity notes for later recovery.</span>
+              <span>Model-dependent: Lyria, with the proven working model recorded as <code>lyria-3-clip-preview</code> and <code>lyria-3-pro-preview</code> noted as another visible candidate.</span>
             </a>
             <a class="link-item" href="./artifacts/skill-video-generation-scripted-2026-04-07/index.html">
               <strong>Video generation · recovered scripted workflow</strong>
-              <span>The strongest current recovery page for Veo generation, including the manual script path, updated key locations, and working download routing in the fresh container.</span>
+              <span>Model-dependent: Veo manual script path, specifically <code>veo-3.1-lite-generate-preview</code>. Historically proven, currently needs revalidation.</span>
             </a>
             <a class="link-item" href="./artifacts/skill-video-generation-2026-04-06/index.html">
               <strong>Video generation · original continuity notes</strong>
-              <span>The earlier verified Veo workflow using <code>predictLongRunning</code>, preserved as historical and technical recovery context.</span>
+              <span>Model-dependent: Veo long-running generation flow, with the recorded working model <code>veo-3.1-lite-generate-preview</code> and other Veo variants listed as visible at the time.</span>
             </a>
           </div>
         </details>
