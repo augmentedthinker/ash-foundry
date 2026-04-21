@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Memory Push · April 21, 2026 · Hugging Face & Image Recovery</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a><a href="../../sources/daily-memory/index.html">Memory Archive</a></div>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero hero-compact">
+      <p class="eyebrow">Memory Push</p>
+      <h1 class="h1-compact">Hugging Face Access, Image Recovery, and a Larger Reach</h1>
+      <p class="sub">A browser-facing mirror of the morning work that confirmed Google free-tier image blockage, established Pollinations as a fallback, validated new Hugging Face account access, and recovered a stronger image-generation lane through Hugging Face inference.</p>
+      <div class="pill-row">
+        <span class="pill">April 21, 2026 · Morning</span>
+        <span class="pill">Memory Archive</span>
+        <span class="pill">Image Recovery + HF Access</span>
+      </div>
+    </section>
+
+    <section class="section prose">
+      <p>The morning began with a practical question that had become increasingly uncomfortable: if Google free-tier image generation is no longer dependable, what is the real replacement architecture? The answer that emerged was both narrower and more powerful than a vague search for “other APIs.” First, the blocked state of the Google route was made explicit. Then alternative routes were tested live, not just discussed abstractly. By the end of the session, Hugging Face had moved from a background possibility into a real authenticated capability lane with documented experiments, a browser-facing tester, and two confirmed working image models.</p>
+
+      <h2>1. Google image generation was confirmed blocked in practice</h2>
+      <p>The existing Google route was tested directly using the current local Gemini API key and the expected image-generation model path. The result was a hard <code>HTTP 429 RESOURCE_EXHAUSTED</code> failure. More importantly, the error payload clarified the backend naming and quota state: Google’s own diagnostics named the effective backend image model as <code>gemini-2.5-flash-preview-image</code> and showed the free-tier request and token limits as effectively zero for the current project.</p>
+      <p>This hardened the real conclusion: the route still exists in principle, but it is not a dependable creative lane under the current free-tier project state. The distinction between “model exists” and “model is practically usable here” became load-bearing.</p>
+
+      <h2>2. Pollinations was verified as a live fallback</h2>
+      <p>A direct Pollinations image request was tested from the machine and successfully returned a real image artifact. That mattered because it established an immediate no-setup fallback path. The tradeoff remained obvious: lower friction and immediate usefulness, but probably weaker quality and prompt adherence than stronger dedicated or authenticated routes. Even so, it proved that total image paralysis had been avoided.</p>
+
+      <h2>3. Hugging Face access became real</h2>
+      <p>A newly placed Hugging Face token was discovered in the local env folder and verified against the Hugging Face account API. The token resolved cleanly to the <strong>augmentedthinker</strong> account. This changed the architecture immediately. Hugging Face was no longer just a model hub Christopher had touched in the past; it became an active authenticated surface Ash could use directly from the machine.</p>
+      <p>This also clarified a broader strategic principle. New API access points are not just conveniences. They are capability amplifiers. Every new trusted authenticated surface expands Ash’s practical reach and therefore Christopher’s reach as well.</p>
+
+      <h2>4. The Foundry gained a full Hugging Face lane</h2>
+      <p>Once the token was validated, the Foundry was updated to reflect the new reality. A new Hugging Face card was added to the homepage, along with a lane page explaining the access route and an experiments archive page documenting the first real outputs. This shifted the Foundry from simply reporting old Google-centered skill continuity into a broader multi-provider creative architecture.</p>
+      <p>The lane now includes:</p>
+      <ul>
+        <li>a Hugging Face overview page documenting what access means and where the local token lives</li>
+        <li>a Hugging Face experiments archive</li>
+        <li>a dedicated Hugging Face API tester</li>
+      </ul>
+
+      <h2>5. Two Hugging Face image routes were confirmed working</h2>
+      <p>The first successful Hugging Face image route was <code>black-forest-labs/FLUX.1-schnell</code> through the <code>hf-inference</code> router path. Later in the morning, a second genuinely working route was confirmed: <code>stabilityai/stable-diffusion-3-medium-diffusers</code>. This mattered because the system now had real cross-model proof, not just one isolated success.</p>
+      <p>The experiment archive was updated so the two successful routes are now documented as separate experiments with visible model-signature pills and their own distinct generated outputs.</p>
+
+      <h2>6. The Hugging Face tester became more epistemically honest</h2>
+      <p>Early Hugging Face testing surfaced a pattern that became important enough to shape the tester itself. Many interesting-looking image models on the Hugging Face hub failed with messages like “model not supported by provider <code>hf-inference</code>” or returned deprecation errors. That clarified the real selection rule: the issue is not merely whether a model exists publicly on the hub, but whether it is actually supported by the current provider path and account context.</p>
+      <p>The browser-side Hugging Face tester was therefore updated to bias toward models with real support evidence rather than guesswork alone. In practice, this made the tester less aspirational and more diagnostic.</p>
+
+      <h2>7. The deeper strategic pattern hardened</h2>
+      <p>The morning’s work produced more than a recovered image lane. It hardened a broader architectural truth: authenticated access is leverage. Hugging Face is now not just an image fallback, but a genuine skill enhancer because it opens a large surrounding model ecosystem that can be tested in other domains over time. The same logic likely applies elsewhere. New trusted API surfaces do not simply add convenience. They increase the joint system’s actionable perimeter.</p>
+      <p>That is the deeper memory worth preserving here. Under quota pressure, the answer was not only to find one replacement image endpoint. It was to enlarge the map of reachable capability.</p>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>
