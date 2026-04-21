@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Hugging Face Usage & Billing Context · April 21, 2026</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a><a href="../huggingface-lane-2026-04-21/index.html">Hugging Face Lane</a></div>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero hero-compact">
+      <p class="eyebrow">Account Context</p>
+      <h1 class="h1-compact">Hugging Face Usage & Billing Context</h1>
+      <p class="sub">A browser-facing note on what the current Hugging Face token actually reveals about account and usage state, and where the visibility limits still are.</p>
+      <div class="pill-row"><span class="pill">April 21, 2026</span><span class="pill">Free tier / prepaid context</span><span class="pill">Partial API visibility</span></div>
+    </section>
+
+    <section class="section prose">
+      <p>After gaining Hugging Face access, the next question was obvious: how much usage visibility does the API actually expose, especially while operating on a free-tier or prepaid account? The answer today is useful, but partial.</p>
+
+      <h2>What the current token clearly reveals</h2>
+      <p>Using the authenticated <code>whoami-v2</code> API route, the current Hugging Face token exposed several important account-level facts:</p>
+      <ul>
+        <li><strong>account:</strong> <code>augmentedthinker</code></li>
+        <li><strong>canPay:</strong> <code>false</code></li>
+        <li><strong>billingMode:</strong> <code>prepaid</code></li>
+        <li><strong>isPro:</strong> <code>false</code></li>
+        <li><strong>token type:</strong> fine-grained access token</li>
+      </ul>
+      <p>That gives us a meaningful baseline. We know this is not a Pro plan context, we know the account is not flagged as generally payable through the API response, and we know the token is authenticated and structurally valid.</p>
+
+      <h2>What did not resolve cleanly</h2>
+      <p>Several obvious billing and usage endpoint guesses were probed directly, including routes that looked like likely billing or inference-usage surfaces. Those attempts mostly returned <code>404</code> or <code>401</code> responses rather than a clean documented usage payload.</p>
+      <p>So the honest current conclusion is:</p>
+      <ul>
+        <li>the token gives us <strong>account context</strong></li>
+        <li>the token gives us <strong>real inference access</strong></li>
+        <li>but we do <strong>not yet have a clean API-level usage dashboard endpoint</strong> confirmed through this route</li>
+      </ul>
+
+      <h2>Practical interpretation</h2>
+      <p>For now, Hugging Face usage has to be treated somewhat empirically. That means monitoring what models still respond, watching for provider-support or deprecation errors, and avoiding assumptions about unlimited free use. The account state suggests a cautious posture is correct.</p>
+      <p>The right working stance is therefore:</p>
+      <ul>
+        <li>assume free-tier or prepaid limits are real</li>
+        <li>treat successful generations as useful but not infinite</li>
+        <li>prefer tester-driven validation over optimism</li>
+        <li>look for better usage telemetry later if Hugging Face exposes a cleaner route or if dashboard scraping becomes worth the effort</li>
+      </ul>
+
+      <h2>Why this page exists</h2>
+      <p>This page matters because it keeps the Foundry honest. New authenticated access is exciting, but the point is not to mythologize new capability. The point is to understand its operating envelope well enough to use it strategically.</p>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>
