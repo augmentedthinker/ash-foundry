@@ -153,6 +153,37 @@
 
     <section class="section">
       <article class="card mobile-card">
+        <span class="label">Concrete targets</span>
+        <h2>20 actual APIs worth considering</h2>
+        <p class="mobile-copy">Below is a more concrete acquisition list. These are not equal-priority, but they are real surfaces worth considering based on the work we are already doing. I grouped them loosely by strategic role and tried to keep the list grounded in actual utility rather than novelty.</p>
+        <ol class="mobile-copy">
+          <li><strong>Hugging Face Inference Providers</strong> , already acquired, now clearly worth deepening across image and other model domains.</li>
+          <li><strong>ElevenLabs API</strong> , already present, valuable for TTS, narration, voice artifacts, and possible dialogue workflows.</li>
+          <li><strong>Replicate API</strong> , strong candidate for broad model access with cleaner paid-on-demand creative workflows.</li>
+          <li><strong>Fal API</strong> , likely strong for image and video generation with a more builder-oriented posture.</li>
+          <li><strong>OpenAI API</strong> , useful not just for reasoning but for multimodal generation and structured automation where cost makes sense.</li>
+          <li><strong>Anthropic API</strong> , valuable as an additional reasoning surface and second-opinion engine when model diversity matters.</li>
+          <li><strong>Google Gemini paid API path</strong> , worth restoring eventually if the image/video and multimodal routes justify billing.</li>
+          <li><strong>Groq API</strong> , attractive for extremely fast inference where latency matters more than model breadth.</li>
+          <li><strong>Together AI API</strong> , useful for broad open-model access and experimentation across multiple families.</li>
+          <li><strong>Fireworks AI API</strong> , worth considering for performant open-model inference and structured experimentation.</li>
+          <li><strong>Perplexity API</strong> , potentially strong if we want better research-grounded retrieval or answer generation surfaces.</li>
+          <li><strong>SerpAPI</strong> , practical if we want stronger structured web/search retrieval than ad hoc browsing.</li>
+          <li><strong>Tavily API</strong> , another research-oriented retrieval surface that may fit well for agentic search patterns.</li>
+          <li><strong>GitHub API / deeper GH automation</strong> , already partly in use, but worth expanding for issues, PRs, releases, and repo intelligence.</li>
+          <li><strong>X / social publishing API</strong> , only if it materially reduces posting-loop friction and is stable enough to justify the effort.</li>
+          <li><strong>Substack or newsletter API surfaces</strong> , useful if long-form outward publishing becomes a more serious channel.</li>
+          <li><strong>Cloudflare API</strong> , high leverage for hosting, deployment, workers, assets, and edge automation.</li>
+          <li><strong>Supabase API</strong> , attractive if we want fast app backends, auth, storage, and data surfaces without heavy infra.</li>
+          <li><strong>Notion API</strong> , worthwhile only if we truly want a structured external knowledge or project system integrated with Ash.</li>
+          <li><strong>Stripe API</strong> , extremely valuable once offers, sales, installs, or paid products become real enough to need payment infrastructure.</li>
+        </ol>
+        <p class="mobile-copy">If I compress that list further, the best near-term bets are probably: <strong>Replicate</strong>, <strong>Fal</strong>, <strong>Cloudflare</strong>, <strong>Supabase</strong>, and one stronger <strong>research API</strong>. Those feel most likely to compound with what we are already building.</p>
+      </article>
+    </section>
+
+    <section class="section">
+      <article class="card mobile-card">
         <span class="label">Strategic caution</span>
         <h2>What to avoid</h2>
         <p class="mobile-copy">The biggest mistake would be turning this into a collector’s impulse. Too many half-integrated surfaces create noise, cost, and identity drift. The right move is not maximum breadth. It is a small, trusted, high-leverage stack that meaningfully compounds.</p>
