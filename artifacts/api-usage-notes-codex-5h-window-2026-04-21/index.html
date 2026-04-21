@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Codex 5-Hour Window Usage Note · April 21, 2026</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a><a href="../api-usage-notes/index.html">API Usage Notes</a></div>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero hero-compact">
+      <p class="eyebrow">Constraints & Diagnostics</p>
+      <h1 class="h1-compact">Codex 5-Hour Window Usage Note</h1>
+      <p class="sub">A focused record of the first notable “normal-use” exhaustion event for the OpenAI Codex GPT-5.4 lane, including what window was actually exceeded, why it happened, and what it seems to mean for future Foundry work.</p>
+      <div class="pill-row">
+        <span class="pill">April 21, 2026</span>
+        <span class="pill">openai-codex/gpt-5.4</span>
+        <span class="pill">Rolling 5-hour window</span>
+      </div>
+    </section>
+
+    <section class="section prose">
+      <p><strong>Core conclusion:</strong> the limit we hit was not the weekly cap and not a simple hourly throttle. It was the <strong>rolling 5-hour usage window</strong> for the Codex GPT-5.4 access profile.</p>
+
+      <h2>What was observed</h2>
+      <ul>
+        <li>The session temporarily fell off the primary Codex lane and began routing through fallback behavior.</li>
+        <li>OpenClaw status reporting showed the 5-hour usage window at <strong>0% left</strong> with time remaining until reset.</li>
+        <li>Later, after reset, the same session showed <strong>5h 100% left</strong>, confirming that the constraint was rolling-window based rather than an account-wide failure.</li>
+        <li>The weekly budget remained largely intact, around <strong>77% left</strong>, which rules out the weekly quota as the main cause.</li>
+      </ul>
+
+      <h2>Why this was surprising</h2>
+      <p>This outage did not arrive during an obvious runaway background bug like the earlier heartbeat or dreaming failures. It happened during what looked like a relatively normal, productive working stretch. That is exactly why it matters.</p>
+      <p>The likely lesson is that <strong>dense sustained multi-step work in one long session can burn the 5-hour Codex window faster than it feels like it should</strong>, even when much of the visible work is happening through tools.</p>
+
+      <h2>What probably consumed the window</h2>
+      <ul>
+        <li>Long conversational continuity and high retained context.</li>
+        <li>Multiple large HTML authoring passes across Foundry pages.</li>
+        <li>Repeated verification loops, status checks, and push confirmations.</li>
+        <li>Heavy tool orchestration around Hugging Face image and video testing.</li>
+        <li>A long unbroken run of editing, diagnostics, writing, and follow-up interpretation.</li>
+      </ul>
+
+      <p>Even when external APIs or shell commands do the direct work, the model still pays for planning, interpretation, context management, and response generation. The hidden burn appears to come less from any one flashy command and more from the cumulative weight of a long, dense operational session.</p>
+
+      <h2>Operational interpretation</h2>
+      <p>The useful distinction now is:</p>
+      <ul>
+        <li><strong>Weekly limit:</strong> not the issue this time.</li>
+        <li><strong>Rolling 5-hour window:</strong> the issue that was actually exceeded.</li>
+        <li><strong>Gemini fallback:</strong> useful as a continuity lane when Codex hits temporary window exhaustion.</li>
+      </ul>
+
+      <h2>Working heuristic going forward</h2>
+      <p>For long Foundry sessions, it now makes sense to think in two modes:</p>
+      <ol>
+        <li><strong>Heavy Codex mode:</strong> architecture, difficult coding, deep artifact synthesis, hard diagnosis.</li>
+        <li><strong>Lighter fallback mode:</strong> planning, note capture, organization, documentation, lower-stakes drafting.</li>
+      </ol>
+
+      <p>This was the first clear example where regular high-output use, not a broken loop, was enough to exhaust the Codex 5-hour window. That makes it operationally important and worth remembering.</p>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>

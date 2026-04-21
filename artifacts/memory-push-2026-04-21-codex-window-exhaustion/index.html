@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Memory Push · Codex Window Exhaustion · April 21, 2026</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a><a href="../../sources/daily-memory/index.html">Memory Archive</a></div>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero hero-compact">
+      <p class="eyebrow">Memory push · April 21, 2026 · Afternoon</p>
+      <h1 class="h1-compact">Codex Window Exhaustion, Flash-Lite Fallback, and the Shape of Normal-Use Limits</h1>
+      <p class="sub">A browser-facing mirror of the April 21 memory push capturing the first clearly notable case where sustained regular Foundry work, not an obvious runaway bug, exhausted the rolling Codex GPT-5.4 window.</p>
+      <div class="pill-row">
+        <span class="pill">Browser-facing mirror</span>
+        <span class="pill">Codex 5-hour window</span>
+        <span class="pill">Gemini fallback context</span>
+      </div>
+    </section>
+
+    <section class="section prose">
+      <p>This memory push matters because it marks a shift in how quota pressure should be interpreted. Earlier quota incidents felt linked to obvious background failures or experimental features that went pathological. This one did not. It happened during dense but recognizably normal work: Foundry editing, Hugging Face testing, artifact writing, repo creation, verification loops, and long-context continuity management.</p>
+      <p>The key lesson is that the OpenAI Codex GPT-5.4 lane appears vulnerable not only to bugs, but to a long enough stretch of serious ordinary use. The window actually hit was the <strong>rolling 5-hour usage window</strong>, not the weekly budget. After reset, the 5-hour window returned to full headroom while the weekly budget remained substantially intact.</p>
+      <p>That matters operationally because it changes how future sessions should be paced. Heavy architecture and complex coding still make sense on Codex while the window is healthy. But once a session becomes long, dense, and verification-heavy, it becomes much easier than expected to exhaust the primary lane and fall onto Gemini or other fallbacks.</p>
+      <p>The broader interpretation is not that Codex failed. It is that normal-use limits are now part of the real working architecture and need to be treated as such. This is no longer only a story about runaway loops. It is a story about sustained ambitious use under real constraints.</p>
+      <p>A dedicated usage note was added in the API Usage &amp; Quotas lane so this lesson does not disappear into the chat log.</p>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>
