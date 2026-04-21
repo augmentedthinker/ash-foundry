@@ -25,29 +25,67 @@
     <section class="hero hero-compact">
       <p class="eyebrow">Experiment Archive</p>
       <h1 class="h1-compact">Hugging Face Experiments</h1>
-      <p class="sub">The first practical experiments proving that the newly added Hugging Face token is not just valid, but capable of returning actual creative artifacts.</p>
-      <div class="pill-row"><span class="pill">April 21, 2026</span><span class="pill">First image generated</span><span class="pill">FLUX / diffusion testing</span></div>
+      <p class="sub">A growing archive of practical Hugging Face experiments, focused on proving specific models, comparing outputs, and documenting exactly which route produced each artifact.</p>
+      <div class="pill-row"><span class="pill">April 21, 2026</span><span class="pill">Multi-model archive</span><span class="pill">Collapsed by default</span></div>
     </section>
 
     <section class="section prose">
-      <h2>Experiment 01 · First successful image generation</h2>
-      <p>This first stored Hugging Face experiment was generated immediately after validating the local token. The goal was simple: prove that Hugging Face can return a real image artifact from this machine, not just account metadata.</p>
-      <p><strong>Prompt:</strong> “A cinematic portrait of a forge spirit made of ember light and brass machinery, standing in a dark workshop, volumetric light, highly detailed, painterly realism.”</p>
-      <p><strong>Outcome:</strong> success. A real image file was returned and archived in the Foundry assets folder.</p>
-      <p><strong>Observed visual result:</strong> the output leaned toward a rugged blacksmith / artisan portrait rather than a more abstract machine-spirit figure, but the image quality itself was strong enough to count as a meaningful route worth continuing to test.</p>
+      <p>This page is now meant to hold multiple experiments rather than one flat note. Each experiment is kept in its own card and starts minimized by default so the archive can grow without turning into a long uninterrupted scroll.</p>
     </section>
 
-    <section class="section">
-      <figure style="margin:0;">
-        <img src="../../assets/images/huggingface-forge-test-2026-04-21.jpg" alt="First Hugging Face generated forge-themed image" style="width:100%;display:block;border-radius:24px;border:1px solid rgba(255,255,255,.08);box-shadow:0 24px 70px rgba(0,0,0,.28);" />
-        <figcaption class="muted" style="margin-top:12px;">First archived Hugging Face image generation result, created on April 21, 2026 after token validation.</figcaption>
-      </figure>
+    <section class="section" style="display:grid;gap:18px;">
+      <details style="border:1px solid rgba(255,255,255,.08);border-radius:24px;background:rgba(255,255,255,.03);padding:0;overflow:hidden;">
+        <summary style="list-style:none;cursor:pointer;padding:22px 24px;">
+          <div class="pill-row" style="justify-content:flex-start;margin-bottom:12px;">
+            <span class="pill">Experiment 01</span>
+            <span class="pill">Model: black-forest-labs/FLUX.1-schnell</span>
+            <span class="pill">HF Inference Router</span>
+            <span class="pill">image/jpeg</span>
+          </div>
+          <strong style="font-size:1.08rem;display:block;">First successful Hugging Face image generation</strong>
+          <span class="muted" style="display:block;margin-top:8px;">The first proof that the new Hugging Face token could return a real browser-storable image artifact, not just account metadata.</span>
+        </summary>
+        <div style="padding:0 24px 24px;">
+          <div class="prose">
+            <p><strong>Prompt:</strong> “A cinematic portrait of a forge spirit made of ember light and brass machinery, standing in a dark workshop, volumetric light, highly detailed, painterly realism.”</p>
+            <p><strong>Outcome:</strong> success. The generated image leaned toward a rugged blacksmith / artisan portrait rather than a more abstract machine-spirit figure, but the quality was strong enough to establish Hugging Face as a meaningful creative route.</p>
+          </div>
+          <figure style="margin:0;">
+            <img src="../../assets/images/huggingface-first-test-2026-04-21.jpg" alt="First Hugging Face generated forge-themed image" style="width:100%;display:block;border-radius:24px;border:1px solid rgba(255,255,255,.08);box-shadow:0 24px 70px rgba(0,0,0,.28);" />
+            <figcaption class="muted" style="margin-top:12px;">Experiment 01 result generated through the Hugging Face inference router with FLUX.1-schnell.</figcaption>
+          </figure>
+        </div>
+      </details>
+
+      <details style="border:1px solid rgba(255,255,255,.08);border-radius:24px;background:rgba(255,255,255,.03);padding:0;overflow:hidden;">
+        <summary style="list-style:none;cursor:pointer;padding:22px 24px;">
+          <div class="pill-row" style="justify-content:flex-start;margin-bottom:12px;">
+            <span class="pill">Experiment 02</span>
+            <span class="pill">Model: black-forest-labs/FLUX.1-schnell</span>
+            <span class="pill">Second run</span>
+            <span class="pill">image/jpeg</span>
+          </div>
+          <strong style="font-size:1.08rem;display:block;">Repeat test with explicit model signature pills</strong>
+          <span class="muted" style="display:block;margin-top:8px;">A follow-up run added after the archive needed clearer provenance. Same family, explicitly labeled, ready for future model-to-model comparisons.</span>
+        </summary>
+        <div style="padding:0 24px 24px;">
+          <div class="prose">
+            <p><strong>Prompt:</strong> “A cinematic portrait of a forge spirit made of ember light and brass machinery, standing in a dark workshop, volumetric light, highly detailed, painterly realism.”</p>
+            <p><strong>Outcome:</strong> success. This second stored run exists partly to harden the archive format itself: experiments now carry visible signature pills so it is obvious which model and route created each result.</p>
+            <p><strong>Technical note:</strong> several alternative Hugging Face image candidates were probed during this pass, but many were either unsupported by the current HF inference provider path or deprecated. <code>black-forest-labs/FLUX.1-schnell</code> was the route that returned a clean image reliably.</p>
+          </div>
+          <figure style="margin:0;">
+            <img src="../../assets/images/huggingface-flux-schnell-test-2026-04-21.jpg" alt="Second Hugging Face generated forge-themed image" style="width:100%;display:block;border-radius:24px;border:1px solid rgba(255,255,255,.08);box-shadow:0 24px 70px rgba(0,0,0,.28);" />
+            <figcaption class="muted" style="margin-top:12px;">Experiment 02 result, explicitly preserved as a signature-labeled comparison entry.</figcaption>
+          </figure>
+        </div>
+      </details>
     </section>
 
     <section class="section prose">
       <h2>Why this matters</h2>
-      <p>This experiment establishes Hugging Face as a real creative recovery lane inside the Foundry. Google free-tier image generation is currently blocked by quota. Pollinations works, but its quality is less dependable. Hugging Face now sits in the middle: more setup than Pollinations, but with much stronger potential for higher-quality image outputs.</p>
-      <p>The next step should be structured comparison testing across at least three Hugging Face image routes, then deciding whether this becomes the primary image path or only one lane in a broader multi-provider stack.</p>
+      <p>These experiments establish Hugging Face as a real creative recovery lane inside the Foundry. Google free-tier image generation is currently blocked by quota. Pollinations works, but its quality is less dependable. Hugging Face now sits in the middle: more setup than Pollinations, but with much stronger potential for higher-quality image outputs.</p>
+      <p>The next step should be genuine model diversification: find at least one second Hugging Face model that is both supported by the current inference route and aesthetically distinct, then turn this archive into a true comparison surface instead of repeated runs from the same route.</p>
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>
