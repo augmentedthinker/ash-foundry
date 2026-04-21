@@ -33,6 +33,7 @@
       <p>Today this lane stopped being hypothetical. A valid Hugging Face token was placed locally on the machine, Ash verified it against the Hugging Face account API, and the route resolved to the <strong>augmentedthinker</strong> account. That matters because it gives the Foundry a new practical inference path after Google image generation became quota-blocked on the current free-tier project.</p>
       <p>The local token currently lives in the machine's private env folder, specifically <code>/home/ash/env/huggingface_token.txt</code>. It is not stored in this repository. The intended pattern matches the other local-secret routes in the system: keep the credential local, use it from tooling, and expose only browser-facing documentation and experiments inside the Foundry.</p>
       <p>The first practical use case is image generation. Using the validated token, Ash successfully generated a first browser-storable image through Hugging Face inference. That immediately moves Hugging Face from “maybe useful later” into the category of a real recovery route.</p>
+      <p>A dedicated <strong>Hugging Face API Tester</strong> now also exists in the Foundry so we can probe which specific image routes are truly supported by the current token and provider path, instead of assuming every interesting model on the hub is actually usable.</p>
 
       <h2>What access means in practice</h2>
       <ul>
