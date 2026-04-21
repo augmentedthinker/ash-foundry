@@ -61,22 +61,22 @@
         <summary style="list-style:none;cursor:pointer;padding:22px 24px;">
           <div class="pill-row" style="justify-content:flex-start;margin-bottom:12px;">
             <span class="pill">Experiment 02</span>
-            <span class="pill">Model: black-forest-labs/FLUX.1-schnell</span>
-            <span class="pill">Second run</span>
+            <span class="pill">Model: stabilityai/stable-diffusion-3-medium-diffusers</span>
+            <span class="pill">Fresh run</span>
             <span class="pill">image/jpeg</span>
           </div>
-          <strong style="font-size:1.08rem;display:block;">Repeat test with explicit model signature pills</strong>
-          <span class="muted" style="display:block;margin-top:8px;">A follow-up run added after the archive needed clearer provenance. Same family, explicitly labeled, ready for future model-to-model comparisons.</span>
+          <strong style="font-size:1.08rem;display:block;">First successful Stability route image generation</strong>
+          <span class="muted" style="display:block;margin-top:8px;">A genuinely new experiment using the second confirmed working Hugging Face model, replacing the earlier duplicate-style FLUX rerun.</span>
         </summary>
         <div style="padding:0 24px 24px;">
           <div class="prose">
-            <p><strong>Prompt:</strong> “A cinematic portrait of a forge spirit made of ember light and brass machinery, standing in a dark workshop, volumetric light, highly detailed, painterly realism.”</p>
-            <p><strong>Outcome:</strong> success. This second stored run exists partly to harden the archive format itself: experiments now carry visible signature pills so it is obvious which model and route created each result.</p>
-            <p><strong>Technical note:</strong> several alternative Hugging Face image candidates were probed during this pass, but many were either unsupported by the current HF inference provider path or deprecated. <code>black-forest-labs/FLUX.1-schnell</code> was the route that returned a clean image reliably.</p>
+            <p><strong>Prompt:</strong> “A luminous forge spirit formed from ember light and dark steel, standing beside a blazing anvil in a shadowy workshop, cinematic atmosphere, intricate glowing details, painterly realism, high prompt adherence.”</p>
+            <p><strong>Outcome:</strong> success. This route returned a fresh image through <code>stabilityai/stable-diffusion-3-medium-diffusers</code>, giving the archive its first true cross-model comparison point instead of a repeated run from the same FLUX baseline.</p>
+            <p><strong>Observed visual result:</strong> the output came back as a much more infernal, armored forge-being, with strong fire contrast, a heavy fantasy mood, and noticeably different composition from the Black Forest Labs result.</p>
           </div>
           <figure style="margin:0;">
-            <img src="../../assets/images/huggingface-flux-schnell-test-2026-04-21.jpg" alt="Second Hugging Face generated forge-themed image" style="width:100%;display:block;border-radius:24px;border:1px solid rgba(255,255,255,.08);box-shadow:0 24px 70px rgba(0,0,0,.28);" />
-            <figcaption class="muted" style="margin-top:12px;">Experiment 02 result, explicitly preserved as a signature-labeled comparison entry.</figcaption>
+            <img src="../../assets/images/huggingface-sd3-medium-test-2026-04-21.jpg" alt="Stability AI medium diffusers forge-themed image" style="width:100%;display:block;border-radius:24px;border:1px solid rgba(255,255,255,.08);box-shadow:0 24px 70px rgba(0,0,0,.28);" />
+            <figcaption class="muted" style="margin-top:12px;">Experiment 02 result generated through the Hugging Face inference router with Stability AI SD3 medium diffusers.</figcaption>
           </figure>
         </div>
       </details>
