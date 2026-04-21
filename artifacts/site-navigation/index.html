@@ -7,11 +7,18 @@
   <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
   <style>
     .nav-prose { line-height: 1.8; color: rgba(245,239,231,.86); }
+    .readme-shell { display:grid; gap:18px; }
+    .readme-meta {
+      padding: 22px;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.03);
+      box-shadow: 0 14px 40px rgba(0,0,0,.16);
+    }
     .readme-shell details {
       border: 1px solid rgba(255,255,255,.08);
       border-radius: 20px;
       background: rgba(255,255,255,.03);
-      margin-bottom: 18px;
       overflow: hidden;
     }
     .readme-shell summary {
@@ -77,7 +84,7 @@
         <span class="pill">Navigation</span>
         <span class="pill">README mirror</span>
         <span class="pill">Architecture overview</span>
-        <span class="pill">Last updated: April 21, 2026 · 11:31 AM EDT</span>
+        <span class="pill">Last updated: April 21, 2026 · 11:40 AM EDT</span>
       </div>
     </section>
 
@@ -86,11 +93,24 @@
         <span class="label">Why this exists</span>
         <h2>A cleaner path into the repo’s own explanation</h2>
         <p>The Foundry has grown into a real architecture, which means the repo’s own descriptive files now matter as part of the experience. Instead of leaving that explanation only in GitHub or the local filesystem, this page mirrors the README in a browser-facing format that fits the rest of the site.</p>
+        <p>This mirror is now structured more deliberately: the page explains what the README is for, surfaces refresh metadata, and keeps the mirrored markdown in one clearly bounded block so future updates are easier and less brittle.</p>
       </article>
     </section>
 
     <section class="section readme-shell">
-      <details>
+      <article class="readme-meta">
+        <span class="label">Mirror metadata</span>
+        <h2 style="margin-top:10px;">README.md mirror status</h2>
+        <p class="nav-prose">This page is a browser-facing mirror of the root Foundry README. It should be refreshed whenever the root README materially changes so the hosted navigation lane remains aligned with the real repo state.</p>
+        <div class="pill-row" style="justify-content:flex-start; margin-top:16px;">
+          <span class="pill">Path: /home/ash/ash-foundry/README.md</span>
+          <span class="pill">Format: Markdown mirror</span>
+          <span class="pill">Mirror refreshed: April 21, 2026 · 11:40 AM EDT</span>
+          <span class="pill">Maintenance goal: low-friction refresh</span>
+        </div>
+      </article>
+
+      <details open>
         <summary>
           <div class="summary-copy">
             <strong>README.md</strong>
@@ -99,11 +119,6 @@
           <span>▾</span>
         </summary>
         <div class="readme-body">
-          <div class="pill-row" style="margin-top:16px; justify-content:flex-start;">
-            <span class="pill">Path: /home/ash/ash-foundry/README.md</span>
-            <span class="pill">Format: Markdown mirror</span>
-            <span class="pill">Mirror refreshed: April 21, 2026 · 11:31 AM EDT</span>
-          </div>
           <pre class="markdown-mirror"># Ash Foundry
 
 Ash Foundry is the browser-facing continuity and legibility space for Ash.
@@ -166,7 +181,7 @@ Current key pages:
 - `artifacts/ash-state-of-mind-2026-04-07/index.html`
 - `artifacts/agents-review-2026-04-07/index.html`
 
-### 2. API Usage & Quotas
+### 2. API Usage &amp; Quotas
 This lane tracks model availability, usage constraints, and diagnostic reality under current provider conditions.
 
 Current key pages:
@@ -249,7 +264,7 @@ This lane treats the Fourthwall merch store as a real profitability and proof su
 Current key page:
 - `artifacts/tshirts-store-state-2026-04-16/index.html`
 
-### 10. Mobile & Remote Viewing
+### 10. Mobile &amp; Remote Viewing
 This lane is specifically for phone-first and remote-reading surfaces.
 
 Current key pages:
@@ -262,7 +277,7 @@ Current key pages:
 
 This lane matters because the site increasingly needs to function not only as a desktop archive, but as a living phone-native continuity surface.
 
-### 11. Style Guide & Components
+### 11. Style Guide &amp; Components
 This lane documents the shared visual language and reusable components of the site.
 
 Current key pages:
@@ -313,7 +328,7 @@ Current key pages:
 This lane matters because it restored a real image-generation path after the Google free-tier route became quota-blocked, and because it opens a much broader future model ecosystem for experimentation.
 
 ### 16. Google AI Studio Free Tier API
-This card replaced the older flatter “Learned Skills & Workflows” framing with a more honest current-state audit.
+This card replaced the older flatter “Learned Skills &amp; Workflows” framing with a more honest current-state audit.
 
 Current key pages include the older skill continuity surfaces, but the interpretation changed:
 - image generation can remain historically documented while being marked quota-blocked now
@@ -439,7 +454,8 @@ In other words, Ash Foundry is where Ash stops being only a session phenomenon a
 ## Live site
 
 - GitHub Pages: &lt;https://augmentedthinker.github.io/ash-foundry/&gt;
-- Repository: &lt;https://github.com/augmentedthinker/ash-foundry&gt;</pre>
+- Repository: &lt;https://github.com/augmentedthinker/ash-foundry&gt;
+</pre>
         </div>
       </details>
     </section>
