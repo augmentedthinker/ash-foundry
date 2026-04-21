@@ -64,15 +64,17 @@
           <p>This artifact is aimed at the <strong>Google AI Studio / Gemini API free tier</strong>, especially in the context of the Google Cloud trial expiring. The point is not to guess what should work. The point is to let you test real model responsiveness directly from the browser.</p>
           <p>The page uses the Gemini REST endpoint and sends a tiny prompt to each selected model. If a model responds, it is reachable with your key. If it fails, the error block should usually tell you whether the issue is invalid auth, model access, quota exhaustion, or a missing free-tier entitlement.</p>
           <h3>Best-current candidate model IDs</h3>
-          <p class="muted">Based on current Google documentation and recent public references, these are the main API model IDs worth testing for ongoing free-tier access:</p>
+          <p class="muted">Based on current Google documentation, recent public references, and our own recent local testing, these are the main API model IDs worth probing individually:</p>
           <ul class="tight">
             <li><code class="inline">gemini-2.5-flash</code></li>
             <li><code class="inline">gemini-2.5-flash-lite</code></li>
             <li><code class="inline">gemini-2.5-pro</code></li>
-            <li><code class="inline">gemini-2.5-flash-image</code> (image-oriented, likely not suitable for this text ping test, so listed for awareness only)</li>
-            <li><code class="inline">gemini-3.1-flash-lite-preview</code> (reported publicly as free-priced in API contexts, but preview availability can drift)</li>
+            <li><code class="inline">gemini-2.5-flash-image</code> (image route, worth testing directly even if quota-blocked)</li>
+            <li><code class="inline">gemini-2.5-flash-preview-image</code> (the backend image model name surfaced by quota errors)</li>
+            <li><code class="inline">gemini-3.1-flash-lite-preview</code></li>
+            <li><code class="inline">gemini-3.1-flash-image</code> (publicly visible in some Google surfaces, worth probing empirically)</li>
           </ul>
-          <p><strong>Important caveat:</strong> <code class="inline">gemini-3.1-pro-preview</code> and <code class="inline">gemini-3.1-pro-preview-customtools</code> do <em>not</em> appear to be dependable free-tier API targets. They may be visible in AI Studio or in product UIs but still fail, time out, or require paid quota in programmatic usage.</p>
+          <p><strong>Important caveat:</strong> some model names are stable public IDs while others are preview or backend-facing names that may 404, 403, or appear only in quota diagnostics. This tester is intentionally empirical, not trusting docs alone.</p>
         </article>
 
         <article class="soft-card">
@@ -99,18 +101,19 @@
           <ul class="tight">
             <li>Your API key stays in the browser tab. This page does not submit it to the repo.</li>
             <li>Each selected model is called at <code class="inline">v1beta/models/{model}:generateContent</code>.</li>
-            <li>The test uses a tiny text-only prompt so results are cheap and fast.</li>
-            <li>The result area reports HTTP status, raw error text when available, and any returned text.</li>
+            <li>Text models get a tiny text-only ping. Image-labeled models get a multimodal request with <code class="inline">responseModalities</code> set to text and image so the route itself can be tested honestly.</li>
+            <li>The result area reports HTTP status, raw error text when available, and any returned text or image-signal metadata.</li>
           </ul>
         </article>
 
         <article class="soft-card prose">
           <h2>Interpretation guide</h2>
           <ul class="tight">
-            <li><strong>200 + short text response:</strong> the model is reachable with your key.</li>
+            <li><strong>200 + short text response:</strong> the text model is reachable with your key.</li>
+            <li><strong>200 + image part present:</strong> the image route is genuinely alive.</li>
             <li><strong>400/404:</strong> the model ID may be wrong or not exposed on your endpoint/tier.</li>
             <li><strong>403:</strong> the key is valid but the model is not available to your project or tier.</li>
-            <li><strong>429:</strong> quota or rate limit wall.</li>
+            <li><strong>429:</strong> quota or rate limit wall. This is the current expected failure mode for our Google image route.</li>
             <li><strong>Timeout / fetch failed:</strong> network issue, CORS issue, or unstable upstream behavior.</li>
           </ul>
         </article>
@@ -129,27 +132,48 @@
     const MODELS = [
       {
         id: 'gemini-2.5-flash',
+        kind: 'text',
         note: 'Strong free-tier candidate for general text tests.'
       },
       {
         id: 'gemini-2.5-flash-lite',
+        kind: 'text',
         note: 'Fast, cheaper tier candidate.'
       },
       {
         id: 'gemini-2.5-pro',
+        kind: 'text',
         note: 'May be limited, but worth verifying directly.'
       },
       {
+        id: 'gemini-2.5-flash-image',
+        kind: 'image',
+        note: 'Primary public image model ID worth testing directly.'
+      },
+      {
+        id: 'gemini-2.5-flash-preview-image',
+        kind: 'image',
+        note: 'Backend-facing image model name surfaced by live quota errors.'
+      },
+      {
         id: 'gemini-3.1-flash-lite-preview',
+        kind: 'text',
         note: 'Preview/free-priced candidate, availability may drift.'
       },
       {
+        id: 'gemini-3.1-flash-image',
+        kind: 'image',
+        note: 'Image-labeled route seen in some public Google surfaces, worth probing.'
+      },
+      {
         id: 'gemini-3.1-pro-preview',
+        kind: 'text',
         note: 'Likely paid or unstable for API access, included for verification.'
       },
       {
         id: 'gemini-3.1-pro-preview-customtools',
-        note: 'OpenClaw-specific runtime label, included as an experiment.'
+        kind: 'text',
+        note: 'OpenClaw runtime label, included as an experiment only.'
       }
     ];
 
@@ -166,7 +190,7 @@
             <strong>${model.id}</strong>
             <div class="muted">${model.note}</div>
           </div>
-          <span class="pill">candidate</span>
+          <span class="pill">${model.kind}</span>
         </label>
       `).join('');
     }
@@ -183,28 +207,50 @@
       return div;
     }
 
+    function getModelConfig(modelId) {
+      return MODELS.find(model => model.id === modelId) || { id: modelId, kind: 'text' };
+    }
+
     async function testModel(modelId, apiKey, prompt) {
+      const model = getModelConfig(modelId);
       const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(modelId)}:generateContent?key=${encodeURIComponent(apiKey)}`;
-      const pending = addResult('pending', modelId, 'Testing...');
-      try {
-        const response = await fetch(url, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
+      const pending = addResult('pending', modelId, `Testing ${model.kind} route...`);
+      const body = model.kind === 'image'
+        ? {
+            contents: [
+              {
+                parts: [{ text: prompt || 'Create a simple test image and reply briefly.' }]
+              }
+            ],
+            generationConfig: {
+              responseModalities: ['TEXT', 'IMAGE']
+            }
+          }
+        : {
             contents: [
               {
                 parts: [{ text: prompt }]
               }
             ]
-          })
+          };
+      try {
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body)
         });
         const text = await response.text();
         let parsed;
         try { parsed = JSON.parse(text); } catch {}
         if (response.ok) {
-          const output = parsed?.candidates?.[0]?.content?.parts?.map(p => p.text).filter(Boolean).join('\n') || text;
+          const parts = parsed?.candidates?.[0]?.content?.parts || [];
+          const textOut = parts.map(p => p.text).filter(Boolean).join('\n');
+          const hasImage = parts.some(p => p.inlineData || p.inline_data);
+          const summary = model.kind === 'image'
+            ? (hasImage ? `Image part returned successfully.${textOut ? `\n\nText:\n${textOut}` : ''}` : `No image part returned.${textOut ? `\n\nText:\n${textOut}` : ''}`)
+            : (textOut || text || 'No text returned.');
           pending.className = 'result ok';
-          pending.innerHTML = `<strong>${modelId} · HTTP ${response.status}</strong><div style="margin-top:8px; white-space:pre-wrap;" class="muted">${output || 'No text returned.'}</div>`;
+          pending.innerHTML = `<strong>${modelId} · HTTP ${response.status}</strong><div style="margin-top:8px; white-space:pre-wrap;" class="muted">${summary}</div>`;
         } else {
           const detail = parsed?.error ? JSON.stringify(parsed.error, null, 2) : text;
           pending.className = 'result err';
