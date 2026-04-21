@@ -746,35 +746,35 @@
       </article>
 
       <article class="card">
-        <span class="label">Learned Skills</span>
-        <h2>Learned Skills &amp; Workflows</h2>
-        <p>A quick-recovery lane for proven skills and repeatable workflows that Ash can re-enter after resets, reboots, or local amnesia. This card is for what already works, how it works, and where to look when a capability needs to be recovered fast.</p>
-        <details>
-          <summary>Open learned skills and workflows <span>▾</span></summary>
+        <span class="label">Google AI Studio audit</span>
+        <h2>Google AI Studio Free Tier API</h2>
+        <p>A reality-check lane for older Google-dependent skills after losing the earlier paid-connected access path. This card now distinguishes between models that are still visible to the current key, routes that are presently working, routes blocked by quota, and routes that are historically documented but no longer honestly verified right now.</p>
+        <details open>
+          <summary>Open free-tier model audit <span>▾</span></summary>
           <div class="links">
-            <a class="link-item" href="./artifacts/skill-ai-image-generation-openclaw-2026-04-07/index.html">
+            <a class="link-item" href="./artifacts/skill-ai-image-generation-openclaw-2026-04-07/index.html" style="border-left:4px solid #d18b47; padding-left:14px;">
               <strong>AI image generation · native OpenClaw workflow</strong>
-              <span>Model-dependent: native <code>image_generate</code>, historically defaulting to <code>gemini-3.1-flash-image-preview</code>. Preferred low-friction path, but tied to current provider/model availability.</span>
+              <span><strong>Status: quota-blocked now.</strong> Models still visible: <code>gemini-3.1-flash-image-preview</code>, <code>gemini-3-pro-image-preview</code>. Live native image test returned <code>HTTP 429 quota exceeded</code>, so this is not gone, but it is not currently usable under present quota conditions.</span>
             </a>
-            <a class="link-item" href="./artifacts/skill-ai-image-generation-2026-04-06/index.html">
+            <a class="link-item" href="./artifacts/skill-ai-image-generation-2026-04-06/index.html" style="border-left:4px solid #d18b47; padding-left:14px;">
               <strong>AI image generation · manual Gemini API workflow</strong>
-              <span>Model-dependent: direct Gemini image API using <code>gemini-2.5-flash-image</code>. Manual fallback path when the native workflow fails.</span>
+              <span><strong>Status: model still listed, practical access unconfirmed tonight.</strong> Historical model: <code>gemini-2.5-flash-image</code>. The model is still returned by the live models endpoint, but image capability appears quota-constrained on the current key.</span>
             </a>
-            <a class="link-item" href="./artifacts/skill-text-to-speech-2026-04-06/index.html">
+            <a class="link-item" href="./artifacts/skill-text-to-speech-2026-04-06/index.html" style="border-left:4px solid #58c86e; padding-left:14px;">
               <strong>Text-to-speech</strong>
-              <span>Model-dependent: Gemini TTS, primarily <code>gemini-2.5-flash-preview-tts</code> with <code>gemini-2.5-pro-preview-tts</code> as another visible candidate.</span>
+              <span><strong>Status: working now.</strong> Live test succeeded with <code>gemini-2.5-flash-preview-tts</code>. Other currently listed TTS models include <code>gemini-2.5-pro-preview-tts</code> and <code>gemini-3.1-flash-tts-preview</code>.</span>
             </a>
-            <a class="link-item" href="./artifacts/skill-music-generation-2026-04-06/index.html">
+            <a class="link-item" href="./artifacts/skill-music-generation-2026-04-06/index.html" style="border-left:4px solid #d18b47; padding-left:14px;">
               <strong>Music generation</strong>
-              <span>Model-dependent: Lyria, with the proven working model recorded as <code>lyria-3-clip-preview</code> and <code>lyria-3-pro-preview</code> noted as another visible candidate.</span>
+              <span><strong>Status: models visible, live revalidation still in progress.</strong> Current models endpoint still lists <code>lyria-3-clip-preview</code> and <code>lyria-3-pro-preview</code>. A fresh music-generation request was accepted by tooling, but final completion had not yet been confirmed at this audit point.</span>
             </a>
-            <a class="link-item" href="./artifacts/skill-video-generation-scripted-2026-04-07/index.html">
+            <a class="link-item" href="./artifacts/skill-video-generation-scripted-2026-04-07/index.html" style="border-left:4px solid #d18b47; padding-left:14px; text-decoration:line-through; text-decoration-thickness:1.5px;">
               <strong>Video generation · recovered scripted workflow</strong>
-              <span>Model-dependent: Veo manual script path, specifically <code>veo-3.1-lite-generate-preview</code>. Historically proven, currently needs revalidation.</span>
+              <span><strong>Status: not currently verified.</strong> Historical model: <code>veo-3.1-lite-generate-preview</code>. Veo models are still listed by the current key, but a fresh native video generation attempt did not remain active or produce a confirmed result. Likely affected by tier/access changes or route instability.</span>
             </a>
-            <a class="link-item" href="./artifacts/skill-video-generation-2026-04-06/index.html">
+            <a class="link-item" href="./artifacts/skill-video-generation-2026-04-06/index.html" style="border-left:4px solid #d18b47; padding-left:14px; text-decoration:line-through; text-decoration-thickness:1.5px;">
               <strong>Video generation · original continuity notes</strong>
-              <span>Model-dependent: Veo long-running generation flow, with the recorded working model <code>veo-3.1-lite-generate-preview</code> and other Veo variants listed as visible at the time.</span>
+              <span><strong>Status: historical only for now.</strong> Recorded working model was <code>veo-3.1-lite-generate-preview</code>, and the live models list still includes <code>veo-2.0-generate-001</code>, <code>veo-3.0-fast-generate-001</code>, <code>veo-3.0-generate-001</code>, <code>veo-3.1-fast-generate-preview</code>, <code>veo-3.1-generate-preview</code>, and <code>veo-3.1-lite-generate-preview</code>, but present-day usability is not re-proven.</span>
             </a>
           </div>
         </details>
