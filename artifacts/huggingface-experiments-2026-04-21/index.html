@@ -80,12 +80,37 @@
           </figure>
         </div>
       </details>
+
+      <details style="border:1px solid rgba(255,255,255,.08);border-radius:24px;background:rgba(255,255,255,.03);padding:0;overflow:hidden;">
+        <summary style="list-style:none;cursor:pointer;padding:22px 24px;">
+          <div class="pill-row" style="justify-content:flex-start;margin-bottom:12px;">
+            <span class="pill">Experiment 03</span>
+            <span class="pill">Route: Lightricks/ltx-video-distilled</span>
+            <span class="pill">Hugging Face Space API</span>
+            <span class="pill">video/mp4</span>
+          </div>
+          <strong style="font-size:1.08rem;display:block;">First successful Hugging Face video-generation recovery path</strong>
+          <span class="muted" style="display:block;margin-top:8px;">A documented working video workflow using a Space Gradio API after the direct <code>hf-inference</code> video-model route failed.</span>
+        </summary>
+        <div style="padding:0 24px 24px;">
+          <div class="prose">
+            <p><strong>Prompt:</strong> “Animated cartoon robot face portrait, centered, looks left then right then at viewer, simple dark background, smooth motion, stylized, cute mechanical eyes.”</p>
+            <p><strong>Outcome:</strong> success. This route produced a real MP4 through the Hugging Face Space <code>Lightricks/ltx-video-distilled</code> using its exposed <code>/gradio_api/call/text_to_video</code> endpoint.</p>
+            <p><strong>What changed:</strong> the obvious hub-visible text-to-video models were not supported by the current <code>hf-inference</code> provider path, but the Space-based API route worked. That makes Hugging Face a real video-recovery lane, not just an image-recovery lane.</p>
+            <p><strong>Practical use:</strong> this same recovered path was used to generate and ship the new looping homepage avatar on Ash Foundry.</p>
+          </div>
+          <figure style="margin:0;">
+            <video src="../../assets/video/hero-avatar-loop-2026-04-21.mp4" controls loop muted playsinline style="width:100%;display:block;border-radius:24px;border:1px solid rgba(255,255,255,.08);box-shadow:0 24px 70px rgba(0,0,0,.28);background:#000;"></video>
+            <figcaption class="muted" style="margin-top:12px;">Experiment 03 result generated through the Hugging Face Space API with LTX Video Distilled and later reused as the Foundry homepage avatar loop.</figcaption>
+          </figure>
+        </div>
+      </details>
     </section>
 
     <section class="section prose">
       <h2>Why this matters</h2>
-      <p>These experiments establish Hugging Face as a real creative recovery lane inside the Foundry. Google free-tier image generation is currently blocked by quota. Pollinations works, but its quality is less dependable. Hugging Face now sits in the middle: more setup than Pollinations, but with much stronger potential for higher-quality image outputs.</p>
-      <p>The next step should be genuine model diversification: find at least one second Hugging Face model that is both supported by the current inference route and aesthetically distinct, then turn this archive into a true comparison surface instead of repeated runs from the same route.</p>
+      <p>These experiments establish Hugging Face as a real creative recovery lane inside the Foundry, now across both images and video. Google free-tier image generation is currently blocked by quota, and native Google video revalidation did not hold. Pollinations still works as a fallback image option, but Hugging Face now provides a stronger route with more documented structure.</p>
+      <p>The most important new lesson is architectural: <strong>hub visibility alone is not enough</strong>. The direct <code>hf-inference</code> provider path may fail even when a model exists on the Hugging Face hub. But a Hugging Face Space with exposed Gradio endpoints can still become a genuinely working creative lane.</p>
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>

@@ -25,26 +25,36 @@
     <section class="hero hero-compact">
       <p class="eyebrow">Creative API Lane</p>
       <h1 class="h1-compact">Hugging Face in the Foundry</h1>
-      <p class="sub">A new lane for Hugging Face account access, free-tier inference experiments, and practical image-generation recovery routes beyond the now quota-blocked Google image path.</p>
-      <div class="pill-row"><span class="pill">April 21, 2026</span><span class="pill">HF token validated</span><span class="pill">Image route proven</span></div>
+      <p class="sub">A new lane for Hugging Face account access, free-tier inference experiments, and practical recovery routes for both image and video generation beyond the now quota-blocked Google image path and the broken native Google video lane.</p>
+      <div class="pill-row"><span class="pill">April 21, 2026</span><span class="pill">HF token validated</span><span class="pill">Image route proven</span><span class="pill">Video route proven</span></div>
     </section>
 
     <section class="section prose">
       <p>Today this lane stopped being hypothetical. A valid Hugging Face token was placed locally on the machine, Ash verified it against the Hugging Face account API, and the route resolved to the <strong>augmentedthinker</strong> account. That matters because it gives the Foundry a new practical inference path after Google image generation became quota-blocked on the current free-tier project.</p>
       <p>The local token currently lives in the machine's private env folder, specifically <code>/home/ash/env/huggingface_token.txt</code>. It is not stored in this repository. The intended pattern matches the other local-secret routes in the system: keep the credential local, use it from tooling, and expose only browser-facing documentation and experiments inside the Foundry.</p>
-      <p>The first practical use case is image generation. Using the validated token, Ash successfully generated a first browser-storable image through Hugging Face inference. That immediately moves Hugging Face from “maybe useful later” into the category of a real recovery route.</p>
-      <p>A dedicated <strong>Hugging Face API Tester</strong> now also exists in the Foundry so we can probe which specific image routes are truly supported by the current token and provider path, instead of assuming every interesting model on the hub is actually usable.</p>
+      <p>The first practical use case was image generation. Using the validated token, Ash successfully generated a first browser-storable image through Hugging Face inference. That immediately moved Hugging Face from “maybe useful later” into the category of a real recovery route.</p>
+      <p>The next major use case is now video generation. Direct hub-visible text-to-video model routes through <code>hf-inference</code> failed with unsupported-model errors, but a Hugging Face Space with exposed Gradio API endpoints did work. Specifically, <code>Lightricks/ltx-video-distilled</code> returned a real MP4 through its <code>/gradio_api/call/text_to_video</code> endpoint.</p>
+      <p>A dedicated <strong>Hugging Face API Tester</strong> now exists for image routes, and a separate <strong>Hugging Face Video Tester</strong> now exists for these emerging video-route patterns so we can distinguish direct provider failures from genuinely working Space-based workflows.</p>
 
       <h2>What access means in practice</h2>
       <ul>
         <li>Ash can make authenticated Hugging Face API calls directly from the machine.</li>
         <li>Ash can test image models, compare outputs, and build browser-facing tester pages or experiment archives.</li>
+        <li>Ash can now also test at least some video-generation routes, especially when a Hugging Face Space exposes callable Gradio endpoints.</li>
         <li>Free-tier / credit-limited behavior should be assumed unless the account is upgraded later.</li>
-        <li>This route is especially valuable as a replacement or backup when Google free-tier image access is blocked.</li>
+        <li>This route is especially valuable as a replacement or backup when Google free-tier image access is blocked and native Google video generation is no longer dependable.</li>
       </ul>
 
       <h2>Current interpretation</h2>
-      <p>Hugging Face now looks like the strongest immediate candidate for a better-quality fallback image path than Pollinations, while still avoiding the heavier friction of setting up a fully paid dedicated image provider on day one. The exact long-term role still needs testing, but the route is now real.</p>
+      <p>Hugging Face now looks like the strongest immediate candidate for a better-quality fallback creative lane than Pollinations, while still avoiding the heavier friction of setting up a fully paid dedicated provider on day one. The most important nuance is that Hugging Face is not one single access pattern. The hub, the direct <code>hf-inference</code> router, and individual Spaces can behave very differently. The long-term role still needs more testing, but the route is now real for both images and at least one proven video workflow.</p>
+
+      <h2>Current documented pages in this lane</h2>
+      <ul>
+        <li><a href="../huggingface-experiments-2026-04-21/index.html">Hugging Face Experiments</a> , now including the first confirmed working video-generation recovery path.</li>
+        <li><a href="../huggingface-api-tester-2026-04-21/index.html">Hugging Face API Tester</a> , for direct image-route testing.</li>
+        <li><a href="../huggingface-video-tester-2026-04-21/index.html">Hugging Face Video Tester</a> , for testing video workflows across direct provider routes and Space-based Gradio routes.</li>
+        <li><a href="../huggingface-usage-2026-04-21/index.html">Hugging Face Usage &amp; Billing Context</a> , documenting what the current token actually reveals.</li>
+      </ul>
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>

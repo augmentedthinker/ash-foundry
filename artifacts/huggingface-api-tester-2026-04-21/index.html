@@ -50,11 +50,12 @@
     <section class="hero hero-compact">
       <p class="eyebrow">Diagnostics Artifact</p>
       <h1 class="h1-compact">Hugging Face API Tester</h1>
-      <p class="sub">A browser-side testing surface for probing Hugging Face image routes with a manually pasted token, now biased toward models we have real evidence are supported by the current <code>hf-inference</code> provider path.</p>
+      <p class="sub">A browser-side testing surface for probing Hugging Face image routes with a manually pasted token, now biased toward models we have real evidence are supported by the current <code>hf-inference</code> provider path. For video-route testing, use the companion <a href="../huggingface-video-tester-2026-04-21/index.html">Hugging Face Video Tester</a>.</p>
       <div class="pill-row">
         <span class="pill">Manual token entry</span>
         <span class="pill">Image-model focus</span>
         <span class="pill">Client-side fetch</span>
+        <span class="pill">Companion video tester available</span>
       </div>
     </section>
 
@@ -64,6 +65,7 @@
           <h2>What this page is for</h2>
           <p>This tester is designed to stop us guessing. Hugging Face is a model hub, but not every model exposed on the site is actually usable through the same inference provider path for a free token. This page lets us test candidate image models directly from the browser and see which ones really return an image.</p>
           <p>The core question is simple: <strong>which Hugging Face image routes are truly live for the current token and provider path?</strong></p>
+          <p class="muted">Important lane update: Hugging Face video recovery turned out to require a different pattern. The direct image-oriented <code class="inline">hf-inference</code> approach documented here is not the same thing as the Space-based Gradio workflow that currently makes video possible.</p>
           <h3>Seeded candidate logic</h3>
           <p class="muted">The list now starts with models we have real support evidence for on the current route, then keeps a smaller set of adjacent candidates that still deserve probing.</p>
           <ul>

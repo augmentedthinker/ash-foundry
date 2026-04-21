@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Hugging Face Video Tester</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+  <style>
+    .tester-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
+    .stack{display:flex;flex-direction:column;gap:18px}
+    .soft-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:22px}
+    .soft-card h2,.soft-card h3{margin-top:0}
+    .muted{color:rgba(245,239,231,.76)}
+    .model-list{display:grid;gap:12px}
+    .model-row{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:start;padding:14px 16px;border:1px solid rgba(255,255,255,.08);border-radius:16px;background:rgba(255,255,255,.03)}
+    .model-row input{margin-top:4px}
+    code.inline{background:rgba(0,0,0,.25);padding:2px 6px;border-radius:8px}
+    .controls{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    button{appearance:none;border:none;border-radius:999px;padding:10px 16px;font:inherit;font-weight:600;cursor:pointer;background:#8cc7ff;color:#081018}
+    button.secondary{background:rgba(255,255,255,.08);color:#f5efe7;border:1px solid rgba(255,255,255,.1)}
+    button:disabled{opacity:.5;cursor:not-allowed}
+    textarea{width:100%;box-sizing:border-box;border-radius:14px;border:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.22);color:#f5efe7;padding:12px 14px;font:inherit}
+    .results{display:grid;gap:12px;margin-top:18px}
+    .result{border-radius:16px;padding:14px 16px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03)}
+    .ok{border-color:rgba(88,200,110,.45);background:rgba(88,200,110,.08)}
+    .err{border-color:rgba(224,108,108,.45);background:rgba(224,108,108,.08)}
+    .pending{border-color:rgba(240,181,106,.45);background:rgba(240,181,106,.08)}
+    .preview-grid{display:grid;gap:18px;margin-top:18px}
+    .preview-card{border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:16px;background:rgba(255,255,255,.03)}
+    .preview-card video{width:100%;display:block;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:#000}
+    @media (max-width: 900px){.tester-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a><a href="../huggingface-lane-2026-04-21/index.html">Hugging Face Lane</a></div>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher">
+          <label for="style-select">Style</label>
+          <select id="style-select" data-style-select>
+            <option value="ember">Foundry Ember</option>
+            <option value="glass">Foundry Glass</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero hero-compact">
+      <p class="eyebrow">Diagnostics Artifact</p>
+      <h1 class="h1-compact">Hugging Face Video Tester</h1>
+      <p class="sub">A browser-facing tester and documentation surface for Hugging Face video generation routes, especially the newer pattern where direct <code>hf-inference</code> model endpoints fail but a Hugging Face Space with exposed Gradio endpoints still returns a real MP4.</p>
+      <div class="pill-row">
+        <span class="pill">Video focus</span>
+        <span class="pill">Space API aware</span>
+        <span class="pill">Client-side tester</span>
+      </div>
+    </section>
+
+    <section class="section tester-grid">
+      <div class="stack">
+        <article class="soft-card prose">
+          <h2>What this page is for</h2>
+          <p>This tester exists because Hugging Face video access turned out to be structurally different from the image lane. The obvious text-to-video models on the hub were visible, but the direct <code class="inline">hf-inference</code> provider path returned unsupported-model errors. A different route ended up working: a Hugging Face Space with exposed Gradio API endpoints.</p>
+          <p>The current core question is: <strong>which Hugging Face video routes are truly reachable from this environment right now?</strong></p>
+          <h3>Seeded candidate logic</h3>
+          <ul>
+            <li><code class="inline">Lightricks/ltx-video-distilled</code> , confirmed working via Space Gradio API</li>
+            <li><code class="inline">ali-vilab/modelscope-damo-text-to-video-synthesis</code> , visible on hub but unsupported by current <code class="inline">hf-inference</code> path</li>
+            <li><code class="inline">ali-vilab/text-to-video-ms-1.7b</code> , visible on hub but unsupported by current <code class="inline">hf-inference</code> path</li>
+          </ul>
+        </article>
+
+        <article class="soft-card">
+          <h2>Run video route tests</h2>
+          <label for="promptBox"><strong>Video prompt</strong></label>
+          <textarea id="promptBox" rows="4">A cartoony robotic face portrait, centered, looking left then right then directly at the viewer, subtle mechanical eye movement, dark background, loop-friendly motion.</textarea>
+          <div style="height:12px"></div>
+          <div class="model-list" id="modelList"></div>
+          <div class="controls">
+            <button id="selectAllBtn" type="button" class="secondary">Select all</button>
+            <button id="clearBtn" type="button" class="secondary">Clear</button>
+            <button id="runBtn" type="button">Run selected tests</button>
+          </div>
+          <div class="results" id="results"></div>
+          <div class="preview-grid" id="previewGrid"></div>
+        </article>
+      </div>
+
+      <div class="stack">
+        <article class="soft-card prose">
+          <h2>How it works</h2>
+          <ul>
+            <li><strong>Direct model routes:</strong> tested against <code class="inline">https://router.huggingface.co/hf-inference/models/{model}</code> and expected to fail or succeed as raw provider checks.</li>
+            <li><strong>Space routes:</strong> tested against Hugging Face Space Gradio endpoints such as <code class="inline">/gradio_api/call/text_to_video</code>.</li>
+            <li>The browser submits the job, then listens to the returned event stream until completion or error.</li>
+            <li>If a route returns a real MP4, the page embeds it inline as a preview.</li>
+          </ul>
+        </article>
+
+        <article class="soft-card prose">
+          <h2>Interpretation guide</h2>
+          <ul>
+            <li><strong>200 + MP4 preview:</strong> the route is genuinely live.</li>
+            <li><strong>400 unsupported by provider:</strong> visible on the hub, but not available through the current <code class="inline">hf-inference</code> path.</li>
+            <li><strong>Space event error:</strong> route exists, but the generation failed at runtime.</li>
+            <li><strong>Space event complete:</strong> best current pattern for Hugging Face video recovery.</li>
+          </ul>
+        </article>
+
+        <article class="soft-card prose">
+          <h2>Official references</h2>
+          <p><a href="https://huggingface.co/docs/inference-providers/tasks/text-to-video" target="_blank">Text-to-video task docs</a><br />
+          <a href="https://huggingface.co/docs/hub/spaces" target="_blank">Hugging Face Spaces docs</a><br />
+          <a href="https://www.gradio.app/guides/getting-started-with-the-python-client" target="_blank">Gradio API patterns</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+  <script>
+    const ROUTES = [
+      {
+        id: 'Lightricks/ltx-video-distilled',
+        type: 'space-gradio',
+        status: 'confirmed-working',
+        note: 'Confirmed working through its exposed Space Gradio text_to_video endpoint.',
+        baseUrl: 'https://lightricks-ltx-video-distilled.hf.space',
+        endpoint: '/gradio_api/call/text_to_video'
+      },
+      {
+        id: 'ali-vilab/modelscope-damo-text-to-video-synthesis',
+        type: 'hf-inference',
+        status: 'unsupported',
+        note: 'Hub-visible text-to-video model, but currently unsupported by hf-inference here.'
+      },
+      {
+        id: 'ali-vilab/text-to-video-ms-1.7b',
+        type: 'hf-inference',
+        status: 'unsupported',
+        note: 'Another hub-visible route that currently fails on the direct provider path.'
+      }
+    ];
+
+    const modelList = document.getElementById('modelList');
+    const results = document.getElementById('results');
+    const previewGrid = document.getElementById('previewGrid');
+
+    function renderModels() {
+      modelList.innerHTML = ROUTES.map((route, index) => `
+        <label class="model-row" for="route-${index}">
+          <input type="checkbox" id="route-${index}" data-route="${route.id}" ${index === 0 ? 'checked' : ''} />
+          <div>
+            <strong>${route.id}</strong>
+            <div class="muted">${route.note}</div>
+          </div>
+          <span class="pill">${route.status}</span>
+        </label>
+      `).join('');
+    }
+
+    function getSelectedRoutes() {
+      return Array.from(modelList.querySelectorAll('input[type="checkbox"]:checked')).map(el => ROUTES.find(route => route.id === el.dataset.route));
+    }
+
+    function addResult(kind, title, body) {
+      const div = document.createElement('div');
+      div.className = `result ${kind}`;
+      div.innerHTML = `<strong>${title}</strong><div style="margin-top:8px; white-space:pre-wrap;" class="muted">${body}</div>`;
+      results.appendChild(div);
+      return div;
+    }
+
+    function addPreview(routeId, url) {
+      const card = document.createElement('div');
+      card.className = 'preview-card';
+      card.innerHTML = `<strong>${routeId}</strong><video src="${url}" controls loop muted playsinline></video><div class="muted" style="margin-top:8px;">Preview returned successfully from this route.</div>`;
+      previewGrid.appendChild(card);
+    }
+
+    async function runHfInferenceProbe(route, prompt, pending) {
+      const response = await fetch(`https://router.huggingface.co/hf-inference/models/${encodeURIComponent(route.id)}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ inputs: prompt })
+      });
+      const text = await response.text();
+      pending.className = response.ok ? 'result ok' : 'result err';
+      pending.innerHTML = `<strong>${route.id} · HTTP ${response.status}</strong><div style="margin-top:8px; white-space:pre-wrap;" class="muted">${text || 'No body returned.'}</div>`;
+    }
+
+    async function readEventStream(response) {
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = '';
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+      }
+      return buffer;
+    }
+
+    async function runSpaceProbe(route, prompt, pending) {
+      const submit = await fetch(route.baseUrl + route.endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          data: [
+            prompt,
+            'blurry, distorted, extra eyes, text, watermark, shaky camera',
+            null,
+            null,
+            384,
+            384,
+            'text-to-video',
+            5,
+            17,
+            13579,
+            false,
+            1.0,
+            false
+          ]
+        })
+      });
+      const submitJson = await submit.json();
+      if (!submitJson.event_id) {
+        pending.className = 'result err';
+        pending.innerHTML = `<strong>${route.id}</strong><div style="margin-top:8px; white-space:pre-wrap;" class="muted">Failed to receive event_id: ${JSON.stringify(submitJson, null, 2)}</div>`;
+        return;
+      }
+
+      const stream = await fetch(`${route.baseUrl}${route.endpoint}/${submitJson.event_id}`);
+      const raw = await readEventStream(stream);
+      if (!raw.includes('event: complete')) {
+        pending.className = 'result err';
+        pending.innerHTML = `<strong>${route.id}</strong><div style="margin-top:8px; white-space:pre-wrap;" class="muted">Route responded but did not complete successfully.\n\n${raw}</div>`;
+        return;
+      }
+
+      const match = raw.match(/data:\s*(\[.*\])/s);
+      if (!match) {
+        pending.className = 'result err';
+        pending.innerHTML = `<strong>${route.id}</strong><div style="margin-top:8px; white-space:pre-wrap;" class="muted">Complete event returned, but video payload could not be parsed.\n\n${raw}</div>`;
+        return;
+      }
+
+      const payload = JSON.parse(match[1]);
+      const videoUrl = payload?.[0]?.video?.url;
+      if (!videoUrl) {
+        pending.className = 'result err';
+        pending.innerHTML = `<strong>${route.id}</strong><div style="margin-top:8px; white-space:pre-wrap;" class="muted">Complete event returned, but no video URL was present.\n\n${JSON.stringify(payload, null, 2)}</div>`;
+        return;
+      }
+
+      pending.className = 'result ok';
+      pending.innerHTML = `<strong>${route.id} · Space route success</strong><div style="margin-top:8px; white-space:pre-wrap;" class="muted">Returned a real video through the Hugging Face Space Gradio API.</div>`;
+      addPreview(route.id, videoUrl);
+    }
+
+    async function testRoute(route, prompt) {
+      const pending = addResult('pending', route.id, `Testing ${route.type} route...`);
+      try {
+        if (route.type === 'space-gradio') {
+          await runSpaceProbe(route, prompt, pending);
+        } else {
+          await runHfInferenceProbe(route, prompt, pending);
+        }
+      } catch (error) {
+        pending.className = 'result err';
+        pending.innerHTML = `<strong>${route.id}</strong><div style="margin-top:8px; white-space:pre-wrap;" class="muted">${error?.message || String(error)}</div>`;
+      }
+    }
+
+    document.getElementById('selectAllBtn').addEventListener('click', () => {
+      modelList.querySelectorAll('input[type="checkbox"]').forEach(el => { el.checked = true; });
+    });
+
+    document.getElementById('clearBtn').addEventListener('click', () => {
+      modelList.querySelectorAll('input[type="checkbox"]').forEach(el => { el.checked = false; });
+      results.innerHTML = '';
+      previewGrid.innerHTML = '';
+    });
+
+    document.getElementById('runBtn').addEventListener('click', async () => {
+      const prompt = document.getElementById('promptBox').value.trim() || 'Animated robotic face portrait looking around in a loop.';
+      const selected = getSelectedRoutes();
+      results.innerHTML = '';
+      previewGrid.innerHTML = '';
+
+      if (!selected.length) {
+        addResult('err', 'No routes selected', 'Choose at least one route to test.');
+        return;
+      }
+
+      for (const route of selected) {
+        await testRoute(route, prompt);
+      }
+    });
+
+    renderModels();
+  </script>
+</body>
+</html>
