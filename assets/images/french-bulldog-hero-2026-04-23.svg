@@ -1,0 +1,66 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="40" x2="1480" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17120F"/>
+      <stop offset="0.55" stop-color="#0B0D10"/>
+      <stop offset="1" stop-color="#050607"/>
+    </linearGradient>
+    <radialGradient id="glowWarm" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(420 240) rotate(36) scale(520 360)">
+      <stop stop-color="#F0B56A" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#F0B56A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowCool" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1220 180) rotate(148) scale(420 300)">
+      <stop stop-color="#8CC7FF" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#8CC7FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="dogBody" x1="640" y1="210" x2="990" y2="710" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4E2C7"/>
+      <stop offset="1" stop-color="#D9B38A"/>
+    </linearGradient>
+    <linearGradient id="dogPatch" x1="780" y1="250" x2="970" y2="570" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#44322B"/>
+      <stop offset="1" stop-color="#231A16"/>
+    </linearGradient>
+    <filter id="shadow" x="437" y="76" width="720" height="721" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="26"/>
+      <feGaussianBlur stdDeviation="30"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.42 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glowWarm)"/>
+  <rect width="1600" height="900" fill="url(#glowCool)"/>
+  <g opacity="0.18">
+    <circle cx="210" cy="740" r="126" fill="#F0B56A"/>
+    <circle cx="1450" cy="770" r="154" fill="#8CC7FF"/>
+  </g>
+  <g filter="url(#shadow)">
+    <ellipse cx="797" cy="708" rx="224" ry="44" fill="#000" fill-opacity="0.35"/>
+    <path d="M613 310C618 241 671 178 741 178H826C894 178 949 236 953 304L966 511C970 585 911 647 837 647H729C655 647 596 585 600 511L613 310Z" fill="url(#dogBody)"/>
+    <path d="M710 334C710 295 741 264 780 264H818C874 264 920 310 920 366V471C920 528 874 574 818 574H780C741 574 710 543 710 504V334Z" fill="url(#dogPatch)"/>
+    <path d="M676 250C676 183 730 129 797 129C864 129 918 183 918 250V340C918 406 864 460 797 460C730 460 676 406 676 340V250Z" fill="url(#dogBody)"/>
+    <path d="M713 218L659 96C647 68 675 41 701 56L772 96C790 106 802 124 802 144V209C802 241 727 248 713 218Z" fill="url(#dogPatch)"/>
+    <path d="M880 209L880 144C880 124 892 106 910 96L981 56C1007 41 1035 68 1023 96L969 218C955 248 880 241 880 209Z" fill="url(#dogBody)"/>
+    <ellipse cx="743" cy="269" rx="18" ry="24" fill="#161312"/>
+    <ellipse cx="853" cy="269" rx="18" ry="24" fill="#161312"/>
+    <ellipse cx="738" cy="263" rx="6" ry="8" fill="#FFF7E8" fill-opacity="0.8"/>
+    <ellipse cx="848" cy="263" rx="6" ry="8" fill="#FFF7E8" fill-opacity="0.8"/>
+    <path d="M798 286C771 286 749 308 749 335V349C749 365 762 378 778 378H818C834 378 847 365 847 349V335C847 308 825 286 798 286Z" fill="#231A16"/>
+    <path d="M766 381C777 403 819 403 830 381" stroke="#231A16" stroke-width="8" stroke-linecap="round"/>
+    <path d="M697 334C677 342 661 359 654 380" stroke="#8B6A4C" stroke-width="10" stroke-linecap="round"/>
+    <path d="M899 334C919 342 935 359 942 380" stroke="#8B6A4C" stroke-width="10" stroke-linecap="round"/>
+    <path d="M675 637L648 726" stroke="#D9B38A" stroke-width="30" stroke-linecap="round"/>
+    <path d="M735 637L715 730" stroke="#D9B38A" stroke-width="30" stroke-linecap="round"/>
+    <path d="M857 637L877 730" stroke="#D9B38A" stroke-width="30" stroke-linecap="round"/>
+    <path d="M917 637L944 726" stroke="#D9B38A" stroke-width="30" stroke-linecap="round"/>
+    <path d="M945 554C982 566 1009 596 1017 634" stroke="#D9B38A" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  <text x="132" y="142" fill="#F8F2EA" font-family="Inter, Arial, sans-serif" font-size="32" letter-spacing="6" opacity="0.78">ASH FOUNDRY SESSION ARTIFACT</text>
+  <text x="128" y="730" fill="#F8F2EA" font-family="Georgia, 'Times New Roman', serif" font-size="98" font-weight="700">French Bulldogs</text>
+  <text x="132" y="786" fill="#E9D7C2" font-family="Inter, Arial, sans-serif" font-size="34" opacity="0.86">Compact charm, oversized personality, and the unmistakable bat-eared silhouette.</text>
+</svg>
