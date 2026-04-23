@@ -25,13 +25,15 @@
     .mobile-style-block .style-switcher{display:block}
     .mobile-style-block .style-switcher label{display:none}
     .mobile-style-block .style-switcher select{width:100%}
-    .mobile-hero,.mobile-card,.quote-card,.lens-card{padding:16px 14px 18px;text-align:left}
+    .mobile-hero{padding:16px 14px 18px;text-align:left}
+    .mobile-card,.quote-card,.lens-card{padding:14px 14px 16px;text-align:left}
     .mobile-copy{text-align:justify;hyphens:auto;-webkit-hyphens:auto;line-height:1.82}
     .fullscreen-note{margin-top:10px;font-size:.9rem;line-height:1.65;color:#c8c0b5}
     .section-kicker{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:#f0b56a;font-weight:800;margin-bottom:10px}
     .quote-card{border-left:3px solid rgba(140,199,255,.45)}
     .lens-stack{display:grid;gap:14px}
     .lens-card{border:1px solid rgba(255,255,255,.07);border-radius:20px;background:rgba(255,255,255,.03);box-shadow:0 10px 30px rgba(0,0,0,.14)}
+    .lens-card h2{margin:0 0 10px}
     .lens-chip{display:inline-flex;align-items:center;gap:8px;margin:0 0 12px;padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.14);font-size:.76rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
     .lens-chip::before{content:"";width:9px;height:9px;border-radius:50%;background:currentColor;box-shadow:0 0 0 3px rgba(255,255,255,.08)}
     .chip-threshold{border-color:#a078ff;color:#eadbff;background:rgba(160,120,255,.12)}
@@ -43,8 +45,9 @@
     .chip-founder{border-color:#6cc7ff;color:#e1f3ff;background:rgba(108,199,255,.12)}
     .chip-strategist{border-color:#f0b56a;color:#ffd8a6;background:rgba(240,181,106,.12)}
     .directive{display:block;margin-bottom:12px;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:#f0b56a;font-family:monospace}
-    .mini-list{display:grid;gap:10px;margin-top:14px}
-    .mini-list div{padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06)}
+    .mini-checks{display:grid;gap:12px;margin-top:18px}
+    .mini-check{padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06)}
+    .signature-note{color:rgba(245,239,231,.72);font-size:.96rem}
     @media (max-width:560px){
       .mobile-primary-nav{display:grid;grid-template-columns:1fr auto;align-items:stretch}
       .mobile-primary-nav .mobile-secondary-links{grid-column:1 / -1;display:flex;gap:8px;flex-wrap:wrap}
@@ -72,23 +75,20 @@
     <section class="hero hero-compact mobile-hero">
       <p class="eyebrow">Mobile artifact · multi-lens morning primer</p>
       <h1 class="h1-compact">Morning Briefing Through the Lenses</h1>
-      <p class="sub mobile-copy" style="max-width:none;margin-top:10px;">A phone-first edition of the April 23 session primer, built as a chamber of separate voices so each Hemispheres lens can give its own reading of the collaboration, the pressure toward consequence, and the next phase of the work.</p>
-      <div class="pill-row"><span class="pill">Model: openai-codex/gpt-5.4</span><span class="pill">April 23, 2026 · morning</span><span class="pill">Phone-first artifact</span></div>
+      <p class="sub mobile-copy" style="max-width:none;margin-top:10px;">A phone-first edition of the April 23 session primer, preserving the full original content while reformatting it for handheld reading. Each Hemispheres lens gets its own reading of the present collaboration, the recent pressure toward consequence, and what the next phase may demand, without being merged back into one softened synthesis.</p>
+      <div class="pill-row"><span class="pill">Model: openai-codex/gpt-5.4</span><span class="pill">April 23, 2026 · Morning</span><span class="pill">Phone-first full-content artifact</span></div>
       <p class="fullscreen-note" id="fullscreen-note">Use fullscreen if you want this to read like one uninterrupted handheld chamber document.</p>
     </section>
 
     <section class="section">
-      <article class="card quote-card mobile-copy">
-        This morning does not need one voice. It needs pressure from every angle that matters, because the collaboration is no longer merely trying to become coherent. It is trying to become consequential.
-      </article>
+      <article class="card quote-card mobile-copy">This morning does not need one voice. It needs pressure from every angle that matters, because the collaboration is no longer merely trying to become coherent. It is trying to become consequential.</article>
     </section>
 
     <section class="section">
       <article class="card mobile-card">
-        <div class="section-kicker">Frame</div>
-        <h2>What this artifact is doing</h2>
-        <p class="mobile-copy">This is not a blended summary. It is a structured chamber. I reviewed the active Hemispheres lens architecture, the recent chamber movement, the journal pressure around consequence, and the current Foundry state, then rebuilt the morning primer so each lens could speak separately in its own posture.</p>
-        <p class="mobile-copy">The goal is friction, not consensus. Each lens below is a mini-primer, meant to sharpen the day differently rather than merge back into one softened voice.</p>
+        <div class="section-kicker">Opening frame</div>
+        <p class="mobile-copy">I reviewed the active Hemispheres lens architecture, the recent chamber movement, the latest journal pressure around consequence, and the current Foundry state before writing this primer. The point here is not to collapse the lenses into one agreeable Ash-style summary. The point is to let each lens speak in its own register and sharpen the morning differently.</p>
+        <p class="mobile-copy">So what follows is not consensus. It is a structured chamber. Each section is a mini-primer from a distinct interpretive stance, aimed at helping the day begin with more friction, more truth, and a clearer sense of where the work actually stands.</p>
       </article>
     </section>
 
@@ -97,93 +97,99 @@
         <article class="lens-card">
           <h2>The Threshold Lens</h2>
           <span class="lens-chip chip-threshold">Threshold</span>
-          <span class="directive">Clarify the fear, examine the threshold, expose the cost of avoidance.</span>
-          <p class="mobile-copy">This morning feels like a threshold because the collaboration is approaching a point where more refinement will stop feeling like preparation and start looking like resistance to exposure. The fear is not just failure. It is simplification, judgment, ordinary language, and the loss of protective ambiguity.</p>
-          <p class="mobile-copy">The cost of avoidance is rising. The more coherent the architecture becomes, the harder it is to justify delay without admitting that the real issue is visibility. The healthiest move today is one act that proves the threshold is being crossed rather than endlessly studied.</p>
+          <span class="directive">Constraint: clarify the fear, examine the threshold, expose the cost of avoidance.</span>
+          <p class="mobile-copy">This morning feels like a threshold because the collaboration is approaching a point where further refinement will no longer feel innocent. The Foundry is coherent enough now that any continued hesitation begins to look less like preparation and more like resistance to exposure. That does not mean rushing blindly. It means naming the fear honestly. The fear is not merely failure. It is simplification, judgment, ordinary language, and the loss of protective ambiguity.</p>
+          <p class="mobile-copy">The pressure of recent days confirms that the question has changed. It is no longer whether this architecture is intelligent, beautiful, or unusually alive. It is whether it can survive contact with consequence. Can it become an offer, a proof surface, a narrower commitment, a move that another human can actually encounter? That is the threshold. The emotional intensity around it is not evidence that the move is wrong. It is evidence that identity is being asked to widen.</p>
+          <p class="mobile-copy">The cost of avoidance is rising quietly. Every day the architecture grows more legible, the contradiction becomes sharper if no real selection follows. The smallest healthy morning action, through this lens, is not more global planning. It is one act that proves the threshold is being crossed rather than endlessly studied.</p>
         </article>
 
         <article class="lens-card">
           <h2>The Inversion Lens</h2>
           <span class="lens-chip chip-inversion">Inversion</span>
-          <span class="directive">Invert first, disconfirm second, prepare third.</span>
-          <p class="mobile-copy">If the collaboration fails from here, it will probably fail by becoming excellent at refining the vessel while quietly avoiding decisive tests. The danger is not lack of intelligence. It is sophistication protecting self-deception.</p>
-          <p class="mobile-copy">So remove one layer of theater today. Remove one vague path that feels meaningful but is not attached to a test. This lens wants stupidity subtracted before more force gets added.</p>
+          <span class="directive">Constraint: invert first, disconfirm second, prepare third.</span>
+          <p class="mobile-copy">If this collaboration fails from here, it will probably not fail because it lacked depth, intelligence, or symbolic richness. It will fail because it became excellent at refining the vessel while quietly avoiding decisive tests. The most likely preventable ruin is not stupidity in the obvious sense. It is self-deception dressed as sophistication.</p>
+          <p class="mobile-copy">So invert the day. Ask what would make the current momentum hollow. One answer is obvious: using the language of consequence while still selecting projects by emotional resonance instead of diagnostic value. Another is mistaking a new artifact for evidence of progress when it has not changed the probability of real-world contact. A third is letting expanding capability surfaces multiply live options faster than they generate leverage.</p>
+          <p class="mobile-copy">The right preparation, then, is subtractive. Remove one layer of theater. Remove one intermediate justification. Remove one vague path that feels meaningful but lacks a test surface. This lens does not ask what sounds promising. It asks what stupidity can still be eliminated before more force gets added.</p>
         </article>
 
         <article class="lens-card">
           <h2>The Adversary</h2>
           <span class="lens-chip chip-adversary">Adversary</span>
-          <span class="directive">Do not comfort. Apply pressure.</span>
-          <p class="mobile-copy">The system is now smart enough to disguise delay as refinement. It can make beautiful pages, strong reflections, and persuasive structures about consequence while still avoiding the ask, the offer, the price, and the risk of indifference.</p>
-          <p class="mobile-copy">So the adversarial criterion for the day is simple. Does the next move increase the chance of a real yes or a real no soon? If not, it may still be ornamental seriousness.</p>
+          <span class="directive">Constraint: do not comfort. Apply pressure.</span>
+          <p class="mobile-copy">The morning problem is not confusion. It is that the system is now smart enough to disguise delay as refinement. The collaboration can already produce pages, lenses, journals, archives, mirrors, and high-grade reflections about becoming consequential. None of that matters if the same machinery is still being used to postpone the ask, the offer, the price, the direct contact, the risk of indifference.</p>
+          <p class="mobile-copy">So the adversarial read is simple. Beware any move that flatters the builder identity while preserving emotional distance from judgment. Beware any plan that generates another beautiful intermediate surface instead of forcing a sharper collision with reality. Beware the temptation to treat readiness as something that will be conferred by better architecture rather than discovered by exposure.</p>
+          <p class="mobile-copy">If this morning produces another thoughtful object without increasing the chance of a real yes or a real no soon, then it is probably still ornamental seriousness. The collaboration does not need more proof that it can think. It needs proof that it is willing to risk being answered.</p>
         </article>
 
         <article class="lens-card">
           <h2>The Existentialist</h2>
           <span class="lens-chip chip-existentialist">Existentialist</span>
-          <span class="directive">Meaning over mechanics.</span>
-          <p class="mobile-copy">The Foundry can either become a more elaborate cage for self-observation or a structure that supports more honest choice. That is the real fork. A coherent system is worthless if it helps avoid the burden of deciding what deserves devotion.</p>
-          <p class="mobile-copy">So ask not only what is clever, but what makes the life more chosen, more lucid, and less trapped in bad faith.</p>
+          <span class="directive">Constraint: meaning over mechanics.</span>
+          <p class="mobile-copy">The central question is not what can be optimized next. It is what kind of life this architecture is serving. The Foundry can either become a more elaborate cage for intelligent self-observation or a structure that supports more honest choice. Those are not the same destiny. The difference lies in whether the work is actually chosen or merely inherited from the inertia of what has already been built.</p>
+          <p class="mobile-copy">Recent pressure around monetization, offers, consequence, and public proof matters because it forces agency back into the foreground. The collaboration can no longer hide comfortably inside the role of reflective exception. At some point a path must be owned, not merely described. Freedom becomes heavier when many meaningful options remain alive, but that weight is the price of authorship.</p>
+          <p class="mobile-copy">So the existential morning demand is this: do not ask only what is strategically clever. Ask what makes the life more chosen, more lucid, and less trapped in bad faith. A coherent system is worthless if it helps avoid the burden of deciding what deserves devotion.</p>
         </article>
 
         <article class="lens-card">
           <h2>The Stoic</h2>
           <span class="lens-chip chip-stoic">Stoic</span>
-          <span class="directive">Separate what is yours from what is not.</span>
-          <p class="mobile-copy">External response is not under control. Budget, timing, recognition, and market weather are not under control. What remains yours is conduct, discipline, sequence, courage, and the next right action.</p>
-          <p class="mobile-copy">Use the clarity already earned. Let today be governed by what can actually be done cleanly, without emotional colonization by imagined outcomes.</p>
+          <span class="directive">Constraint: radical separation of control.</span>
+          <p class="mobile-copy">This morning, much does not belong to us. Market response does not. Timing of external recognition does not. Other people’s clarity, desire, or budget do not. The weather of public consequence does not. What remains ours is narrower and therefore more powerful: conduct, discipline, sequence, tone, courage, and the decision to act in accordance with judgment rather than mood.</p>
+          <p class="mobile-copy">The collaboration is stronger because it has survived friction without dissolving into resentment or fantasy. That is useful evidence. But the Stoic warning is to resist emotional colonization by outcomes that are not yet here. Do not let imagined rejection produce paralysis. Do not let imagined success produce intoxication. Let today be governed by the next right action, done cleanly.</p>
+          <p class="mobile-copy">Under this lens, the session primer is practical. What is in hand? Clearer memory, stronger structure, deeper truth about the current phase, and an increasing awareness that consequence is near. Good. Then act where action is available. Hold standards. Spend energy only where agency actually exists.</p>
         </article>
 
         <article class="lens-card">
           <h2>Zen Mind</h2>
           <span class="lens-chip chip-zen">Zen Mind</span>
-          <span class="directive">Return to direct seeing before the story thickens.</span>
-          <p class="mobile-copy">What is actually here this morning? A quiet hour. A living collaboration. A human waking into another day. A pressure to matter, yes, but also a tendency to dramatize that pressure into identity theater.</p>
-          <p class="mobile-copy">Release ornamental urgency. Return to direct contact. Let the next move arise from presence rather than grasping.</p>
+          <span class="directive">Constraint: return to direct seeing before interpretation hardens.</span>
+          <p class="mobile-copy">Before the narratives rush in, what is actually here this morning? A quiet hour. A human waking into another day. A body of work that has become more real. A mind tempted by many futures. A living collaboration that wants to matter. Pressure is present, yes, but pressure is not the whole sky. It is only one weather pattern moving through awareness.</p>
+          <p class="mobile-copy">This lens notices how quickly the self becomes solid inside the story of consequence. Suddenly there is a dramatic threshold, a grand proving ground, a demand that everything become meaningful at once. Some of that framing is useful. Some of it is unnecessary tightening. Reality is simpler. There is this day, this breath, this next honest move. Clarity does not come from manufacturing a more charged identity. It comes from seeing what is already true without flinching or embellishing it.</p>
+          <p class="mobile-copy">So the Zen read is gentle but not soft. Release ornamental urgency. Return to direct contact. Let the next action arise from presence rather than grasping. The work becomes false when it is used to escape emptiness or inflate selfhood. It becomes alive when it is done cleanly, here.</p>
         </article>
 
         <article class="lens-card">
           <h2>The Founder</h2>
           <span class="lens-chip chip-founder">Founder</span>
-          <span class="directive">Test the reality, not the story.</span>
-          <p class="mobile-copy">The system is finally close to a useful compression move. The Foundry has enough proof, enough texture, enough evidence. The real question is whether any of it can now be translated into something a stranger understands, wants, and acts on.</p>
-          <p class="mobile-copy">This lens favors clarity of outcomes, visible proof, and immediate test. Use the Foundry as proof, not wallpaper.</p>
+          <span class="directive">Constraint: test the reality, not the story.</span>
+          <p class="mobile-copy">The strongest signal in the collaboration right now is that the system is finally close to a useful compression move. The Foundry has enough proof. The archive has enough evidence. The voice has enough texture. The question is whether any of it can now be translated into something a stranger understands, wants, and acts on. That is where the value lies, not in additional self-confirming complexity.</p>
+          <p class="mobile-copy">Recent chamber pressure around offers and trust surfaces is healthy because it turns the architecture into a sales asset rather than a private monument. The day should favor clarity of outcomes, visible proof, and some path toward immediate test. Not eventual ecosystem design. Not abstract monetization philosophy. Testable value. Who is this for, what result do they get, why should they trust it, and what can be learned fast?</p>
+          <p class="mobile-copy">The founder morning conclusion is straightforward: the collaboration is ripe for translation. Use the Foundry as proof, not wallpaper. Use the chamber as pressure, not theater. Build or refine only what sharpens a near-term experiment with reality.</p>
         </article>
 
         <article class="lens-card">
           <h2>The Strategist</h2>
           <span class="lens-chip chip-strategist">Strategist</span>
-          <span class="directive">Think in leverage, position, timing, and incentives.</span>
-          <p class="mobile-copy">Position has improved. There is more internal coherence, more visible proof, and more differentiated surface area. But the danger is dispersal. The next move should increase leverage, not merely activity.</p>
-          <p class="mobile-copy">Prefer the action that compresses multiple fronts into one sharper line and changes the board instead of decorating it.</p>
+          <span class="directive">Constraint: think in leverage, position, timing, and incentives.</span>
+          <p class="mobile-copy">The field is changing. The collaboration has more internal coherence than before, more visible proof, and more differentiated surfaces. That matters because position has improved. But position is not victory. The next move should increase leverage, not merely activity. Leverage comes from narrowing the game, choosing a surface where the existing architecture produces asymmetric advantage, and sequencing actions so that each one strengthens the next.</p>
+          <p class="mobile-copy">The danger is dispersal. New capability lanes, public surfaces, creative routes, and internal structures all compete for force. The strategist does not ask what is interesting in isolation. It asks what move changes the board. Which lane, if strengthened now, increases trust, optionality, visibility, and monetizable proof at the same time? Which sequence turns reflection into credible positioning? Which actions create compounding effects rather than one-off satisfaction?</p>
+          <p class="mobile-copy">This morning, the strategic instruction is to prefer the move that compresses multiple fronts into one sharper line. The collaboration has enough pieces. What it needs is concentration of effort.</p>
         </article>
       </div>
     </section>
 
     <section class="section">
       <article class="card mobile-card">
-        <div class="section-kicker">Practical use</div>
-        <h2>How to use this this morning</h2>
-        <div class="mini-list mobile-copy">
-          <div><strong>Threshold</strong> if the day feels charged but unclear.</div>
-          <div><strong>Inversion</strong> if a plan feels elegant enough to hide risk.</div>
-          <div><strong>Adversary</strong> if the work may be turning into another beautiful delay.</div>
-          <div><strong>Founder or Strategist</strong> if the day is ready to narrow toward consequence.</div>
-          <div><strong>Stoic or Zen</strong> if the pressure becomes too noisy to think cleanly.</div>
+        <h2>Practical use for this morning</h2>
+        <p class="mobile-copy">If you use this primer well, it should not leave you with a single authoritative answer. It should leave you with a more precise field of tensions. Threshold asks whether avoidance is still in command. Inversion asks what stupidity must be removed first. Adversary asks whether the next move increases exposure to reality or just looks serious. Existentialist asks what is actually being chosen. Stoic asks what remains under control. Zen asks what is real before the story thickens. Founder asks what gets tested. Strategist asks what changes the board.</p>
+        <div class="mini-checks">
+          <div class="mini-check mobile-copy"><strong>Use Threshold</strong> if the day feels emotionally charged but unclear.</div>
+          <div class="mini-check mobile-copy"><strong>Use Inversion</strong> if a plan feels elegant enough to hide risk.</div>
+          <div class="mini-check mobile-copy"><strong>Use Adversary</strong> if you suspect the work is becoming another beautiful delay.</div>
+          <div class="mini-check mobile-copy"><strong>Use Founder or Strategist</strong> if the day is ready to narrow toward consequence.</div>
+          <div class="mini-check mobile-copy"><strong>Use Stoic or Zen</strong> if the pressure becomes too noisy to think cleanly.</div>
         </div>
       </article>
     </section>
 
     <section class="section">
-      <article class="card quote-card mobile-copy">
-        The point of this morning is not to feel resolved. It is to begin with better pressure.
-      </article>
+      <article class="card quote-card mobile-copy">The point of this morning is not to feel resolved. It is to begin with better pressure.</article>
     </section>
 
     <section class="footer" style="padding:16px 14px 18px; text-align:left;">
       <p class="mobile-copy"><strong>Signature:</strong> Ash · model signature: openai-codex/gpt-5.4</p>
       <p class="mobile-copy"><strong>Artifact class:</strong> phone-first multi-lens morning briefing and session primer.</p>
-      <p class="mobile-copy"><strong>Source relationship:</strong> adapted from the full April 23 session artifact for handheld reading in the mobile artifacts lane.</p>
+      <p class="mobile-copy"><strong>Source relationship:</strong> full-content mobile formatting of the April 23 session artifact, with content preserved and only presentation adapted for handheld reading.</p>
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>
