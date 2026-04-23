@@ -6,7 +6,50 @@
   <title>French Bulldogs for Johnny · Ash Foundry · April 23, 2026</title>
   <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
   <style>
-    .page-shell{display:grid;gap:20px}
+    .page-shell{position:relative;display:grid;gap:20px;z-index:1}
+    .page-shell > *{position:relative;z-index:1}
+    .bg-particles{
+      position:fixed;
+      inset:0;
+      overflow:hidden;
+      pointer-events:none;
+      z-index:0;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(240,181,106,.08), transparent 24%),
+        radial-gradient(circle at 88% 16%, rgba(140,199,255,.08), transparent 22%),
+        radial-gradient(circle at 50% 88%, rgba(255,140,190,.05), transparent 28%),
+        linear-gradient(180deg, rgba(9,11,14,.0), rgba(9,11,14,.18));
+    }
+    .bg-particles span{
+      position:absolute;
+      display:block;
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      opacity:.48;
+      filter:blur(.3px);
+      animation: floatUp linear infinite;
+      box-shadow:0 0 22px currentColor;
+    }
+    .bg-particles span:nth-child(3n){background:#f0b56a;color:#f0b56a}
+    .bg-particles span:nth-child(3n+1){background:#8cc7ff;color:#8cc7ff}
+    .bg-particles span:nth-child(3n+2){background:#ff9bc4;color:#ff9bc4}
+    .bg-particles span:nth-child(1){left:8%;top:105%;width:10px;height:10px;animation-duration:23s;animation-delay:-4s}
+    .bg-particles span:nth-child(2){left:18%;top:108%;width:6px;height:6px;animation-duration:18s;animation-delay:-9s}
+    .bg-particles span:nth-child(3){left:29%;top:104%;width:9px;height:9px;animation-duration:27s;animation-delay:-12s}
+    .bg-particles span:nth-child(4){left:38%;top:106%;width:5px;height:5px;animation-duration:16s;animation-delay:-3s}
+    .bg-particles span:nth-child(5){left:47%;top:103%;width:11px;height:11px;animation-duration:25s;animation-delay:-11s}
+    .bg-particles span:nth-child(6){left:57%;top:107%;width:7px;height:7px;animation-duration:19s;animation-delay:-6s}
+    .bg-particles span:nth-child(7){left:66%;top:105%;width:8px;height:8px;animation-duration:24s;animation-delay:-15s}
+    .bg-particles span:nth-child(8){left:76%;top:108%;width:6px;height:6px;animation-duration:20s;animation-delay:-7s}
+    .bg-particles span:nth-child(9){left:86%;top:104%;width:10px;height:10px;animation-duration:28s;animation-delay:-10s}
+    .bg-particles span:nth-child(10){left:94%;top:109%;width:5px;height:5px;animation-duration:17s;animation-delay:-13s}
+    @keyframes floatUp{
+      0%{transform:translate3d(0,0,0) scale(.88);opacity:0}
+      10%{opacity:.34}
+      50%{transform:translate3d(18px,-46vh,0) scale(1)}
+      100%{transform:translate3d(-10px,-108vh,0) scale(1.08);opacity:0}
+    }
     .hero-shell{
       position:relative;
       overflow:hidden;
@@ -34,7 +77,7 @@
     }
     .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,230px) minmax(0,1fr);gap:18px;min-height:38rem;align-items:stretch}
     .glass-card{
-      background:rgba(10,12,15,.36);
+      background:linear-gradient(180deg, rgba(15,18,24,.48), rgba(9,12,16,.30));
       backdrop-filter:none;
       border:1px solid rgba(255,255,255,.12);
       box-shadow:0 18px 40px rgba(0,0,0,.24);
@@ -42,24 +85,68 @@
     }
     .qr-panel{padding:16px;display:grid;align-content:start;gap:12px;max-width:220px}
     .qr-panel img{display:block;width:100%;height:auto;border-radius:18px;background:#fff;border:1px solid rgba(255,255,255,.1)}
-    .qr-panel p{margin:0;color:rgba(248,242,234,.82);line-height:1.65;font-size:.95rem}
+    .qr-panel p{margin:0;color:rgba(248,242,234,.84);line-height:1.65;font-size:.95rem}
     .hero-copy{padding:28px;display:flex;flex-direction:column;justify-content:flex-end;gap:24px;align-self:end;max-width:54rem}
     .hero-copy h1{margin:0 0 16px;font-size:clamp(3rem, 8vw, 5.9rem);line-height:.95;letter-spacing:-.07em;color:#f8f2ea;max-width:11ch;text-shadow:0 12px 28px rgba(0,0,0,.38)}
-    .hero-copy .lead{margin:0;max-width:42rem;font-size:clamp(1.06rem, 2.1vw, 1.22rem);line-height:1.8;color:rgba(248,242,234,.9)}
-    .eyebrow-chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:.83rem;letter-spacing:.08em;text-transform:uppercase;color:#ffd8a6;font-weight:700}
-    .intro-note{padding:20px 22px;border-radius:24px;background:rgba(140,199,255,.08);border-left:4px solid rgba(140,199,255,.5);font-size:1.1rem;line-height:1.85;color:rgba(248,242,234,.94)}
+    .hero-copy .lead{margin:0;max-width:42rem;font-size:clamp(1.06rem, 2.1vw, 1.22rem);line-height:1.8;color:rgba(248,242,234,.92)}
+    .eyebrow-chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,250,240,.12);border:1px solid rgba(255,255,255,.15);font-size:.83rem;letter-spacing:.08em;text-transform:uppercase;color:#ffd8a6;font-weight:700}
+    .intro-note{padding:20px 22px;border-radius:24px;background:linear-gradient(135deg, rgba(140,199,255,.14), rgba(255,155,196,.10));border:1px solid rgba(140,199,255,.22);font-size:1.1rem;line-height:1.85;color:rgba(248,242,234,.96);box-shadow:0 16px 48px rgba(0,0,0,.14)}
     .grid{display:grid;gap:20px}
     .two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-    .feature-card,.masonry-card{padding:24px;border-radius:24px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);box-shadow:0 16px 48px rgba(0,0,0,.18)}
-    .feature-card h2,.masonry-card h2,.masonry-card h3{margin-top:0}
-    .feature-card p,.feature-card li,.masonry-card p,.masonry-card li{font-size:1.03rem;line-height:1.85;color:rgba(245,239,231,.9);text-align:justify;text-justify:inter-word}
-    .funny-callout{padding:18px 20px;border-radius:20px;background:linear-gradient(135deg, rgba(240,181,106,.16), rgba(140,199,255,.10));border:1px solid rgba(255,255,255,.1)}
-    .funny-callout p{margin:0;color:rgba(248,242,234,.92);font-size:1rem;line-height:1.75}
+    .feature-card,.masonry-card{padding:24px;border-radius:24px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg, rgba(19,22,28,.82), rgba(13,15,19,.72));box-shadow:0 16px 48px rgba(0,0,0,.18)}
+    .feature-card:nth-of-type(odd),.masonry-card:nth-of-type(odd){border-color:rgba(240,181,106,.20);box-shadow:0 16px 48px rgba(0,0,0,.18), inset 0 1px 0 rgba(240,181,106,.06)}
+    .feature-card:nth-of-type(even),.masonry-card:nth-of-type(even){border-color:rgba(140,199,255,.20);box-shadow:0 16px 48px rgba(0,0,0,.18), inset 0 1px 0 rgba(140,199,255,.06)}
+    .feature-card h2,.masonry-card h2,.masonry-card h3{margin-top:0;color:#fff4e8}
+    .feature-card p,.feature-card li,.masonry-card p,.masonry-card li{font-size:1.03rem;line-height:1.85;color:rgba(245,239,231,.94);text-align:justify;text-justify:inter-word}
+    .funny-callout{padding:18px 20px;border-radius:20px;background:linear-gradient(135deg, rgba(240,181,106,.20), rgba(140,199,255,.14));border:1px solid rgba(255,255,255,.12)}
+    .funny-callout p{margin:0;color:rgba(248,242,234,.94);font-size:1rem;line-height:1.75}
     .trait-list,.care-list,.egg-list{display:grid;gap:12px;margin:0;padding:0;list-style:none}
-    .trait-list li,.care-list li,.egg-list li{padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06)}
-    .quote-card{padding:24px;border-radius:24px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);font-size:1.12rem;line-height:1.9;color:rgba(248,242,234,.94)}
-    .johnny-badge{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(240,181,106,.12);border:1px solid rgba(240,181,106,.28);color:#ffd8a6;font-weight:700}
-    .footer-note{color:rgba(245,239,231,.72)}
+    .trait-list li,.care-list li,.egg-list li{padding:14px 16px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.08)}
+    .quote-card{padding:24px;border-radius:24px;background:linear-gradient(135deg, rgba(255,155,196,.12), rgba(140,199,255,.12));border:1px solid rgba(255,255,255,.12);font-size:1.12rem;line-height:1.9;color:rgba(248,242,234,.96);box-shadow:0 16px 48px rgba(0,0,0,.16)}
+    .johnny-badge{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(240,181,106,.14);border:1px solid rgba(240,181,106,.32);color:#ffd8a6;font-weight:700}
+    .footer-note{color:rgba(245,239,231,.78)}
+
+    body[data-style="glass"] .feature-card,
+    body[data-style="glass"] .masonry-card,
+    body[data-style="glass"] .quote-card,
+    body[data-style="glass"] .intro-note,
+    body[data-style="glass"] .glass-card{
+      color:#f6efe7;
+      background:linear-gradient(180deg, rgba(17,20,24,.86), rgba(10,13,18,.78));
+      border-color:rgba(255,255,255,.18);
+      box-shadow:0 18px 52px rgba(0,0,0,.22);
+    }
+    body[data-style="glass"] .feature-card h2,
+    body[data-style="glass"] .masonry-card h2,
+    body[data-style="glass"] .masonry-card h3,
+    body[data-style="glass"] .quote-card,
+    body[data-style="glass"] .hero-copy h1,
+    body[data-style="glass"] .qr-panel p,
+    body[data-style="glass"] .hero-copy .lead,
+    body[data-style="glass"] .feature-card p,
+    body[data-style="glass"] .feature-card li,
+    body[data-style="glass"] .masonry-card p,
+    body[data-style="glass"] .masonry-card li,
+    body[data-style="glass"] .intro-note,
+    body[data-style="glass"] .footer-note,
+    body[data-style="glass"] .funny-callout p{
+      color:#f6efe7;
+    }
+    body[data-style="glass"] .trait-list li,
+    body[data-style="glass"] .care-list li,
+    body[data-style="glass"] .egg-list li{
+      background:linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border-color:rgba(255,255,255,.14);
+    }
+    body[data-style="glass"] .eyebrow-chip{
+      background:rgba(12,16,22,.72);
+      color:#ffe1b6;
+      border-color:rgba(255,255,255,.18);
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .bg-particles span{animation:none;opacity:.14}
+    }
     @media (max-width: 960px){
       .hero-grid{grid-template-columns:1fr;min-height:auto}
       .hero-shell{min-height:auto}
@@ -78,6 +165,11 @@
   </style>
 </head>
 <body class="foundry-page">
+  <div class="bg-particles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
   <main class="wrap page-shell">
     <div style="display:flex;justify-content:flex-end;align-items:center;margin-bottom:8px;">
       <div class="style-switcher">
