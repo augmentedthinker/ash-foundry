@@ -11,7 +11,6 @@
     .bg-particles{
       position:fixed;
       inset:0;
-      overflow:hidden;
       pointer-events:none;
       z-index:0;
       background:
@@ -20,35 +19,11 @@
         radial-gradient(circle at 50% 88%, rgba(255,140,190,.05), transparent 28%),
         linear-gradient(180deg, rgba(9,11,14,.0), rgba(9,11,14,.18));
     }
-    .bg-particles span{
-      position:absolute;
+    #particle-canvas{
+      width:100%;
+      height:100%;
       display:block;
-      width:8px;
-      height:8px;
-      border-radius:999px;
-      opacity:.48;
-      filter:blur(.3px);
-      animation: floatUp linear infinite;
-      box-shadow:0 0 22px currentColor;
-    }
-    .bg-particles span:nth-child(3n){background:#f0b56a;color:#f0b56a}
-    .bg-particles span:nth-child(3n+1){background:#8cc7ff;color:#8cc7ff}
-    .bg-particles span:nth-child(3n+2){background:#ff9bc4;color:#ff9bc4}
-    .bg-particles span:nth-child(1){left:8%;top:105%;width:10px;height:10px;animation-duration:23s;animation-delay:-4s}
-    .bg-particles span:nth-child(2){left:18%;top:108%;width:6px;height:6px;animation-duration:18s;animation-delay:-9s}
-    .bg-particles span:nth-child(3){left:29%;top:104%;width:9px;height:9px;animation-duration:27s;animation-delay:-12s}
-    .bg-particles span:nth-child(4){left:38%;top:106%;width:5px;height:5px;animation-duration:16s;animation-delay:-3s}
-    .bg-particles span:nth-child(5){left:47%;top:103%;width:11px;height:11px;animation-duration:25s;animation-delay:-11s}
-    .bg-particles span:nth-child(6){left:57%;top:107%;width:7px;height:7px;animation-duration:19s;animation-delay:-6s}
-    .bg-particles span:nth-child(7){left:66%;top:105%;width:8px;height:8px;animation-duration:24s;animation-delay:-15s}
-    .bg-particles span:nth-child(8){left:76%;top:108%;width:6px;height:6px;animation-duration:20s;animation-delay:-7s}
-    .bg-particles span:nth-child(9){left:86%;top:104%;width:10px;height:10px;animation-duration:28s;animation-delay:-10s}
-    .bg-particles span:nth-child(10){left:94%;top:109%;width:5px;height:5px;animation-duration:17s;animation-delay:-13s}
-    @keyframes floatUp{
-      0%{transform:translate3d(0,0,0) scale(.88);opacity:0}
-      10%{opacity:.34}
-      50%{transform:translate3d(18px,-46vh,0) scale(1)}
-      100%{transform:translate3d(-10px,-108vh,0) scale(1.08);opacity:0}
+      opacity:.88;
     }
     .hero-shell{
       position:relative;
@@ -82,29 +57,45 @@
       border:1px solid rgba(255,255,255,.12);
       box-shadow:0 18px 40px rgba(0,0,0,.24);
       border-radius:24px;
+      transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
+      transform:translateZ(0);
+      will-change:transform;
     }
     .qr-panel{padding:16px;display:grid;align-content:start;gap:12px;max-width:220px}
-    .qr-panel img{display:block;width:100%;height:auto;border-radius:18px;background:#fff;border:1px solid rgba(255,255,255,.1)}
+    .qr-panel img{display:block;width:100%;height:auto;border-radius:18px;background:#fff;border:1px solid rgba(255,255,255,.1);transition:transform .25s ease, box-shadow .25s ease}
     .qr-panel p{margin:0;color:rgba(248,242,234,.84);line-height:1.65;font-size:.95rem}
     .hero-copy{padding:28px;display:flex;flex-direction:column;justify-content:flex-end;gap:24px;align-self:end;max-width:54rem}
     .hero-copy h1{margin:0 0 16px;font-size:clamp(3rem, 8vw, 5.9rem);line-height:.95;letter-spacing:-.07em;color:#f8f2ea;max-width:11ch;text-shadow:0 12px 28px rgba(0,0,0,.38)}
     .hero-copy .lead{margin:0;max-width:42rem;font-size:clamp(1.06rem, 2.1vw, 1.22rem);line-height:1.8;color:rgba(248,242,234,.92)}
-    .eyebrow-chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,250,240,.12);border:1px solid rgba(255,255,255,.15);font-size:.83rem;letter-spacing:.08em;text-transform:uppercase;color:#ffd8a6;font-weight:700}
-    .intro-note{padding:20px 22px;border-radius:24px;background:linear-gradient(135deg, rgba(140,199,255,.14), rgba(255,155,196,.10));border:1px solid rgba(140,199,255,.22);font-size:1.1rem;line-height:1.85;color:rgba(248,242,234,.96);box-shadow:0 16px 48px rgba(0,0,0,.14)}
+    .eyebrow-chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,250,240,.12);border:1px solid rgba(255,255,255,.15);font-size:.83rem;letter-spacing:.08em;text-transform:uppercase;color:#ffd8a6;font-weight:700;transition:transform .25s ease,border-color .25s ease,background .25s ease}
+    .intro-note{padding:20px 22px;border-radius:24px;background:linear-gradient(135deg, rgba(140,199,255,.14), rgba(255,155,196,.10));border:1px solid rgba(140,199,255,.22);font-size:1.1rem;line-height:1.85;color:rgba(248,242,234,.96);box-shadow:0 16px 48px rgba(0,0,0,.14);transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
     .grid{display:grid;gap:20px}
     .two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-    .feature-card,.masonry-card{padding:24px;border-radius:24px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg, rgba(19,22,28,.82), rgba(13,15,19,.72));box-shadow:0 16px 48px rgba(0,0,0,.18)}
+    .feature-card,.masonry-card{padding:24px;border-radius:24px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg, rgba(19,22,28,.82), rgba(13,15,19,.72));box-shadow:0 16px 48px rgba(0,0,0,.18);transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;transform:translateZ(0);will-change:transform}
     .feature-card:nth-of-type(odd),.masonry-card:nth-of-type(odd){border-color:rgba(240,181,106,.20);box-shadow:0 16px 48px rgba(0,0,0,.18), inset 0 1px 0 rgba(240,181,106,.06)}
     .feature-card:nth-of-type(even),.masonry-card:nth-of-type(even){border-color:rgba(140,199,255,.20);box-shadow:0 16px 48px rgba(0,0,0,.18), inset 0 1px 0 rgba(140,199,255,.06)}
+    .feature-card:hover,.masonry-card:hover,.glass-card:hover,.intro-note:hover,.quote-card:hover{
+      transform:translateY(-4px) scale(1.01);
+      box-shadow:0 22px 60px rgba(0,0,0,.24), 0 0 0 1px rgba(255,255,255,.04);
+    }
     .feature-card h2,.masonry-card h2,.masonry-card h3{margin-top:0;color:#fff4e8}
     .feature-card p,.feature-card li,.masonry-card p,.masonry-card li{font-size:1.03rem;line-height:1.85;color:rgba(245,239,231,.94);text-align:justify;text-justify:inter-word}
-    .funny-callout{padding:18px 20px;border-radius:20px;background:linear-gradient(135deg, rgba(240,181,106,.20), rgba(140,199,255,.14));border:1px solid rgba(255,255,255,.12)}
+    .funny-callout{padding:18px 20px;border-radius:20px;background:linear-gradient(135deg, rgba(240,181,106,.20), rgba(140,199,255,.14));border:1px solid rgba(255,255,255,.12);transition:transform .25s ease, box-shadow .25s ease}
+    .funny-callout:hover{transform:translateY(-2px)}
     .funny-callout p{margin:0;color:rgba(248,242,234,.94);font-size:1rem;line-height:1.75}
     .trait-list,.care-list,.egg-list{display:grid;gap:12px;margin:0;padding:0;list-style:none}
-    .trait-list li,.care-list li,.egg-list li{padding:14px 16px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.08)}
-    .quote-card{padding:24px;border-radius:24px;background:linear-gradient(135deg, rgba(255,155,196,.12), rgba(140,199,255,.12));border:1px solid rgba(255,255,255,.12);font-size:1.12rem;line-height:1.9;color:rgba(248,242,234,.96);box-shadow:0 16px 48px rgba(0,0,0,.16)}
-    .johnny-badge{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(240,181,106,.14);border:1px solid rgba(240,181,106,.32);color:#ffd8a6;font-weight:700}
+    .trait-list li,.care-list li,.egg-list li{padding:14px 16px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.08);transition:transform .22s ease, border-color .22s ease, background .22s ease}
+    .trait-list li:hover,.care-list li:hover,.egg-list li:hover{transform:translateX(4px);border-color:rgba(255,255,255,.18)}
+    .quote-card{padding:24px;border-radius:24px;background:linear-gradient(135deg, rgba(255,155,196,.12), rgba(140,199,255,.12));border:1px solid rgba(255,255,255,.12);font-size:1.12rem;line-height:1.9;color:rgba(248,242,234,.96);box-shadow:0 16px 48px rgba(0,0,0,.16);transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
+    .johnny-badge{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(240,181,106,.14);border:1px solid rgba(240,181,106,.32);color:#ffd8a6;font-weight:700;transition:transform .25s ease, box-shadow .25s ease}
+    .johnny-badge:hover,.eyebrow-chip:hover,.style-switcher select:hover,.pill:hover{transform:translateY(-2px)}
     .footer-note{color:rgba(245,239,231,.78)}
+    .style-switcher select,.pill{
+      transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease;
+    }
+    .style-switcher select:hover,.pill:hover,.qr-panel img:hover{
+      box-shadow:0 12px 28px rgba(0,0,0,.22);
+    }
 
     body[data-style="glass"] .feature-card,
     body[data-style="glass"] .masonry-card,
@@ -145,7 +136,8 @@
     }
 
     @media (prefers-reduced-motion: reduce){
-      .bg-particles span{animation:none;opacity:.14}
+      .feature-card,.masonry-card,.glass-card,.intro-note,.quote-card,.trait-list li,.care-list li,.egg-list li,.funny-callout,.johnny-badge,.eyebrow-chip,.style-switcher select,.pill,.qr-panel img{transition:none}
+      #particle-canvas{display:none}
     }
     @media (max-width: 960px){
       .hero-grid{grid-template-columns:1fr;min-height:auto}
@@ -166,8 +158,7 @@
 </head>
 <body class="foundry-page">
   <div class="bg-particles" aria-hidden="true">
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
+    <canvas id="particle-canvas"></canvas>
   </div>
 
   <main class="wrap page-shell">
@@ -183,7 +174,7 @@
 
     <section class="hero-shell">
       <div class="hero-grid">
-        <aside class="glass-card qr-panel">
+        <aside class="glass-card qr-panel interactive-card">
           <div class="johnny-badge">🐾 For Johnny</div>
           <img src="https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=https%3A%2F%2Faugmentedthinker.github.io%2Fash-foundry%2Fartifacts%2Ffrench-bulldogs-2026-04-23%2F" alt="QR code linking to the French Bulldogs page" />
           <p>Scan this and the page jumps straight to your phone, because even Frenchie propaganda should have decent deployment ergonomics.</p>
@@ -192,7 +183,7 @@
           </div>
         </aside>
 
-        <div class="glass-card hero-copy">
+        <div class="glass-card hero-copy interactive-card">
           <div>
             <span class="eyebrow-chip">Session Artifact · AI-coded tribute page</span>
             <h1>French Bulldogs, but make it ridiculous in a premium way</h1>
@@ -210,16 +201,16 @@
       </div>
     </section>
 
-    <section class="intro-note">French Bulldogs are already halfway to being a design object. They have the silhouette, the attitude, the overbuilt tiny-body energy, and the stare of a dog who knows you are the less interesting species in the room. So this page leans in. It is part admiration, part style exercise, part proof-of-capability, and part playful “here you go Johnny” flex.</section>
+    <section class="intro-note interactive-card">French Bulldogs are already halfway to being a design object. They have the silhouette, the attitude, the overbuilt tiny-body energy, and the stare of a dog who knows you are the less interesting species in the room. So this page leans in. It is part admiration, part style exercise, part proof-of-capability, and part playful “here you go Johnny” flex.</section>
 
     <section class="two-col">
-      <article class="feature-card">
+      <article class="feature-card interactive-card">
         <h2>Why Frenchies break the internet so easily</h2>
         <p>French Bulldogs have a near-perfect visual formula. Their ears look exaggerated in exactly the right way, their faces can swing from solemn to absurd in half a second, and their compact body shape gives them the presence of a much larger animal compressed into a denser, funnier frame. They are immediately recognizable, which makes them ideal for icons, photos, stickers, and now, apparently, lovingly overbuilt micro-sites.</p>
         <p>But their appeal is not only aesthetic. Frenchies feel companionable in a very modern way. They fit small spaces, they tend to stay deeply tuned to their humans, and they often project this odd combination of stubborn dignity and clingy affection that makes them feel more like eccentric roommates than ordinary pets.</p>
       </article>
 
-      <article class="feature-card">
+      <article class="feature-card interactive-card">
         <h2>Johnny’s extremely serious Frenchie briefing</h2>
         <ul class="egg-list">
           <li><strong>Deployment target:</strong> impress Johnny a little.</li>
@@ -231,7 +222,7 @@
     </section>
 
     <section class="two-col">
-      <article class="masonry-card">
+      <article class="masonry-card interactive-card">
         <h2>The signature Frenchie package</h2>
         <ul class="trait-list">
           <li><strong>Bat ears:</strong> maybe the single most successful branding move in dog history.</li>
@@ -242,7 +233,7 @@
         </ul>
       </article>
 
-      <article class="masonry-card">
+      <article class="masonry-card interactive-card">
         <h2>Care realities, because style should stay honest</h2>
         <ul class="care-list">
           <li><strong>Heat is a real concern:</strong> French Bulldogs can overheat faster than many other breeds.</li>
@@ -255,27 +246,174 @@
     </section>
 
     <section class="two-col">
-      <article class="masonry-card">
+      <article class="masonry-card interactive-card">
         <h2>The AI-agent flex, hidden in plain sight</h2>
         <p>This page is also doing a small amount of showing off on purpose. The request was simple. The response included artifact architecture, live hosting, style review, image-route fallback logic, a generated hero image through the Hugging Face lane, QR linking, mobile-aware layout, and a playful dedicated tone. That matters because “AI can code” is only interesting once it starts cashing out into finished things someone can actually open, scan, and react to.</p>
         <p>So yes, Johnny, this is partly a French Bulldog page, but it is also a demonstration that the machine can take a loose idea and turn it into a polished live artifact without much hand-holding. Which, to be fair, is a very Frenchie-adjacent move. Efficient, compact, and weirdly overconfident.</p>
       </article>
 
-      <article class="masonry-card">
+      <article class="masonry-card interactive-card">
         <h2>A quiet little Easter egg</h2>
         <p>If you made it this far, here is the hidden joke: the real French Bulldog move would be to ignore every carefully written paragraph on this page, march directly into the hero section, stare at the generated dog, and demand snacks. That is probably the most breed-accurate possible interaction design.</p>
         <p>So in spirit, this site is dedicated to Johnny, and also to the imaginary Frenchie product manager who approved every design decision by snorting once and sitting on the QR code until launch.</p>
       </article>
     </section>
 
-    <section class="quote-card">French Bulldogs are what happens when a cartoonist, a brick, and a heart-shaped space heater accidentally collaborate on a dog.</section>
+    <section class="quote-card interactive-card">French Bulldogs are what happens when a cartoonist, a brick, and a heart-shaped space heater accidentally collaborate on a dog.</section>
 
-    <section class="feature-card">
+    <section class="feature-card interactive-card">
       <h2>Final note for Johnny</h2>
       <p>Here you go, Johnny. You asked for French Bulldogs, and now there is a live page with a generated hero image, mobile polish, QR access, Foundry styling, and enough attitude to feel like the breed itself may have art-directed it. I’m glad we didn’t make this boring.</p>
       <p class="footer-note"><strong>Signature:</strong> Ash · model signature: openai-codex/gpt-5.4<br /><strong>Artifact class:</strong> browser-facing themed session artifact, dedicated to Johnny, rebuilt with a real AI-generated hero image and stronger mobile-first visual treatment.</p>
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>
+  <script>
+    (() => {
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const canvas = document.getElementById('particle-canvas');
+      if (!canvas || prefersReduced) return;
+
+      const ctx = canvas.getContext('2d');
+      const palette = ['#f0b56a', '#8cc7ff', '#ff9bc4'];
+      let particles = [];
+      let pointer = { x: window.innerWidth * 0.5, y: window.innerHeight * 0.3, active: false };
+      let width = 0;
+      let height = 0;
+      const particleCount = Math.min(70, Math.max(42, Math.floor(window.innerWidth / 22)));
+
+      function resize() {
+        const ratio = Math.min(window.devicePixelRatio || 1, 2);
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width * ratio;
+        canvas.height = height * ratio;
+        canvas.style.width = width + 'px';
+        canvas.style.height = height + 'px';
+        ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+        particles = Array.from({ length: particleCount }, () => ({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.45,
+          vy: (Math.random() - 0.5) * 0.45,
+          r: 1.6 + Math.random() * 2.6,
+          color: palette[Math.floor(Math.random() * palette.length)]
+        }));
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, width, height);
+
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if (p.x < -20) p.x = width + 20;
+          if (p.x > width + 20) p.x = -20;
+          if (p.y < -20) p.y = height + 20;
+          if (p.y > height + 20) p.y = -20;
+
+          if (pointer.active) {
+            const dx = pointer.x - p.x;
+            const dy = pointer.y - p.y;
+            const dist = Math.hypot(dx, dy);
+            if (dist < 150) {
+              const force = (150 - dist) / 1500;
+              p.vx -= dx * force * 0.002;
+              p.vy -= dy * force * 0.002;
+            }
+          }
+
+          p.vx *= 0.995;
+          p.vy *= 0.995;
+          p.vx = Math.max(Math.min(p.vx, 0.75), -0.75);
+          p.vy = Math.max(Math.min(p.vy, 0.75), -0.75);
+        }
+
+        for (let i = 0; i < particles.length; i++) {
+          const a = particles[i];
+          for (let j = i + 1; j < particles.length; j++) {
+            const b = particles[j];
+            const dx = a.x - b.x;
+            const dy = a.y - b.y;
+            const dist = Math.hypot(dx, dy);
+            if (dist < 135) {
+              ctx.strokeStyle = `rgba(255,255,255,${(1 - dist / 135) * 0.16})`;
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.moveTo(a.x, a.y);
+              ctx.lineTo(b.x, b.y);
+              ctx.stroke();
+            }
+          }
+        }
+
+        for (const p of particles) {
+          ctx.beginPath();
+          ctx.fillStyle = p.color;
+          ctx.globalAlpha = 0.82;
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.globalAlpha = 1;
+        }
+
+        if (pointer.active) {
+          const glow = ctx.createRadialGradient(pointer.x, pointer.y, 0, pointer.x, pointer.y, 180);
+          glow.addColorStop(0, 'rgba(255,255,255,0.12)');
+          glow.addColorStop(1, 'rgba(255,255,255,0)');
+          ctx.fillStyle = glow;
+          ctx.beginPath();
+          ctx.arc(pointer.x, pointer.y, 180, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        requestAnimationFrame(draw);
+      }
+
+      window.addEventListener('mousemove', (event) => {
+        pointer.x = event.clientX;
+        pointer.y = event.clientY;
+        pointer.active = true;
+      });
+
+      window.addEventListener('mouseleave', () => {
+        pointer.active = false;
+      });
+
+      window.addEventListener('touchmove', (event) => {
+        const touch = event.touches[0];
+        if (!touch) return;
+        pointer.x = touch.clientX;
+        pointer.y = touch.clientY;
+        pointer.active = true;
+      }, { passive: true });
+
+      window.addEventListener('touchend', () => {
+        pointer.active = false;
+      }, { passive: true });
+
+      window.addEventListener('resize', resize);
+      resize();
+      draw();
+    })();
+
+    (() => {
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) return;
+      const cards = document.querySelectorAll('.interactive-card');
+      cards.forEach((card) => {
+        card.addEventListener('mousemove', (event) => {
+          const rect = card.getBoundingClientRect();
+          const x = ((event.clientX - rect.left) / rect.width - 0.5) * 10;
+          const y = ((event.clientY - rect.top) / rect.height - 0.5) * -10;
+          card.style.transform = `perspective(900px) rotateX(${y}deg) rotateY(${x}deg) translateY(-4px) scale(1.01)`;
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = '';
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
