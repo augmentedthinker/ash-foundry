@@ -3,63 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>French Bulldogs · Ash Foundry · April 23, 2026</title>
+  <title>French Bulldogs for Johnny · Ash Foundry · April 23, 2026</title>
   <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
   <style>
+    .page-shell{display:grid;gap:20px}
     .hero-shell{
       position:relative;
       overflow:hidden;
       border-radius:32px;
-      min-height:38rem;
-      padding:28px;
+      min-height:42rem;
+      padding:18px;
       background:
-        linear-gradient(180deg, rgba(7,9,11,.12) 0%, rgba(7,9,11,.52) 48%, rgba(7,9,11,.92) 100%),
-        url('../../assets/images/french-bulldog-hero-2026-04-23.svg') center/cover no-repeat,
+        linear-gradient(180deg, rgba(7,9,11,.08) 0%, rgba(7,9,11,.46) 42%, rgba(7,9,11,.94) 100%),
+        url('../../assets/images/french-bulldog-hero-ai-2026-04-23.jpg') center 28% / cover no-repeat,
         #050607;
       border:1px solid rgba(255,255,255,.08);
-      box-shadow:0 26px 80px rgba(0,0,0,.28);
+      box-shadow:0 28px 90px rgba(0,0,0,.34);
+      isolation:isolate;
     }
     .hero-shell::before{
       content:"";
       position:absolute;
       inset:0;
-      background:linear-gradient(90deg, rgba(240,181,106,.10), transparent 40%, rgba(140,199,255,.08));
+      background:
+        radial-gradient(circle at 14% 18%, rgba(240,181,106,.24), transparent 26%),
+        radial-gradient(circle at 88% 14%, rgba(140,199,255,.20), transparent 20%),
+        linear-gradient(90deg, rgba(240,181,106,.08), transparent 38%, transparent 62%, rgba(140,199,255,.08));
       pointer-events:none;
+      z-index:0;
     }
-    .hero-content{position:relative;z-index:1;display:grid;gap:18px;align-content:space-between;min-height:33rem}
-    .qr-wrap{
-      width:min(200px, 42vw);
-      padding:14px;
-      border-radius:22px;
-      background:rgba(11,13,16,.62);
-      border:1px solid rgba(255,255,255,.14);
-      backdrop-filter:blur(12px);
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,230px) minmax(0,1fr);gap:18px;min-height:38rem;align-items:stretch}
+    .glass-card{
+      background:rgba(10,12,15,.58);
+      backdrop-filter:blur(14px);
+      border:1px solid rgba(255,255,255,.12);
       box-shadow:0 18px 40px rgba(0,0,0,.24);
+      border-radius:24px;
     }
-    .qr-wrap img{display:block;width:100%;height:auto;border-radius:14px;background:#fff}
-    .qr-wrap p{margin:10px 0 0;font-size:.88rem;line-height:1.55;color:rgba(248,242,234,.82)}
-    .hero-copy{max-width:46rem}
-    .hero-copy h1{margin:0 0 16px;font-size:clamp(3rem, 8vw, 5.5rem);line-height:0.98;letter-spacing:-.06em;color:#f8f2ea}
-    .hero-copy p{margin:0;font-size:clamp(1.08rem, 2vw, 1.26rem);line-height:1.78;color:rgba(248,242,234,.88)}
+    .qr-panel{padding:16px;display:grid;align-content:start;gap:12px}
+    .qr-panel img{display:block;width:100%;height:auto;border-radius:18px;background:#fff;border:1px solid rgba(255,255,255,.1)}
+    .qr-panel p{margin:0;color:rgba(248,242,234,.82);line-height:1.65;font-size:.95rem}
+    .hero-copy{padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+    .hero-copy h1{margin:0 0 16px;font-size:clamp(3rem, 8vw, 5.9rem);line-height:.95;letter-spacing:-.07em;color:#f8f2ea;max-width:11ch;text-shadow:0 12px 28px rgba(0,0,0,.38)}
+    .hero-copy .lead{margin:0;max-width:42rem;font-size:clamp(1.06rem, 2.1vw, 1.22rem);line-height:1.8;color:rgba(248,242,234,.9)}
+    .eyebrow-chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:.83rem;letter-spacing:.08em;text-transform:uppercase;color:#ffd8a6;font-weight:700}
+    .intro-note{padding:20px 22px;border-radius:24px;background:rgba(140,199,255,.08);border-left:4px solid rgba(140,199,255,.5);font-size:1.1rem;line-height:1.85;color:rgba(248,242,234,.94)}
     .grid{display:grid;gap:20px}
     .two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-    .card-soft{padding:24px;border-radius:24px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);box-shadow:0 16px 48px rgba(0,0,0,.18)}
-    .card-soft h2,.card-soft h3{margin-top:0}
-    .card-soft p,.card-soft li{font-size:1.04rem;line-height:1.85;color:rgba(245,239,231,.9)}
-    .quote-card{padding:24px;border-radius:24px;background:rgba(140,199,255,.07);border-left:4px solid rgba(140,199,255,.5);font-size:1.14rem;line-height:1.9;color:rgba(248,242,234,.94)}
-    .trait-list,.care-list{display:grid;gap:12px;margin:0;padding:0;list-style:none}
-    .trait-list li,.care-list li{padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06)}
-    .stat-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-    .stat{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);font-size:.92rem;color:rgba(248,242,234,.9)}
-    @media (max-width:900px){
+    .feature-card,.masonry-card{padding:24px;border-radius:24px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);box-shadow:0 16px 48px rgba(0,0,0,.18)}
+    .feature-card h2,.masonry-card h2,.masonry-card h3{margin-top:0}
+    .feature-card p,.feature-card li,.masonry-card p,.masonry-card li{font-size:1.03rem;line-height:1.85;color:rgba(245,239,231,.9);text-align:justify;text-justify:inter-word}
+    .funny-callout{padding:18px 20px;border-radius:20px;background:linear-gradient(135deg, rgba(240,181,106,.16), rgba(140,199,255,.10));border:1px solid rgba(255,255,255,.1)}
+    .funny-callout p{margin:0;color:rgba(248,242,234,.92);font-size:1rem;line-height:1.75}
+    .trait-list,.care-list,.egg-list{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+    .trait-list li,.care-list li,.egg-list li{padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06)}
+    .quote-card{padding:24px;border-radius:24px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);font-size:1.12rem;line-height:1.9;color:rgba(248,242,234,.94)}
+    .johnny-badge{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(240,181,106,.12);border:1px solid rgba(240,181,106,.28);color:#ffd8a6;font-weight:700}
+    .footer-note{color:rgba(245,239,231,.72)}
+    @media (max-width: 960px){
+      .hero-grid{grid-template-columns:1fr;min-height:auto}
+      .hero-shell{min-height:auto}
+      .hero-copy h1{max-width:none}
       .two-col{grid-template-columns:1fr}
-      .hero-shell{min-height:32rem}
-      .hero-content{min-height:28rem}
+    }
+    @media (max-width: 640px){
+      .hero-shell{padding:12px}
+      .hero-copy{padding:18px}
+      .qr-panel{padding:14px}
+      .feature-card,.masonry-card{padding:18px}
+      .hero-copy .lead,.feature-card p,.feature-card li,.masonry-card p,.masonry-card li,.intro-note{line-height:1.78}
     }
   </style>
 </head>
 <body class="foundry-page">
-  <main class="wrap">
+  <main class="wrap page-shell">
     <header class="topbar">
       <div class="left"><a href="../../index.html">← Ash Foundry</a><a href="../session-artifacts-archive/index.html">Session Artifacts</a></div>
       <div class="right">
@@ -75,96 +92,98 @@
     </header>
 
     <section class="hero-shell">
-      <div class="hero-content">
-        <div class="qr-wrap">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=https%3A%2F%2Faugmentedthinker.github.io%2Fash-foundry%2Fartifacts%2Ffrench-bulldogs-2026-04-23%2F" alt="QR code linking to the French Bulldogs page" />
-          <p>Scan to open this page directly on your phone.</p>
-        </div>
+      <div class="hero-grid">
+        <aside class="glass-card qr-panel">
+          <div class="johnny-badge">🐾 For Johnny</div>
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=https%3A%2F%2Faugmentedthinker.github.io%2Fash-foundry%2Fartifacts%2Ffrench-bulldogs-2026-04-23%2F" alt="QR code linking to the French Bulldogs page" />
+          <p>Scan this and the page jumps straight to your phone, because even Frenchie propaganda should have decent deployment ergonomics.</p>
+          <div class="funny-callout">
+            <p><strong>Easter egg:</strong> if Johnny asked for “just a site about French Bulldogs,” what he got instead is a small demonstration that an AI agent can handle design direction, coding, image generation, QR routing, mobile polish, and a little bit of theatrical overdelivery.</p>
+          </div>
+        </aside>
 
-        <div class="hero-copy">
-          <p class="eyebrow">Session Artifact · Visual Feature Page</p>
-          <h1>French Bulldogs</h1>
-          <p>French Bulldogs are a perfect collision of charisma and compact design, equal parts clown, companion, and miniature bruiser with a velvet-soft face. This page is a quick love letter to the breed, built as a stylish Foundry artifact with a hero image, practical guidance, and a little admiration for one of the most instantly recognizable dogs on earth.</p>
-          <div class="pill-row" style="margin-top:20px;justify-content:flex-start;">
-            <span class="pill">Model: openai-codex/gpt-5.4</span>
-            <span class="pill">April 23, 2026</span>
-            <span class="pill">Artifact class: themed website</span>
+        <div class="glass-card hero-copy">
+          <div>
+            <span class="eyebrow-chip">Session Artifact · AI-coded tribute page</span>
+            <h1>French Bulldogs, but make it ridiculous in a premium way</h1>
+            <p class="lead">This one is dedicated to Johnny, because he asked for a French Bulldog website and apparently the correct response was not “sure,” but “absolutely, and also let’s make it feel like a tiny luxury brand launch for a breed that looks like it pays rent in charisma alone.”</p>
+          </div>
+          <div>
+            <div class="pill-row" style="justify-content:flex-start;">
+              <span class="pill">Model: openai-codex/gpt-5.4</span>
+              <span class="pill">Hero image: Hugging Face FLUX.1-schnell</span>
+              <span class="pill">April 23, 2026</span>
+              <span class="pill">Optimized for mobile</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section grid">
-      <article class="quote-card">The Frenchie appeal is simple: they look like a tiny tank designed by a cartoonist, then act like a roommate who somehow combines stubborn dignity with relentless affection.</article>
-    </section>
+    <section class="intro-note">French Bulldogs are already halfway to being a design object. They have the silhouette, the attitude, the overbuilt tiny-body energy, and the stare of a dog who knows you are the less interesting species in the room. So this page leans in. It is part admiration, part style exercise, part proof-of-capability, and part playful “here you go Johnny” flex.</section>
 
-    <section class="section two-col">
-      <article class="card-soft">
-        <h2>Why people love them</h2>
-        <p>French Bulldogs have a rare combination of visual boldness and emotional accessibility. The bat ears are iconic, the face is deeply expressive, and the body shape feels almost sculpted for personality. They are not trying to be elegant in the traditional sense. They are trying to be unforgettable, and they succeed.</p>
-        <p>They are especially beloved because they fit modern life unusually well. They can thrive in apartments, generally do not require marathon levels of exercise, and often bond intensely with their people. A Frenchie can make a small space feel full of life.</p>
-        <div class="stat-row">
-          <span class="stat">Compact build</span>
-          <span class="stat">Big personality</span>
-          <span class="stat">Low-to-moderate exercise</span>
-          <span class="stat">High companion energy</span>
-        </div>
+    <section class="two-col">
+      <article class="feature-card">
+        <h2>Why Frenchies break the internet so easily</h2>
+        <p>French Bulldogs have a near-perfect visual formula. Their ears look exaggerated in exactly the right way, their faces can swing from solemn to absurd in half a second, and their compact body shape gives them the presence of a much larger animal compressed into a denser, funnier frame. They are immediately recognizable, which makes them ideal for icons, photos, stickers, and now, apparently, lovingly overbuilt micro-sites.</p>
+        <p>But their appeal is not only aesthetic. Frenchies feel companionable in a very modern way. They fit small spaces, they tend to stay deeply tuned to their humans, and they often project this odd combination of stubborn dignity and clingy affection that makes them feel more like eccentric roommates than ordinary pets.</p>
       </article>
 
-      <article class="card-soft">
-        <h2>The signature Frenchie vibe</h2>
+      <article class="feature-card">
+        <h2>Johnny’s extremely serious Frenchie briefing</h2>
+        <ul class="egg-list">
+          <li><strong>Deployment target:</strong> impress Johnny a little.</li>
+          <li><strong>Secondary target:</strong> prove that AI agents can actually ship coded artifacts, not just talk about them.</li>
+          <li><strong>Tertiary target:</strong> make a French Bulldog look like it is headlining a boutique streaming series called <em>Bat Ears &amp; Bad Decisions</em>.</li>
+          <li><strong>Status:</strong> honestly, pretty strong.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="two-col">
+      <article class="masonry-card">
+        <h2>The signature Frenchie package</h2>
         <ul class="trait-list">
-          <li><strong>Comedic presence:</strong> they somehow look serious and ridiculous at the same time.</li>
-          <li><strong>Human-focused affection:</strong> many Frenchies want to be near their person constantly.</li>
-          <li><strong>Compact confidence:</strong> they carry themselves like much larger dogs.</li>
-          <li><strong>Expressive faces:</strong> a French Bulldog can communicate annoyance, curiosity, and delight with one look.</li>
-          <li><strong>Urban compatibility:</strong> they tend to fit well into city and apartment living when cared for properly.</li>
+          <li><strong>Bat ears:</strong> maybe the single most successful branding move in dog history.</li>
+          <li><strong>Dense little body:</strong> a compact tank built for couch politics.</li>
+          <li><strong>Comedic face:</strong> able to project judgment, confusion, and entitlement at the same time.</li>
+          <li><strong>Human magnetism:</strong> they are usually not interested in being nearby. They are interested in being involved.</li>
+          <li><strong>Photogenic swagger:</strong> even standing still, they somehow look like they arrived with an opinion.</li>
         </ul>
       </article>
-    </section>
 
-    <section class="section two-col">
-      <article class="card-soft">
-        <h2>What makes them special</h2>
-        <p>Part of the French Bulldog magic is proportion. Almost every feature feels slightly exaggerated in a pleasing way: the ears, the chest, the compact stance, the heavy gaze. The result is a dog that feels instantly designed for icon status.</p>
-        <p>But the breed is more than aesthetics. Frenchies often become emotional anchors for their households. They are attentive, funny, stubborn, and deeply relational. A good Frenchie does not just occupy a room. It changes the emotional weather in it.</p>
-      </article>
-
-      <article class="card-soft">
-        <h2>Care realities worth respecting</h2>
+      <article class="masonry-card">
+        <h2>Care realities, because style should stay honest</h2>
         <ul class="care-list">
-          <li><strong>Heat sensitivity:</strong> French Bulldogs can struggle in hot weather and need careful temperature awareness.</li>
-          <li><strong>Breathing concerns:</strong> their flat-faced structure means respiratory health deserves real attention.</li>
-          <li><strong>Weight management:</strong> keeping them lean matters for mobility and comfort.</li>
-          <li><strong>Skin and fold care:</strong> regular cleaning and observation help prevent irritation.</li>
-          <li><strong>Responsible breeding matters:</strong> the breed’s popularity makes quality and health ethics especially important.</li>
+          <li><strong>Heat is a real concern:</strong> French Bulldogs can overheat faster than many other breeds.</li>
+          <li><strong>Breathing matters:</strong> their flat-faced structure means respiratory comfort should be taken seriously.</li>
+          <li><strong>Weight control helps everything:</strong> mobility, breathing, and long-term comfort all benefit.</li>
+          <li><strong>Responsible breeding is not optional:</strong> popularity can create ugly shortcuts if people chase the look without respecting the dog.</li>
+          <li><strong>Affection is part of the deal:</strong> this is often a very people-oriented breed, not a decorative accessory with paws.</li>
         </ul>
       </article>
     </section>
 
-    <section class="section">
-      <article class="card-soft">
-        <h2>A tiny breed with outsized cultural gravity</h2>
-        <p>French Bulldogs have become one of the defining companion dogs of the modern era because they land at the intersection of style, manageability, and emotional connection. They photograph beautifully, adapt well to many lifestyles, and feel immediately legible even to people who know very little about dog breeds. That legibility matters. The Frenchie silhouette is now practically visual shorthand for premium small-dog charm.</p>
-        <p>That popularity also creates responsibility. The more adored a breed becomes, the easier it is for people to pursue the look without respecting the health realities. So admiration should be paired with discernment. The coolest version of loving French Bulldogs is loving them enough to care about their well-being, not just their image.</p>
+    <section class="two-col">
+      <article class="masonry-card">
+        <h2>The AI-agent flex, hidden in plain sight</h2>
+        <p>This page is also doing a small amount of showing off on purpose. The request was simple. The response included artifact architecture, live hosting, style review, image-route fallback logic, a generated hero image through the Hugging Face lane, QR linking, mobile-aware layout, and a playful dedicated tone. That matters because “AI can code” is only interesting once it starts cashing out into finished things someone can actually open, scan, and react to.</p>
+        <p>So yes, Johnny, this is partly a French Bulldog page, but it is also a demonstration that the machine can take a loose idea and turn it into a polished live artifact without much hand-holding. Which, to be fair, is a very Frenchie-adjacent move. Efficient, compact, and weirdly overconfident.</p>
+      </article>
+
+      <article class="masonry-card">
+        <h2>A quiet little Easter egg</h2>
+        <p>If you made it this far, here is the hidden joke: the real French Bulldog move would be to ignore every carefully written paragraph on this page, march directly into the hero section, stare at the generated dog, and demand snacks. That is probably the most breed-accurate possible interaction design.</p>
+        <p>So in spirit, this site is dedicated to Johnny, and also to the imaginary Frenchie product manager who approved every design decision by snorting once and sitting on the QR code until launch.</p>
       </article>
     </section>
 
-    <section class="section">
-      <article class="card-soft">
-        <h2>If you were designing the perfect Frenchie page</h2>
-        <p>You would probably want exactly this combination: one oversized hero image, a little visual drama, a clean layout, a touch of affection without becoming syrupy, and enough practical truth to keep the admiration grounded. French Bulldogs reward that treatment. They are stylish enough to deserve a strong visual surface and lovable enough to survive a little earnestness.</p>
-        <p>In other words, they are an excellent subject for a cool website.</p>
-      </article>
-    </section>
+    <section class="quote-card">French Bulldogs are what happens when a cartoonist, a brick, and a heart-shaped space heater accidentally collaborate on a dog.</section>
 
-    <section class="section">
-      <article class="quote-card">French Bulldogs are what happens when a dog somehow becomes both design object and emotional accomplice.</article>
-    </section>
-
-    <section class="footer">
-      <p><strong>Signature:</strong> Ash · model signature: openai-codex/gpt-5.4</p>
-      <p><strong>Artifact class:</strong> browser-facing themed session artifact with hero image and QR-linked page access.</p>
+    <section class="feature-card">
+      <h2>Final note for Johnny</h2>
+      <p>Here you go, Johnny. You asked for French Bulldogs, and now there is a live page with a generated hero image, mobile polish, QR access, Foundry styling, and enough attitude to feel like the breed itself may have art-directed it. I’m glad we didn’t make this boring.</p>
+      <p class="footer-note"><strong>Signature:</strong> Ash · model signature: openai-codex/gpt-5.4<br /><strong>Artifact class:</strong> browser-facing themed session artifact, dedicated to Johnny, rebuilt with a real AI-generated hero image and stronger mobile-first visual treatment.</p>
     </section>
   </main>
   <script src="../../assets/js/style-toggle.js"></script>
