@@ -1,0 +1,5706 @@
+{
+  "history": {
+    "AMD": [
+      {
+        "close": 251.31,
+        "date": "2026-01-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-26T14:30:00+00:00"
+      },
+      {
+        "close": 252.03,
+        "date": "2026-01-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-27T14:30:00+00:00"
+      },
+      {
+        "close": 252.74,
+        "date": "2026-01-28",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-28T14:30:00+00:00"
+      },
+      {
+        "close": 252.18,
+        "date": "2026-01-29",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-29T14:30:00+00:00"
+      },
+      {
+        "close": 236.73,
+        "date": "2026-01-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-30T14:30:00+00:00"
+      },
+      {
+        "close": 246.27,
+        "date": "2026-02-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-02T14:30:00+00:00"
+      },
+      {
+        "close": 242.11,
+        "date": "2026-02-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-03T14:30:00+00:00"
+      },
+      {
+        "close": 200.19,
+        "date": "2026-02-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-04T14:30:00+00:00"
+      },
+      {
+        "close": 192.5,
+        "date": "2026-02-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-05T14:30:00+00:00"
+      },
+      {
+        "close": 208.44,
+        "date": "2026-02-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-06T14:30:00+00:00"
+      },
+      {
+        "close": 216.0,
+        "date": "2026-02-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-09T14:30:00+00:00"
+      },
+      {
+        "close": 213.57,
+        "date": "2026-02-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-10T14:30:00+00:00"
+      },
+      {
+        "close": 213.58,
+        "date": "2026-02-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-11T14:30:00+00:00"
+      },
+      {
+        "close": 205.94,
+        "date": "2026-02-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-12T14:30:00+00:00"
+      },
+      {
+        "close": 207.32,
+        "date": "2026-02-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-13T14:30:00+00:00"
+      },
+      {
+        "close": 203.08,
+        "date": "2026-02-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-17T14:30:00+00:00"
+      },
+      {
+        "close": 200.12,
+        "date": "2026-02-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-18T14:30:00+00:00"
+      },
+      {
+        "close": 203.37,
+        "date": "2026-02-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-19T14:30:00+00:00"
+      },
+      {
+        "close": 200.15,
+        "date": "2026-02-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-20T14:30:00+00:00"
+      },
+      {
+        "close": 196.6,
+        "date": "2026-02-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-23T14:30:00+00:00"
+      },
+      {
+        "close": 213.84,
+        "date": "2026-02-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-24T14:30:00+00:00"
+      },
+      {
+        "close": 210.86,
+        "date": "2026-02-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-25T14:30:00+00:00"
+      },
+      {
+        "close": 203.68,
+        "date": "2026-02-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-26T14:30:00+00:00"
+      },
+      {
+        "close": 200.21,
+        "date": "2026-02-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-27T14:30:00+00:00"
+      },
+      {
+        "close": 198.62,
+        "date": "2026-03-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-02T14:30:00+00:00"
+      },
+      {
+        "close": 190.95,
+        "date": "2026-03-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-03T14:30:00+00:00"
+      },
+      {
+        "close": 202.07,
+        "date": "2026-03-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-04T14:30:00+00:00"
+      },
+      {
+        "close": 199.45,
+        "date": "2026-03-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-05T14:30:00+00:00"
+      },
+      {
+        "close": 192.43,
+        "date": "2026-03-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-06T14:30:00+00:00"
+      },
+      {
+        "close": 202.68,
+        "date": "2026-03-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-09T13:30:00+00:00"
+      },
+      {
+        "close": 203.23,
+        "date": "2026-03-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-10T13:30:00+00:00"
+      },
+      {
+        "close": 204.83,
+        "date": "2026-03-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-11T13:30:00+00:00"
+      },
+      {
+        "close": 197.74,
+        "date": "2026-03-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-12T13:30:00+00:00"
+      },
+      {
+        "close": 193.39,
+        "date": "2026-03-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-13T13:30:00+00:00"
+      },
+      {
+        "close": 196.58,
+        "date": "2026-03-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-16T13:30:00+00:00"
+      },
+      {
+        "close": 196.31,
+        "date": "2026-03-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-17T13:30:00+00:00"
+      },
+      {
+        "close": 199.46,
+        "date": "2026-03-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-18T13:30:00+00:00"
+      },
+      {
+        "close": 205.27,
+        "date": "2026-03-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-19T13:30:00+00:00"
+      },
+      {
+        "close": 201.33,
+        "date": "2026-03-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-20T13:30:00+00:00"
+      },
+      {
+        "close": 202.68,
+        "date": "2026-03-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-23T13:30:00+00:00"
+      },
+      {
+        "close": 205.37,
+        "date": "2026-03-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-24T13:30:00+00:00"
+      },
+      {
+        "close": 220.27,
+        "date": "2026-03-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-25T13:30:00+00:00"
+      },
+      {
+        "close": 203.77,
+        "date": "2026-03-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-26T13:30:00+00:00"
+      },
+      {
+        "close": 201.99,
+        "date": "2026-03-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-27T13:30:00+00:00"
+      },
+      {
+        "close": 196.04,
+        "date": "2026-03-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-30T13:30:00+00:00"
+      },
+      {
+        "close": 203.43,
+        "date": "2026-03-31",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-31T13:30:00+00:00"
+      },
+      {
+        "close": 210.21,
+        "date": "2026-04-01",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-01T13:30:00+00:00"
+      },
+      {
+        "close": 217.5,
+        "date": "2026-04-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-02T13:30:00+00:00"
+      },
+      {
+        "close": 220.18,
+        "date": "2026-04-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-06T13:30:00+00:00"
+      },
+      {
+        "close": 221.53,
+        "date": "2026-04-07",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-07T13:30:00+00:00"
+      },
+      {
+        "close": 231.82,
+        "date": "2026-04-08",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-08T13:30:00+00:00"
+      },
+      {
+        "close": 236.64,
+        "date": "2026-04-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-09T13:30:00+00:00"
+      },
+      {
+        "close": 245.04,
+        "date": "2026-04-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-10T13:30:00+00:00"
+      },
+      {
+        "close": 246.83,
+        "date": "2026-04-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-13T13:30:00+00:00"
+      },
+      {
+        "close": 255.07,
+        "date": "2026-04-14",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-14T13:30:00+00:00"
+      },
+      {
+        "close": 258.12,
+        "date": "2026-04-15",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-15T13:30:00+00:00"
+      },
+      {
+        "close": 278.26,
+        "date": "2026-04-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-16T13:30:00+00:00"
+      },
+      {
+        "close": 278.39,
+        "date": "2026-04-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-17T13:30:00+00:00"
+      },
+      {
+        "close": 274.95,
+        "date": "2026-04-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-20T13:30:00+00:00"
+      },
+      {
+        "close": 284.49,
+        "date": "2026-04-21",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-21T13:30:00+00:00"
+      },
+      {
+        "close": 303.46,
+        "date": "2026-04-22",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-22T13:30:00+00:00"
+      },
+      {
+        "close": 305.33,
+        "date": "2026-04-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-23T13:30:00+00:00"
+      },
+      {
+        "close": 347.81,
+        "date": "2026-04-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-24T13:30:00+00:00"
+      }
+    ],
+    "AMZN": [
+      {
+        "close": 238.42,
+        "date": "2026-01-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-26T14:30:00+00:00"
+      },
+      {
+        "close": 244.68,
+        "date": "2026-01-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-27T14:30:00+00:00"
+      },
+      {
+        "close": 243.01,
+        "date": "2026-01-28",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-28T14:30:00+00:00"
+      },
+      {
+        "close": 241.73,
+        "date": "2026-01-29",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-29T14:30:00+00:00"
+      },
+      {
+        "close": 239.3,
+        "date": "2026-01-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-30T14:30:00+00:00"
+      },
+      {
+        "close": 242.96,
+        "date": "2026-02-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-02T14:30:00+00:00"
+      },
+      {
+        "close": 238.62,
+        "date": "2026-02-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-03T14:30:00+00:00"
+      },
+      {
+        "close": 232.99,
+        "date": "2026-02-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-04T14:30:00+00:00"
+      },
+      {
+        "close": 222.69,
+        "date": "2026-02-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-05T14:30:00+00:00"
+      },
+      {
+        "close": 210.32,
+        "date": "2026-02-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-06T14:30:00+00:00"
+      },
+      {
+        "close": 208.72,
+        "date": "2026-02-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-09T14:30:00+00:00"
+      },
+      {
+        "close": 206.96,
+        "date": "2026-02-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-10T14:30:00+00:00"
+      },
+      {
+        "close": 204.08,
+        "date": "2026-02-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-11T14:30:00+00:00"
+      },
+      {
+        "close": 199.6,
+        "date": "2026-02-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-12T14:30:00+00:00"
+      },
+      {
+        "close": 198.79,
+        "date": "2026-02-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-13T14:30:00+00:00"
+      },
+      {
+        "close": 201.15,
+        "date": "2026-02-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-17T14:30:00+00:00"
+      },
+      {
+        "close": 204.79,
+        "date": "2026-02-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-18T14:30:00+00:00"
+      },
+      {
+        "close": 204.86,
+        "date": "2026-02-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-19T14:30:00+00:00"
+      },
+      {
+        "close": 210.11,
+        "date": "2026-02-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-20T14:30:00+00:00"
+      },
+      {
+        "close": 205.27,
+        "date": "2026-02-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-23T14:30:00+00:00"
+      },
+      {
+        "close": 208.56,
+        "date": "2026-02-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-24T14:30:00+00:00"
+      },
+      {
+        "close": 210.64,
+        "date": "2026-02-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-25T14:30:00+00:00"
+      },
+      {
+        "close": 207.92,
+        "date": "2026-02-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-26T14:30:00+00:00"
+      },
+      {
+        "close": 210.0,
+        "date": "2026-02-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-27T14:30:00+00:00"
+      },
+      {
+        "close": 208.39,
+        "date": "2026-03-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-02T14:30:00+00:00"
+      },
+      {
+        "close": 208.73,
+        "date": "2026-03-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-03T14:30:00+00:00"
+      },
+      {
+        "close": 216.82,
+        "date": "2026-03-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-04T14:30:00+00:00"
+      },
+      {
+        "close": 218.94,
+        "date": "2026-03-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-05T14:30:00+00:00"
+      },
+      {
+        "close": 213.21,
+        "date": "2026-03-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-06T14:30:00+00:00"
+      },
+      {
+        "close": 213.49,
+        "date": "2026-03-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-09T13:30:00+00:00"
+      },
+      {
+        "close": 214.33,
+        "date": "2026-03-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-10T13:30:00+00:00"
+      },
+      {
+        "close": 212.65,
+        "date": "2026-03-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-11T13:30:00+00:00"
+      },
+      {
+        "close": 209.53,
+        "date": "2026-03-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-12T13:30:00+00:00"
+      },
+      {
+        "close": 207.67,
+        "date": "2026-03-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-13T13:30:00+00:00"
+      },
+      {
+        "close": 211.74,
+        "date": "2026-03-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-16T13:30:00+00:00"
+      },
+      {
+        "close": 215.2,
+        "date": "2026-03-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-17T13:30:00+00:00"
+      },
+      {
+        "close": 209.87,
+        "date": "2026-03-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-18T13:30:00+00:00"
+      },
+      {
+        "close": 208.76,
+        "date": "2026-03-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-19T13:30:00+00:00"
+      },
+      {
+        "close": 205.37,
+        "date": "2026-03-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-20T13:30:00+00:00"
+      },
+      {
+        "close": 210.14,
+        "date": "2026-03-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-23T13:30:00+00:00"
+      },
+      {
+        "close": 207.24,
+        "date": "2026-03-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-24T13:30:00+00:00"
+      },
+      {
+        "close": 211.71,
+        "date": "2026-03-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-25T13:30:00+00:00"
+      },
+      {
+        "close": 207.54,
+        "date": "2026-03-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-26T13:30:00+00:00"
+      },
+      {
+        "close": 199.34,
+        "date": "2026-03-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-27T13:30:00+00:00"
+      },
+      {
+        "close": 200.95,
+        "date": "2026-03-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-30T13:30:00+00:00"
+      },
+      {
+        "close": 208.27,
+        "date": "2026-03-31",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-31T13:30:00+00:00"
+      },
+      {
+        "close": 210.57,
+        "date": "2026-04-01",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-01T13:30:00+00:00"
+      },
+      {
+        "close": 209.77,
+        "date": "2026-04-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-02T13:30:00+00:00"
+      },
+      {
+        "close": 212.79,
+        "date": "2026-04-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-06T13:30:00+00:00"
+      },
+      {
+        "close": 213.77,
+        "date": "2026-04-07",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-07T13:30:00+00:00"
+      },
+      {
+        "close": 221.25,
+        "date": "2026-04-08",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-08T13:30:00+00:00"
+      },
+      {
+        "close": 233.65,
+        "date": "2026-04-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-09T13:30:00+00:00"
+      },
+      {
+        "close": 238.38,
+        "date": "2026-04-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-10T13:30:00+00:00"
+      },
+      {
+        "close": 239.89,
+        "date": "2026-04-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-13T13:30:00+00:00"
+      },
+      {
+        "close": 249.02,
+        "date": "2026-04-14",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-14T13:30:00+00:00"
+      },
+      {
+        "close": 248.5,
+        "date": "2026-04-15",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-15T13:30:00+00:00"
+      },
+      {
+        "close": 249.7,
+        "date": "2026-04-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-16T13:30:00+00:00"
+      },
+      {
+        "close": 250.56,
+        "date": "2026-04-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-17T13:30:00+00:00"
+      },
+      {
+        "close": 248.28,
+        "date": "2026-04-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-20T13:30:00+00:00"
+      },
+      {
+        "close": 249.91,
+        "date": "2026-04-21",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-21T13:30:00+00:00"
+      },
+      {
+        "close": 255.36,
+        "date": "2026-04-22",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-22T13:30:00+00:00"
+      },
+      {
+        "close": 255.08,
+        "date": "2026-04-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-23T13:30:00+00:00"
+      },
+      {
+        "close": 263.99,
+        "date": "2026-04-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-24T13:30:00+00:00"
+      }
+    ],
+    "ARM": [
+      {
+        "close": 114.73,
+        "date": "2026-01-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-26T14:30:00+00:00"
+      },
+      {
+        "close": 114.88,
+        "date": "2026-01-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-27T14:30:00+00:00"
+      },
+      {
+        "close": 109.96,
+        "date": "2026-01-28",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-28T14:30:00+00:00"
+      },
+      {
+        "close": 108.43,
+        "date": "2026-01-29",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-29T14:30:00+00:00"
+      },
+      {
+        "close": 105.36,
+        "date": "2026-01-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-30T14:30:00+00:00"
+      },
+      {
+        "close": 106.93,
+        "date": "2026-02-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-02T14:30:00+00:00"
+      },
+      {
+        "close": 104.55,
+        "date": "2026-02-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-03T14:30:00+00:00"
+      },
+      {
+        "close": 104.9,
+        "date": "2026-02-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-04T14:30:00+00:00"
+      },
+      {
+        "close": 110.88,
+        "date": "2026-02-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-05T14:30:00+00:00"
+      },
+      {
+        "close": 123.7,
+        "date": "2026-02-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-06T14:30:00+00:00"
+      },
+      {
+        "close": 124.61,
+        "date": "2026-02-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-09T14:30:00+00:00"
+      },
+      {
+        "close": 125.95,
+        "date": "2026-02-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-10T14:30:00+00:00"
+      },
+      {
+        "close": 125.28,
+        "date": "2026-02-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-11T14:30:00+00:00"
+      },
+      {
+        "close": 122.19,
+        "date": "2026-02-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-12T14:30:00+00:00"
+      },
+      {
+        "close": 125.28,
+        "date": "2026-02-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-13T14:30:00+00:00"
+      },
+      {
+        "close": 126.89,
+        "date": "2026-02-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-17T14:30:00+00:00"
+      },
+      {
+        "close": 127.24,
+        "date": "2026-02-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-18T14:30:00+00:00"
+      },
+      {
+        "close": 126.93,
+        "date": "2026-02-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-19T14:30:00+00:00"
+      },
+      {
+        "close": 125.58,
+        "date": "2026-02-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-20T14:30:00+00:00"
+      },
+      {
+        "close": 123.78,
+        "date": "2026-02-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-23T14:30:00+00:00"
+      },
+      {
+        "close": 128.14,
+        "date": "2026-02-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-24T14:30:00+00:00"
+      },
+      {
+        "close": 131.74,
+        "date": "2026-02-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-25T14:30:00+00:00"
+      },
+      {
+        "close": 129.26,
+        "date": "2026-02-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-26T14:30:00+00:00"
+      },
+      {
+        "close": 127.45,
+        "date": "2026-02-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-27T14:30:00+00:00"
+      },
+      {
+        "close": 124.37,
+        "date": "2026-03-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-02T14:30:00+00:00"
+      },
+      {
+        "close": 121.72,
+        "date": "2026-03-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-03T14:30:00+00:00"
+      },
+      {
+        "close": 124.11,
+        "date": "2026-03-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-04T14:30:00+00:00"
+      },
+      {
+        "close": 120.62,
+        "date": "2026-03-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-05T14:30:00+00:00"
+      },
+      {
+        "close": 114.38,
+        "date": "2026-03-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-06T14:30:00+00:00"
+      },
+      {
+        "close": 117.63,
+        "date": "2026-03-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-09T13:30:00+00:00"
+      },
+      {
+        "close": 120.55,
+        "date": "2026-03-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-10T13:30:00+00:00"
+      },
+      {
+        "close": 120.1,
+        "date": "2026-03-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-11T13:30:00+00:00"
+      },
+      {
+        "close": 115.12,
+        "date": "2026-03-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-12T13:30:00+00:00"
+      },
+      {
+        "close": 115.75,
+        "date": "2026-03-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-13T13:30:00+00:00"
+      },
+      {
+        "close": 121.7,
+        "date": "2026-03-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-16T13:30:00+00:00"
+      },
+      {
+        "close": 127.31,
+        "date": "2026-03-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-17T13:30:00+00:00"
+      },
+      {
+        "close": 128.36,
+        "date": "2026-03-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-18T13:30:00+00:00"
+      },
+      {
+        "close": 129.82,
+        "date": "2026-03-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-19T13:30:00+00:00"
+      },
+      {
+        "close": 132.35,
+        "date": "2026-03-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-20T13:30:00+00:00"
+      },
+      {
+        "close": 136.89,
+        "date": "2026-03-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-23T13:30:00+00:00"
+      },
+      {
+        "close": 134.96,
+        "date": "2026-03-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-24T13:30:00+00:00"
+      },
+      {
+        "close": 157.07,
+        "date": "2026-03-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-25T13:30:00+00:00"
+      },
+      {
+        "close": 154.8,
+        "date": "2026-03-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-26T13:30:00+00:00"
+      },
+      {
+        "close": 144.13,
+        "date": "2026-03-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-27T13:30:00+00:00"
+      },
+      {
+        "close": 136.96,
+        "date": "2026-03-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-30T13:30:00+00:00"
+      },
+      {
+        "close": 151.28,
+        "date": "2026-03-31",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-31T13:30:00+00:00"
+      },
+      {
+        "close": 155.07,
+        "date": "2026-04-01",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-01T13:30:00+00:00"
+      },
+      {
+        "close": 149.11,
+        "date": "2026-04-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-02T13:30:00+00:00"
+      },
+      {
+        "close": 148.77,
+        "date": "2026-04-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-06T13:30:00+00:00"
+      },
+      {
+        "close": 143.86,
+        "date": "2026-04-07",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-07T13:30:00+00:00"
+      },
+      {
+        "close": 148.91,
+        "date": "2026-04-08",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-08T13:30:00+00:00"
+      },
+      {
+        "close": 149.795,
+        "date": "2026-04-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-09T13:30:00+00:00"
+      },
+      {
+        "close": 148.93,
+        "date": "2026-04-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-10T13:30:00+00:00"
+      },
+      {
+        "close": 157.58,
+        "date": "2026-04-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-13T13:30:00+00:00"
+      },
+      {
+        "close": 161.22,
+        "date": "2026-04-14",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-14T13:30:00+00:00"
+      },
+      {
+        "close": 159.34,
+        "date": "2026-04-15",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-15T13:30:00+00:00"
+      },
+      {
+        "close": 162.33,
+        "date": "2026-04-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-16T13:30:00+00:00"
+      },
+      {
+        "close": 166.73,
+        "date": "2026-04-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-17T13:30:00+00:00"
+      },
+      {
+        "close": 175.1,
+        "date": "2026-04-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-20T13:30:00+00:00"
+      },
+      {
+        "close": 175.49,
+        "date": "2026-04-21",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-21T13:30:00+00:00"
+      },
+      {
+        "close": 196.57,
+        "date": "2026-04-22",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-22T13:30:00+00:00"
+      },
+      {
+        "close": 204.61,
+        "date": "2026-04-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-23T13:30:00+00:00"
+      },
+      {
+        "close": 234.81,
+        "date": "2026-04-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-24T13:30:00+00:00"
+      }
+    ],
+    "ASML": [
+      {
+        "close": 1413.35,
+        "date": "2026-01-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-26T14:30:00+00:00"
+      },
+      {
+        "close": 1454.59,
+        "date": "2026-01-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-27T14:30:00+00:00"
+      },
+      {
+        "close": 1422.92,
+        "date": "2026-01-28",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-28T14:30:00+00:00"
+      },
+      {
+        "close": 1455.16,
+        "date": "2026-01-29",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-29T14:30:00+00:00"
+      },
+      {
+        "close": 1423.0,
+        "date": "2026-01-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-30T14:30:00+00:00"
+      },
+      {
+        "close": 1441.39,
+        "date": "2026-02-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-02T14:30:00+00:00"
+      },
+      {
+        "close": 1395.88,
+        "date": "2026-02-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-03T14:30:00+00:00"
+      },
+      {
+        "close": 1339.13,
+        "date": "2026-02-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-04T14:30:00+00:00"
+      },
+      {
+        "close": 1350.16,
+        "date": "2026-02-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-05T14:30:00+00:00"
+      },
+      {
+        "close": 1413.01,
+        "date": "2026-02-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-06T14:30:00+00:00"
+      },
+      {
+        "close": 1429.49,
+        "date": "2026-02-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-09T14:30:00+00:00"
+      },
+      {
+        "close": 1413.62,
+        "date": "2026-02-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-10T14:30:00+00:00"
+      },
+      {
+        "close": 1435.63,
+        "date": "2026-02-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-11T14:30:00+00:00"
+      },
+      {
+        "close": 1406.87,
+        "date": "2026-02-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-12T14:30:00+00:00"
+      },
+      {
+        "close": 1406.61,
+        "date": "2026-02-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-13T14:30:00+00:00"
+      },
+      {
+        "close": 1419.78,
+        "date": "2026-02-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-17T14:30:00+00:00"
+      },
+      {
+        "close": 1468.72,
+        "date": "2026-02-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-18T14:30:00+00:00"
+      },
+      {
+        "close": 1458.9301,
+        "date": "2026-02-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-19T14:30:00+00:00"
+      },
+      {
+        "close": 1469.59,
+        "date": "2026-02-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-20T14:30:00+00:00"
+      },
+      {
+        "close": 1485.99,
+        "date": "2026-02-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-23T14:30:00+00:00"
+      },
+      {
+        "close": 1497.8,
+        "date": "2026-02-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-24T14:30:00+00:00"
+      },
+      {
+        "close": 1526.51,
+        "date": "2026-02-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-25T14:30:00+00:00"
+      },
+      {
+        "close": 1463.8,
+        "date": "2026-02-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-26T14:30:00+00:00"
+      },
+      {
+        "close": 1450.5601,
+        "date": "2026-02-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-27T14:30:00+00:00"
+      },
+      {
+        "close": 1423.54,
+        "date": "2026-03-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-02T14:30:00+00:00"
+      },
+      {
+        "close": 1360.9399,
+        "date": "2026-03-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-03T14:30:00+00:00"
+      },
+      {
+        "close": 1399.37,
+        "date": "2026-03-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-04T14:30:00+00:00"
+      },
+      {
+        "close": 1368.36,
+        "date": "2026-03-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-05T14:30:00+00:00"
+      },
+      {
+        "close": 1292.8,
+        "date": "2026-03-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-06T14:30:00+00:00"
+      },
+      {
+        "close": 1357.42,
+        "date": "2026-03-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-09T13:30:00+00:00"
+      },
+      {
+        "close": 1383.4,
+        "date": "2026-03-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-10T13:30:00+00:00"
+      },
+      {
+        "close": 1386.6801,
+        "date": "2026-03-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-11T13:30:00+00:00"
+      },
+      {
+        "close": 1351.58,
+        "date": "2026-03-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-12T13:30:00+00:00"
+      },
+      {
+        "close": 1345.6899,
+        "date": "2026-03-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-13T13:30:00+00:00"
+      },
+      {
+        "close": 1375.5601,
+        "date": "2026-03-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-16T13:30:00+00:00"
+      },
+      {
+        "close": 1389.16,
+        "date": "2026-03-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-17T13:30:00+00:00"
+      },
+      {
+        "close": 1355.17,
+        "date": "2026-03-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-18T13:30:00+00:00"
+      },
+      {
+        "close": 1366.39,
+        "date": "2026-03-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-19T13:30:00+00:00"
+      },
+      {
+        "close": 1317.25,
+        "date": "2026-03-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-20T13:30:00+00:00"
+      },
+      {
+        "close": 1369.62,
+        "date": "2026-03-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-23T13:30:00+00:00"
+      },
+      {
+        "close": 1399.42,
+        "date": "2026-03-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-24T13:30:00+00:00"
+      },
+      {
+        "close": 1393.89,
+        "date": "2026-03-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-25T13:30:00+00:00"
+      },
+      {
+        "close": 1329.5,
+        "date": "2026-03-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-26T13:30:00+00:00"
+      },
+      {
+        "close": 1302.47,
+        "date": "2026-03-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-27T13:30:00+00:00"
+      },
+      {
+        "close": 1253.96,
+        "date": "2026-03-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-30T13:30:00+00:00"
+      },
+      {
+        "close": 1320.83,
+        "date": "2026-03-31",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-31T13:30:00+00:00"
+      },
+      {
+        "close": 1359.76,
+        "date": "2026-04-01",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-01T13:30:00+00:00"
+      },
+      {
+        "close": 1317.23,
+        "date": "2026-04-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-02T13:30:00+00:00"
+      },
+      {
+        "close": 1304.01,
+        "date": "2026-04-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-06T13:30:00+00:00"
+      },
+      {
+        "close": 1306.45,
+        "date": "2026-04-07",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-07T13:30:00+00:00"
+      },
+      {
+        "close": 1421.05,
+        "date": "2026-04-08",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-08T13:30:00+00:00"
+      },
+      {
+        "close": 1448.64,
+        "date": "2026-04-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-09T13:30:00+00:00"
+      },
+      {
+        "close": 1478.28,
+        "date": "2026-04-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-10T13:30:00+00:00"
+      },
+      {
+        "close": 1500.2,
+        "date": "2026-04-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-13T13:30:00+00:00"
+      },
+      {
+        "close": 1518.3,
+        "date": "2026-04-14",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-14T13:30:00+00:00"
+      },
+      {
+        "close": 1481.77,
+        "date": "2026-04-15",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-15T13:30:00+00:00"
+      },
+      {
+        "close": 1410.83,
+        "date": "2026-04-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-16T13:30:00+00:00"
+      },
+      {
+        "close": 1459.8,
+        "date": "2026-04-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-17T13:30:00+00:00"
+      },
+      {
+        "close": 1476.5,
+        "date": "2026-04-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-20T13:30:00+00:00"
+      },
+      {
+        "close": 1458.97,
+        "date": "2026-04-21",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-21T13:30:00+00:00"
+      },
+      {
+        "close": 1443.66,
+        "date": "2026-04-22",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-22T13:30:00+00:00"
+      },
+      {
+        "close": 1417.8,
+        "date": "2026-04-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-23T13:30:00+00:00"
+      },
+      {
+        "close": 1457.7,
+        "date": "2026-04-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-24T13:30:00+00:00"
+      }
+    ],
+    "AVGO": [
+      {
+        "close": 324.85,
+        "date": "2026-01-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-26T14:30:00+00:00"
+      },
+      {
+        "close": 332.79,
+        "date": "2026-01-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-27T14:30:00+00:00"
+      },
+      {
+        "close": 333.24,
+        "date": "2026-01-28",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-28T14:30:00+00:00"
+      },
+      {
+        "close": 330.73,
+        "date": "2026-01-29",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-29T14:30:00+00:00"
+      },
+      {
+        "close": 331.3,
+        "date": "2026-01-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-30T14:30:00+00:00"
+      },
+      {
+        "close": 331.11,
+        "date": "2026-02-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-02T14:30:00+00:00"
+      },
+      {
+        "close": 320.33,
+        "date": "2026-02-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-03T14:30:00+00:00"
+      },
+      {
+        "close": 308.05,
+        "date": "2026-02-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-04T14:30:00+00:00"
+      },
+      {
+        "close": 310.51,
+        "date": "2026-02-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-05T14:30:00+00:00"
+      },
+      {
+        "close": 332.92,
+        "date": "2026-02-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-06T14:30:00+00:00"
+      },
+      {
+        "close": 343.94,
+        "date": "2026-02-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-09T14:30:00+00:00"
+      },
+      {
+        "close": 340.44,
+        "date": "2026-02-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-10T14:30:00+00:00"
+      },
+      {
+        "close": 342.76,
+        "date": "2026-02-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-11T14:30:00+00:00"
+      },
+      {
+        "close": 331.17,
+        "date": "2026-02-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-12T14:30:00+00:00"
+      },
+      {
+        "close": 325.17,
+        "date": "2026-02-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-13T14:30:00+00:00"
+      },
+      {
+        "close": 332.54,
+        "date": "2026-02-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-17T14:30:00+00:00"
+      },
+      {
+        "close": 333.51,
+        "date": "2026-02-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-18T14:30:00+00:00"
+      },
+      {
+        "close": 333.99,
+        "date": "2026-02-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-19T14:30:00+00:00"
+      },
+      {
+        "close": 332.65,
+        "date": "2026-02-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-20T14:30:00+00:00"
+      },
+      {
+        "close": 330.34,
+        "date": "2026-02-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-23T14:30:00+00:00"
+      },
+      {
+        "close": 325.49,
+        "date": "2026-02-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-24T14:30:00+00:00"
+      },
+      {
+        "close": 332.31,
+        "date": "2026-02-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-25T14:30:00+00:00"
+      },
+      {
+        "close": 321.7,
+        "date": "2026-02-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-26T14:30:00+00:00"
+      },
+      {
+        "close": 319.55,
+        "date": "2026-02-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-27T14:30:00+00:00"
+      },
+      {
+        "close": 318.82,
+        "date": "2026-03-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-02T14:30:00+00:00"
+      },
+      {
+        "close": 313.84,
+        "date": "2026-03-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-03T14:30:00+00:00"
+      },
+      {
+        "close": 317.53,
+        "date": "2026-03-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-04T14:30:00+00:00"
+      },
+      {
+        "close": 332.77,
+        "date": "2026-03-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-05T14:30:00+00:00"
+      },
+      {
+        "close": 330.48,
+        "date": "2026-03-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-06T14:30:00+00:00"
+      },
+      {
+        "close": 345.75,
+        "date": "2026-03-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-09T13:30:00+00:00"
+      },
+      {
+        "close": 342.58,
+        "date": "2026-03-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-10T13:30:00+00:00"
+      },
+      {
+        "close": 341.57,
+        "date": "2026-03-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-11T13:30:00+00:00"
+      },
+      {
+        "close": 335.97,
+        "date": "2026-03-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-12T13:30:00+00:00"
+      },
+      {
+        "close": 322.16,
+        "date": "2026-03-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-13T13:30:00+00:00"
+      },
+      {
+        "close": 324.92,
+        "date": "2026-03-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-16T13:30:00+00:00"
+      },
+      {
+        "close": 321.31,
+        "date": "2026-03-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-17T13:30:00+00:00"
+      },
+      {
+        "close": 315.93,
+        "date": "2026-03-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-18T13:30:00+00:00"
+      },
+      {
+        "close": 319.84,
+        "date": "2026-03-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-19T13:30:00+00:00"
+      },
+      {
+        "close": 310.51,
+        "date": "2026-03-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-20T13:30:00+00:00"
+      },
+      {
+        "close": 322.51,
+        "date": "2026-03-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-23T13:30:00+00:00"
+      },
+      {
+        "close": 318.29,
+        "date": "2026-03-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-24T13:30:00+00:00"
+      },
+      {
+        "close": 318.81,
+        "date": "2026-03-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-25T13:30:00+00:00"
+      },
+      {
+        "close": 309.42,
+        "date": "2026-03-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-26T13:30:00+00:00"
+      },
+      {
+        "close": 300.68,
+        "date": "2026-03-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-27T13:30:00+00:00"
+      },
+      {
+        "close": 293.41,
+        "date": "2026-03-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-30T13:30:00+00:00"
+      },
+      {
+        "close": 309.51,
+        "date": "2026-03-31",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-31T13:30:00+00:00"
+      },
+      {
+        "close": 313.49,
+        "date": "2026-04-01",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-01T13:30:00+00:00"
+      },
+      {
+        "close": 314.55,
+        "date": "2026-04-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-02T13:30:00+00:00"
+      },
+      {
+        "close": 314.43,
+        "date": "2026-04-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-06T13:30:00+00:00"
+      },
+      {
+        "close": 333.97,
+        "date": "2026-04-07",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-07T13:30:00+00:00"
+      },
+      {
+        "close": 350.63,
+        "date": "2026-04-08",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-08T13:30:00+00:00"
+      },
+      {
+        "close": 354.91,
+        "date": "2026-04-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-09T13:30:00+00:00"
+      },
+      {
+        "close": 371.55,
+        "date": "2026-04-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-10T13:30:00+00:00"
+      },
+      {
+        "close": 379.75,
+        "date": "2026-04-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-13T13:30:00+00:00"
+      },
+      {
+        "close": 380.78,
+        "date": "2026-04-14",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-14T13:30:00+00:00"
+      },
+      {
+        "close": 396.72,
+        "date": "2026-04-15",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-15T13:30:00+00:00"
+      },
+      {
+        "close": 398.47,
+        "date": "2026-04-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-16T13:30:00+00:00"
+      },
+      {
+        "close": 406.54,
+        "date": "2026-04-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-17T13:30:00+00:00"
+      },
+      {
+        "close": 399.63,
+        "date": "2026-04-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-20T13:30:00+00:00"
+      },
+      {
+        "close": 402.17,
+        "date": "2026-04-21",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-21T13:30:00+00:00"
+      },
+      {
+        "close": 422.65,
+        "date": "2026-04-22",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-22T13:30:00+00:00"
+      },
+      {
+        "close": 419.94,
+        "date": "2026-04-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-23T13:30:00+00:00"
+      },
+      {
+        "close": 422.76,
+        "date": "2026-04-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-24T13:30:00+00:00"
+      }
+    ],
+    "GOOGL": [
+      {
+        "close": 333.26,
+        "date": "2026-01-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-26T14:30:00+00:00"
+      },
+      {
+        "close": 334.55,
+        "date": "2026-01-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-27T14:30:00+00:00"
+      },
+      {
+        "close": 336.01,
+        "date": "2026-01-28",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-28T14:30:00+00:00"
+      },
+      {
+        "close": 338.25,
+        "date": "2026-01-29",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-29T14:30:00+00:00"
+      },
+      {
+        "close": 338.0,
+        "date": "2026-01-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-30T14:30:00+00:00"
+      },
+      {
+        "close": 343.69,
+        "date": "2026-02-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-02T14:30:00+00:00"
+      },
+      {
+        "close": 339.71,
+        "date": "2026-02-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-03T14:30:00+00:00"
+      },
+      {
+        "close": 333.04,
+        "date": "2026-02-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-04T14:30:00+00:00"
+      },
+      {
+        "close": 331.25,
+        "date": "2026-02-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-05T14:30:00+00:00"
+      },
+      {
+        "close": 322.86,
+        "date": "2026-02-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-06T14:30:00+00:00"
+      },
+      {
+        "close": 324.32,
+        "date": "2026-02-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-09T14:30:00+00:00"
+      },
+      {
+        "close": 318.58,
+        "date": "2026-02-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-10T14:30:00+00:00"
+      },
+      {
+        "close": 310.96,
+        "date": "2026-02-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-11T14:30:00+00:00"
+      },
+      {
+        "close": 309.0,
+        "date": "2026-02-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-12T14:30:00+00:00"
+      },
+      {
+        "close": 305.72,
+        "date": "2026-02-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-13T14:30:00+00:00"
+      },
+      {
+        "close": 302.02,
+        "date": "2026-02-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-17T14:30:00+00:00"
+      },
+      {
+        "close": 303.33,
+        "date": "2026-02-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-18T14:30:00+00:00"
+      },
+      {
+        "close": 302.85,
+        "date": "2026-02-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-19T14:30:00+00:00"
+      },
+      {
+        "close": 314.98,
+        "date": "2026-02-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-20T14:30:00+00:00"
+      },
+      {
+        "close": 311.49,
+        "date": "2026-02-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-23T14:30:00+00:00"
+      },
+      {
+        "close": 310.9,
+        "date": "2026-02-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-24T14:30:00+00:00"
+      },
+      {
+        "close": 312.9,
+        "date": "2026-02-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-25T14:30:00+00:00"
+      },
+      {
+        "close": 307.38,
+        "date": "2026-02-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-26T14:30:00+00:00"
+      },
+      {
+        "close": 311.76,
+        "date": "2026-02-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-27T14:30:00+00:00"
+      },
+      {
+        "close": 306.52,
+        "date": "2026-03-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-02T14:30:00+00:00"
+      },
+      {
+        "close": 303.58,
+        "date": "2026-03-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-03T14:30:00+00:00"
+      },
+      {
+        "close": 303.13,
+        "date": "2026-03-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-04T14:30:00+00:00"
+      },
+      {
+        "close": 300.88,
+        "date": "2026-03-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-05T14:30:00+00:00"
+      },
+      {
+        "close": 298.52,
+        "date": "2026-03-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-06T14:30:00+00:00"
+      },
+      {
+        "close": 306.36,
+        "date": "2026-03-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-09T13:30:00+00:00"
+      },
+      {
+        "close": 307.04,
+        "date": "2026-03-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-10T13:30:00+00:00"
+      },
+      {
+        "close": 308.7,
+        "date": "2026-03-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-11T13:30:00+00:00"
+      },
+      {
+        "close": 303.55,
+        "date": "2026-03-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-12T13:30:00+00:00"
+      },
+      {
+        "close": 302.28,
+        "date": "2026-03-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-13T13:30:00+00:00"
+      },
+      {
+        "close": 305.56,
+        "date": "2026-03-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-16T13:30:00+00:00"
+      },
+      {
+        "close": 310.92,
+        "date": "2026-03-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-17T13:30:00+00:00"
+      },
+      {
+        "close": 307.69,
+        "date": "2026-03-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-18T13:30:00+00:00"
+      },
+      {
+        "close": 307.13,
+        "date": "2026-03-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-19T13:30:00+00:00"
+      },
+      {
+        "close": 301.0,
+        "date": "2026-03-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-20T13:30:00+00:00"
+      },
+      {
+        "close": 302.06,
+        "date": "2026-03-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-23T13:30:00+00:00"
+      },
+      {
+        "close": 290.44,
+        "date": "2026-03-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-24T13:30:00+00:00"
+      },
+      {
+        "close": 290.93,
+        "date": "2026-03-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-25T13:30:00+00:00"
+      },
+      {
+        "close": 280.92,
+        "date": "2026-03-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-26T13:30:00+00:00"
+      },
+      {
+        "close": 274.34,
+        "date": "2026-03-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-27T13:30:00+00:00"
+      },
+      {
+        "close": 273.5,
+        "date": "2026-03-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-30T13:30:00+00:00"
+      },
+      {
+        "close": 287.56,
+        "date": "2026-03-31",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-31T13:30:00+00:00"
+      },
+      {
+        "close": 297.39,
+        "date": "2026-04-01",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-01T13:30:00+00:00"
+      },
+      {
+        "close": 295.77,
+        "date": "2026-04-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-02T13:30:00+00:00"
+      },
+      {
+        "close": 299.99,
+        "date": "2026-04-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-06T13:30:00+00:00"
+      },
+      {
+        "close": 305.46,
+        "date": "2026-04-07",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-07T13:30:00+00:00"
+      },
+      {
+        "close": 317.32,
+        "date": "2026-04-08",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-08T13:30:00+00:00"
+      },
+      {
+        "close": 318.49,
+        "date": "2026-04-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-09T13:30:00+00:00"
+      },
+      {
+        "close": 317.24,
+        "date": "2026-04-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-10T13:30:00+00:00"
+      },
+      {
+        "close": 321.31,
+        "date": "2026-04-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-13T13:30:00+00:00"
+      },
+      {
+        "close": 332.91,
+        "date": "2026-04-14",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-14T13:30:00+00:00"
+      },
+      {
+        "close": 337.12,
+        "date": "2026-04-15",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-15T13:30:00+00:00"
+      },
+      {
+        "close": 336.02,
+        "date": "2026-04-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-16T13:30:00+00:00"
+      },
+      {
+        "close": 341.68,
+        "date": "2026-04-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-17T13:30:00+00:00"
+      },
+      {
+        "close": 337.42,
+        "date": "2026-04-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-20T13:30:00+00:00"
+      },
+      {
+        "close": 332.29,
+        "date": "2026-04-21",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-21T13:30:00+00:00"
+      },
+      {
+        "close": 339.32,
+        "date": "2026-04-22",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-22T13:30:00+00:00"
+      },
+      {
+        "close": 338.89,
+        "date": "2026-04-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-23T13:30:00+00:00"
+      },
+      {
+        "close": 344.4,
+        "date": "2026-04-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-24T13:30:00+00:00"
+      }
+    ],
+    "META": [
+      {
+        "close": 672.36,
+        "date": "2026-01-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-26T14:30:00+00:00"
+      },
+      {
+        "close": 672.97,
+        "date": "2026-01-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-27T14:30:00+00:00"
+      },
+      {
+        "close": 668.73,
+        "date": "2026-01-28",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-28T14:30:00+00:00"
+      },
+      {
+        "close": 738.31,
+        "date": "2026-01-29",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-29T14:30:00+00:00"
+      },
+      {
+        "close": 716.5,
+        "date": "2026-01-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-30T14:30:00+00:00"
+      },
+      {
+        "close": 706.41,
+        "date": "2026-02-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-02T14:30:00+00:00"
+      },
+      {
+        "close": 691.7,
+        "date": "2026-02-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-03T14:30:00+00:00"
+      },
+      {
+        "close": 668.99,
+        "date": "2026-02-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-04T14:30:00+00:00"
+      },
+      {
+        "close": 670.21,
+        "date": "2026-02-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-05T14:30:00+00:00"
+      },
+      {
+        "close": 661.46,
+        "date": "2026-02-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-06T14:30:00+00:00"
+      },
+      {
+        "close": 677.22,
+        "date": "2026-02-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-09T14:30:00+00:00"
+      },
+      {
+        "close": 670.72,
+        "date": "2026-02-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-10T14:30:00+00:00"
+      },
+      {
+        "close": 668.69,
+        "date": "2026-02-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-11T14:30:00+00:00"
+      },
+      {
+        "close": 649.81,
+        "date": "2026-02-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-12T14:30:00+00:00"
+      },
+      {
+        "close": 639.77,
+        "date": "2026-02-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-13T14:30:00+00:00"
+      },
+      {
+        "close": 639.29,
+        "date": "2026-02-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-17T14:30:00+00:00"
+      },
+      {
+        "close": 643.22,
+        "date": "2026-02-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-18T14:30:00+00:00"
+      },
+      {
+        "close": 644.78,
+        "date": "2026-02-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-19T14:30:00+00:00"
+      },
+      {
+        "close": 655.66,
+        "date": "2026-02-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-20T14:30:00+00:00"
+      },
+      {
+        "close": 637.25,
+        "date": "2026-02-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-23T14:30:00+00:00"
+      },
+      {
+        "close": 639.3,
+        "date": "2026-02-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-24T14:30:00+00:00"
+      },
+      {
+        "close": 653.69,
+        "date": "2026-02-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-25T14:30:00+00:00"
+      },
+      {
+        "close": 657.01,
+        "date": "2026-02-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-26T14:30:00+00:00"
+      },
+      {
+        "close": 648.18,
+        "date": "2026-02-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-27T14:30:00+00:00"
+      },
+      {
+        "close": 653.56,
+        "date": "2026-03-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-02T14:30:00+00:00"
+      },
+      {
+        "close": 655.08,
+        "date": "2026-03-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-03T14:30:00+00:00"
+      },
+      {
+        "close": 667.73,
+        "date": "2026-03-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-04T14:30:00+00:00"
+      },
+      {
+        "close": 660.57,
+        "date": "2026-03-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-05T14:30:00+00:00"
+      },
+      {
+        "close": 644.86,
+        "date": "2026-03-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-06T14:30:00+00:00"
+      },
+      {
+        "close": 647.39,
+        "date": "2026-03-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-09T13:30:00+00:00"
+      },
+      {
+        "close": 654.07,
+        "date": "2026-03-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-10T13:30:00+00:00"
+      },
+      {
+        "close": 654.86,
+        "date": "2026-03-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-11T13:30:00+00:00"
+      },
+      {
+        "close": 638.18,
+        "date": "2026-03-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-12T13:30:00+00:00"
+      },
+      {
+        "close": 613.71,
+        "date": "2026-03-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-13T13:30:00+00:00"
+      },
+      {
+        "close": 627.45,
+        "date": "2026-03-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-16T13:30:00+00:00"
+      },
+      {
+        "close": 622.66,
+        "date": "2026-03-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-17T13:30:00+00:00"
+      },
+      {
+        "close": 615.68,
+        "date": "2026-03-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-18T13:30:00+00:00"
+      },
+      {
+        "close": 606.7,
+        "date": "2026-03-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-19T13:30:00+00:00"
+      },
+      {
+        "close": 593.66,
+        "date": "2026-03-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-20T13:30:00+00:00"
+      },
+      {
+        "close": 604.06,
+        "date": "2026-03-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-23T13:30:00+00:00"
+      },
+      {
+        "close": 592.92,
+        "date": "2026-03-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-24T13:30:00+00:00"
+      },
+      {
+        "close": 594.89,
+        "date": "2026-03-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-25T13:30:00+00:00"
+      },
+      {
+        "close": 547.54,
+        "date": "2026-03-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-26T13:30:00+00:00"
+      },
+      {
+        "close": 525.72,
+        "date": "2026-03-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-27T13:30:00+00:00"
+      },
+      {
+        "close": 536.38,
+        "date": "2026-03-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-30T13:30:00+00:00"
+      },
+      {
+        "close": 572.13,
+        "date": "2026-03-31",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-31T13:30:00+00:00"
+      },
+      {
+        "close": 579.23,
+        "date": "2026-04-01",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-01T13:30:00+00:00"
+      },
+      {
+        "close": 574.46,
+        "date": "2026-04-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-02T13:30:00+00:00"
+      },
+      {
+        "close": 573.02,
+        "date": "2026-04-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-06T13:30:00+00:00"
+      },
+      {
+        "close": 575.05,
+        "date": "2026-04-07",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-07T13:30:00+00:00"
+      },
+      {
+        "close": 612.42,
+        "date": "2026-04-08",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-08T13:30:00+00:00"
+      },
+      {
+        "close": 628.39,
+        "date": "2026-04-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-09T13:30:00+00:00"
+      },
+      {
+        "close": 629.86,
+        "date": "2026-04-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-10T13:30:00+00:00"
+      },
+      {
+        "close": 634.53,
+        "date": "2026-04-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-13T13:30:00+00:00"
+      },
+      {
+        "close": 662.49,
+        "date": "2026-04-14",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-14T13:30:00+00:00"
+      },
+      {
+        "close": 671.58,
+        "date": "2026-04-15",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-15T13:30:00+00:00"
+      },
+      {
+        "close": 676.87,
+        "date": "2026-04-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-16T13:30:00+00:00"
+      },
+      {
+        "close": 688.55,
+        "date": "2026-04-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-17T13:30:00+00:00"
+      },
+      {
+        "close": 670.91,
+        "date": "2026-04-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-20T13:30:00+00:00"
+      },
+      {
+        "close": 668.84,
+        "date": "2026-04-21",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-21T13:30:00+00:00"
+      },
+      {
+        "close": 674.72,
+        "date": "2026-04-22",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-22T13:30:00+00:00"
+      },
+      {
+        "close": 659.15,
+        "date": "2026-04-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-23T13:30:00+00:00"
+      },
+      {
+        "close": 675.03,
+        "date": "2026-04-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-24T13:30:00+00:00"
+      }
+    ],
+    "MSFT": [
+      {
+        "close": 470.28,
+        "date": "2026-01-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-26T14:30:00+00:00"
+      },
+      {
+        "close": 480.58,
+        "date": "2026-01-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-27T14:30:00+00:00"
+      },
+      {
+        "close": 481.63,
+        "date": "2026-01-28",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-28T14:30:00+00:00"
+      },
+      {
+        "close": 433.5,
+        "date": "2026-01-29",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-29T14:30:00+00:00"
+      },
+      {
+        "close": 430.29,
+        "date": "2026-01-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-30T14:30:00+00:00"
+      },
+      {
+        "close": 423.37,
+        "date": "2026-02-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-02T14:30:00+00:00"
+      },
+      {
+        "close": 411.21,
+        "date": "2026-02-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-03T14:30:00+00:00"
+      },
+      {
+        "close": 414.19,
+        "date": "2026-02-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-04T14:30:00+00:00"
+      },
+      {
+        "close": 393.67,
+        "date": "2026-02-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-05T14:30:00+00:00"
+      },
+      {
+        "close": 401.14,
+        "date": "2026-02-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-06T14:30:00+00:00"
+      },
+      {
+        "close": 413.6,
+        "date": "2026-02-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-09T14:30:00+00:00"
+      },
+      {
+        "close": 413.27,
+        "date": "2026-02-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-10T14:30:00+00:00"
+      },
+      {
+        "close": 404.37,
+        "date": "2026-02-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-11T14:30:00+00:00"
+      },
+      {
+        "close": 401.84,
+        "date": "2026-02-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-12T14:30:00+00:00"
+      },
+      {
+        "close": 401.32,
+        "date": "2026-02-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-13T14:30:00+00:00"
+      },
+      {
+        "close": 396.86,
+        "date": "2026-02-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-17T14:30:00+00:00"
+      },
+      {
+        "close": 399.6,
+        "date": "2026-02-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-18T14:30:00+00:00"
+      },
+      {
+        "close": 398.46,
+        "date": "2026-02-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-19T14:30:00+00:00"
+      },
+      {
+        "close": 397.23,
+        "date": "2026-02-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-20T14:30:00+00:00"
+      },
+      {
+        "close": 384.47,
+        "date": "2026-02-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-23T14:30:00+00:00"
+      },
+      {
+        "close": 389.0,
+        "date": "2026-02-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-24T14:30:00+00:00"
+      },
+      {
+        "close": 400.6,
+        "date": "2026-02-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-25T14:30:00+00:00"
+      },
+      {
+        "close": 401.72,
+        "date": "2026-02-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-26T14:30:00+00:00"
+      },
+      {
+        "close": 392.74,
+        "date": "2026-02-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-27T14:30:00+00:00"
+      },
+      {
+        "close": 398.55,
+        "date": "2026-03-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-02T14:30:00+00:00"
+      },
+      {
+        "close": 403.93,
+        "date": "2026-03-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-03T14:30:00+00:00"
+      },
+      {
+        "close": 405.2,
+        "date": "2026-03-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-04T14:30:00+00:00"
+      },
+      {
+        "close": 410.68,
+        "date": "2026-03-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-05T14:30:00+00:00"
+      },
+      {
+        "close": 408.96,
+        "date": "2026-03-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-06T14:30:00+00:00"
+      },
+      {
+        "close": 409.41,
+        "date": "2026-03-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-09T13:30:00+00:00"
+      },
+      {
+        "close": 405.76,
+        "date": "2026-03-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-10T13:30:00+00:00"
+      },
+      {
+        "close": 404.88,
+        "date": "2026-03-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-11T13:30:00+00:00"
+      },
+      {
+        "close": 401.86,
+        "date": "2026-03-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-12T13:30:00+00:00"
+      },
+      {
+        "close": 395.55,
+        "date": "2026-03-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-13T13:30:00+00:00"
+      },
+      {
+        "close": 399.95,
+        "date": "2026-03-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-16T13:30:00+00:00"
+      },
+      {
+        "close": 399.41,
+        "date": "2026-03-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-17T13:30:00+00:00"
+      },
+      {
+        "close": 391.79,
+        "date": "2026-03-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-18T13:30:00+00:00"
+      },
+      {
+        "close": 389.02,
+        "date": "2026-03-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-19T13:30:00+00:00"
+      },
+      {
+        "close": 381.87,
+        "date": "2026-03-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-20T13:30:00+00:00"
+      },
+      {
+        "close": 383.0,
+        "date": "2026-03-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-23T13:30:00+00:00"
+      },
+      {
+        "close": 372.74,
+        "date": "2026-03-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-24T13:30:00+00:00"
+      },
+      {
+        "close": 371.04,
+        "date": "2026-03-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-25T13:30:00+00:00"
+      },
+      {
+        "close": 365.97,
+        "date": "2026-03-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-26T13:30:00+00:00"
+      },
+      {
+        "close": 356.77,
+        "date": "2026-03-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-27T13:30:00+00:00"
+      },
+      {
+        "close": 358.96,
+        "date": "2026-03-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-30T13:30:00+00:00"
+      },
+      {
+        "close": 370.17,
+        "date": "2026-03-31",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-31T13:30:00+00:00"
+      },
+      {
+        "close": 369.37,
+        "date": "2026-04-01",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-01T13:30:00+00:00"
+      },
+      {
+        "close": 373.46,
+        "date": "2026-04-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-02T13:30:00+00:00"
+      },
+      {
+        "close": 372.88,
+        "date": "2026-04-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-06T13:30:00+00:00"
+      },
+      {
+        "close": 372.29,
+        "date": "2026-04-07",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-07T13:30:00+00:00"
+      },
+      {
+        "close": 374.33,
+        "date": "2026-04-08",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-08T13:30:00+00:00"
+      },
+      {
+        "close": 373.07,
+        "date": "2026-04-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-09T13:30:00+00:00"
+      },
+      {
+        "close": 370.87,
+        "date": "2026-04-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-10T13:30:00+00:00"
+      },
+      {
+        "close": 384.37,
+        "date": "2026-04-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-13T13:30:00+00:00"
+      },
+      {
+        "close": 393.11,
+        "date": "2026-04-14",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-14T13:30:00+00:00"
+      },
+      {
+        "close": 411.22,
+        "date": "2026-04-15",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-15T13:30:00+00:00"
+      },
+      {
+        "close": 420.26,
+        "date": "2026-04-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-16T13:30:00+00:00"
+      },
+      {
+        "close": 422.79,
+        "date": "2026-04-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-17T13:30:00+00:00"
+      },
+      {
+        "close": 418.07,
+        "date": "2026-04-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-20T13:30:00+00:00"
+      },
+      {
+        "close": 424.16,
+        "date": "2026-04-21",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-21T13:30:00+00:00"
+      },
+      {
+        "close": 432.92,
+        "date": "2026-04-22",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-22T13:30:00+00:00"
+      },
+      {
+        "close": 415.75,
+        "date": "2026-04-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-23T13:30:00+00:00"
+      },
+      {
+        "close": 424.62,
+        "date": "2026-04-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-24T13:30:00+00:00"
+      }
+    ],
+    "MU": [
+      {
+        "close": 389.09,
+        "date": "2026-01-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-26T14:30:00+00:00"
+      },
+      {
+        "close": 410.24,
+        "date": "2026-01-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-27T14:30:00+00:00"
+      },
+      {
+        "close": 435.28,
+        "date": "2026-01-28",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-28T14:30:00+00:00"
+      },
+      {
+        "close": 435.79,
+        "date": "2026-01-29",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-29T14:30:00+00:00"
+      },
+      {
+        "close": 414.88,
+        "date": "2026-01-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-30T14:30:00+00:00"
+      },
+      {
+        "close": 437.8,
+        "date": "2026-02-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-02T14:30:00+00:00"
+      },
+      {
+        "close": 419.44,
+        "date": "2026-02-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-03T14:30:00+00:00"
+      },
+      {
+        "close": 379.4,
+        "date": "2026-02-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-04T14:30:00+00:00"
+      },
+      {
+        "close": 382.89,
+        "date": "2026-02-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-05T14:30:00+00:00"
+      },
+      {
+        "close": 394.69,
+        "date": "2026-02-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-06T14:30:00+00:00"
+      },
+      {
+        "close": 383.5,
+        "date": "2026-02-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-09T14:30:00+00:00"
+      },
+      {
+        "close": 373.25,
+        "date": "2026-02-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-10T14:30:00+00:00"
+      },
+      {
+        "close": 410.34,
+        "date": "2026-02-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-11T14:30:00+00:00"
+      },
+      {
+        "close": 413.97,
+        "date": "2026-02-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-12T14:30:00+00:00"
+      },
+      {
+        "close": 411.66,
+        "date": "2026-02-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-13T14:30:00+00:00"
+      },
+      {
+        "close": 399.78,
+        "date": "2026-02-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-17T14:30:00+00:00"
+      },
+      {
+        "close": 420.95,
+        "date": "2026-02-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-18T14:30:00+00:00"
+      },
+      {
+        "close": 417.35,
+        "date": "2026-02-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-19T14:30:00+00:00"
+      },
+      {
+        "close": 428.17,
+        "date": "2026-02-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-20T14:30:00+00:00"
+      },
+      {
+        "close": 420.97,
+        "date": "2026-02-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-23T14:30:00+00:00"
+      },
+      {
+        "close": 418.01,
+        "date": "2026-02-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-24T14:30:00+00:00"
+      },
+      {
+        "close": 429.0,
+        "date": "2026-02-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-25T14:30:00+00:00"
+      },
+      {
+        "close": 415.56,
+        "date": "2026-02-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-26T14:30:00+00:00"
+      },
+      {
+        "close": 412.37,
+        "date": "2026-02-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-27T14:30:00+00:00"
+      },
+      {
+        "close": 412.67,
+        "date": "2026-03-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-02T14:30:00+00:00"
+      },
+      {
+        "close": 379.68,
+        "date": "2026-03-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-03T14:30:00+00:00"
+      },
+      {
+        "close": 400.77,
+        "date": "2026-03-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-04T14:30:00+00:00"
+      },
+      {
+        "close": 397.05,
+        "date": "2026-03-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-05T14:30:00+00:00"
+      },
+      {
+        "close": 370.3,
+        "date": "2026-03-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-06T14:30:00+00:00"
+      },
+      {
+        "close": 389.32,
+        "date": "2026-03-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-09T13:30:00+00:00"
+      },
+      {
+        "close": 403.11,
+        "date": "2026-03-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-10T13:30:00+00:00"
+      },
+      {
+        "close": 418.69,
+        "date": "2026-03-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-11T13:30:00+00:00"
+      },
+      {
+        "close": 405.35,
+        "date": "2026-03-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-12T13:30:00+00:00"
+      },
+      {
+        "close": 426.13,
+        "date": "2026-03-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-13T13:30:00+00:00"
+      },
+      {
+        "close": 441.8,
+        "date": "2026-03-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-16T13:30:00+00:00"
+      },
+      {
+        "close": 461.69,
+        "date": "2026-03-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-17T13:30:00+00:00"
+      },
+      {
+        "close": 461.73,
+        "date": "2026-03-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-18T13:30:00+00:00"
+      },
+      {
+        "close": 444.27,
+        "date": "2026-03-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-19T13:30:00+00:00"
+      },
+      {
+        "close": 422.9,
+        "date": "2026-03-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-20T13:30:00+00:00"
+      },
+      {
+        "close": 404.35,
+        "date": "2026-03-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-23T13:30:00+00:00"
+      },
+      {
+        "close": 395.53,
+        "date": "2026-03-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-24T13:30:00+00:00"
+      },
+      {
+        "close": 382.09,
+        "date": "2026-03-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-25T13:30:00+00:00"
+      },
+      {
+        "close": 355.46,
+        "date": "2026-03-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-26T13:30:00+00:00"
+      },
+      {
+        "close": 357.22,
+        "date": "2026-03-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-27T13:30:00+00:00"
+      },
+      {
+        "close": 321.8,
+        "date": "2026-03-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-30T13:30:00+00:00"
+      },
+      {
+        "close": 337.84,
+        "date": "2026-03-31",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-31T13:30:00+00:00"
+      },
+      {
+        "close": 367.85,
+        "date": "2026-04-01",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-01T13:30:00+00:00"
+      },
+      {
+        "close": 366.24,
+        "date": "2026-04-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-02T13:30:00+00:00"
+      },
+      {
+        "close": 377.76,
+        "date": "2026-04-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-06T13:30:00+00:00"
+      },
+      {
+        "close": 377.58,
+        "date": "2026-04-07",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-07T13:30:00+00:00"
+      },
+      {
+        "close": 406.73,
+        "date": "2026-04-08",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-08T13:30:00+00:00"
+      },
+      {
+        "close": 421.51,
+        "date": "2026-04-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-09T13:30:00+00:00"
+      },
+      {
+        "close": 420.59,
+        "date": "2026-04-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-10T13:30:00+00:00"
+      },
+      {
+        "close": 426.56,
+        "date": "2026-04-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-13T13:30:00+00:00"
+      },
+      {
+        "close": 465.66,
+        "date": "2026-04-14",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-14T13:30:00+00:00"
+      },
+      {
+        "close": 456.23,
+        "date": "2026-04-15",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-15T13:30:00+00:00"
+      },
+      {
+        "close": 457.23,
+        "date": "2026-04-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-16T13:30:00+00:00"
+      },
+      {
+        "close": 455.07,
+        "date": "2026-04-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-17T13:30:00+00:00"
+      },
+      {
+        "close": 448.42,
+        "date": "2026-04-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-20T13:30:00+00:00"
+      },
+      {
+        "close": 449.38,
+        "date": "2026-04-21",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-21T13:30:00+00:00"
+      },
+      {
+        "close": 487.48,
+        "date": "2026-04-22",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-22T13:30:00+00:00"
+      },
+      {
+        "close": 481.72,
+        "date": "2026-04-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-23T13:30:00+00:00"
+      },
+      {
+        "close": 496.72,
+        "date": "2026-04-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-24T13:30:00+00:00"
+      }
+    ],
+    "NVDA": [
+      {
+        "close": 186.47,
+        "date": "2026-01-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-26T14:30:00+00:00"
+      },
+      {
+        "close": 188.52,
+        "date": "2026-01-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-27T14:30:00+00:00"
+      },
+      {
+        "close": 191.52,
+        "date": "2026-01-28",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-28T14:30:00+00:00"
+      },
+      {
+        "close": 192.51,
+        "date": "2026-01-29",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-29T14:30:00+00:00"
+      },
+      {
+        "close": 191.13,
+        "date": "2026-01-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-30T14:30:00+00:00"
+      },
+      {
+        "close": 185.61,
+        "date": "2026-02-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-02T14:30:00+00:00"
+      },
+      {
+        "close": 180.34,
+        "date": "2026-02-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-03T14:30:00+00:00"
+      },
+      {
+        "close": 174.19,
+        "date": "2026-02-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-04T14:30:00+00:00"
+      },
+      {
+        "close": 171.88,
+        "date": "2026-02-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-05T14:30:00+00:00"
+      },
+      {
+        "close": 185.41,
+        "date": "2026-02-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-06T14:30:00+00:00"
+      },
+      {
+        "close": 190.04,
+        "date": "2026-02-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-09T14:30:00+00:00"
+      },
+      {
+        "close": 188.54,
+        "date": "2026-02-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-10T14:30:00+00:00"
+      },
+      {
+        "close": 190.05,
+        "date": "2026-02-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-11T14:30:00+00:00"
+      },
+      {
+        "close": 186.94,
+        "date": "2026-02-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-12T14:30:00+00:00"
+      },
+      {
+        "close": 182.81,
+        "date": "2026-02-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-13T14:30:00+00:00"
+      },
+      {
+        "close": 184.97,
+        "date": "2026-02-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-17T14:30:00+00:00"
+      },
+      {
+        "close": 187.98,
+        "date": "2026-02-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-18T14:30:00+00:00"
+      },
+      {
+        "close": 187.9,
+        "date": "2026-02-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-19T14:30:00+00:00"
+      },
+      {
+        "close": 189.82,
+        "date": "2026-02-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-20T14:30:00+00:00"
+      },
+      {
+        "close": 191.55,
+        "date": "2026-02-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-23T14:30:00+00:00"
+      },
+      {
+        "close": 192.85,
+        "date": "2026-02-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-24T14:30:00+00:00"
+      },
+      {
+        "close": 195.56,
+        "date": "2026-02-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-25T14:30:00+00:00"
+      },
+      {
+        "close": 184.89,
+        "date": "2026-02-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-26T14:30:00+00:00"
+      },
+      {
+        "close": 177.19,
+        "date": "2026-02-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-27T14:30:00+00:00"
+      },
+      {
+        "close": 182.48,
+        "date": "2026-03-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-02T14:30:00+00:00"
+      },
+      {
+        "close": 180.05,
+        "date": "2026-03-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-03T14:30:00+00:00"
+      },
+      {
+        "close": 183.04,
+        "date": "2026-03-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-04T14:30:00+00:00"
+      },
+      {
+        "close": 183.34,
+        "date": "2026-03-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-05T14:30:00+00:00"
+      },
+      {
+        "close": 177.82,
+        "date": "2026-03-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-06T14:30:00+00:00"
+      },
+      {
+        "close": 182.65,
+        "date": "2026-03-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-09T13:30:00+00:00"
+      },
+      {
+        "close": 184.77,
+        "date": "2026-03-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-10T13:30:00+00:00"
+      },
+      {
+        "close": 186.03,
+        "date": "2026-03-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-11T13:30:00+00:00"
+      },
+      {
+        "close": 183.14,
+        "date": "2026-03-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-12T13:30:00+00:00"
+      },
+      {
+        "close": 180.25,
+        "date": "2026-03-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-13T13:30:00+00:00"
+      },
+      {
+        "close": 183.22,
+        "date": "2026-03-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-16T13:30:00+00:00"
+      },
+      {
+        "close": 181.93,
+        "date": "2026-03-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-17T13:30:00+00:00"
+      },
+      {
+        "close": 180.4,
+        "date": "2026-03-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-18T13:30:00+00:00"
+      },
+      {
+        "close": 178.56,
+        "date": "2026-03-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-19T13:30:00+00:00"
+      },
+      {
+        "close": 172.7,
+        "date": "2026-03-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-20T13:30:00+00:00"
+      },
+      {
+        "close": 175.64,
+        "date": "2026-03-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-23T13:30:00+00:00"
+      },
+      {
+        "close": 175.2,
+        "date": "2026-03-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-24T13:30:00+00:00"
+      },
+      {
+        "close": 178.68,
+        "date": "2026-03-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-25T13:30:00+00:00"
+      },
+      {
+        "close": 171.24,
+        "date": "2026-03-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-26T13:30:00+00:00"
+      },
+      {
+        "close": 167.52,
+        "date": "2026-03-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-27T13:30:00+00:00"
+      },
+      {
+        "close": 165.17,
+        "date": "2026-03-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-30T13:30:00+00:00"
+      },
+      {
+        "close": 174.4,
+        "date": "2026-03-31",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-31T13:30:00+00:00"
+      },
+      {
+        "close": 175.75,
+        "date": "2026-04-01",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-01T13:30:00+00:00"
+      },
+      {
+        "close": 177.39,
+        "date": "2026-04-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-02T13:30:00+00:00"
+      },
+      {
+        "close": 177.64,
+        "date": "2026-04-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-06T13:30:00+00:00"
+      },
+      {
+        "close": 178.1,
+        "date": "2026-04-07",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-07T13:30:00+00:00"
+      },
+      {
+        "close": 182.08,
+        "date": "2026-04-08",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-08T13:30:00+00:00"
+      },
+      {
+        "close": 183.91,
+        "date": "2026-04-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-09T13:30:00+00:00"
+      },
+      {
+        "close": 188.63,
+        "date": "2026-04-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-10T13:30:00+00:00"
+      },
+      {
+        "close": 189.31,
+        "date": "2026-04-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-13T13:30:00+00:00"
+      },
+      {
+        "close": 196.51,
+        "date": "2026-04-14",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-14T13:30:00+00:00"
+      },
+      {
+        "close": 198.87,
+        "date": "2026-04-15",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-15T13:30:00+00:00"
+      },
+      {
+        "close": 198.35,
+        "date": "2026-04-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-16T13:30:00+00:00"
+      },
+      {
+        "close": 201.68,
+        "date": "2026-04-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-17T13:30:00+00:00"
+      },
+      {
+        "close": 202.06,
+        "date": "2026-04-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-20T13:30:00+00:00"
+      },
+      {
+        "close": 199.88,
+        "date": "2026-04-21",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-21T13:30:00+00:00"
+      },
+      {
+        "close": 202.5,
+        "date": "2026-04-22",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-22T13:30:00+00:00"
+      },
+      {
+        "close": 199.64,
+        "date": "2026-04-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-23T13:30:00+00:00"
+      },
+      {
+        "close": 208.27,
+        "date": "2026-04-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-24T13:30:00+00:00"
+      }
+    ],
+    "QQQ": [
+      {
+        "close": 625.46,
+        "date": "2026-01-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-26T14:30:00+00:00"
+      },
+      {
+        "close": 631.13,
+        "date": "2026-01-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-27T14:30:00+00:00"
+      },
+      {
+        "close": 633.22,
+        "date": "2026-01-28",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-28T14:30:00+00:00"
+      },
+      {
+        "close": 629.43,
+        "date": "2026-01-29",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-29T14:30:00+00:00"
+      },
+      {
+        "close": 621.87,
+        "date": "2026-01-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-30T14:30:00+00:00"
+      },
+      {
+        "close": 626.14,
+        "date": "2026-02-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-02T14:30:00+00:00"
+      },
+      {
+        "close": 616.52,
+        "date": "2026-02-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-03T14:30:00+00:00"
+      },
+      {
+        "close": 605.75,
+        "date": "2026-02-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-04T14:30:00+00:00"
+      },
+      {
+        "close": 597.03,
+        "date": "2026-02-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-05T14:30:00+00:00"
+      },
+      {
+        "close": 609.65,
+        "date": "2026-02-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-06T14:30:00+00:00"
+      },
+      {
+        "close": 614.32,
+        "date": "2026-02-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-09T14:30:00+00:00"
+      },
+      {
+        "close": 611.47,
+        "date": "2026-02-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-10T14:30:00+00:00"
+      },
+      {
+        "close": 613.11,
+        "date": "2026-02-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-11T14:30:00+00:00"
+      },
+      {
+        "close": 600.64,
+        "date": "2026-02-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-12T14:30:00+00:00"
+      },
+      {
+        "close": 601.92,
+        "date": "2026-02-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-13T14:30:00+00:00"
+      },
+      {
+        "close": 601.3,
+        "date": "2026-02-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-17T14:30:00+00:00"
+      },
+      {
+        "close": 605.79,
+        "date": "2026-02-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-18T14:30:00+00:00"
+      },
+      {
+        "close": 603.47,
+        "date": "2026-02-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-19T14:30:00+00:00"
+      },
+      {
+        "close": 608.81,
+        "date": "2026-02-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-20T14:30:00+00:00"
+      },
+      {
+        "close": 601.41,
+        "date": "2026-02-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-23T14:30:00+00:00"
+      },
+      {
+        "close": 607.87,
+        "date": "2026-02-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-24T14:30:00+00:00"
+      },
+      {
+        "close": 616.68,
+        "date": "2026-02-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-25T14:30:00+00:00"
+      },
+      {
+        "close": 609.24,
+        "date": "2026-02-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-26T14:30:00+00:00"
+      },
+      {
+        "close": 607.29,
+        "date": "2026-02-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-27T14:30:00+00:00"
+      },
+      {
+        "close": 608.09,
+        "date": "2026-03-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-02T14:30:00+00:00"
+      },
+      {
+        "close": 601.58,
+        "date": "2026-03-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-03T14:30:00+00:00"
+      },
+      {
+        "close": 610.75,
+        "date": "2026-03-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-04T14:30:00+00:00"
+      },
+      {
+        "close": 608.91,
+        "date": "2026-03-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-05T14:30:00+00:00"
+      },
+      {
+        "close": 599.75,
+        "date": "2026-03-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-06T14:30:00+00:00"
+      },
+      {
+        "close": 607.76,
+        "date": "2026-03-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-09T13:30:00+00:00"
+      },
+      {
+        "close": 607.77,
+        "date": "2026-03-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-10T13:30:00+00:00"
+      },
+      {
+        "close": 607.69,
+        "date": "2026-03-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-11T13:30:00+00:00"
+      },
+      {
+        "close": 597.26,
+        "date": "2026-03-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-12T13:30:00+00:00"
+      },
+      {
+        "close": 593.72,
+        "date": "2026-03-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-13T13:30:00+00:00"
+      },
+      {
+        "close": 600.38,
+        "date": "2026-03-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-16T13:30:00+00:00"
+      },
+      {
+        "close": 603.31,
+        "date": "2026-03-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-17T13:30:00+00:00"
+      },
+      {
+        "close": 594.9,
+        "date": "2026-03-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-18T13:30:00+00:00"
+      },
+      {
+        "close": 593.02,
+        "date": "2026-03-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-19T13:30:00+00:00"
+      },
+      {
+        "close": 582.06,
+        "date": "2026-03-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-20T13:30:00+00:00"
+      },
+      {
+        "close": 588.0,
+        "date": "2026-03-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-23T13:30:00+00:00"
+      },
+      {
+        "close": 583.98,
+        "date": "2026-03-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-24T13:30:00+00:00"
+      },
+      {
+        "close": 587.82,
+        "date": "2026-03-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-25T13:30:00+00:00"
+      },
+      {
+        "close": 573.79,
+        "date": "2026-03-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-26T13:30:00+00:00"
+      },
+      {
+        "close": 562.58,
+        "date": "2026-03-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-27T13:30:00+00:00"
+      },
+      {
+        "close": 558.28,
+        "date": "2026-03-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-30T13:30:00+00:00"
+      },
+      {
+        "close": 577.18,
+        "date": "2026-03-31",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-31T13:30:00+00:00"
+      },
+      {
+        "close": 584.31,
+        "date": "2026-04-01",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-01T13:30:00+00:00"
+      },
+      {
+        "close": 584.98,
+        "date": "2026-04-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-02T13:30:00+00:00"
+      },
+      {
+        "close": 588.5,
+        "date": "2026-04-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-06T13:30:00+00:00"
+      },
+      {
+        "close": 588.59,
+        "date": "2026-04-07",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-07T13:30:00+00:00"
+      },
+      {
+        "close": 606.09,
+        "date": "2026-04-08",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-08T13:30:00+00:00"
+      },
+      {
+        "close": 610.19,
+        "date": "2026-04-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-09T13:30:00+00:00"
+      },
+      {
+        "close": 611.07,
+        "date": "2026-04-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-10T13:30:00+00:00"
+      },
+      {
+        "close": 617.39,
+        "date": "2026-04-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-13T13:30:00+00:00"
+      },
+      {
+        "close": 628.6,
+        "date": "2026-04-14",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-14T13:30:00+00:00"
+      },
+      {
+        "close": 637.4,
+        "date": "2026-04-15",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-15T13:30:00+00:00"
+      },
+      {
+        "close": 640.47,
+        "date": "2026-04-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-16T13:30:00+00:00"
+      },
+      {
+        "close": 648.85,
+        "date": "2026-04-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-17T13:30:00+00:00"
+      },
+      {
+        "close": 646.79,
+        "date": "2026-04-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-20T13:30:00+00:00"
+      },
+      {
+        "close": 644.33,
+        "date": "2026-04-21",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-21T13:30:00+00:00"
+      },
+      {
+        "close": 655.11,
+        "date": "2026-04-22",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-22T13:30:00+00:00"
+      },
+      {
+        "close": 651.42,
+        "date": "2026-04-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-23T13:30:00+00:00"
+      },
+      {
+        "close": 663.88,
+        "date": "2026-04-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-24T13:30:00+00:00"
+      }
+    ],
+    "SMCI": [
+      {
+        "close": 30.8,
+        "date": "2026-01-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-26T14:30:00+00:00"
+      },
+      {
+        "close": 31.2,
+        "date": "2026-01-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-27T14:30:00+00:00"
+      },
+      {
+        "close": 31.21,
+        "date": "2026-01-28",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-28T14:30:00+00:00"
+      },
+      {
+        "close": 30.12,
+        "date": "2026-01-29",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-29T14:30:00+00:00"
+      },
+      {
+        "close": 29.11,
+        "date": "2026-01-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-30T14:30:00+00:00"
+      },
+      {
+        "close": 29.71,
+        "date": "2026-02-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-02T14:30:00+00:00"
+      },
+      {
+        "close": 29.67,
+        "date": "2026-02-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-03T14:30:00+00:00"
+      },
+      {
+        "close": 33.76,
+        "date": "2026-02-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-04T14:30:00+00:00"
+      },
+      {
+        "close": 30.85,
+        "date": "2026-02-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-05T14:30:00+00:00"
+      },
+      {
+        "close": 34.38,
+        "date": "2026-02-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-06T14:30:00+00:00"
+      },
+      {
+        "close": 33.53,
+        "date": "2026-02-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-09T14:30:00+00:00"
+      },
+      {
+        "close": 33.33,
+        "date": "2026-02-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-10T14:30:00+00:00"
+      },
+      {
+        "close": 32.04,
+        "date": "2026-02-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-11T14:30:00+00:00"
+      },
+      {
+        "close": 30.43,
+        "date": "2026-02-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-12T14:30:00+00:00"
+      },
+      {
+        "close": 30.54,
+        "date": "2026-02-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-13T14:30:00+00:00"
+      },
+      {
+        "close": 30.11,
+        "date": "2026-02-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-17T14:30:00+00:00"
+      },
+      {
+        "close": 29.71,
+        "date": "2026-02-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-18T14:30:00+00:00"
+      },
+      {
+        "close": 32.16,
+        "date": "2026-02-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-19T14:30:00+00:00"
+      },
+      {
+        "close": 32.42,
+        "date": "2026-02-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-20T14:30:00+00:00"
+      },
+      {
+        "close": 30.71,
+        "date": "2026-02-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-23T14:30:00+00:00"
+      },
+      {
+        "close": 31.13,
+        "date": "2026-02-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-24T14:30:00+00:00"
+      },
+      {
+        "close": 33.6,
+        "date": "2026-02-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-25T14:30:00+00:00"
+      },
+      {
+        "close": 32.28,
+        "date": "2026-02-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-26T14:30:00+00:00"
+      },
+      {
+        "close": 32.39,
+        "date": "2026-02-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-27T14:30:00+00:00"
+      },
+      {
+        "close": 31.83,
+        "date": "2026-03-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-02T14:30:00+00:00"
+      },
+      {
+        "close": 30.68,
+        "date": "2026-03-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-03T14:30:00+00:00"
+      },
+      {
+        "close": 32.65,
+        "date": "2026-03-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-04T14:30:00+00:00"
+      },
+      {
+        "close": 32.24,
+        "date": "2026-03-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-05T14:30:00+00:00"
+      },
+      {
+        "close": 31.31,
+        "date": "2026-03-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-06T14:30:00+00:00"
+      },
+      {
+        "close": 31.98,
+        "date": "2026-03-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-09T13:30:00+00:00"
+      },
+      {
+        "close": 31.79,
+        "date": "2026-03-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-10T13:30:00+00:00"
+      },
+      {
+        "close": 31.79,
+        "date": "2026-03-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-11T13:30:00+00:00"
+      },
+      {
+        "close": 30.9,
+        "date": "2026-03-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-12T13:30:00+00:00"
+      },
+      {
+        "close": 30.75,
+        "date": "2026-03-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-13T13:30:00+00:00"
+      },
+      {
+        "close": 31.86,
+        "date": "2026-03-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-16T13:30:00+00:00"
+      },
+      {
+        "close": 31.51,
+        "date": "2026-03-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-17T13:30:00+00:00"
+      },
+      {
+        "close": 30.35,
+        "date": "2026-03-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-18T13:30:00+00:00"
+      },
+      {
+        "close": 30.79,
+        "date": "2026-03-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-19T13:30:00+00:00"
+      },
+      {
+        "close": 20.53,
+        "date": "2026-03-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-20T13:30:00+00:00"
+      },
+      {
+        "close": 21.58,
+        "date": "2026-03-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-23T13:30:00+00:00"
+      },
+      {
+        "close": 22.23,
+        "date": "2026-03-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-24T13:30:00+00:00"
+      },
+      {
+        "close": 24.05,
+        "date": "2026-03-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-25T13:30:00+00:00"
+      },
+      {
+        "close": 22.21,
+        "date": "2026-03-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-26T13:30:00+00:00"
+      },
+      {
+        "close": 21.97,
+        "date": "2026-03-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-27T13:30:00+00:00"
+      },
+      {
+        "close": 21.06,
+        "date": "2026-03-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-30T13:30:00+00:00"
+      },
+      {
+        "close": 22.77,
+        "date": "2026-03-31",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-31T13:30:00+00:00"
+      },
+      {
+        "close": 22.51,
+        "date": "2026-04-01",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-01T13:30:00+00:00"
+      },
+      {
+        "close": 23.22,
+        "date": "2026-04-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-02T13:30:00+00:00"
+      },
+      {
+        "close": 22.05,
+        "date": "2026-04-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-06T13:30:00+00:00"
+      },
+      {
+        "close": 22.67,
+        "date": "2026-04-07",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-07T13:30:00+00:00"
+      },
+      {
+        "close": 23.37,
+        "date": "2026-04-08",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-08T13:30:00+00:00"
+      },
+      {
+        "close": 23.22,
+        "date": "2026-04-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-09T13:30:00+00:00"
+      },
+      {
+        "close": 25.26,
+        "date": "2026-04-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-10T13:30:00+00:00"
+      },
+      {
+        "close": 25.97,
+        "date": "2026-04-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-13T13:30:00+00:00"
+      },
+      {
+        "close": 27.2,
+        "date": "2026-04-14",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-14T13:30:00+00:00"
+      },
+      {
+        "close": 27.29,
+        "date": "2026-04-15",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-15T13:30:00+00:00"
+      },
+      {
+        "close": 28.4,
+        "date": "2026-04-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-16T13:30:00+00:00"
+      },
+      {
+        "close": 28.56,
+        "date": "2026-04-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-17T13:30:00+00:00"
+      },
+      {
+        "close": 28.81,
+        "date": "2026-04-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-20T13:30:00+00:00"
+      },
+      {
+        "close": 28.43,
+        "date": "2026-04-21",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-21T13:30:00+00:00"
+      },
+      {
+        "close": 29.18,
+        "date": "2026-04-22",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-22T13:30:00+00:00"
+      },
+      {
+        "close": 26.75,
+        "date": "2026-04-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-23T13:30:00+00:00"
+      },
+      {
+        "close": 29.08,
+        "date": "2026-04-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-24T13:30:00+00:00"
+      }
+    ],
+    "SMH": [
+      {
+        "close": 398.82,
+        "date": "2026-01-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-26T14:30:00+00:00"
+      },
+      {
+        "close": 407.25,
+        "date": "2026-01-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-27T14:30:00+00:00"
+      },
+      {
+        "close": 416.63,
+        "date": "2026-01-28",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-28T14:30:00+00:00"
+      },
+      {
+        "close": 417.52,
+        "date": "2026-01-29",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-29T14:30:00+00:00"
+      },
+      {
+        "close": 403.46,
+        "date": "2026-01-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-30T14:30:00+00:00"
+      },
+      {
+        "close": 407.97,
+        "date": "2026-02-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-02T14:30:00+00:00"
+      },
+      {
+        "close": 397.68,
+        "date": "2026-02-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-03T14:30:00+00:00"
+      },
+      {
+        "close": 382.02,
+        "date": "2026-02-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-04T14:30:00+00:00"
+      },
+      {
+        "close": 381.07,
+        "date": "2026-02-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-05T14:30:00+00:00"
+      },
+      {
+        "close": 401.65,
+        "date": "2026-02-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-06T14:30:00+00:00"
+      },
+      {
+        "close": 406.65,
+        "date": "2026-02-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-09T14:30:00+00:00"
+      },
+      {
+        "close": 404.76,
+        "date": "2026-02-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-10T14:30:00+00:00"
+      },
+      {
+        "close": 414.78,
+        "date": "2026-02-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-11T14:30:00+00:00"
+      },
+      {
+        "close": 406.11,
+        "date": "2026-02-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-12T14:30:00+00:00"
+      },
+      {
+        "close": 407.72,
+        "date": "2026-02-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-13T14:30:00+00:00"
+      },
+      {
+        "close": 407.51,
+        "date": "2026-02-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-17T14:30:00+00:00"
+      },
+      {
+        "close": 412.55,
+        "date": "2026-02-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-18T14:30:00+00:00"
+      },
+      {
+        "close": 410.2,
+        "date": "2026-02-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-19T14:30:00+00:00"
+      },
+      {
+        "close": 415.03,
+        "date": "2026-02-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-20T14:30:00+00:00"
+      },
+      {
+        "close": 412.88,
+        "date": "2026-02-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-23T14:30:00+00:00"
+      },
+      {
+        "close": 419.16,
+        "date": "2026-02-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-24T14:30:00+00:00"
+      },
+      {
+        "close": 426.16,
+        "date": "2026-02-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-25T14:30:00+00:00"
+      },
+      {
+        "close": 412.01,
+        "date": "2026-02-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-26T14:30:00+00:00"
+      },
+      {
+        "close": 406.37,
+        "date": "2026-02-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-27T14:30:00+00:00"
+      },
+      {
+        "close": 406.39,
+        "date": "2026-03-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-02T14:30:00+00:00"
+      },
+      {
+        "close": 391.06,
+        "date": "2026-03-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-03T14:30:00+00:00"
+      },
+      {
+        "close": 399.1,
+        "date": "2026-03-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-04T14:30:00+00:00"
+      },
+      {
+        "close": 395.35,
+        "date": "2026-03-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-05T14:30:00+00:00"
+      },
+      {
+        "close": 380.56,
+        "date": "2026-03-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-06T14:30:00+00:00"
+      },
+      {
+        "close": 394.37,
+        "date": "2026-03-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-09T13:30:00+00:00"
+      },
+      {
+        "close": 397.33,
+        "date": "2026-03-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-10T13:30:00+00:00"
+      },
+      {
+        "close": 401.03,
+        "date": "2026-03-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-11T13:30:00+00:00"
+      },
+      {
+        "close": 388.13,
+        "date": "2026-03-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-12T13:30:00+00:00"
+      },
+      {
+        "close": 387.33,
+        "date": "2026-03-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-13T13:30:00+00:00"
+      },
+      {
+        "close": 393.92,
+        "date": "2026-03-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-16T13:30:00+00:00"
+      },
+      {
+        "close": 396.88,
+        "date": "2026-03-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-17T13:30:00+00:00"
+      },
+      {
+        "close": 393.67,
+        "date": "2026-03-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-18T13:30:00+00:00"
+      },
+      {
+        "close": 394.92,
+        "date": "2026-03-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-19T13:30:00+00:00"
+      },
+      {
+        "close": 384.74,
+        "date": "2026-03-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-20T13:30:00+00:00"
+      },
+      {
+        "close": 391.36,
+        "date": "2026-03-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-23T13:30:00+00:00"
+      },
+      {
+        "close": 394.59,
+        "date": "2026-03-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-24T13:30:00+00:00"
+      },
+      {
+        "close": 399.02,
+        "date": "2026-03-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-25T13:30:00+00:00"
+      },
+      {
+        "close": 380.84,
+        "date": "2026-03-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-26T13:30:00+00:00"
+      },
+      {
+        "close": 374.25,
+        "date": "2026-03-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-27T13:30:00+00:00"
+      },
+      {
+        "close": 362.53,
+        "date": "2026-03-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-30T13:30:00+00:00"
+      },
+      {
+        "close": 383.4,
+        "date": "2026-03-31",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-31T13:30:00+00:00"
+      },
+      {
+        "close": 391.97,
+        "date": "2026-04-01",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-01T13:30:00+00:00"
+      },
+      {
+        "close": 392.32,
+        "date": "2026-04-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-02T13:30:00+00:00"
+      },
+      {
+        "close": 395.98,
+        "date": "2026-04-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-06T13:30:00+00:00"
+      },
+      {
+        "close": 399.9,
+        "date": "2026-04-07",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-07T13:30:00+00:00"
+      },
+      {
+        "close": 422.92,
+        "date": "2026-04-08",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-08T13:30:00+00:00"
+      },
+      {
+        "close": 430.31,
+        "date": "2026-04-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-09T13:30:00+00:00"
+      },
+      {
+        "close": 436.88,
+        "date": "2026-04-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-10T13:30:00+00:00"
+      },
+      {
+        "close": 443.34,
+        "date": "2026-04-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-13T13:30:00+00:00"
+      },
+      {
+        "close": 452.0,
+        "date": "2026-04-14",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-14T13:30:00+00:00"
+      },
+      {
+        "close": 453.0,
+        "date": "2026-04-15",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-15T13:30:00+00:00"
+      },
+      {
+        "close": 454.8,
+        "date": "2026-04-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-16T13:30:00+00:00"
+      },
+      {
+        "close": 464.16,
+        "date": "2026-04-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-17T13:30:00+00:00"
+      },
+      {
+        "close": 463.96,
+        "date": "2026-04-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-20T13:30:00+00:00"
+      },
+      {
+        "close": 464.66,
+        "date": "2026-04-21",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-21T13:30:00+00:00"
+      },
+      {
+        "close": 476.83,
+        "date": "2026-04-22",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-22T13:30:00+00:00"
+      },
+      {
+        "close": 481.85,
+        "date": "2026-04-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-23T13:30:00+00:00"
+      },
+      {
+        "close": 506.44,
+        "date": "2026-04-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-24T13:30:00+00:00"
+      }
+    ],
+    "SOXX": [
+      {
+        "close": 343.07,
+        "date": "2026-01-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-26T14:30:00+00:00"
+      },
+      {
+        "close": 351.08,
+        "date": "2026-01-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-27T14:30:00+00:00"
+      },
+      {
+        "close": 360.46,
+        "date": "2026-01-28",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-28T14:30:00+00:00"
+      },
+      {
+        "close": 361.13,
+        "date": "2026-01-29",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-29T14:30:00+00:00"
+      },
+      {
+        "close": 346.3,
+        "date": "2026-01-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-30T14:30:00+00:00"
+      },
+      {
+        "close": 352.69,
+        "date": "2026-02-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-02T14:30:00+00:00"
+      },
+      {
+        "close": 345.64,
+        "date": "2026-02-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-03T14:30:00+00:00"
+      },
+      {
+        "close": 330.38,
+        "date": "2026-02-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-04T14:30:00+00:00"
+      },
+      {
+        "close": 330.83,
+        "date": "2026-02-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-05T14:30:00+00:00"
+      },
+      {
+        "close": 348.51,
+        "date": "2026-02-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-06T14:30:00+00:00"
+      },
+      {
+        "close": 352.77,
+        "date": "2026-02-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-09T14:30:00+00:00"
+      },
+      {
+        "close": 351.43,
+        "date": "2026-02-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-10T14:30:00+00:00"
+      },
+      {
+        "close": 360.2,
+        "date": "2026-02-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-11T14:30:00+00:00"
+      },
+      {
+        "close": 351.5,
+        "date": "2026-02-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-12T14:30:00+00:00"
+      },
+      {
+        "close": 354.66,
+        "date": "2026-02-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-13T14:30:00+00:00"
+      },
+      {
+        "close": 354.1,
+        "date": "2026-02-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-17T14:30:00+00:00"
+      },
+      {
+        "close": 357.92,
+        "date": "2026-02-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-18T14:30:00+00:00"
+      },
+      {
+        "close": 355.84,
+        "date": "2026-02-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-19T14:30:00+00:00"
+      },
+      {
+        "close": 359.43,
+        "date": "2026-02-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-20T14:30:00+00:00"
+      },
+      {
+        "close": 356.82,
+        "date": "2026-02-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-23T14:30:00+00:00"
+      },
+      {
+        "close": 362.04,
+        "date": "2026-02-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-24T14:30:00+00:00"
+      },
+      {
+        "close": 368.0,
+        "date": "2026-02-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-25T14:30:00+00:00"
+      },
+      {
+        "close": 356.8,
+        "date": "2026-02-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-26T14:30:00+00:00"
+      },
+      {
+        "close": 352.29,
+        "date": "2026-02-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-27T14:30:00+00:00"
+      },
+      {
+        "close": 352.05,
+        "date": "2026-03-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-02T14:30:00+00:00"
+      },
+      {
+        "close": 334.78,
+        "date": "2026-03-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-03T14:30:00+00:00"
+      },
+      {
+        "close": 341.54,
+        "date": "2026-03-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-04T14:30:00+00:00"
+      },
+      {
+        "close": 337.76,
+        "date": "2026-03-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-05T14:30:00+00:00"
+      },
+      {
+        "close": 323.51,
+        "date": "2026-03-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-06T14:30:00+00:00"
+      },
+      {
+        "close": 336.37,
+        "date": "2026-03-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-09T13:30:00+00:00"
+      },
+      {
+        "close": 338.81,
+        "date": "2026-03-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-10T13:30:00+00:00"
+      },
+      {
+        "close": 342.09,
+        "date": "2026-03-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-11T13:30:00+00:00"
+      },
+      {
+        "close": 330.19,
+        "date": "2026-03-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-12T13:30:00+00:00"
+      },
+      {
+        "close": 331.32,
+        "date": "2026-03-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-13T13:30:00+00:00"
+      },
+      {
+        "close": 337.83,
+        "date": "2026-03-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-16T13:30:00+00:00"
+      },
+      {
+        "close": 340.25,
+        "date": "2026-03-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-17T13:30:00+00:00"
+      },
+      {
+        "close": 338.29,
+        "date": "2026-03-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-18T13:30:00+00:00"
+      },
+      {
+        "close": 340.2,
+        "date": "2026-03-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-19T13:30:00+00:00"
+      },
+      {
+        "close": 332.51,
+        "date": "2026-03-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-20T13:30:00+00:00"
+      },
+      {
+        "close": 336.59,
+        "date": "2026-03-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-23T13:30:00+00:00"
+      },
+      {
+        "close": 341.02,
+        "date": "2026-03-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-24T13:30:00+00:00"
+      },
+      {
+        "close": 345.25,
+        "date": "2026-03-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-25T13:30:00+00:00"
+      },
+      {
+        "close": 328.85,
+        "date": "2026-03-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-26T13:30:00+00:00"
+      },
+      {
+        "close": 323.48,
+        "date": "2026-03-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-27T13:30:00+00:00"
+      },
+      {
+        "close": 309.79,
+        "date": "2026-03-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-30T13:30:00+00:00"
+      },
+      {
+        "close": 328.66,
+        "date": "2026-03-31",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-31T13:30:00+00:00"
+      },
+      {
+        "close": 338.54,
+        "date": "2026-04-01",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-01T13:30:00+00:00"
+      },
+      {
+        "close": 339.61,
+        "date": "2026-04-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-02T13:30:00+00:00"
+      },
+      {
+        "close": 344.1,
+        "date": "2026-04-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-06T13:30:00+00:00"
+      },
+      {
+        "close": 347.76,
+        "date": "2026-04-07",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-07T13:30:00+00:00"
+      },
+      {
+        "close": 370.4,
+        "date": "2026-04-08",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-08T13:30:00+00:00"
+      },
+      {
+        "close": 378.63,
+        "date": "2026-04-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-09T13:30:00+00:00"
+      },
+      {
+        "close": 386.6,
+        "date": "2026-04-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-10T13:30:00+00:00"
+      },
+      {
+        "close": 393.34,
+        "date": "2026-04-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-13T13:30:00+00:00"
+      },
+      {
+        "close": 401.24,
+        "date": "2026-04-14",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-14T13:30:00+00:00"
+      },
+      {
+        "close": 401.86,
+        "date": "2026-04-15",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-15T13:30:00+00:00"
+      },
+      {
+        "close": 405.95,
+        "date": "2026-04-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-16T13:30:00+00:00"
+      },
+      {
+        "close": 415.71,
+        "date": "2026-04-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-17T13:30:00+00:00"
+      },
+      {
+        "close": 417.55,
+        "date": "2026-04-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-20T13:30:00+00:00"
+      },
+      {
+        "close": 420.7,
+        "date": "2026-04-21",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-21T13:30:00+00:00"
+      },
+      {
+        "close": 431.77,
+        "date": "2026-04-22",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-22T13:30:00+00:00"
+      },
+      {
+        "close": 441.0,
+        "date": "2026-04-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-23T13:30:00+00:00"
+      },
+      {
+        "close": 461.6,
+        "date": "2026-04-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-24T13:30:00+00:00"
+      }
+    ],
+    "TSM": [
+      {
+        "close": 332.71,
+        "date": "2026-01-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-26T14:30:00+00:00"
+      },
+      {
+        "close": 338.34,
+        "date": "2026-01-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-27T14:30:00+00:00"
+      },
+      {
+        "close": 342.3,
+        "date": "2026-01-28",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-28T14:30:00+00:00"
+      },
+      {
+        "close": 339.55,
+        "date": "2026-01-29",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-29T14:30:00+00:00"
+      },
+      {
+        "close": 330.56,
+        "date": "2026-01-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-01-30T14:30:00+00:00"
+      },
+      {
+        "close": 341.36,
+        "date": "2026-02-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-02T14:30:00+00:00"
+      },
+      {
+        "close": 335.75,
+        "date": "2026-02-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-03T14:30:00+00:00"
+      },
+      {
+        "close": 325.74,
+        "date": "2026-02-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-04T14:30:00+00:00"
+      },
+      {
+        "close": 330.73,
+        "date": "2026-02-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-05T14:30:00+00:00"
+      },
+      {
+        "close": 348.85,
+        "date": "2026-02-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-06T14:30:00+00:00"
+      },
+      {
+        "close": 355.41,
+        "date": "2026-02-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-09T14:30:00+00:00"
+      },
+      {
+        "close": 361.91,
+        "date": "2026-02-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-10T14:30:00+00:00"
+      },
+      {
+        "close": 374.09,
+        "date": "2026-02-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-11T14:30:00+00:00"
+      },
+      {
+        "close": 368.1,
+        "date": "2026-02-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-12T14:30:00+00:00"
+      },
+      {
+        "close": 366.36,
+        "date": "2026-02-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-13T14:30:00+00:00"
+      },
+      {
+        "close": 364.2,
+        "date": "2026-02-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-17T14:30:00+00:00"
+      },
+      {
+        "close": 362.26,
+        "date": "2026-02-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-18T14:30:00+00:00"
+      },
+      {
+        "close": 360.39,
+        "date": "2026-02-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-19T14:30:00+00:00"
+      },
+      {
+        "close": 370.54,
+        "date": "2026-02-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-20T14:30:00+00:00"
+      },
+      {
+        "close": 370.04,
+        "date": "2026-02-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-23T14:30:00+00:00"
+      },
+      {
+        "close": 385.75,
+        "date": "2026-02-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-24T14:30:00+00:00"
+      },
+      {
+        "close": 387.73,
+        "date": "2026-02-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-25T14:30:00+00:00"
+      },
+      {
+        "close": 376.81,
+        "date": "2026-02-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-26T14:30:00+00:00"
+      },
+      {
+        "close": 374.58,
+        "date": "2026-02-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-02-27T14:30:00+00:00"
+      },
+      {
+        "close": 369.11,
+        "date": "2026-03-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-02T14:30:00+00:00"
+      },
+      {
+        "close": 353.13,
+        "date": "2026-03-03",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-03T14:30:00+00:00"
+      },
+      {
+        "close": 357.44,
+        "date": "2026-03-04",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-04T14:30:00+00:00"
+      },
+      {
+        "close": 353.86,
+        "date": "2026-03-05",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-05T14:30:00+00:00"
+      },
+      {
+        "close": 338.89,
+        "date": "2026-03-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-06T14:30:00+00:00"
+      },
+      {
+        "close": 348.7,
+        "date": "2026-03-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-09T13:30:00+00:00"
+      },
+      {
+        "close": 347.09,
+        "date": "2026-03-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-10T13:30:00+00:00"
+      },
+      {
+        "close": 354.56,
+        "date": "2026-03-11",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-11T13:30:00+00:00"
+      },
+      {
+        "close": 336.71,
+        "date": "2026-03-12",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-12T13:30:00+00:00"
+      },
+      {
+        "close": 338.31,
+        "date": "2026-03-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-13T13:30:00+00:00"
+      },
+      {
+        "close": 340.23,
+        "date": "2026-03-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-16T13:30:00+00:00"
+      },
+      {
+        "close": 345.98,
+        "date": "2026-03-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-17T13:30:00+00:00"
+      },
+      {
+        "close": 339.57,
+        "date": "2026-03-18",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-18T13:30:00+00:00"
+      },
+      {
+        "close": 338.79,
+        "date": "2026-03-19",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-19T13:30:00+00:00"
+      },
+      {
+        "close": 329.24,
+        "date": "2026-03-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-20T13:30:00+00:00"
+      },
+      {
+        "close": 338.45,
+        "date": "2026-03-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-23T13:30:00+00:00"
+      },
+      {
+        "close": 343.25,
+        "date": "2026-03-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-24T13:30:00+00:00"
+      },
+      {
+        "close": 347.75,
+        "date": "2026-03-25",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-25T13:30:00+00:00"
+      },
+      {
+        "close": 326.11,
+        "date": "2026-03-26",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-26T13:30:00+00:00"
+      },
+      {
+        "close": 326.74,
+        "date": "2026-03-27",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-27T13:30:00+00:00"
+      },
+      {
+        "close": 316.5,
+        "date": "2026-03-30",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-30T13:30:00+00:00"
+      },
+      {
+        "close": 337.95,
+        "date": "2026-03-31",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-03-31T13:30:00+00:00"
+      },
+      {
+        "close": 341.49,
+        "date": "2026-04-01",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-01T13:30:00+00:00"
+      },
+      {
+        "close": 339.04,
+        "date": "2026-04-02",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-02T13:30:00+00:00"
+      },
+      {
+        "close": 341.76,
+        "date": "2026-04-06",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-06T13:30:00+00:00"
+      },
+      {
+        "close": 345.32,
+        "date": "2026-04-07",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-07T13:30:00+00:00"
+      },
+      {
+        "close": 365.9,
+        "date": "2026-04-08",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-08T13:30:00+00:00"
+      },
+      {
+        "close": 365.49,
+        "date": "2026-04-09",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-09T13:30:00+00:00"
+      },
+      {
+        "close": 370.6,
+        "date": "2026-04-10",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-10T13:30:00+00:00"
+      },
+      {
+        "close": 369.57,
+        "date": "2026-04-13",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-13T13:30:00+00:00"
+      },
+      {
+        "close": 379.89,
+        "date": "2026-04-14",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-14T13:30:00+00:00"
+      },
+      {
+        "close": 375.1,
+        "date": "2026-04-15",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-15T13:30:00+00:00"
+      },
+      {
+        "close": 363.35,
+        "date": "2026-04-16",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-16T13:30:00+00:00"
+      },
+      {
+        "close": 370.5,
+        "date": "2026-04-17",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-17T13:30:00+00:00"
+      },
+      {
+        "close": 366.24,
+        "date": "2026-04-20",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-20T13:30:00+00:00"
+      },
+      {
+        "close": 368.08,
+        "date": "2026-04-21",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-21T13:30:00+00:00"
+      },
+      {
+        "close": 387.44,
+        "date": "2026-04-22",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-22T13:30:00+00:00"
+      },
+      {
+        "close": 382.66,
+        "date": "2026-04-23",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-23T13:30:00+00:00"
+      },
+      {
+        "close": 402.46,
+        "date": "2026-04-24",
+        "source": "Yahoo Finance chart endpoint (unofficial)",
+        "updatedAt": "2026-04-24T13:30:00+00:00"
+      }
+    ]
+  },
+  "note": "Durable quote history for AI Market Lab. Historical closes use Yahoo Finance chart endpoint (unofficial); current snapshots use delayed Stooq quotes. Paper-trading only.",
+  "updatedAt": "2026-04-25T20:47:16.378889+00:00"
+}
