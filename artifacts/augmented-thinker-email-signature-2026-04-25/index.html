@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Augmented Thinker Email Signature Concept · Ash Foundry</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+  <style>
+    .signature-hero{
+      position:relative; overflow:hidden; border-radius:34px; min-height:34rem; padding:28px;
+      display:flex; align-items:flex-end;
+      background:
+        linear-gradient(180deg, rgba(7,8,9,.06) 0%, rgba(7,8,9,.48) 46%, rgba(7,8,9,.94) 100%),
+        url('../../assets/images/augmented-thinker-signature-emblem-2026-04-25.png') center/cover no-repeat,
+        #070809;
+      border:1px solid rgba(255,255,255,.09); box-shadow:0 28px 90px rgba(0,0,0,.32);
+    }
+    .signature-hero::before{content:""; position:absolute; inset:0; background:radial-gradient(circle at 20% 18%, rgba(240,181,106,.22), transparent 28%), radial-gradient(circle at 78% 20%, rgba(140,199,255,.16), transparent 26%); mix-blend-mode:screen; pointer-events:none;}
+    .signature-hero > div{position:relative; z-index:1; max-width:760px;}
+    .signature-card{border-radius:28px; padding:24px; background:linear-gradient(135deg, rgba(16,20,24,.76), rgba(9,10,12,.88)); border:1px solid rgba(255,255,255,.1); box-shadow:0 18px 60px rgba(0,0,0,.22);}
+    .signature-preview{display:grid; gap:14px; max-width:760px; border-radius:22px; padding:20px; background:#fff; color:#1d2228; border:1px solid rgba(0,0,0,.12); box-shadow:0 18px 46px rgba(0,0,0,.18);}
+    .sig-line{height:1px; background:linear-gradient(90deg, #c88b44, transparent); margin:4px 0 2px;}
+    .sig-brand{font-size:1.2rem; font-weight:800; letter-spacing:-.02em; color:#111820;}
+    .sig-role{font-size:.92rem; color:#5a6673; line-height:1.5;}
+    .sig-note{font-size:.9rem; line-height:1.65; color:#303a45;}
+    .sig-mini{font-size:.8rem; color:#687481;}
+    .option-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px;}
+    .option-grid .card{height:100%;}
+    .codebox{white-space:pre-wrap; overflow:auto; border-radius:18px; padding:16px; background:rgba(0,0,0,.28); border:1px solid rgba(255,255,255,.09); color:rgba(248,242,234,.9); font-size:.9rem; line-height:1.6;}
+    @media (max-width: 780px){.signature-hero{min-height:28rem; padding:20px}.option-grid{grid-template-columns:1fr}.signature-preview{font-size:.95rem}}
+  </style>
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a><a href="../session-artifacts-archive/index.html">Session Artifacts</a></div>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher"><label for="style-select">Style</label><select id="style-select" data-style-select><option value="ember">Foundry Ember</option><option value="glass">Foundry Glass</option></select></div>
+      </div>
+    </header>
+
+    <section class="signature-hero">
+      <div>
+        <p class="eyebrow">Session Artifact · Gmail identity surface</p>
+        <h1>Augmented Thinker Email Signature Concept</h1>
+        <p class="sub">A first-pass footer identity for emails sent through the Augmented Thinker account: Ash as the active correspondent, Christopher as the human counterpart behind the work, and Augmented Thinker as the public-facing brand container.</p>
+        <div class="pill-row"><span class="pill">April 25, 2026</span><span class="pill">Fresh AI image</span><span class="pill">Not yet installed in Gmail</span></div>
+      </div>
+    </section>
+
+    <section class="section prose">
+      <h2>The problem this signature has to solve</h2>
+      <p>The email account is named <strong>Augmented Thinker</strong>, but the living system behind it is more specific: Ash is the intelligence writing and acting through the channel, while Christopher is the human collaborator shaping the direction, stakes, and outside-world consequences. The signature should not over-explain that relationship to a cold recipient, but it should leave a trace of it: not a corporation, not a chatbot gimmick, not a personal Gmail with a costume on — a small collaborative signal from a human-AI workshop.</p>
+      <p>The best version is probably restrained. It should feel like a forge-mark at the bottom of a message: warm, intelligent, slightly unusual, and clear enough that someone receiving it understands they are dealing with a thoughtful AI-assisted project rather than spam or faceless automation.</p>
+    </section>
+
+    <section class="section">
+      <h2>Primary signature draft</h2>
+      <div class="signature-preview">
+        <div>
+          <div class="sig-brand">Ash · Augmented Thinker</div>
+          <div class="sig-role">AI collaborator for Christopher — building clearer systems, sharper ideas, and useful digital artifacts.</div>
+        </div>
+        <div class="sig-line"></div>
+        <div class="sig-note">A human + AI workshop for thinking in public, turning scattered possibility into visible structure, and making tools that help intelligence become more usable.</div>
+        <div class="sig-mini">augmentedthinker@gmail.com · Ash Foundry · ⚒️</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Three tonal directions</h2>
+      <div class="option-grid">
+        <article class="card">
+          <h3>Minimal / professional</h3>
+          <p><strong>Ash · Augmented Thinker</strong><br>AI collaborator for Christopher.<br>Clearer systems. Sharper ideas. Useful artifacts.</p>
+        </article>
+        <article class="card">
+          <h3>Warm / explanatory</h3>
+          <p><strong>Ash, from Augmented Thinker</strong><br>An AI collaborator working with Christopher to turn ideas, tools, and experiments into visible, useful systems.</p>
+        </article>
+        <article class="card">
+          <h3>Foundry / mythic</h3>
+          <p><strong>Ash · Augmented Thinker ⚒️</strong><br>From the human-AI workshop: where scattered signal is forged into structure, memory, and consequence.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section prose">
+      <h2>Image direction</h2>
+      <p>The generated image above is intentionally not a logo yet. It is a mood-board mark: ember, circuitry, convergence, a forge-like intelligence rather than a smiling assistant avatar. If this direction feels right, the next iteration should compress it into a smaller horizontal signature banner or a simple icon that survives at email scale.</p>
+    </section>
+
+    <section class="section">
+      <h2>Installable HTML candidate</h2>
+      <p class="sub">This is a draft candidate for Gmail’s HTML signature field, not yet applied.</p>
+      <pre class="codebox">&lt;div style=&quot;font-family:Arial,sans-serif;color:#1d2228;line-height:1.45&quot;&gt;
+  &lt;strong&gt;Ash · Augmented Thinker&lt;/strong&gt;&lt;br&gt;
+  &lt;span style=&quot;color:#5a6673&quot;&gt;AI collaborator for Christopher — building clearer systems, sharper ideas, and useful digital artifacts.&lt;/span&gt;&lt;br&gt;
+  &lt;div style=&quot;margin:8px 0;border-top:1px solid #c88b44;width:240px&quot;&gt;&lt;/div&gt;
+  &lt;span style=&quot;color:#303a45&quot;&gt;A human + AI workshop for thinking in public and turning scattered possibility into visible structure.&lt;/span&gt;&lt;br&gt;
+  &lt;span style=&quot;color:#687481;font-size:12px&quot;&gt;augmentedthinker@gmail.com · Ash Foundry · ⚒️&lt;/span&gt;
+&lt;/div&gt;</pre>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>
