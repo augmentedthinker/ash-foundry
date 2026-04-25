@@ -161,3 +161,53 @@ summary::-webkit-details-marker{display:none}
 /* Artifact Notes & Quotes */
 .briefing-note{font-size:1.03rem;line-height:1.9}
 .quote-box{margin:2rem 0;padding:2rem;border-left:4px solid var(--accent);background:var(--accent-soft);font-style:italic;font-size:1.2rem;color:var(--text-quote);border-radius:0 12px 12px 0}
+
+/*
+  Glass-mode artifact safety overrides
+  -----------------------------------
+  Many long-form session artifacts define local editorial classes such as
+  `.prose-card`, `.wide-quote`, `.signal`, and `.timeline-item` inside their
+  own page-level <style> blocks. Those older blocks often hard-code Ember
+  colors for dark surfaces. Because the Glass stylesheet is loaded before those
+  page-level styles, these overrides intentionally use !important so Glass
+  remains readable even when an artifact was authored dark-first.
+*/
+html[data-style="glass"] .prose-card{
+  background:rgba(255,255,255,.78) !important;
+  border-color:rgba(64,92,140,.18) !important;
+  box-shadow:0 24px 70px rgba(70,97,145,.16) !important;
+  color:var(--text) !important;
+}
+html[data-style="glass"] .prose-card h2,
+html[data-style="glass"] .prose-card h3,
+html[data-style="glass"] .prose-card strong{
+  color:var(--text) !important;
+}
+html[data-style="glass"] .prose-card p,
+html[data-style="glass"] .prose-card li,
+html[data-style="glass"] .signature{
+  color:var(--text-soft) !important;
+}
+html[data-style="glass"] .wide-quote{
+  background:linear-gradient(135deg, rgba(255,255,255,.84), rgba(239,245,255,.72)) !important;
+  border-color:rgba(91,124,250,.20) !important;
+  border-left-color:rgba(91,124,250,.58) !important;
+  color:var(--text-quote) !important;
+  box-shadow:0 18px 54px rgba(70,97,145,.14) !important;
+}
+html[data-style="glass"] .signal,
+html[data-style="glass"] .callout,
+html[data-style="glass"] .timeline-item{
+  background:rgba(255,255,255,.62) !important;
+  border-color:rgba(64,92,140,.16) !important;
+  color:var(--text-soft) !important;
+}
+html[data-style="glass"] .signal strong,
+html[data-style="glass"] .timeline-item strong{
+  color:var(--text) !important;
+}
+html[data-style="glass"] .signal span,
+html[data-style="glass"] .callout,
+html[data-style="glass"] .timeline-item p{
+  color:var(--text-soft) !important;
+}

@@ -59,6 +59,13 @@
     </div>
 
     <div class="sg-section">
+      <h3 class="sg-heading">Glass Mode Readability Rule</h3>
+      <p class="justified-sample">Foundry Ember is the dark editorial mode; Foundry Glass is the light editorial mode. Glass must never be treated as merely Ember with a pale background. Long-form artifact cards, quote boxes, timelines, signal grids, and custom prose sections need dark text on translucent light panels when <code>html[data-style="glass"]</code> is active.</p>
+      <p class="justified-sample">When authoring new artifacts, prefer shared theme variables such as <code>var(--text)</code>, <code>var(--text-soft)</code>, <code>var(--panel)</code>, <code>var(--panel-soft)</code>, and <code>var(--line)</code> instead of hard-coded Ember colors like <code>#f8f2ea</code> or <code>rgba(245,239,231,...)</code>. If a page needs custom dark-first editorial styling, include explicit <code>html[data-style="glass"]</code> overrides for every custom surface that carries prose.</p>
+      <div class="quote-box">Glass mode acceptance test: switch any new long-form artifact to Glass and confirm that body paragraphs, headings, quote cards, timeline items, pills, and signal boxes remain readable without selecting text or zooming.</div>
+    </div>
+
+    <div class="sg-section">
       <h3 class="sg-heading">2. Pills, Labels, and Actions</h3>
       <div style="margin-bottom: 1.5rem;">
         <p style="margin-bottom: 8px; font-size: 0.9rem; color: var(--muted);">Pill Row (.pill-row > .pill)</p>
