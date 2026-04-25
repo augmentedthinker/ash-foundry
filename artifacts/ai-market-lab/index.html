@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>AI Market Lab · Ash Foundry</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+  <style>
+    .lab-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:start}
+    .panel{border-radius:26px;padding:22px;background:linear-gradient(135deg,rgba(16,20,24,.72),rgba(8,10,12,.88));border:1px solid rgba(255,255,255,.1);box-shadow:0 18px 60px rgba(0,0,0,.22)}
+    .control-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:12px 0}
+    button.lab-button,input,select,textarea{border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:rgba(248,242,234,.94);padding:10px 14px;font:inherit}
+    button.lab-button{cursor:pointer;background:linear-gradient(135deg,rgba(240,181,106,.22),rgba(140,199,255,.12));transition:transform .18s ease,border-color .18s ease}
+    button.lab-button:hover{transform:translateY(-1px);border-color:rgba(240,181,106,.45)}
+    textarea{border-radius:18px;width:100%;min-height:110px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9rem}
+    input[type="number"]{width:120px}
+    .watch-table{width:100%;border-collapse:collapse;font-size:.92rem;overflow:hidden;border-radius:18px}
+    .watch-table th,.watch-table td{padding:10px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left;vertical-align:top}
+    .watch-table th{color:rgba(248,242,234,.62);font-size:.78rem;text-transform:uppercase;letter-spacing:.1em}
+    .ticker{font-weight:800;color:#f0b56a}.muted{color:rgba(248,242,234,.62)}.positive{color:#68d391}.negative{color:#fc8181}
+    .spark{width:100%;height:48px;display:block;background:rgba(255,255,255,.025);border-radius:12px}
+    .strategy-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .strategy{border-radius:20px;padding:16px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.035)}
+    .strategy h3{margin-top:0}.strategy ul{padding-left:1.1rem;line-height:1.7}.strategy button{margin-top:8px}
+    .note{font-size:.9rem;line-height:1.7;color:rgba(248,242,234,.76)}
+    .mini-ledger{max-height:320px;overflow:auto}
+    @media(max-width:900px){.lab-grid,.strategy-grid{grid-template-columns:1fr}.watch-table{font-size:.84rem}.hide-mobile{display:none}}
+  </style>
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a></div>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher"><label for="style-select">Style</label><select id="style-select" data-style-select><option value="ember">Foundry Ember</option><option value="glass">Foundry Glass</option></select></div>
+      </div>
+    </header>
+
+    <section class="hero hero-compact">
+      <p class="eyebrow">AI Market Lab · Paper Portfolio</p>
+      <h1 class="h1-compact">Frontier Shock Watch</h1>
+      <p class="sub">A lightweight market game for tracking AI infrastructure, model-release shocks, and paper-money strategies before any real capital enters the arena. Research surface first; dragon-hoard later.</p>
+      <div class="pill-row"><span class="pill">Not financial advice</span><span class="pill">Manual update button</span><span class="pill">Local browser paper portfolio</span><span class="pill">DeepSeek / frontier model events</span></div>
+    </section>
+
+    <section class="section prose">
+      <article class="quote">The thesis is not “short Nvidia because China made a model.” The thesis is: frontier-model shocks move expectations around compute demand, inference margins, software leverage, and geopolitical chip ecosystems.</article>
+      <p>This page is a sandbox for testing that thesis with play money. It stores snapshots and paper trades in your browser only. Prices are pulled from Stooq when the update button works; if the browser blocks a fetch, paste CSV rows manually. Either way, the point is discipline: thesis → watchlist → simulated allocation → postmortem.</p>
+    </section>
+
+    <section class="section lab-grid">
+      <article class="panel">
+        <h2>Watchlist</h2>
+        <p class="note">Core names: AI chips, hyperscalers, infrastructure, and ETFs exposed to the DeepSeek-style shock cycle.</p>
+        <div class="control-row">
+          <button class="lab-button" id="updateQuotes">Update quotes</button>
+          <button class="lab-button" id="clearHistory">Clear local history</button>
+          <span class="muted" id="status">No update yet.</span>
+        </div>
+        <table class="watch-table" id="watchTable">
+          <thead><tr><th>Ticker</th><th>Name</th><th>Last</th><th>Change</th><th class="hide-mobile">Local graph</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </article>
+
+      <aside class="panel">
+        <h2>Manual price update</h2>
+        <p class="note">Paste rows like <code>NVDA,875.25</code> if live fetch fails. This app is static GitHub Pages, so browser finance APIs may be moody little goblins.</p>
+        <textarea id="manualCsv" placeholder="NVDA,875.25&#10;AMD,156.20&#10;MSFT,421.10"></textarea>
+        <div class="control-row"><button class="lab-button" id="applyManual">Apply manual prices</button></div>
+        <h3>Current thesis notes</h3>
+        <p class="note"><strong>Bearish pressure:</strong> expensive inference premiums, chip monopoly assumptions, China export-control insulation.</p>
+        <p class="note"><strong>Bullish counterforce:</strong> cheaper models can increase total AI usage, which can still increase aggregate compute demand.</p>
+      </aside>
+    </section>
+
+    <section class="section">
+      <h2>Strategy presets</h2>
+      <div class="strategy-grid">
+        <article class="strategy">
+          <h3>Balanced AI Basket</h3>
+          <p class="note">Equal-weight broad exposure. Boring on purpose.</p>
+          <ul><li>NVDA, AMD, TSM, AVGO</li><li>MSFT, GOOGL, AMZN, META</li><li>SMH, QQQ</li></ul>
+          <button class="lab-button" data-strategy="balanced">Load strategy</button>
+        </article>
+        <article class="strategy">
+          <h3>DeepSeek Shock Hedge</h3>
+          <p class="note">Tests the idea that model efficiency pressures premium chip multiples while helping AI users.</p>
+          <ul><li>Underweight: NVDA, SMCI</li><li>Overweight: GOOGL, META, MSFT</li><li>ETF ballast: QQQ</li></ul>
+          <button class="lab-button" data-strategy="shock">Load strategy</button>
+        </article>
+        <article class="strategy">
+          <h3>Compute Still Wins</h3>
+          <p class="note">Tests the counter-thesis: cheaper intelligence drives more usage, not less compute.</p>
+          <ul><li>Overweight: NVDA, AVGO, TSM</li><li>Support: AMD, SMH, MSFT</li></ul>
+          <button class="lab-button" data-strategy="compute">Load strategy</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section lab-grid">
+      <article class="panel">
+        <h2>Paper portfolio</h2>
+        <div class="control-row">
+          <label>Bankroll <input id="bankroll" type="number" value="1000" min="1" step="100"></label>
+          <button class="lab-button" id="startGame">Start / reset paper game</button>
+          <button class="lab-button" id="markToMarket">Mark to market</button>
+        </div>
+        <table class="watch-table" id="portfolioTable">
+          <thead><tr><th>Ticker</th><th>Weight</th><th>Entry</th><th>Shares</th><th>Value</th><th>P/L</th></tr></thead>
+          <tbody><tr><td colspan="6" class="muted">Load a strategy, then start the game.</td></tr></tbody>
+        </table>
+      </article>
+      <aside class="panel">
+        <h2>Selected allocation</h2>
+        <div id="allocationList" class="note">No strategy loaded yet.</div>
+        <h2>Local ledger</h2>
+        <div id="ledger" class="note mini-ledger">No paper trades yet.</div>
+      </aside>
+    </section>
+
+    <section class="section prose">
+      <h2>Operating rules before real money</h2>
+      <ul>
+        <li>No autonomous real trades. Ash can research, simulate, and propose; Christopher approves anything real.</li>
+        <li>Every thesis needs a time horizon, invalidation condition, and postmortem.</li>
+        <li>Shorting and leveraged products are advanced weapons. Paper-test them first.</li>
+        <li>DeepSeek-style releases are not automatically bearish. Efficiency can compress margins and expand demand at the same time.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    const watchlist = [
+      ['NVDA','Nvidia','nvda.us'],['AMD','AMD','amd.us'],['TSM','TSMC','tsm.us'],['AVGO','Broadcom','avgo.us'],['ARM','Arm','arm.us'],['SMCI','Super Micro','smci.us'],
+      ['MSFT','Microsoft','msft.us'],['GOOGL','Alphabet','googl.us'],['AMZN','Amazon','amzn.us'],['META','Meta','meta.us'],['ASML','ASML','asml.us'],['MU','Micron','mu.us'],
+      ['SMH','VanEck Semiconductor ETF','smh.us'],['SOXX','iShares Semiconductor ETF','soxx.us'],['QQQ','Nasdaq 100 ETF','qqq.us']
+    ];
+    const strategies = {
+      balanced:{NVDA:.10,AMD:.10,TSM:.10,AVGO:.10,MSFT:.10,GOOGL:.10,AMZN:.10,META:.10,SMH:.10,QQQ:.10},
+      shock:{NVDA:.05,SMCI:.03,AMD:.07,GOOGL:.18,META:.18,MSFT:.18,AMZN:.12,QQQ:.12,SMH:.07},
+      compute:{NVDA:.22,AVGO:.18,TSM:.16,AMD:.12,SMH:.14,MSFT:.10,ASML:.08}
+    };
+    let selected = JSON.parse(localStorage.getItem('aml-selected') || 'null');
+    let quotes = JSON.parse(localStorage.getItem('aml-quotes') || '{}');
+    let history = JSON.parse(localStorage.getItem('aml-history') || '{}');
+    let portfolio = JSON.parse(localStorage.getItem('aml-portfolio') || 'null');
+
+    function save(){localStorage.setItem('aml-quotes',JSON.stringify(quotes));localStorage.setItem('aml-history',JSON.stringify(history));localStorage.setItem('aml-selected',JSON.stringify(selected));localStorage.setItem('aml-portfolio',JSON.stringify(portfolio));}
+    function fmt(n){return Number.isFinite(n)?'$'+n.toFixed(2):'—'}
+    function pct(n){return Number.isFinite(n)?(n>=0?'+':'')+(n*100).toFixed(2)+'%':'—'}
+    function nowStamp(){return new Date().toLocaleString()}
+    function pushHistory(t, price){if(!history[t]) history[t]=[]; history[t].push({t:Date.now(),p:price}); history[t]=history[t].slice(-20)}
+    function drawSpark(canvas, data){const ctx=canvas.getContext('2d'), w=canvas.width=canvas.clientWidth*devicePixelRatio, h=canvas.height=canvas.clientHeight*devicePixelRatio; ctx.clearRect(0,0,w,h); if(!data||data.length<2){ctx.fillStyle='rgba(248,242,234,.35)';ctx.fillText('needs 2 updates',10,24);return} const vals=data.map(d=>d.p), min=Math.min(...vals), max=Math.max(...vals), pad=8*devicePixelRatio; ctx.strokeStyle=vals.at(-1)>=vals[0]?'#68d391':'#fc8181'; ctx.lineWidth=2*devicePixelRatio; ctx.beginPath(); vals.forEach((v,i)=>{const x=pad+(w-2*pad)*(i/(vals.length-1)); const y=h-pad-(h-2*pad)*((v-min)/(max-min||1)); i?ctx.lineTo(x,y):ctx.moveTo(x,y)}); ctx.stroke()}
+    function renderWatch(){const tb=document.querySelector('#watchTable tbody'); tb.innerHTML=''; watchlist.forEach(([t,n])=>{const q=quotes[t]||{}; const ch=q.prev?((q.last-q.prev)/q.prev):NaN; const tr=document.createElement('tr'); tr.innerHTML=`<td class="ticker">${t}</td><td>${n}</td><td>${fmt(q.last)}</td><td class="${ch>=0?'positive':'negative'}">${pct(ch)}</td><td class="hide-mobile"><canvas class="spark" data-t="${t}"></canvas></td>`; tb.appendChild(tr)}); document.querySelectorAll('canvas.spark').forEach(c=>drawSpark(c,history[c.dataset.t]));}
+    function renderAllocation(){const el=document.getElementById('allocationList'); if(!selected){el.textContent='No strategy loaded yet.';return} el.innerHTML=Object.entries(selected).map(([t,w])=>`<div><span class="ticker">${t}</span> ${(w*100).toFixed(1)}%</div>`).join('')}
+    function renderPortfolio(){const tb=document.querySelector('#portfolioTable tbody'); if(!portfolio){tb.innerHTML='<tr><td colspan="6" class="muted">Load a strategy, then start the game.</td></tr>';return} let total=0, cost=0; tb.innerHTML=''; Object.entries(portfolio.positions).forEach(([t,pos])=>{const last=quotes[t]?.last || pos.entry; const value=last*pos.shares; const pl=value-pos.cost; total+=value; cost+=pos.cost; const tr=document.createElement('tr'); tr.innerHTML=`<td class="ticker">${t}</td><td>${(pos.weight*100).toFixed(1)}%</td><td>${fmt(pos.entry)}</td><td>${pos.shares.toFixed(4)}</td><td>${fmt(value)}</td><td class="${pl>=0?'positive':'negative'}">${fmt(pl)}</td>`; tb.appendChild(tr)}); const tr=document.createElement('tr'); tr.innerHTML=`<td colspan="4"><strong>Total</strong></td><td><strong>${fmt(total)}</strong></td><td class="${total-cost>=0?'positive':'negative'}"><strong>${fmt(total-cost)} (${pct((total-cost)/cost)})</strong></td>`; tb.appendChild(tr); document.getElementById('ledger').innerHTML=`Started: ${portfolio.started}<br>Initial bankroll: ${fmt(portfolio.bankroll)}<br>Current value: ${fmt(total)}<br>P/L: ${fmt(total-cost)} (${pct((total-cost)/cost)})`}
+    async function updateQuotes(){const status=document.getElementById('status'); status.textContent='Fetching Stooq quotes…'; try{const symbols=watchlist.map(x=>x[2]).join(','); const url=`https://stooq.com/q/l/?s=${symbols}&f=sd2t2ohlcv&h&e=csv`; const res=await fetch(url,{cache:'no-store'}); if(!res.ok) throw new Error(res.status); const csv=await res.text(); const lines=csv.trim().split(/\r?\n/).slice(1); let count=0; lines.forEach(line=>{const parts=line.split(','); const symbol=parts[0]?.replace('.US','').toUpperCase(); const close=parseFloat(parts[6]); if(symbol && Number.isFinite(close)){const prev=quotes[symbol]?.last; quotes[symbol]={last:close,prev:prev||close,updated:nowStamp()}; pushHistory(symbol,close); count++}}); status.textContent=`Updated ${count} quotes at ${nowStamp()}`; save(); renderWatch(); renderPortfolio();}catch(e){status.textContent='Live fetch failed. Paste manual prices instead. '+e.message}}
+    function applyManual(){document.getElementById('manualCsv').value.split(/\r?\n/).forEach(line=>{const [raw, val]=line.split(','); const t=raw?.trim().toUpperCase(); const price=parseFloat(val); if(t && Number.isFinite(price)){const prev=quotes[t]?.last; quotes[t]={last:price,prev:prev||price,updated:nowStamp()}; pushHistory(t,price)}}); save(); renderWatch(); renderPortfolio(); document.getElementById('status').textContent='Manual prices applied at '+nowStamp()}
+    document.querySelectorAll('[data-strategy]').forEach(b=>b.onclick=()=>{selected=strategies[b.dataset.strategy]; save(); renderAllocation()});
+    document.getElementById('startGame').onclick=()=>{if(!selected){alert('Load a strategy first.');return} const bankroll=parseFloat(document.getElementById('bankroll').value)||1000; const positions={}; for(const [t,w] of Object.entries(selected)){const price=quotes[t]?.last; if(!price){alert('Missing price for '+t+'. Update quotes or enter manual prices first.');return} const cost=bankroll*w; positions[t]={weight:w,entry:price,shares:cost/price,cost};} portfolio={started:nowStamp(),bankroll,positions}; save(); renderPortfolio()};
+    document.getElementById('markToMarket').onclick=renderPortfolio;
+    document.getElementById('applyManual').onclick=applyManual;
+    document.getElementById('updateQuotes').onclick=updateQuotes;
+    document.getElementById('clearHistory').onclick=()=>{if(confirm('Clear local quote history and paper portfolio?')){history={};quotes={};portfolio=null;save();renderWatch();renderPortfolio();document.getElementById('ledger').textContent='Cleared.'}};
+    renderWatch(); renderAllocation(); renderPortfolio();
+  </script>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>
