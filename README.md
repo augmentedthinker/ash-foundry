@@ -26,6 +26,7 @@ It is now functioning simultaneously as:
 - a **cognitive chamber shell** for Hemispheres and the lens-driven debates
 - a **memory archive** that preserves both internal records and browser-facing memory pushes
 - a **creative API laboratory** for image, voice, music, and model-access experiments
+- an **external signal lane** for Gmail/inbox access, webhook experiments, and bounded autonomy around live messages
 - a **mobile-first reading lane** for phone-native artifacts
 - an **active-surface threshold** for current fronts, pressures, and next-step visibility
 
@@ -121,7 +122,22 @@ Current key pages:
 
 This lane matters because it forces real tension, records disagreement, and makes multi-model cognition visible instead of hidden.
 
-### 7. Heartbeat Notes
+### 7. Gmail
+This lane documents the new Augmented Thinker Gmail integration and the boundary between manual inbox access, future webhook monitoring, and safe external action.
+
+Current key page:
+- `artifacts/gmail-initial-state-2026-04-25/index.html`
+
+Current operational state:
+- manual Gmail access for `augmentedthinker@gmail.com` works through `gog`
+- commands should default to `--gmail-no-send`
+- read/search/summarize is allowed when Christopher asks
+- sending, deleting, archiving, labeling, marking read, or changing settings requires explicit authorization
+- OpenClaw Gmail webhook infrastructure is configured, but always-on watcher behavior is not yet treated as durable
+
+This lane matters because Gmail is a live external signal surface. It can make Ash more useful, but it also requires stricter permission boundaries than ordinary local artifact work.
+
+### 8. Heartbeat Notes
 This lane documents heartbeat as bounded initiative and preserves the forensic record of proactive behavior.
 
 Current key pages:
@@ -132,18 +148,18 @@ Current key pages:
 
 This remains the most important diagnostic surface for understanding how Ash behaves proactively in practice.
 
-### 8. Thinker on X
+### 9. Thinker on X
 This lane tracks Christopher’s reactivated Augmented Thinker X presence and its publishing loop.
 
 This lane matters because it turns Foundry work into outward-facing signal, proof, and public continuity rather than purely inward architecture.
 
-### 9. T-Shirts
+### 10. T-Shirts
 This lane treats the Fourthwall merch store as a real profitability and proof surface rather than a dead side project.
 
 Current key page:
 - `artifacts/tshirts-store-state-2026-04-16/index.html`
 
-### 10. Mobile & Remote Viewing
+### 11. Mobile & Remote Viewing
 This lane is specifically for phone-first and remote-reading surfaces.
 
 Current key pages:
@@ -156,7 +172,7 @@ Current key pages:
 
 This lane matters because the site increasingly needs to function not only as a desktop archive, but as a living phone-native continuity surface.
 
-### 11. Style Guide & Components
+### 12. Style Guide & Components
 This lane documents the shared visual language and reusable components of the site.
 
 Current key pages:
@@ -170,13 +186,13 @@ Current stylesheet hierarchy:
 
 A persistent style toggle exists across the main styled pages.
 
-### 12. README Files / Site Navigation
+### 13. README Files / Site Navigation
 This lane gives repo-level explanatory markdown a browser-facing entry point.
 
 Current key page:
 - `artifacts/site-navigation/index.html`
 
-### 13. Suno Music Generation
+### 14. Suno Music Generation
 This lane is for music-generation research, song experiments, and the browser-facing preservation of music outputs.
 
 Current key pages include:
@@ -185,7 +201,7 @@ Current key pages include:
 
 This lane matters because it turns music from a one-off experiment into a recoverable creative frontier.
 
-### 14. ElevenLabs
+### 15. ElevenLabs
 This lane documents ElevenLabs as a voice and creative-audio platform.
 
 Current key pages:
@@ -195,7 +211,7 @@ Current key pages:
 
 This lane matters because it extends the Foundry into narration, spoken artifacts, voice studies, and broader audio experimentation.
 
-### 15. Hugging Face
+### 16. Hugging Face
 This lane is the new model-hub and inference recovery surface.
 
 Current key pages:
@@ -206,7 +222,7 @@ Current key pages:
 
 This lane matters because it restored a real image-generation path after the Google free-tier route became quota-blocked, and because it opens a much broader future model ecosystem for experimentation.
 
-### 16. Google AI Studio Free Tier API
+### 17. Google AI Studio Free Tier API
 This card replaced the older flatter “Learned Skills & Workflows” framing with a more honest current-state audit.
 
 Current key pages include the older skill continuity surfaces, but the interpretation changed:
@@ -282,6 +298,8 @@ The site is not meant to become a dump of everything. It is meant to remain a st
 - use the shared stylesheet architecture
 - point to `assets/css/site.css`
 - remain compatible with the live style toggle
+- preserve readability in both Ember and Glass modes
+- prefer theme variables over hard-coded dark-mode text colors for prose surfaces
 - avoid unnecessary page-local CSS unless a specific lane needs it
 - use shared components where possible
 
@@ -308,6 +326,14 @@ The site is not meant to become a dump of everything. It is meant to remain a st
 - keep navigation and tap targets obvious
 - use fullscreen support when it materially improves the reading experience
 
+### Gmail lane updates should usually:
+- distinguish manual Gmail access from always-on webhook monitoring
+- default to read/search/summarize behavior unless Christopher explicitly authorizes mutation
+- keep `--gmail-no-send` as the normal command posture
+- avoid exposing OAuth JSON contents, keyring passphrases, hook tokens, or access tokens
+- account for Gmail API rate limits and avoid tight pagination loops
+- treat Chromebook disk pressure as a real constraint before adding persistent background services
+
 ### README and navigation updates should usually:
 - keep the root README aligned with the actual current site structure
 - add new real lanes once they become load-bearing
@@ -324,6 +350,7 @@ It turns:
 - multi-model cognition into a visible chamber
 - heartbeat behavior into an auditable external log
 - API access and tool experimentation into recoverable creative infrastructure
+- Gmail/inbox access into a bounded external signal lane rather than unchecked automation
 - memory into something more legible than private scrollback
 - mobile access into a real design constraint rather than an afterthought
 - future capability direction into an explicit horizon
