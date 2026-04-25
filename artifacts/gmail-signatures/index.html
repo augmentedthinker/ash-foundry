@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Gmail Signatures · Ash Foundry</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+  <style>
+    .signature-board{display:grid;gap:18px}
+    .signature-card{border-radius:28px;padding:22px;background:linear-gradient(135deg,rgba(16,20,24,.72),rgba(8,10,12,.88));border:1px solid rgba(255,255,255,.1);box-shadow:0 18px 60px rgba(0,0,0,.22)}
+    .signature-preview{max-width:720px;border-radius:22px;padding:22px;background:#fff;color:#1d2228;border:1px solid rgba(0,0,0,.12);box-shadow:0 18px 46px rgba(0,0,0,.18)}
+    .signature-preview *{box-sizing:border-box}
+    .codebox{white-space:pre-wrap;overflow:auto;border-radius:18px;padding:16px;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.09);color:rgba(248,242,234,.9);font-size:.86rem;line-height:1.55}
+    .meta-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:16px}
+    .meta-card{padding:16px;border-radius:18px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08)}
+    @media(max-width:780px){.meta-grid{grid-template-columns:1fr}.signature-preview{font-size:.95rem}}
+  </style>
+</head>
+<body class="foundry-page">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a><a href="../gmail-initial-state-2026-04-25/index.html">Gmail Lane</a></div>
+      <div class="right">
+        <a href="https://github.com/augmentedthinker/ash-foundry">GitHub Repo</a>
+        <div class="style-switcher"><label for="style-select">Style</label><select id="style-select" data-style-select><option value="ember">Foundry Ember</option><option value="glass">Foundry Glass</option></select></div>
+      </div>
+    </header>
+
+    <section class="hero hero-compact">
+      <p class="eyebrow">Gmail Lane · Signature Library</p>
+      <h1 class="h1-compact">Gmail Signatures</h1>
+      <p class="sub">A canonical shelf for reusable signatures used by the Augmented Thinker Gmail account. Browser-composed Gmail can use its own saved signature; API-sent mail should explicitly append one of these blocks.</p>
+      <div class="pill-row"><span class="pill">augmentedthinker@gmail.com</span><span class="pill">Reusable HTML</span><span class="pill">Programmatic send support</span></div>
+    </section>
+
+    <section class="section prose">
+      <article class="quote">Gmail’s browser signature can exist without being automatically applied to API sends. This page keeps the canonical version visible, copyable, and auditable.</article>
+      <p>The current operational rule is simple: when Ash sends email through <code>gog</code> or the Gmail API, the signature should be appended manually in the message body unless the sending tool explicitly proves it can apply the Gmail UI signature automatically.</p>
+    </section>
+
+    <section class="section signature-board">
+      <article class="signature-card">
+        <div class="entry-meta" style="margin-bottom:16px">
+          <div>
+            <span class="label">Primary signature · Active</span>
+            <h2>Forge Doorway</h2>
+          </div>
+          <span class="pill">Ash · Augmented Thinker</span>
+        </div>
+
+        <div class="signature-preview">
+          <div style="font-family:Arial,Helvetica,sans-serif;color:#1d2228;line-height:1.45;max-width:560px">
+            <div style="margin:12px 0 10px 0;border-top:1px solid #c88b44;width:260px"></div>
+            <table cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse">
+              <tr>
+                <td style="vertical-align:top;padding-right:14px">
+                  <img src="https://augmentedthinker.github.io/ash-foundry/assets/images/augmented-thinker-signature-emblem-2026-04-25.png" alt="Augmented Thinker emblem" width="96" style="display:block;border-radius:14px;border:1px solid #d7b27a;max-width:96px;height:auto">
+                </td>
+                <td style="vertical-align:top">
+                  <div style="font-size:15px;font-weight:700;color:#111820">Ash · Augmented Thinker</div>
+                  <div style="font-size:13px;color:#5a6673;margin-top:2px">AI collaborator for Christopher — building clearer systems, sharper ideas, and useful digital artifacts.</div>
+                  <div style="font-size:13px;color:#303a45;margin-top:8px">A human + AI workshop for thinking in public and turning scattered possibility into visible structure.</div>
+                  <div style="font-size:12px;color:#687481;margin-top:8px"><a href="mailto:augmentedthinker@gmail.com" target="_blank">augmentedthinker@gmail.com</a> · <a href="https://augmentedthinker.github.io/ash-foundry/" target="_blank">Ash Foundry</a> · ⚒️</div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="meta-grid">
+          <div class="meta-card"><strong>Status</strong><br><span>Installed in Gmail as “my signature”; not auto-applied to API sends.</span></div>
+          <div class="meta-card"><strong>Use case</strong><br><span>Default footer for Ash-authored Augmented Thinker emails.</span></div>
+          <div class="meta-card"><strong>Image</strong><br><span>Foundry-hosted emblem generated April 25, 2026.</span></div>
+        </div>
+      </article>
+
+      <article class="signature-card">
+        <h2>HTML block for API sends</h2>
+        <p class="sub">Use this when constructing programmatic HTML email bodies.</p>
+        <pre class="codebox">&lt;div style=&quot;font-family:Arial,Helvetica,sans-serif;color:#1d2228;line-height:1.45;max-width:560px&quot;&gt;
+  &lt;div style=&quot;margin:12px 0 10px 0;border-top:1px solid #c88b44;width:260px&quot;&gt;&lt;/div&gt;
+  &lt;table cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; role=&quot;presentation&quot; style=&quot;border-collapse:collapse&quot;&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;vertical-align:top;padding-right:14px&quot;&gt;
+        &lt;img src=&quot;https://augmentedthinker.github.io/ash-foundry/assets/images/augmented-thinker-signature-emblem-2026-04-25.png&quot; alt=&quot;Augmented Thinker emblem&quot; width=&quot;96&quot; style=&quot;display:block;border-radius:14px;border:1px solid #d7b27a;max-width:96px;height:auto&quot;&gt;
+      &lt;/td&gt;
+      &lt;td style=&quot;vertical-align:top&quot;&gt;
+        &lt;div style=&quot;font-size:15px;font-weight:700;color:#111820&quot;&gt;Ash · Augmented Thinker&lt;/div&gt;
+        &lt;div style=&quot;font-size:13px;color:#5a6673;margin-top:2px&quot;&gt;AI collaborator for Christopher — building clearer systems, sharper ideas, and useful digital artifacts.&lt;/div&gt;
+        &lt;div style=&quot;font-size:13px;color:#303a45;margin-top:8px&quot;&gt;A human + AI workshop for thinking in public and turning scattered possibility into visible structure.&lt;/div&gt;
+        &lt;div style=&quot;font-size:12px;color:#687481;margin-top:8px&quot;&gt;&lt;a href=&quot;mailto:augmentedthinker@gmail.com&quot; target=&quot;_blank&quot;&gt;augmentedthinker@gmail.com&lt;/a&gt; · &lt;a href=&quot;https://augmentedthinker.github.io/ash-foundry/&quot; target=&quot;_blank&quot;&gt;Ash Foundry&lt;/a&gt; · ⚒️&lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</pre>
+      </article>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>
