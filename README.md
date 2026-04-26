@@ -91,6 +91,7 @@ It now functions as a more formal archive with explicit generation expectations 
 Current key pages include:
 - `artifacts/session-artifacts-archive/index.html`
 - `artifacts/session-artifact-protocols/index.html`
+- `artifacts/last-24-hours-orientation-2026-04-26/index.html`
 - `artifacts/state-of-affairs-trajectory-2026-04-26/index.html`
 - `artifacts/present-state-of-awareness-2026-04-26/index.html`
 - `artifacts/state-of-the-union-2026-04-21/index.html`
