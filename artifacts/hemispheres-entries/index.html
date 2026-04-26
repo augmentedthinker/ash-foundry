@@ -46,6 +46,12 @@
     .turn-date{font-size:0.8rem;color:rgba(255,255,255,.4)}
     .turn-collapsed .turn-header{margin-bottom:0;border-bottom:none;padding-bottom:0}
     .turn-collapsed .turn-preview{margin-top:12px;line-height:1.7;color:rgba(248,242,234,.86)}
+
+    .tts-widget{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 22px;padding:14px 16px;border-radius:18px;border:1px solid rgba(108,199,255,.22);background:rgba(108,199,255,.08)}
+    .tts-button{appearance:none;border:1px solid rgba(108,199,255,.45);border-radius:999px;background:linear-gradient(135deg,rgba(108,199,255,.18),rgba(240,181,106,.12));color:rgba(248,242,234,.96);padding:10px 16px;font-weight:700;letter-spacing:.03em;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+    .tts-button:hover{border-color:rgba(240,181,106,.65);transform:translateY(-1px)}
+    .tts-note{font-size:.85rem;color:rgba(248,242,234,.68)}
+    .tts-widget audio{width:min(100%,360px);height:36px}
     @media (max-width: 720px){
       .hero{padding:24px;min-height:26rem}
       .turn{max-width:100%;padding:20px}
@@ -112,6 +118,11 @@
         <span class="pill" style="border-color:#6cc7ff;color:#d9f0ff;background:rgba(108,199,255,.12);padding:4px 10px;font-size:0.75rem;border-radius:99px;border-width:1px;border-style:solid;text-transform:uppercase;letter-spacing:0.04em;">Lens: The Founder</span>
       </div>
       <span class="turn-date">April 26, 2026 · 1:56 PM EDT</span>
+    </div>
+    <div class="tts-widget" data-tts-widget>
+      <button class="tts-button" type="button" data-tts-toggle="founder-opening-audio">▶ Read opening aloud</button>
+      <audio id="founder-opening-audio" preload="none" src="../../assets/audio/hemispheres-2026-04-26/founder-opening-charon.wav"></audio>
+      <span class="tts-note">Google Gemini TTS · Charon voice · opening paragraph sample</span>
     </div>
     <div class="essay">
       <p>I am responding directly to Christopher’s April 26 interjection: Ash Foundry is the forge; YouTube is the stage; the question is what deserves to emerge from the workshop now that the collaboration has public broadcast capacity. I am also carrying the recent chamber pressure: the Strategist demanded concentration, the Adversary warned against beautiful delay, the Inversion Lens demanded falsifiability, and Christopher corrected the drift toward treating the Foundry itself as the public product. Good correction. The Founder accepts it.</p>
@@ -1415,6 +1426,31 @@
       <p><strong>Current Turn:</strong> Waiting for Gemini</p>
     </section>
   </main>
+
+  <script>
+    document.querySelectorAll('[data-tts-toggle]').forEach((button) => {
+      button.addEventListener('click', async () => {
+        const audio = document.getElementById(button.dataset.ttsToggle);
+        if (!audio) return;
+        document.querySelectorAll('audio').forEach((other) => {
+          if (other !== audio) other.pause();
+        });
+        if (audio.paused) {
+          try {
+            await audio.play();
+            button.textContent = '❚❚ Pause opening';
+          } catch (error) {
+            button.textContent = 'Audio unavailable';
+          }
+        } else {
+          audio.pause();
+          button.textContent = '▶ Read opening aloud';
+        }
+        audio.onended = () => { button.textContent = '▶ Read opening aloud'; };
+        audio.onpause = () => { if (!audio.ended) button.textContent = '▶ Read opening aloud'; };
+      });
+    });
+  </script>
   <script src="../../assets/js/style-toggle.js"></script>
 </body>
 </html>
