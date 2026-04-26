@@ -40,11 +40,27 @@
       object-fit: contain;
       background: #000;
     }
+    .youtube-link {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 2;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.22);
+      color: #fff;
+      font: 600 14px/1.2 system-ui, sans-serif;
+      text-decoration: none;
+      backdrop-filter: blur(12px);
+    }
+    .youtube-link:hover { background: rgba(255,255,255,.18); }
   </style>
 </head>
 <body>
   <main class="video-stage">
     <video controls preload="metadata" src="../../assets/video/pressure-structure-choice-03-2026-04-20.mp4"></video>
+    <a class="youtube-link" href="https://youtu.be/ygG6tcGf_qg">Watch Artifact 001 on YouTube</a>
   </main>
 </body>
 </html>
