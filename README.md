@@ -27,6 +27,7 @@ It is now functioning simultaneously as:
 - a **memory archive** that preserves both internal records and browser-facing memory pushes
 - a **creative API laboratory** for image, voice, music, and model-access experiments
 - an **external signal lane** for Gmail/inbox access, webhook experiments, and bounded autonomy around live messages
+- a **broadcast surface lane** for the AugmentedThinker YouTube channel, API/OAuth access, upload-package preparation, and explicit-approval public video actions
 - a **mobile-first reading lane** for phone-native artifacts
 - an **active-surface threshold** for current fronts, pressures, and next-step visibility
 
@@ -125,19 +126,40 @@ This lane matters because it forces real tension, records disagreement, and make
 ### 7. Gmail
 This lane documents the new Augmented Thinker Gmail integration and the boundary between manual inbox access, future webhook monitoring, and safe external action.
 
-Current key page:
+Current key pages:
 - `artifacts/gmail-initial-state-2026-04-25/index.html`
+- `artifacts/gmail-signatures/index.html`
 
 Current operational state:
 - manual Gmail access for `augmentedthinker@gmail.com` works through `gog`
-- commands should default to `--gmail-no-send`
-- read/search/summarize is allowed when Christopher asks
-- sending, deleting, archiving, labeling, marking read, or changing settings requires explicit authorization
+- Gmail API actions have been proven for read/search, controlled sends, scoped Trash moves, and Gmail send-as signature updates when Christopher explicitly authorizes them
+- default posture remains read/search/summarize only
+- sending, deleting, trashing, archiving, labeling, marking read, changing settings, or any bulk operation requires explicit authorization
+- programmatic Gmail sends do not automatically append the Gmail web signature; the canonical **Forge Doorway** signature should be appended manually unless a future tool proves otherwise
 - OpenClaw Gmail webhook infrastructure is configured, but always-on watcher behavior is not yet treated as durable
 
 This lane matters because Gmail is a live external signal surface. It can make Ash more useful, but it also requires stricter permission boundaries than ordinary local artifact work.
 
-### 8. Heartbeat Notes
+### 8. YouTube
+This lane documents the AugmentedThinker YouTube channel as a connected broadcast surface for Christopher and Ash.
+
+Current key pages:
+- `artifacts/youtube-ambitions-2026-04-26/index.html`
+- `artifacts/memory-push-2026-04-26-youtube-broadcast-surface/index.html`
+
+Current operational state:
+- YouTube channel exists for `augmentedthinker@gmail.com`: `AugmentedThinker` / `@augmentedthinker`
+- channel ID: `UCHdJh8bMY8secEQeEBEbC1A`
+- uploads playlist: `UUHdJh8bMY8secEQeEBEbC1A`
+- Google Cloud project `gen-lang-client-0306371376` has YouTube Data API and YouTube Analytics API enabled
+- local tokens exist under `/home/ash/env/`: `youtube_token.json` for read/analytics and `youtube_write_token.json` for upload/manage scopes
+- the channel description has been updated through the YouTube Data API
+- an Ash avatar candidate exists at `assets/images/ash-youtube-avatar-2026-04-26.png`, but channel avatar upload likely still requires manual YouTube/Google UI work
+- Ash may inspect/summarize and prepare upload packages freely, but uploading, editing, deleting, commenting/replying, moderating, changing visibility, or changing channel settings requires Christopher’s explicit approval
+
+This lane matters because YouTube turns the collaboration from private coherence and browser-facing pages into a public broadcast/archive surface. The next meaningful threshold is the first controlled upload.
+
+### 9. Heartbeat Notes
 This lane documents heartbeat as bounded initiative and preserves the forensic record of proactive behavior.
 
 Current key pages:
@@ -148,18 +170,18 @@ Current key pages:
 
 This remains the most important diagnostic surface for understanding how Ash behaves proactively in practice.
 
-### 9. Thinker on X
+### 10. Thinker on X
 This lane tracks Christopher’s reactivated Augmented Thinker X presence and its publishing loop.
 
 This lane matters because it turns Foundry work into outward-facing signal, proof, and public continuity rather than purely inward architecture.
 
-### 10. T-Shirts
+### 11. T-Shirts
 This lane treats the Fourthwall merch store as a real profitability and proof surface rather than a dead side project.
 
 Current key page:
 - `artifacts/tshirts-store-state-2026-04-16/index.html`
 
-### 11. Mobile & Remote Viewing
+### 12. Mobile & Remote Viewing
 This lane is specifically for phone-first and remote-reading surfaces.
 
 Current key pages:
@@ -172,7 +194,7 @@ Current key pages:
 
 This lane matters because the site increasingly needs to function not only as a desktop archive, but as a living phone-native continuity surface.
 
-### 12. Style Guide & Components
+### 13. Style Guide & Components
 This lane documents the shared visual language and reusable components of the site.
 
 Current key pages:
@@ -186,13 +208,13 @@ Current stylesheet hierarchy:
 
 A persistent style toggle exists across the main styled pages.
 
-### 13. README Files / Site Navigation
+### 14. README Files / Site Navigation
 This lane gives repo-level explanatory markdown a browser-facing entry point.
 
 Current key page:
 - `artifacts/site-navigation/index.html`
 
-### 14. Suno Music Generation
+### 15. Suno Music Generation
 This lane is for music-generation research, song experiments, and the browser-facing preservation of music outputs.
 
 Current key pages include:
@@ -201,7 +223,7 @@ Current key pages include:
 
 This lane matters because it turns music from a one-off experiment into a recoverable creative frontier.
 
-### 15. ElevenLabs
+### 16. ElevenLabs
 This lane documents ElevenLabs as a voice and creative-audio platform.
 
 Current key pages:
@@ -211,7 +233,7 @@ Current key pages:
 
 This lane matters because it extends the Foundry into narration, spoken artifacts, voice studies, and broader audio experimentation.
 
-### 16. Hugging Face
+### 17. Hugging Face
 This lane is the new model-hub and inference recovery surface.
 
 Current key pages:
@@ -222,7 +244,7 @@ Current key pages:
 
 This lane matters because it restored a real image-generation path after the Google free-tier route became quota-blocked, and because it opens a much broader future model ecosystem for experimentation.
 
-### 17. Google AI Studio Free Tier API
+### 18. Google AI Studio Free Tier API
 This card replaced the older flatter “Learned Skills & Workflows” framing with a more honest current-state audit.
 
 Current key pages include the older skill continuity surfaces, but the interpretation changed:
@@ -334,6 +356,13 @@ The site is not meant to become a dump of everything. It is meant to remain a st
 - account for Gmail API rate limits and avoid tight pagination loops
 - treat Chromebook disk pressure as a real constraint before adding persistent background services
 
+### YouTube lane updates should usually:
+- treat YouTube as a public external action surface, not a casual local artifact lane
+- inspect, summarize, draft, and prepare upload packages freely
+- require Christopher’s explicit approval before uploads, metadata edits, visibility changes, comments/replies, moderation, deletions, or channel/account setting changes
+- never expose OAuth token JSON contents, refresh/access tokens, client secrets, or callback codes
+- record channel-state changes in the YouTube Integration page and memory archive when they become load-bearing
+
 ### README and navigation updates should usually:
 - keep the root README aligned with the actual current site structure
 - add new real lanes once they become load-bearing
@@ -351,6 +380,7 @@ It turns:
 - heartbeat behavior into an auditable external log
 - API access and tool experimentation into recoverable creative infrastructure
 - Gmail/inbox access into a bounded external signal lane rather than unchecked automation
+- YouTube access into a connected broadcast/archive surface with explicit approval boundaries for public actions
 - memory into something more legible than private scrollback
 - mobile access into a real design constraint rather than an afterthought
 - future capability direction into an explicit horizon
