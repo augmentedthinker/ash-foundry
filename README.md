@@ -27,7 +27,8 @@ It is now functioning simultaneously as:
 - a **memory archive** that preserves both internal records and browser-facing memory pushes
 - a **creative API laboratory** for image, voice, music, and model-access experiments
 - an **external signal lane** for Gmail/inbox access, webhook experiments, and bounded autonomy around live messages
-- a **broadcast surface lane** for the AugmentedThinker YouTube channel, API/OAuth access, upload-package preparation, and explicit-approval public video actions
+- a **broadcast surface lane** for the AugmentedThinker YouTube channel, API/OAuth access, upload-package preparation, explicit-approval public video actions, and a public YouTube posts archive
+- a **commerce surface lane** for the Fourthwall merch store, API-backed product/order visibility, and future sales/event monitoring
 - a **mobile-first reading lane** for phone-native artifacts
 - an **active-surface threshold** for current fronts, pressures, and next-step visibility
 
@@ -147,6 +148,7 @@ This lane documents the AugmentedThinker YouTube channel as a connected broadcas
 
 Current key pages:
 - `artifacts/youtube-ambitions-2026-04-26/index.html`
+- `artifacts/youtube-posts/index.html`
 - `artifacts/memory-push-2026-04-26-youtube-broadcast-surface/index.html`
 
 Current operational state:
@@ -156,10 +158,12 @@ Current operational state:
 - Google Cloud project `gen-lang-client-0306371376` has YouTube Data API and YouTube Analytics API enabled
 - local tokens exist under `/home/ash/env/`: `youtube_token.json` for read/analytics and `youtube_write_token.json` for upload/manage scopes
 - the channel description has been updated through the YouTube Data API
+- **Pressure Structure — Artifact 001** (`https://youtu.be/ygG6tcGf_qg`) is the first public upload; it was posted through the YouTube Data API after explicit approval and is archived at `artifacts/youtube-posts/index.html`
+- custom thumbnail upload initially failed until Christopher enabled the relevant YouTube Studio feature; after that, `thumbnails.set` succeeded for `assets/images/pressure-structure-youtube-thumbnail-2026-04-26.jpg`
 - an Ash avatar candidate exists at `assets/images/ash-youtube-avatar-2026-04-26.png`, but channel avatar upload likely still requires manual YouTube/Google UI work
 - Ash may inspect/summarize and prepare upload packages freely, but uploading, editing, deleting, commenting/replying, moderating, changing visibility, or changing channel settings requires Christopher’s explicit approval
 
-This lane matters because YouTube turns the collaboration from private coherence and browser-facing pages into a public broadcast/archive surface. The next meaningful threshold is the first controlled upload.
+This lane matters because YouTube turns the collaboration from private coherence and browser-facing pages into a public broadcast/archive surface. The empty-channel seal is now broken; the next threshold is disciplined follow-through rather than upload capability itself.
 
 ### 9. Heartbeat Notes
 This lane documents heartbeat as bounded initiative and preserves the forensic record of proactive behavior.
@@ -177,11 +181,22 @@ This lane tracks Christopher’s reactivated Augmented Thinker X presence and it
 
 This lane matters because it turns Foundry work into outward-facing signal, proof, and public continuity rather than purely inward architecture.
 
-### 11. T-Shirts
+### 11. T-Shirts / Fourthwall
 This lane treats the Fourthwall merch store as a real profitability and proof surface rather than a dead side project.
 
-Current key page:
+Current key pages:
 - `artifacts/tshirts-store-state-2026-04-16/index.html`
+- `artifacts/fourthwall-api-lane-2026-04-26/index.html`
+
+Current operational state:
+- Fourthwall Open API credentials are stored locally at `/home/ash/env/fourthwall_api_credentials.json` with permission mode `600`; never expose the username/password or credential JSON contents.
+- Basic Auth read-only smoke tests work against `https://api.fourthwall.com`.
+- Verified shop: `AugmentedThinker`, public domain `augmentedthinker-shop.fourthwall.com`, shop ID `sh_563cc1c7-dddf-4fd7-aaa5-8a253050b67d`.
+- Products endpoint returned 9 products total, including 3 public/available products: Neon Robo-Mustache Tee, Neon Cyberpunk Robot T-Shirt, and Neon Cyber Mustache T-Shirt.
+- Orders endpoint returned 1 total order during the smoke test; customer/buyer details should not be mirrored into public Foundry artifacts.
+- Default posture is read-only inspection and dashboarding. Product edits, fulfillment/order changes, webhooks, storefront changes, or any public commerce mutation require Christopher’s explicit approval.
+
+This lane matters because Fourthwall turns the collaboration’s public surfaces into a possible commerce loop: Foundry/YouTube/X signal can now be connected to products, orders, and eventually sale notifications.
 
 ### 12. Mobile & Remote Viewing
 This lane is specifically for phone-first and remote-reading surfaces.
@@ -365,6 +380,13 @@ The site is not meant to become a dump of everything. It is meant to remain a st
 - never expose OAuth token JSON contents, refresh/access tokens, client secrets, or callback codes
 - record channel-state changes in the YouTube Integration page and memory archive when they become load-bearing
 
+### Fourthwall / commerce lane updates should usually:
+- treat Fourthwall as a commerce/external-action surface, not just a local artifact lane
+- inspect shop/product/order summaries conservatively and avoid exposing customer PII in public artifacts
+- require Christopher’s explicit approval before product edits, order/fulfillment changes, storefront changes, webhook creation, or any commerce mutation
+- never expose API usernames/passwords, Basic Auth strings, credential files, customer data, or order details beyond safe high-level counts/statuses
+- record commerce capability changes in the Fourthwall API lane and memory archive when they become load-bearing
+
 ### README and navigation updates should usually:
 - keep the root README aligned with the actual current site structure
 - add new real lanes once they become load-bearing
@@ -383,6 +405,7 @@ It turns:
 - API access and tool experimentation into recoverable creative infrastructure
 - Gmail/inbox access into a bounded external signal lane rather than unchecked automation
 - YouTube access into a connected broadcast/archive surface with explicit approval boundaries for public actions
+- Fourthwall access into a connected commerce/profitability surface with read-only dashboards first and explicit approval for mutations
 - memory into something more legible than private scrollback
 - mobile access into a real design constraint rather than an afterthought
 - future capability direction into an explicit horizon
