@@ -212,11 +212,13 @@ Current key pages:
 
 This lane matters because the site increasingly needs to function not only as a desktop archive, but as a living phone-native continuity surface.
 
-### 13. Style Guide & Components
-This lane documents the shared visual language and reusable components of the site.
+### 13. Style Systems & Components
+This lane documents the shared visual languages and reusable components of the site. It now functions as a multi-style index rather than a single Foundry-only guide.
 
 Current key pages:
+- `artifacts/style-systems/index.html`
 - `artifacts/foundry-style-guide/index.html`
+- `artifacts/flip7-design-system/index.html`
 - `artifacts/foundry-style-registry-2026-04-13/index.html`
 
 Current stylesheet hierarchy:
@@ -224,7 +226,7 @@ Current stylesheet hierarchy:
 - `assets/css/foundry-ember.css`
 - `assets/css/foundry-glass.css`
 
-A persistent style toggle exists across the main styled pages.
+A persistent style toggle exists across the main styled pages. Project-specific systems, such as Flip7, may add local page styles while remaining linked from the central Style Systems surface.
 
 ### 14. README Files / Site Navigation
 This lane gives repo-level explanatory markdown a browser-facing entry point.
