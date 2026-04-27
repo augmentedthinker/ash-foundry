@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Flip7 State of the Union · 2026-04-26</title>
+  <link id="site-style-link" rel="stylesheet" href="../../assets/css/site.css" />
+  <style>
+    :root{--flip-teal:#2BA8A2;--flip-teal-light:#3CC4BD;--flip-teal-dark:#1E8C86;--flip-bg:#E8F6F5;--flip-gold:#FFD23F;--flip-gold-light:#FFE47A;--flip-gold-dark:#E6B800;--flip-coral:#EF6C4A;--flip-coral-light:#FF8A6A;--flip-coral-dark:#D45233;--flip-cream:#FFF8E7;--flip-sky:#5DADE2;--flip-success:#27AE60;--flip-error:#E74C3C;--flip-ink:#17413e}
+    body.foundry-page{background:linear-gradient(180deg,var(--flip-bg),#fff8e7 55%,#eff8f7);color:var(--flip-ink)}
+    .flip-union-shell{max-width:1080px}.topbar a,.style-switcher{background:rgba(255,248,231,.72);border-color:rgba(30,140,134,.18);color:var(--flip-teal-dark)}.style-switcher label{color:var(--flip-teal-dark)}
+    .flip-hero{position:relative;overflow:hidden;border-radius:34px;padding:32px;border:4px solid var(--flip-teal-dark);background:radial-gradient(circle at 12% 12%,rgba(255,210,63,.58),transparent 23%),radial-gradient(circle at 88% 18%,rgba(239,108,74,.34),transparent 24%),linear-gradient(135deg,#fff8e7,#e8f6f5 58%,#ffe47a);box-shadow:0 18px 44px rgba(43,168,162,.18)}
+    .card-fan{position:absolute;right:34px;top:28px;width:170px;height:128px;pointer-events:none}.fan-card{position:absolute;left:50px;top:18px;width:72px;height:100px;border-radius:16px;border:3px solid rgba(30,140,134,.9);box-shadow:0 10px 20px rgba(0,0,0,.12)}.fan-card:nth-child(1){background:var(--flip-teal);transform:rotate(-24deg);left:0}.fan-card:nth-child(2){background:var(--flip-coral);transform:rotate(-12deg);left:26px}.fan-card:nth-child(3){background:var(--flip-gold);transform:rotate(0);left:52px}.fan-card:nth-child(4){background:var(--flip-sky);transform:rotate(12deg);left:78px}.fan-card:nth-child(5){background:var(--flip-cream);transform:rotate(24deg);left:104px}
+    .flip-logo{display:inline-grid;grid-template-columns:auto auto;align-items:end;gap:8px;margin:18px 0 10px;padding:12px 18px;background:var(--flip-cream);border:3px solid var(--flip-teal-dark);transform:rotate(-3deg) skewX(-6deg);box-shadow:0 12px 28px rgba(0,0,0,.16)}.flip-logo span:first-child{font-size:clamp(2.8rem,8vw,5.3rem);font-weight:900;letter-spacing:.05em;color:var(--flip-teal-dark);line-height:.9}.flip-logo span:last-child{font-size:clamp(4.6rem,12vw,8.4rem);font-weight:900;line-height:.74;color:var(--flip-gold);transform:rotate(5deg);text-shadow:3px 3px 0 var(--flip-teal-dark),6px 6px 0 rgba(30,140,134,.22)}
+    .ribbon{display:inline-block;margin-top:8px;padding:10px 24px;border:3px solid var(--flip-teal-dark);background:var(--flip-cream);color:var(--flip-teal-dark);font-weight:900;letter-spacing:.28em;text-transform:uppercase;box-shadow:0 10px 24px rgba(0,0,0,.12)}.hero-title{max-width:760px;margin:24px 0 12px;font-size:clamp(2.5rem,7vw,5.6rem);line-height:.92;letter-spacing:-.055em;color:var(--flip-teal-dark)}.hero-sub{max-width:760px;color:#315f5b;font-size:1.08rem;line-height:1.85;text-align:justify;text-justify:inter-word}.pill-row{justify-content:flex-start}.pill{background:#fff8e7;border:2px solid rgba(30,140,134,.18);color:var(--flip-teal-dark);box-shadow:0 4px 18px rgba(43,168,162,.10)}
+    .union-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;margin:22px 0}.flip-panel{position:relative;padding:24px;border-radius:28px;background:#fff;border:2px solid rgba(43,168,162,.16);box-shadow:0 4px 20px rgba(43,168,162,.10);overflow:hidden}.flip-panel::before{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;background:var(--flip-teal-light)}.flip-panel.gold::before{background:var(--flip-gold)}.flip-panel.coral::before{background:var(--flip-coral)}.flip-panel.sky::before{background:var(--flip-sky)}.flip-panel h2{margin-top:0;color:var(--flip-teal-dark);font-size:1.55rem}.flip-panel p,.flip-panel li{color:#365f5b;line-height:1.82;text-align:justify;text-justify:inter-word}.section-title{display:flex;align-items:center;gap:10px;margin:34px 0 14px;padding-bottom:10px;border-bottom:3px dashed rgba(43,168,162,.28);color:var(--flip-teal-dark)}.emoji-box{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:14px;background:var(--flip-gold);box-shadow:0 4px 20px rgba(255,210,63,.4)}
+    .score-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0}.score{padding:16px;border-radius:22px;background:#fff8e7;border:2px solid rgba(30,140,134,.16);box-shadow:0 4px 18px rgba(43,168,162,.08)}.score strong{display:block;color:var(--flip-teal-dark);font-size:1.35rem}.score span{display:block;color:#58726f;line-height:1.45}.boom-callout{margin:24px 0;padding:24px;border-radius:28px;background:linear-gradient(135deg,rgba(239,108,74,.14),rgba(255,210,63,.18));border:3px solid rgba(239,108,74,.36);box-shadow:0 4px 20px rgba(239,108,74,.22)}.boom-callout strong{color:var(--flip-coral-dark)}
+    .button-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}.flip-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:900;letter-spacing:.04em;color:#1E4F4B;box-shadow:0 4px 20px rgba(255,210,63,.4);background:linear-gradient(180deg,var(--flip-gold-light),var(--flip-gold))}.flip-btn.teal{background:linear-gradient(180deg,var(--flip-teal-light),var(--flip-teal));color:#fff;box-shadow:0 4px 20px rgba(43,168,162,.3)}.flip-btn.coral{background:linear-gradient(180deg,var(--flip-coral-light),var(--flip-coral));color:#fff;box-shadow:0 4px 20px rgba(239,108,74,.35)}
+    @media(max-width:820px){.union-grid,.score-strip{grid-template-columns:1fr}.card-fan{opacity:.28;right:-10px}.flip-hero{padding:24px}.hero-title{font-size:3rem}.ribbon{letter-spacing:.16em}}
+  </style>
+</head>
+<body class="foundry-page">
+  <main class="wrap flip-union-shell">
+    <header class="topbar">
+      <div class="left"><a href="../../index.html">← Ash Foundry</a><a href="../style-systems/index.html">Style Systems</a><a href="../flip7-design-system/index.html">Flip7 System</a></div>
+      <div class="right"><div class="style-switcher"><label for="style-select">Style</label><select id="style-select" data-style-select><option value="ember">Foundry Ember</option><option value="glass">Foundry Glass</option></select></div></div>
+    </header>
+
+    <section class="flip-hero">
+      <div class="card-fan" aria-hidden="true"><span class="fan-card"></span><span class="fan-card"></span><span class="fan-card"></span><span class="fan-card"></span><span class="fan-card"></span></div>
+      <p class="eyebrow">Session Artifact · State of the Union</p>
+      <div class="flip-logo"><span>FLIP</span><span>7</span></div><br />
+      <span class="ribbon">Design System Enters the Foundry</span>
+      <h1 class="hero-title">A playful system becomes a serious surface.</h1>
+      <p class="hero-sub">This artifact records the moment Flip7 stopped being only a design brief and became a browser-visible style system inside Ash Foundry. The point is not just decoration. It is evidence that the Foundry can now hold multiple visual languages without losing coherence.</p>
+      <div class="pill-row"><span class="pill">Date: 2026-04-26</span><span class="pill">Mode: Flip7 visual language</span><span class="pill">State: Live artifact</span></div>
+    </section>
+
+    <section class="score-strip" aria-label="Current state scores">
+      <div class="score"><strong>01</strong><span>Style Systems index created.</span></div>
+      <div class="score"><strong>02</strong><span>Flip7 design guide made navigable.</span></div>
+      <div class="score"><strong>03</strong><span>Homepage dropdown simplified.</span></div>
+      <div class="score"><strong>07</strong><span>New artifact proves the language in use.</span></div>
+    </section>
+
+    <h2 class="section-title"><span class="emoji-box">🎴</span>The Union</h2>
+    <section class="union-grid">
+      <article class="flip-panel">
+        <h2>What Changed</h2>
+        <p>The Foundry’s style section has crossed from a single house-style reference into a small design-system registry. The Ash Foundry style guide remains the native grammar: Ember, Glass, editorial prose, cards, grids, timelines, and long-form continuity. Flip7 now sits beside it as a second, project-specific language with its own palette, shape logic, interaction mood, and mobile-first assumptions.</p>
+        <p>This matters because a growing Foundry cannot treat every artifact as if it belongs to the same visual species. Some things are ceremonial. Some are diagnostic. Some are commerce surfaces. Some, like Flip7, need to feel like a game you want to tap.</p>
+      </article>
+      <article class="flip-panel gold">
+        <h2>Why It Matters</h2>
+        <p>A style system is a constraint engine. It reduces decision fatigue, keeps future implementation honest, and makes design work reproducible. The Flip7 system is especially useful because it is not vague mood-board language. It specifies colors, radii, rpx spacing, touch targets, card states, BOOM behavior, ranking treatments, and WeChat mini-program-specific rules.</p>
+        <p>That gives the future build a sharper runway: less arguing with the blank canvas, more shipping the scoring experience.</p>
+      </article>
+    </section>
+
+    <h2 class="section-title"><span class="emoji-box">⚡</span>Current Strategic Read</h2>
+    <section class="union-grid">
+      <article class="flip-panel sky">
+        <h2>The Foundry Is Becoming Modular</h2>
+        <p>The new Style Systems index is small, but architecturally important. It says: this site is not merely an archive of outputs. It is a workshop that can hold named systems, compare them, and reuse them. The Foundry house style remains the identity layer. Project-specific systems become specialized tools inside that larger container.</p>
+        <p>That is the right pattern. Keep the core coherent; let the branches become vivid.</p>
+      </article>
+      <article class="flip-panel coral">
+        <h2>The Risk</h2>
+        <p>The danger is proliferation without consequence. A new style page is only valuable if it changes what gets built next. Flip7 should not remain a beautiful card in a gallery. It should become the implementation contract for the scoring mini-program: screens, components, animations, empty states, victory flow, and score-entry mechanics.</p>
+        <p><strong>BOOM condition:</strong> if the system does not cash out into the app, it becomes another attractive delay surface.</p>
+      </article>
+    </section>
+
+    <div class="boom-callout">
+      <strong>State of the Union:</strong> Flip7 is now visible, navigable, and stylistically distinct. The next meaningful move is implementation pressure: convert the guide into reusable WXSS/classes and actual screens, not just another reference page.
+    </div>
+
+    <h2 class="section-title"><span class="emoji-box">🏁</span>Next Round</h2>
+    <section class="flip-panel gold">
+      <h2>Recommended Sequence</h2>
+      <ol>
+        <li><strong>Tokenize:</strong> translate the palette, spacing, radius, shadow, and typography rules into mini-program variables or reusable WXSS utilities.</li>
+        <li><strong>Componentize:</strong> build the Flip7 logo, ribbon, player row, scoring item card, counter buttons, BOOM toggle, Flip7 bonus button, and victory ranking cards.</li>
+        <li><strong>Screen-pass:</strong> apply the system to setup, round scoring, active game, and victory screens.</li>
+        <li><strong>Motion-pass:</strong> add only the animations that communicate state: tap bounce, BOOM pulse, winner glow, crown bounce, and confetti.</li>
+      </ol>
+      <div class="button-row"><a class="flip-btn teal" href="../flip7-design-system/index.html">Open Flip7 guide</a><a class="flip-btn" href="../style-systems/index.html">Back to styles</a><a class="flip-btn coral" href="../../index.html">Foundry home</a></div>
+    </section>
+  </main>
+  <script src="../../assets/js/style-toggle.js"></script>
+</body>
+</html>
